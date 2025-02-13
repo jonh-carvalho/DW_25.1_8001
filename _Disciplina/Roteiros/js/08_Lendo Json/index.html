@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
+
+    
+    <title>08 Lendo Json - DW</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../../..">DW</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Disciplina <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../aulas/">Aulas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../github/">Versionamento</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../mkdocs/">MkDocs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Avaliações</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Avalia%C3%A7%C3%B5es/avalia/">Avaliações</a>
+</li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">AC</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Avalia%C3%A7%C3%B5es/AC/">Index</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Avalia%C3%A7%C3%B5es/AC/ac1/">Ac1</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Avalia%C3%A7%C3%B5es/AC/ac2/">Ac2</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Avalia%C3%A7%C3%B5es/AC/ac3/">Ac3</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Avalia%C3%A7%C3%B5es/AC/ac4/">Ac4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Avalia%C3%A7%C3%B5es/AC/ac5/">Ac5</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">AP2</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Avalia%C3%A7%C3%B5es/AP2/">AP2</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Ap1</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Avalia%C3%A7%C3%B5es/ap1/">AP1</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Exercícios</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../Exerc%C3%ADcios/Javascript/">Javascript</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../Exerc%C3%ADcios/Posicionamento_Landing_Page/">Posicionamento Landing Page</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Roteiros</a>
+    <ul class="dropdown-menu">
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Css</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../css/flexbox/">Flexbox</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../css/grid/">Grid</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../css/posicionamento/">Posicionamento</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../css/siteresponsivo/">Responsividade</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../css/unidadesrelativas/">Unidades Relativas</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Html</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../html/tags%20sem%C3%A2ntica/">Tags semântica</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Js</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../01_Arrays/">Arrays</a>
+</li>
+
+        
+            
+<li >
+    <a href="../02_Maps_Sets/">02 Maps Sets</a>
+</li>
+
+        
+            
+<li >
+    <a href="../03_ChartMap/">03 ChartMap</a>
+</li>
+
+        
+            
+<li >
+    <a href="../04_Forms/">04 Forms</a>
+</li>
+
+        
+            
+<li >
+    <a href="../05_Http/">05 Http</a>
+</li>
+
+        
+            
+<li >
+    <a href="../07_Fetch/">07 Fetch</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">08 Lendo Json</a>
+</li>
+
+        
+            
+<li >
+    <a href="../09_FetchApi/">09 FetchApi</a>
+</li>
+
+        
+            
+<li >
+    <a href="../10_JsonServer/">10 JsonServer</a>
+</li>
+
+        
+            
+<li >
+    <a href="../11_FormsJS/">11 Manipulando html com js</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Ferramentas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../../_Ferramentas/Sites%20Importantes/">Sites Importantes</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../_Ferramentas/validadores/">Validadores</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../_Ferramentas/w3c/">W3C Web Standards</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../../_Ferramentas/w3schools/">W3Schools</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../07_Fetch/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../09_FetchApi/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jonh-carvalho/DW_24.2_8003/edit/master/docs/_Disciplina/Roteiros/js/08_Lendo Json.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#exemplo-1-json-como-objeto-javascript">Exemplo 1: JSON como Objeto JavaScript</a></li>
+        <li class="first-level "><a href="#exemplo-2-json-como-string">Exemplo 2: JSON como String</a></li>
+        <li class="first-level "><a href="#exemplo-3-convertendo-objeto-para-string-json">Exemplo 3: Convertendo Objeto para String JSON</a></li>
+        <li class="first-level "><a href="#criar-uma-pagina">Criar uma página</a></li>
+        <li class="first-level "><a href="#estrutura-do-projeto">Estrutura do projeto</a></li>
+        <li class="first-level "><a href="#passo-1-criando-o-arquivo-datajson">Passo 1: Criando o arquivo data.json</a></li>
+        <li class="first-level "><a href="#passo-2-criando-o-html-indexhtml">Passo 2: Criando o HTML (index.html)</a></li>
+        <li class="first-level "><a href="#passo-3-criando-o-javascript-scriptjs">Passo 3: Criando o JavaScript (script.js)</a></li>
+        <li class="first-level "><a href="#explicacao-do-javascript">Explicação do JavaScript</a></li>
+        <li class="first-level "><a href="#resultado">Resultado</a></li>
+        <li class="first-level "><a href="#lista-de-objetos">Lista de Objetos</a></li>
+            <li class="second-level"><a href="#passo-4-atualizando-o-html-indexhtml">Passo 4: Atualizando o HTML (index.html)</a></li>
+                
+            <li class="second-level"><a href="#passo-5-atualizando-o-javascript-scriptjs">Passo 5: Atualizando o JavaScript (script.js)</a></li>
+                
+            <li class="second-level"><a href="#explicacao-do-codigo">Explicação do Código</a></li>
+                
+            <li class="second-level"><a href="#visualizacao-completa">Visualização Completa</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<p>Ler dados em JavaScript pode ser feito de várias formas dependendo da origem dos dados. Vou te mostrar três abordagens comuns: </p>
+<ol>
+<li><strong>Ler dados de um arquivo JSON local:</strong>
+   Para carregar dados JSON armazenados localmente (por exemplo, <code>data.json</code>), podemos usar <code>fetch()</code>:</li>
+</ol>
+<p><code>js
+   fetch('data.json')
+     .then(response =&gt; response.json())
+     .then(data =&gt; {
+       console.log(data); // Manipule os dados aqui
+     })
+     .catch(error =&gt; console.error('Erro ao ler dados:', error));</code></p>
+<ol>
+<li><strong>Ler dados de uma API (requisição HTTP):</strong>
+   Se os dados estão em uma API, podemos usar o <code>fetch()</code> da mesma forma:</li>
+</ol>
+<p><code>js
+   fetch('https://api.exemplo.com/dados')
+     .then(response =&gt; response.json())
+     .then(data =&gt; {
+       console.log(data); // Manipule os dados da API aqui
+     })
+     .catch(error =&gt; console.error('Erro ao obter dados da API:', error));</code></p>
+<ol>
+<li><strong>Ler dados de um arquivo CSV (usando bibliotecas):</strong>
+   Para CSV, uma biblioteca como o <a href="https://www.papaparse.com/">PapaParse</a> pode ser muito útil:</li>
+</ol>
+<p><code>js
+   Papa.parse('data.csv', {
+     download: true,
+     header: true,
+     complete: function(results) {
+       console.log(results.data); // Manipule os dados CSV aqui
+     }
+   });</code></p>
+<p>Esses métodos permitem carregar e manipular dados em tempo real, seja para atualizar uma página, renderizar informações ou armazenar para uso em sessões.</p>
+<p>Para ler e manipular dados armazenados em uma variável JSON em JavaScript, primeiro é importante que o conteúdo JSON esteja em um formato válido. Em JavaScript, normalmente, usamos objetos JavaScript (similar ao JSON) para armazenar dados. Aqui está um exemplo básico:</p>
+<h3 id="exemplo-1-json-como-objeto-javascript">Exemplo 1: JSON como Objeto JavaScript</h3>
+<p>Se você já tem os dados armazenados como um objeto JavaScript, pode acessar diretamente os valores com a notação de ponto ou colchetes:</p>
+<pre><code class="language-js">// Dados JSON armazenados em uma variável
+const jsonData = {
+  &quot;nome&quot;: &quot;Maria&quot;,
+  &quot;idade&quot;: 30,
+  &quot;endereco&quot;: {
+    &quot;cidade&quot;: &quot;São Paulo&quot;,
+    &quot;estado&quot;: &quot;SP&quot;
+  }
+};
+
+// Acessando os dados
+console.log(jsonData.nome);            // Maria
+console.log(jsonData.idade);           // 30
+console.log(jsonData.endereco.cidade); // São Paulo
+</code></pre>
+<h3 id="exemplo-2-json-como-string">Exemplo 2: JSON como String</h3>
+<p>Se os dados JSON estão em formato de string, você precisa transformá-los em um objeto usando <code>JSON.parse()</code> antes de acessá-los.</p>
+<pre><code class="language-js">// Dados JSON como string
+const jsonString = '{&quot;nome&quot;: &quot;Carlos&quot;, &quot;idade&quot;: 25, &quot;cidade&quot;: &quot;Rio de Janeiro&quot;}';
+
+// Transformando em objeto JavaScript
+const jsonData = JSON.parse(jsonString);
+
+// Acessando os dados
+console.log(jsonData.nome); // Carlos
+console.log(jsonData.idade); // 25
+</code></pre>
+<h3 id="exemplo-3-convertendo-objeto-para-string-json">Exemplo 3: Convertendo Objeto para String JSON</h3>
+<p>Caso queira fazer o contrário (converter um objeto em uma string JSON), você pode usar <code>JSON.stringify()</code>:</p>
+<pre><code class="language-js">const data = {
+  nome: &quot;Ana&quot;,
+  idade: 28
+};
+
+// Convertendo em string JSON
+const jsonString = JSON.stringify(data);
+
+console.log(jsonString); // {&quot;nome&quot;:&quot;Ana&quot;,&quot;idade&quot;:28}
+</code></pre>
+<p>Esses métodos ajudam a manipular facilmente o JSON dentro do JavaScript, permitindo uma leitura e escrita eficiente dos dados.</p>
+<h3 id="criar-uma-pagina">Criar uma página</h3>
+<p>Vamos criar uma página web simples que lê dados em JSON de várias formas: a partir de uma variável objeto, de uma string JSON e de um arquivo JSON local. </p>
+<h3 id="estrutura-do-projeto">Estrutura do projeto</h3>
+<p>Crie uma pasta com os seguintes arquivos:
+1. <code>index.html</code>: o arquivo HTML principal.
+2. <code>script.js</code>: o arquivo JavaScript com o código de leitura dos dados.
+3. <code>data.json</code>: o arquivo JSON local com os dados.</p>
+<h3 id="passo-1-criando-o-arquivo-datajson">Passo 1: Criando o arquivo <code>data.json</code></h3>
+<p>Esse arquivo conterá dados JSON básicos para a leitura local.</p>
+<pre><code class="language-json">{
+  &quot;nome&quot;: &quot;Pedro&quot;,
+  &quot;idade&quot;: 34,
+  &quot;endereco&quot;: {
+    &quot;cidade&quot;: &quot;Curitiba&quot;,
+    &quot;estado&quot;: &quot;PR&quot;
+  }
+}
+</code></pre>
+<h3 id="passo-2-criando-o-html-indexhtml">Passo 2: Criando o HTML (<code>index.html</code>)</h3>
+<p>Aqui está o código HTML básico que referencia o arquivo <code>script.js</code> e tem seções para exibir os dados lidos.</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Leitura de Dados JSON&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Exemplo de Leitura de Dados JSON&lt;/h1&gt;
+
+    &lt;h2&gt;Dados de um Objeto JavaScript&lt;/h2&gt;
+    &lt;pre id=&quot;fromObject&quot;&gt;&lt;/pre&gt;
+
+    &lt;h2&gt;Dados de uma String JSON&lt;/h2&gt;
+    &lt;pre id=&quot;fromString&quot;&gt;&lt;/pre&gt;
+
+    &lt;h2&gt;Dados de um Arquivo JSON&lt;/h2&gt;
+    &lt;pre id=&quot;fromFile&quot;&gt;&lt;/pre&gt;
+
+    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="passo-3-criando-o-javascript-scriptjs">Passo 3: Criando o JavaScript (<code>script.js</code>)</h3>
+<p>O código abaixo lê os dados das três formas descritas: de uma variável JavaScript, de uma string JSON e de um arquivo JSON.</p>
+<pre><code class="language-js">// Exemplo 1: Lendo dados de um objeto JavaScript
+const jsonDataObject = {
+  &quot;nome&quot;: &quot;Maria&quot;,
+  &quot;idade&quot;: 30,
+  &quot;endereco&quot;: {
+    &quot;cidade&quot;: &quot;São Paulo&quot;,
+    &quot;estado&quot;: &quot;SP&quot;
+  }
+};
+
+// Exibindo dados no HTML
+document.getElementById(&quot;fromObject&quot;).textContent = JSON.stringify(jsonDataObject, null, 2);
+
+// Exemplo 2: Lendo dados de uma string JSON
+const jsonString = '{&quot;nome&quot;: &quot;Carlos&quot;, &quot;idade&quot;: 25, &quot;cidade&quot;: &quot;Rio de Janeiro&quot;}';
+const jsonDataFromString = JSON.parse(jsonString);
+
+// Exibindo dados no HTML
+document.getElementById(&quot;fromString&quot;).textContent = JSON.stringify(jsonDataFromString, null, 2);
+
+// Exemplo 3: Lendo dados de um arquivo JSON usando fetch
+fetch('data.json')
+  .then(response =&gt; {
+    if (!response.ok) {
+      throw new Error('Erro ao carregar o arquivo JSON');
+    }
+    return response.json();
+  })
+  .then(data =&gt; {
+    // Exibindo dados no HTML
+    document.getElementById(&quot;fromFile&quot;).textContent = JSON.stringify(data, null, 2);
+  })
+  .catch(error =&gt; {
+    console.error(error);
+    document.getElementById(&quot;fromFile&quot;).textContent = &quot;Erro ao carregar os dados do arquivo JSON&quot;;
+  });
+</code></pre>
+<h3 id="explicacao-do-javascript">Explicação do JavaScript</h3>
+<ol>
+<li><strong>Objeto JavaScript</strong>: A variável <code>jsonDataObject</code> contém os dados diretamente em forma de objeto. Usamos <code>JSON.stringify</code> para formatá-lo e exibi-lo no HTML.</li>
+<li><strong>String JSON</strong>: A variável <code>jsonString</code> contém os dados em formato de string JSON, que é transformada em objeto com <code>JSON.parse</code> antes de exibir.</li>
+<li><strong>Arquivo JSON</strong>: Usamos <code>fetch</code> para carregar o arquivo <code>data.json</code> e converter o conteúdo em JSON com <code>response.json()</code>. Em caso de erro, ele é tratado com <code>.catch</code>.</li>
+</ol>
+<h3 id="resultado">Resultado</h3>
+<p>Ao abrir o arquivo <code>index.html</code> no navegador, você verá três seções com os dados JSON exibidos de cada uma das formas. </p>
+<p>Esse exemplo cobre as abordagens de leitura JSON em JavaScript com um visual simples e fácil de entender.</p>
+<h2 id="lista-de-objetos">Lista de Objetos</h2>
+<p>Para adicionar um exemplo em que uma variável recebe uma lista de vários objetos (array de objetos JSON), podemos estender o exemplo no JavaScript para incluir uma nova variável que contenha vários objetos. Essa nova variável será então exibida no HTML de forma semelhante às anteriores.</p>
+<h3 id="passo-4-atualizando-o-html-indexhtml">Passo 4: Atualizando o HTML (<code>index.html</code>)</h3>
+<p>Adicione uma nova seção ao HTML para exibir os dados de vários objetos.</p>
+<pre><code class="language-html">&lt;h2&gt;Dados de uma Lista de Objetos JSON&lt;/h2&gt;
+&lt;pre id=&quot;fromArray&quot;&gt;&lt;/pre&gt;
+</code></pre>
+<h3 id="passo-5-atualizando-o-javascript-scriptjs">Passo 5: Atualizando o JavaScript (<code>script.js</code>)</h3>
+<p>Adicione uma nova variável contendo vários objetos JSON e exiba-a no HTML.</p>
+<pre><code class="language-js">// Exemplo 4: Lendo dados de uma lista de objetos JSON
+const jsonArray = [
+  {
+    &quot;nome&quot;: &quot;Lucas&quot;,
+    &quot;idade&quot;: 22,
+    &quot;cidade&quot;: &quot;Brasília&quot;
+  },
+  {
+    &quot;nome&quot;: &quot;Ana&quot;,
+    &quot;idade&quot;: 29,
+    &quot;cidade&quot;: &quot;Salvador&quot;
+  },
+  {
+    &quot;nome&quot;: &quot;Pedro&quot;,
+    &quot;idade&quot;: 35,
+    &quot;cidade&quot;: &quot;Recife&quot;
+  }
+];
+
+// Exibindo dados no HTML
+document.getElementById(&quot;fromArray&quot;).textContent = JSON.stringify(jsonArray, null, 2);
+</code></pre>
+<h3 id="explicacao-do-codigo">Explicação do Código</h3>
+<ol>
+<li><strong>Lista de Objetos JSON</strong>: A variável <code>jsonArray</code> armazena uma lista (array) contendo vários objetos JSON. Cada objeto representa uma pessoa com <code>nome</code>, <code>idade</code> e <code>cidade</code>.</li>
+<li><strong>Exibição</strong>: Usamos <code>JSON.stringify</code> para formatar a lista de objetos com indentação de 2 espaços, e o resultado é exibido na seção <code>&lt;pre id="fromArray"&gt;</code> do HTML.</li>
+</ol>
+<h3 id="visualizacao-completa">Visualização Completa</h3>
+<p>Ao abrir o arquivo <code>index.html</code>, você verá agora quatro seções:
+1. Dados de um Objeto JavaScript.
+2. Dados de uma String JSON.
+3. Dados de um Arquivo JSON.
+4. Dados de uma Lista de Objetos JSON.</p>
+<p>Essas seções exibirão cada tipo de dado JSON conforme o exemplo.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/html.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/css.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../../.."</script>
+    
+    <script src="../../../../js/base.js"></script>
+    <script src="../../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
