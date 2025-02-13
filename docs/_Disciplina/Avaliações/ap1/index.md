@@ -2,6 +2,7 @@
 
 ## Objetivo:
 
+<!--
 Desenvolver um site responsivo utilizando **HTML**, **CSS** e técnicas de layout como **Flexbox** e **CSS Grid**, seguindo boas práticas de design web. Escolha um tema(Loja de hardware, brinquedos, clubes, fâ-clube, etc.)
 
 ## Entrega:
@@ -100,3 +101,4 @@ Desenvolver um site responsivo utilizando **HTML**, **CSS** e técnicas de layou
 * O código deve ser organizado, indentado e comentado adequadamente.
 * O **CSS** deve ser escrito em um arquivo separado e vinculado corretamente ao HTML.
 * As imagens devem ser colocadas em uma subpasta "imagens"
+-->

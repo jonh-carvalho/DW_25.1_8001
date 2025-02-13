@@ -1,11 +1,12 @@
 # Aulas
 
-| Aula                         | Conteúdo |
+| Aula | Conteúdo |
+| ---- | -------- |
+| __01__ - 11/02/25    | Welcome Ibmec - [Introdução a Web](../docs/01_Introducao_WEB.pdf)        |
+| __02__ - 18/02/25     | Introdução a HTML |
 
-| __01__ - 07/08/24 | ------------------- |
-
+<!--
 | __02__ - 14/08/24     | Welcome Ibmec -[Introdução a Web](../docs/01_Introducao_WEB.pdf) |
-
 | __03__ - 21/08/24     | [Introdução ao HTML](../docs/02_Introducao_HTML.pdf)  |
 
 | __04__ - 28/08/24     | [Introdução ao CSS](../docs/03_Introducao_CSS.pdf)  |
@@ -36,3 +37,4 @@
 | __17__ - 27/11/24     | AP2      |
 
 | __18__ - 04/12/24     | AS -  Toda matéria (objetivas, discursivas e desenvolvimento)   |
+-->

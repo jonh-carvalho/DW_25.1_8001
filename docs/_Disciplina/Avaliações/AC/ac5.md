@@ -1,5 +1,6 @@
 ### **AC5: Manipulando Formulários com Javascript**
 
+<!--
 ** *Duração* : 70 minutos**
 
 <div style="color:red">IMPORTANTE: Todas as questões precisam ser devidamente comentadas com explicações precisas do que ocorre.
@@ -28,7 +29,7 @@ Plano
     <metacharset="UTF-8">
     <metaname="viewport"content="width=device-width, initial-scale=1.0">
     <title>Formulário com JavaScript</title>
-    <linkrel="stylesheet"href="styles.css"><!-- Link para o arquivo CSS -->
+    <linkrel="stylesheet"href="styles.css">
 </head>
 
 <body>
@@ -205,3 +206,5 @@ button[type="submit"]:hover:not(:disabled) {
 - FileReader: Usa FileReader para ler o arquivo de imagem e exibir a pré-visualização.
   
 - Limpar Pré-visualização: Limpa a pré-visualização da imagem quando o formulário é enviado e redefinido.
+
+-->

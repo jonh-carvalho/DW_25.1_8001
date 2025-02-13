@@ -1,8 +1,0 @@
-{
-    "nome": "Pedro",
-    "idade": 34,
-    "endereco": {
-      "cidade": "Curitiba",
-      "estado": "PR"
-    }
-  }

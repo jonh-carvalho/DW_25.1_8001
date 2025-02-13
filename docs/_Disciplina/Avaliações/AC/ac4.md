@@ -1,5 +1,6 @@
 ### **AC4: Criando um Gerenciador de Lista de Tarefas**
 
+<!-- 
 ** *Duração* : 70 minutos**
 
 **Objetivo:** Desenvolver um pequeno programa que permite gerenciar uma lista de tarefas. Esse programa irá adicionar, remover e listar as tarefas com base nas opções fornecidas pelo usuário.
@@ -50,3 +51,4 @@
    - Operadores de comparação (como `>=`, `<`, e `===`) para verificar as entradas do usuário.
 
 ---
+-->

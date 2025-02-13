@@ -2,6 +2,7 @@
 
 ## Objetivo
 
+<!--
 Desenvolver um site responsivo utilizando **HTML**, **CSS, JS** e técnicas de layout como **Flexbox** e **CSS Grid**, seguindo boas práticas de design web e Mobile First. Crie uma aplicação web interativa que utilize a API Pokémon para exibir informações detalhadas sobre Pokémons. A aplicação deve ser responsiva (mobile-first) e seguir os **padrões web**.
 
 ### Entrega
@@ -91,7 +92,7 @@ touch index.html styles.css script.js
 - **Passo 2:** Configurar o arquivo HTML
 
 ```html
-<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -207,3 +208,5 @@ Agora, você pode abrir o arquivo index.html no seu navegador e buscar informaç
 - [MasterDex](https://play.google.com/store/apps/details?id=com.lorenzogreco.pokedex_provider&hl=pt_BR)
 - [Goldex](https://play.google.com/store/apps/details?id=com.goldex&hl=pt_BR)
 - [Pocket Gallery](https://play.google.com/store/apps/details?id=com.eurekaffeine.pokedex.renaissance&hl=pt)
+
+-->

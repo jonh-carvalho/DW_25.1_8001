@@ -1,5 +1,5 @@
 ### **AC1: Criando uma página da Web básica**
-
+<!-- 
 **Objetivo** :
 Ao final desta atividade, os alunos devem ser capazes de demonstrar sua compreensão dos elementos básicos e da estrutura do HTML, criando uma página da web de perfil pessoal.
 
@@ -20,3 +20,4 @@ Ao final desta atividade, os alunos devem ser capazes de demonstrar sua compreen
 * Certifique-se de que seu documento tenha uma declaração DOCTYPE adequada e inclua tags essenciais como , e .`<html>``<head>``<body>`
 * Use comentários para rotular cada seção.
 * Verifique se o código está recuado corretamente para facilitar a leitura.
+-->
