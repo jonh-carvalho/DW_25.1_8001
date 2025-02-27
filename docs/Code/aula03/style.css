@@ -15,9 +15,12 @@ th {
     padding: 8px;
 }
 
-header{ background-color: aquamarine;}
+header{ background-color: aquamarine;
+    width: 100%;}
 footer { background-color: turquoise;}
 section{ background-color: cyan;}
 
 nav li{ display: inline;}
 nav{ background-color: cadetblue;}
+header, h1{ display: inline-block;
+}
