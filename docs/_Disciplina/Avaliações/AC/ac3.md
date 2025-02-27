@@ -52,7 +52,7 @@ ARQUIVO HTML:
     <style>
         Put your CSS here. For now, it's commented out.
     </style>
-    -->
+    
 </head>
 <body>
     <header>
