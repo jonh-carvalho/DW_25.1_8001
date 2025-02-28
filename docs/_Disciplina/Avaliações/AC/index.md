@@ -1,6 +1,6 @@
 ## Entregas dos ACs
 
-* AC1 - Entrega xx/xx/2025
+* AC1 - Entrega 12/03/2025
 * AC2 - Entrega xx/xx/2025
 * AC3 - Entrega xx/xx/2025
 * AC4 - Entrega xx/xx/2025
