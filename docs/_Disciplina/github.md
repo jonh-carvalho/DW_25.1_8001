@@ -1,6 +1,5 @@
 # Versionamento
 
-
 **Git** e **GitHub** – controle de versão para iniciantes
 
 ---
@@ -18,7 +17,7 @@ Para nosso projeto, faremos uma lista de tarefas escrita em um arquivo de texto 
 Para concluir este roteiro, você precisará do seguinte:
 
 * Uma interface de linha de comando, um terminal.
-* Um editor de texto de sua escolha (usarei o **VS Code**). 
+* Um editor de texto de sua escolha (usarei o **VS Code**).
 * Uma conta no **GitHub**.
 
 ## O que é Git?
@@ -66,9 +65,9 @@ Se você conhece a linha de comando há pouco e ainda está aprendendo a usá-la
 
 Depois de instalar o VS Code, abra seu projeto no editor e abra um novo terminal para seu projeto. Isso apontará automaticamente o terminal/linha de comando para o caminho do seu projeto.
 
-Agora, para inicializar um repositório do seu projeto, basta executar gitinit. Isso dirá ao Git para começar a observar seus arquivos a cada alteração que ocorrer. Esta é a aparência na linha de comando/terminal:** **
+Agora, para inicializar um repositório do seu projeto, basta executar git init. Isso dirá ao Git para começar a observar seus arquivos a cada alteração que ocorrer. Esta é a aparência na linha de comando/terminal:** **
 
-![Screenshot--95-]()git**init**
+![Screenshot-gitinit](./assets/gitinit.png)
 
 A primeira linha tem informações sobre meu PC e o caminho para a pasta. A segunda linha é o comando gitinit e a terceira linha é a resposta enviada de volta me dizendo que meu repositório (ou repo) foi inicializado. Ele é considerado vazio porque não informamos ao Git quais arquivos rastrear.** **
 
@@ -144,9 +143,9 @@ Agora, nosso arquivo está no estado preparado. Você não receberá uma respost
 
 ### Como confirmar (commit) arquivos no Git
 
-O próximo estado de um arquivo após o estado preparado é o estado confirmado. Para confirmar nosso arquivo, usamos o comando gitcommit -m "firstcommit"
+O próximo estado de um arquivo após o estado preparado é o estado confirmado. Para confirmar nosso arquivo, usamos o comando gitcommit -m "first commit"
 
-A primeira parte do comando gitcommit diz ao Git que todos os arquivos preparados estão prontos para serem confirmados. Então, é hora de tirar um instantâneo. A segunda parte, -m "firstcommit"**, é a **mensagem de confirmação. -m é uma abreviação de mensagem enquanto o texto entre aspas é a mensagem de confirmação (que pode ser a mensagem que você quiser e no idioma que quiser).
+A primeira parte do comando git commit diz ao Git que todos os arquivos preparados estão prontos para serem confirmados. Então, é hora de tirar um instantâneo. A segunda parte, -m "firstcommit"**, é a **mensagem de confirmação. -m é uma abreviação de mensagem enquanto o texto entre aspas é a mensagem de confirmação (que pode ser a mensagem que você quiser e no idioma que quiser).
 
 Depois de executar este comando, você deve obter uma resposta semelhante a esta:
 
@@ -168,8 +167,7 @@ gitbranch** -M main**
 git push -u origin main** **
 ```
 
-
-O primeiro comando, gitremoteaddorigin[https://github.com/ihechikara/git-and-github-tutorial.git](https://github.com/ihechikara/git-and-github-tutorial.git), cria uma conexão entre seu repositório local e o repositório remoto no GitHub.** **
+O primeiro comando, git remote addorigin [https://github.com/ihechikara/git-and-github-tutorial.git](https://github.com/ihechikara/git-and-github-tutorial.git), cria uma conexão entre seu repositório local e o repositório remoto no GitHub.** **
 
 O URL do seu projeto remoto deve ser totalmente diferente do anterior. Portanto, para acompanhar, certifique-se de seguir as etapas e trabalhar com seu próprio repositório remoto. Normalmente, você não receberá uma resposta após executar este comando, mas certifique-se de ter uma conexão com a internet.
 
@@ -190,13 +188,9 @@ MINHA LISTA DE TAREFAS
 ---
 
 1. Escrever um artigo.
-
 2. Programar.
-
 3. Estudar pelos livros.
-
 4. Chegar nas aulas a tempo.
-
 5. Visitar minha tia.
 
 **6. Me candidatar a trabalhos remotos. **
