@@ -441,7 +441,7 @@
 <p>Para concluir este roteiro, você precisará do seguinte:</p>
 <ul>
 <li>Uma interface de linha de comando, um terminal.</li>
-<li>Um editor de texto de sua escolha (usarei o <strong>VS Code</strong>). </li>
+<li>Um editor de texto de sua escolha (usarei o <strong>VS Code</strong>).</li>
 <li>Uma conta no <strong>GitHub</strong>.</li>
 </ul>
 <h2 id="o-que-e-git">O que é Git?</h2>
@@ -469,8 +469,8 @@ cd git and github tutorial
 </code></pre>
 <p>Se você conhece a linha de comando há pouco e ainda está aprendendo a usá-la para navegar pelo seu PC, sugiro usar o Visual Studio Code da Microsoft. É um editor de código que possui um terminal embutido para executar comandos. Você pode baixá-lo <a href="https://code.visualstudio.com/download">aqui</a>.</p>
 <p>Depois de instalar o VS Code, abra seu projeto no editor e abra um novo terminal para seu projeto. Isso apontará automaticamente o terminal/linha de comando para o caminho do seu projeto.</p>
-<p>Agora, para inicializar um repositório do seu projeto, basta executar gitinit. Isso dirá ao Git para começar a observar seus arquivos a cada alteração que ocorrer. Esta é a aparência na linha de comando/terminal:** **</p>
-<p><img alt="Screenshot--95-" src="" />git<strong>init</strong></p>
+<p>Agora, para inicializar um repositório do seu projeto, basta executar git init. Isso dirá ao Git para começar a observar seus arquivos a cada alteração que ocorrer. Esta é a aparência na linha de comando/terminal:** **</p>
+<p><img alt="Screenshot-gitinit" src="../assets/gitinit.png" /></p>
 <p>A primeira linha tem informações sobre meu PC e o caminho para a pasta. A segunda linha é o comando gitinit e a terceira linha é a resposta enviada de volta me dizendo que meu repositório (ou repo) foi inicializado. Ele é considerado vazio porque não informamos ao Git quais arquivos rastrear.** **</p>
 <p>Um repositório é apenas outra maneira de definir um projeto que está sendo monitorado/rastreado pelo Git.</p>
 <h3 id="arquivos-de-projeto-no-git">Arquivos de projeto no <strong>Git</strong></h3>
@@ -517,10 +517,10 @@ cd git and github tutorial
 <p>Quando inicializamos nosso projeto, o arquivo não estava sendo rastreado pelo Git. Para isso, usamos o comando gitadd .<strong> O ponto que vem depois de add representa todos os arquivos que existem no repositório. Se você quiser adicionar um arquivo específico (por exemplo, um arquivo chamado about.txt), use gitadd</strong> about.txt<strong>.</strong></p>
 <p>Agora, nosso arquivo está no estado preparado. Você não receberá uma resposta após este comando, mas, para saber em que estado seu arquivo está, você pode executar o comando git status. ** **</p>
 <h3 id="como-confirmar-commit-arquivos-no-git">Como confirmar (commit) arquivos no Git</h3>
-<p>O próximo estado de um arquivo após o estado preparado é o estado confirmado. Para confirmar nosso arquivo, usamos o comando gitcommit -m "firstcommit"</p>
-<p>A primeira parte do comando gitcommit diz ao Git que todos os arquivos preparados estão prontos para serem confirmados. Então, é hora de tirar um instantâneo. A segunda parte, -m "firstcommit"<strong>, é a </strong>mensagem de confirmação. -m é uma abreviação de mensagem enquanto o texto entre aspas é a mensagem de confirmação (que pode ser a mensagem que você quiser e no idioma que quiser).</p>
+<p>O próximo estado de um arquivo após o estado preparado é o estado confirmado. Para confirmar nosso arquivo, usamos o comando gitcommit -m "first commit"</p>
+<p>A primeira parte do comando git commit diz ao Git que todos os arquivos preparados estão prontos para serem confirmados. Então, é hora de tirar um instantâneo. A segunda parte, -m "firstcommit"<strong>, é a </strong>mensagem de confirmação. -m é uma abreviação de mensagem enquanto o texto entre aspas é a mensagem de confirmação (que pode ser a mensagem que você quiser e no idioma que quiser).</p>
 <p>Depois de executar este comando, você deve obter uma resposta semelhante a esta:</p>
-<p><img alt="Screenshot--97-" src="" />gitcommit</p>
+<p><img alt="Screenshot--97-" src="../assets/gitcommit.png" /></p>
 <p>Agora, nosso arquivo está no estado confirmado.</p>
 <p>Passo 4 – Envie o repositório para o GitHub** **</p>
 <p>Depois de criar o repositório, você deve ser redirecionado para uma página que informa como criar um repositório localmente ou enviar um já existente.</p>
@@ -531,39 +531,29 @@ gitbranch** -M main**
 
 git push -u origin main** **
 </code></pre>
-<p>O primeiro comando, gitremoteaddorigin<a href="https://github.com/ihechikara/git-and-github-tutorial.git">https://github.com/ihechikara/git-and-github-tutorial.git</a>, cria uma conexão entre seu repositório local e o repositório remoto no GitHub.** **</p>
+<p>O primeiro comando, git remote addorigin <a href="https://github.com/ihechikara/git-and-github-tutorial.git">https://github.com/ihechikara/git-and-github-tutorial.git</a>, cria uma conexão entre seu repositório local e o repositório remoto no GitHub.** **</p>
 <p>O URL do seu projeto remoto deve ser totalmente diferente do anterior. Portanto, para acompanhar, certifique-se de seguir as etapas e trabalhar com seu próprio repositório remoto. Normalmente, você não receberá uma resposta após executar este comando, mas certifique-se de ter uma conexão com a internet.</p>
 <p>O segundo comando, gitbranch -M main, altera o nome do seu branch principal para "main". O branch padrão pode ser criada como "master", mas "main" é o nome padrão para este repositório agora. Geralmente, não há resposta aqui.** **</p>
 <p>O último comando, gitpush -u originmain<strong>, envia seu repositório do seu dispositivo local para o GitHub. Você deve obter uma resposta semelhante a esta:</strong></p>
-<p><img alt="Screenshot--102-" src="" />gitpush</p>
+<p><img alt="Screenshot--102-" src="../assets/gitpush.png" /></p>
 <p>Para ajudá-lo a aprofundar sua compreensão dos estágios do arquivo, farei alterações no arquivo e, em seguida, enviarei a nova versão para o GitHub.</p>
 <p>Lembre-se de que nosso arquivo agora está no estado confirmado. Vamos fazer alterações no arquivo e anotar os estados.</p>
 <p>Vou adicionar uma nova tarefa à lista de tarefas:</p>
 <p>MINHA LISTA DE TAREFAS</p>
 <hr />
 <ol>
-<li>
-<p>Escrever um artigo.</p>
-</li>
-<li>
-<p>Programar.</p>
-</li>
-<li>
-<p>Estudar pelos livros.</p>
-</li>
-<li>
-<p>Chegar nas aulas a tempo.</p>
-</li>
-<li>
-<p>Visitar minha tia.</p>
-</li>
+<li>Escrever um artigo.</li>
+<li>Programar.</li>
+<li>Estudar pelos livros.</li>
+<li>Chegar nas aulas a tempo.</li>
+<li>Visitar minha tia.</li>
 </ol>
 <p>**6. Me candidatar a trabalhos remotos. **</p>
 <ol>
 <li>Praticar programação</li>
 </ol>
 <p>Depois de adicionar a nova tarefa, execute o comando git status. Isto é o que você deverá ver:** **</p>
-<p><img alt="Screenshot--98-" src="" />git<strong> status</strong></p>
+<p><img alt="Screenshot--98-" src="../assets/gitstatus.png" /></p>
 <p>Depois de fazer alterações no arquivo, ele foi movido para o estado modificado, mas ainda não está preparado para confirmação. Então, você ainda não pode enviá-lo para o GitHub. O Git não tirou um instantâneo final desse estado atual, pois está apenas comparando as alterações que fizemos agora com o último instantâneo.</p>
 <p>Agora vamos adicionar (preparar) este arquivo e, em seguida, confirmá-lo e enviá-lo. Isto é igual ao que fizemos na última seção.</p>
 <p>Primeiro, adicionamos o arquivo usando gitadd ., que adiciona todos os arquivos na pasta (um único arquivo, no nosso caso). Em seguida, confirmamos o arquivo executando gitcommit -m "added new task"<strong> (a mensagem significa "nova tarefa adicionada") seguido de gitpush</strong> -u originmain<strong>.</strong></p>
@@ -571,14 +561,14 @@ git push -u origin main** **
 <h3 id="como-usar-branches-no-git">**Como usar branches no Git **</h3>
 <p>Com branches, você pode criar uma cópia de um arquivo no qual gostaria de trabalhar sem estragar a cópia original. Você pode mesclar essas alterações com a cópia original ou apenas deixar o branch permanecer independente.</p>
 <p>Antes de começarmos a usar branches, quero mostrar uma representação visual do nosso repositório, que se parece com isso:</p>
-<p><img alt="g638" src="" />branchmain</p>
+<p><img alt="g638" src="../assets/branch.png" /></p>
 <p>A imagem acima mostra nosso branch principal com os dois últimos commits (o primeiro commit e o commit da nova tarefa adicionada).</p>
 <p>Neste ponto, quero adicionar mais tarefas à lista, mas ainda não tenho certeza se as quero na minha lista principal. Então, vou criar um outro branch chamado  test para ver como ficaria minha lista com mais tarefas incluídas.</p>
 <p>Para criar um outro branch, execute este comando: git checkout -b test.<strong> Vamos dividir isso em partes e explicar.</strong></p>
 <p>checkout diz ao Git que deve mudar para um outro branch. -bdiz ao Git para criar esse outro branch. testé o nome do branch a ser criado e alterado. Aqui está a resposta que você deve obter:</p>
-<p><img alt="Screenshot--99-" src="" />git<strong> checkout -b</strong></p>
+<p><img alt="Screenshot--99-" src="../assets/gitcheckout.png" /></p>
 <p>Agora que criamos um outro branch, é assim que nosso repositório ficará:</p>
-<p><img alt="g664" src="" />gitbranch</p>
+<p><img alt="g664" src="../assets/gitbranchtest.png" /></p>
 <p>Criamos o outro branch a partir do estado do nosso último commit. Vamos agora adicionar mais tarefas a esse novo branch.</p>
 <p>MINHA LISTA DE TAREFAS</p>
 <hr />
@@ -599,16 +589,16 @@ git push -u origin main** **
 <p>Depois de confirmar seu branchtest, volte para o branchmainexecutando este comando: git checkout main.</p>
 <p>Você notou que não adicionamos o -b ? Isso ocorre porque não estamos criando um outro branch, mas mudando para um branch existente. Você pode verificar todos os branches que existem em seu repositório executando o comando gitbranch ** **</p>
 <p>Agora, podemos mesclar as alterações que fizemos no branchtestno branchmainexecutando git merge test.<strong> Neste ponto, você verá todas as alterações feitas no branchtestrefletidas no branchmain. Você também deve receber uma resposta semelhante a esta:</strong></p>
-<p><img alt="Screenshot--100-" src="" />git<strong> merge</strong></p>
+<p><img alt="Screenshot--100-" src="../assets/gitmerge.png" /></p>
 <p>Aqui está uma representação visual do nosso repositório:</p>
-<p><img alt="g816" src="" />git<strong> merge</strong></p>
+<p><img alt="g816" src="../assets/gitmerge2.png" /></p>
 <p>Se você continuar a enviar seu repositório para o GitHub, verá que o branchtest não será enviado. Ele permanecerá apenas em seu repositório local. Se você quiser enviar seu branchtest<strong>, mude para ele usando git checkout test e execute o comando gitpush</strong> -u origin test<strong>.</strong></p>
 <h3 id="como-extrair-um-repositorio-no-git">**Como extrair um repositório no Git **</h3>
 <p>Fazer pullno Git significa clonar o estado atual de um repositório remoto em seu computador/repositório. Isso é útil quando você deseja trabalhar em seu repositório de um computador diferente ou quando está contribuindo para um projeto de código aberto on-line.</p>
 <p>Para testar isso, não se preocupe em mudar para um novo computador. Basta executar cd .. para sair do diretório atual e voltar uma etapa. No meu caso, naveguei de volta para a minha área de trabalho.** **</p>
 <p>Vá para o GitHub e, na página principal do seu repositório, você verá um botão verde que diz "Code". Ao clicar no botão, você deverá ver algumas opções em um menu suspenso. Vá em frente e copie o URL no formato HTTPS.</p>
 <p>Depois disso, execute git clone SEU_URL_DE_HTTPS. Este comando puxa o repositório remoto para seu computador local em uma pasta chamada git-and-git-tutorial. Isto é o que você deverá ver em seu terminal:** **</p>
-<p><img alt="Screenshot--101-" src="" />git<strong> clone</strong></p>
+<p><img alt="Screenshot--101-" src="../assets/gitclone.png" /></p>
 <h3 id="conclusao">Conclusão</h3>
 <p>Este artigo abordou os comandos básicos que ajudarão você a começar a usar o Git. Também começamos a aprender a usar o GitHub.</p>
 <p>Se você seguiu até este ponto, parabéns. Você está pronto para seguir em frente. Agora, você pode usar o Git em seus projetos, independentemente da linguagem de programação que estiver usando.</p>
