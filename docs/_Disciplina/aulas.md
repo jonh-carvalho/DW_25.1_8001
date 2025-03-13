@@ -4,7 +4,8 @@
 | ---- | -------- |
 | __01__ - 13/02/25    | Welcome Ibmec - [Introdução a Web](../docs/01_Introducao_WEB.pdf)        |
 | __02__ - 20/02/25     | [Introdução ao HTML](../docs/02_Introducao_HTML.pdf) |
-| __03__ - 27/02/25     |   |
+| __03__ - 27/02/25     | HTML |
+| __04__ - 13/02/25     | [Introdução ao CSS](../docs/03_Introducao_CSS.pdf)  |
 <!--
 
 
