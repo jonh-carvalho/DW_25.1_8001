@@ -149,7 +149,7 @@ A primeira parte do comando git commit diz ao Git que todos os arquivos preparad
 
 Depois de executar este comando, você deve obter uma resposta semelhante a esta:
 
-![Screenshot--97-]()gitcommit
+![Screenshot--97-](./assets/gitcommit.png)
 
 Agora, nosso arquivo está no estado confirmado.
 
@@ -167,15 +167,15 @@ gitbranch** -M main**
 git push -u origin main** **
 ```
 
-O primeiro comando, git remote addorigin [https://github.com/ihechikara/git-and-github-tutorial.git](https://github.com/ihechikara/git-and-github-tutorial.git), cria uma conexão entre seu repositório local e o repositório remoto no GitHub.** **
+O primeiro comando, git remote addorigin [https://github.com/ihechikara/git-and-github-tutorial.git](https://github.com/ihechikara/git-and-github-tutorial.git), cria uma conexão entre seu repositório local e o repositório remoto no GitHub.
 
 O URL do seu projeto remoto deve ser totalmente diferente do anterior. Portanto, para acompanhar, certifique-se de seguir as etapas e trabalhar com seu próprio repositório remoto. Normalmente, você não receberá uma resposta após executar este comando, mas certifique-se de ter uma conexão com a internet.
 
-O segundo comando, gitbranch -M main, altera o nome do seu branch principal para "main". O branch padrão pode ser criada como "master", mas "main" é o nome padrão para este repositório agora. Geralmente, não há resposta aqui.** **
+O segundo comando, gitbranch -M main, altera o nome do seu branch principal para "main". O branch padrão pode ser criada como "master", mas "main" é o nome padrão para este repositório agora. Geralmente, não há resposta aqui.
 
 O último comando, gitpush -u originmain**, envia seu repositório do seu dispositivo local para o GitHub. Você deve obter uma resposta semelhante a esta:**
 
-![Screenshot--102-]()gitpush
+![Screenshot--102-](./assets/gitpush.png)
 
 Para ajudá-lo a aprofundar sua compreensão dos estágios do arquivo, farei alterações no arquivo e, em seguida, enviarei a nova versão para o GitHub.
 
@@ -193,13 +193,13 @@ MINHA LISTA DE TAREFAS
 4. Chegar nas aulas a tempo.
 5. Visitar minha tia.
 
-**6. Me candidatar a trabalhos remotos. **
+6. Me candidatar a trabalhos remotos.
 
 7. Praticar programação
 
-Depois de adicionar a nova tarefa, execute o comando git status. Isto é o que você deverá ver:** **
+Depois de adicionar a nova tarefa, execute o comando git status. Isto é o que você deverá ver:
 
-![Screenshot--98-]()git** status**
+![Screenshot--98-](./assets/gitstatus.png)
 
 Depois de fazer alterações no arquivo, ele foi movido para o estado modificado, mas ainda não está preparado para confirmação. Então, você ainda não pode enviá-lo para o GitHub. O Git não tirou um instantâneo final desse estado atual, pois está apenas comparando as alterações que fizemos agora com o último instantâneo.
 
@@ -209,27 +209,27 @@ Primeiro, adicionamos o arquivo usando gitadd ., que adiciona todos os arquivos 
 
 Essas são as três etapas para enviar seus arquivos modificados para o GitHub. Você adiciona, confirma e, em seguida, envia. Espero que agora você entenda os estágios do arquivo e os comandos associados a eles.
 
-### **Como usar branches no Git **
+### **Como usar branches no Git**
 
 Com branches, você pode criar uma cópia de um arquivo no qual gostaria de trabalhar sem estragar a cópia original. Você pode mesclar essas alterações com a cópia original ou apenas deixar o branch permanecer independente.
 
 Antes de começarmos a usar branches, quero mostrar uma representação visual do nosso repositório, que se parece com isso:
 
-![g638]()branchmain
+![g638](./assets/branch.png)
 
 A imagem acima mostra nosso branch principal com os dois últimos commits (o primeiro commit e o commit da nova tarefa adicionada).
 
 Neste ponto, quero adicionar mais tarefas à lista, mas ainda não tenho certeza se as quero na minha lista principal. Então, vou criar um outro branch chamado  test para ver como ficaria minha lista com mais tarefas incluídas.
 
-Para criar um outro branch, execute este comando: git checkout -b test.** Vamos dividir isso em partes e explicar.**
+Para criar um outro branch, execute este comando: git checkout -b test. **Vamos dividir isso em partes e explicar.**
 
 checkout diz ao Git que deve mudar para um outro branch. -bdiz ao Git para criar esse outro branch. testé o nome do branch a ser criado e alterado. Aqui está a resposta que você deve obter:
 
-![Screenshot--99-]()git** checkout -b**
+![Screenshot--99-](./assets/gitcheckout.png)
 
 Agora que criamos um outro branch, é assim que nosso repositório ficará:
 
-![g664]()gitbranch
+![g664](./assets/gitbranchtest.png)
 
 Criamos o outro branch a partir do estado do nosso último commit. Vamos agora adicionar mais tarefas a esse novo branch.
 
@@ -237,59 +237,59 @@ MINHA LISTA DE TAREFAS
 
 ---
 
-1.Escrever um artigo.** **
+1.Escrever um artigo.
 
 2.Programar.
 
-3.Estudar pelos livros.** **
+3.Estudar pelos livros.
 
-4.Chegar nas aulas a tempo.** **
+4.Chegar nas aulas a tempo.
 
-5.Visitar minha tia.** **
+5.Visitar minha tia.
 
-6.Me candidatar a trabalhos remotos.** **
+6.Me candidatar a trabalhos remotos.
 
 7.Praticar programação
 
-8.Completar a tarefa de estágio.** **
+8.Completar a tarefa de estágio.
 
-9.Praticar aberturas do xadrez.** **
+9.Praticar aberturas do xadrez.
 
-10.Resolver quebra-cabeçasdo** xadrez**.** **
+10.Resolver quebra-cabeçasdo**xadrez**.
 
-11.Verificar o cronograma dos testes**.**  ** **
+11.Verificar o cronograma dos **testes**.
 
 ---
 
-  **	Adicionamos quatro novas tarefas. Para mesclar o novo estado com o branchmain**, você deve primeiro preparar e confirmar esse branch. Não entrarei em detalhes sobre o assunto, pois fizemos isso duas vezes na última seção.** **
+  **Adicionamos quatro novas tarefas. Para mesclar o novo estado com o branchmain**, você deve primeiro preparar e confirmar esse branch. Não entrarei em detalhes sobre o assunto, pois fizemos isso duas vezes na última seção.
 
 Você deve tentar fazer isso sozinho para entender como funciona. Como dica, adicione o arquivo e, em seguida, confirme com uma mensagem (consulte a seção anterior para obter detalhes de como fazer isso).
 
 Depois de confirmar seu branchtest, volte para o branchmainexecutando este comando: git checkout main.
 
-Você notou que não adicionamos o -b ? Isso ocorre porque não estamos criando um outro branch, mas mudando para um branch existente. Você pode verificar todos os branches que existem em seu repositório executando o comando gitbranch ** **
+Você notou que não adicionamos o -b ? Isso ocorre porque não estamos criando um outro branch, mas mudando para um branch existente. Você pode verificar todos os branches que existem em seu repositório executando o comando gitbranch.
 
-Agora, podemos mesclar as alterações que fizemos no branchtestno branchmainexecutando git merge test.** Neste ponto, você verá todas as alterações feitas no branchtestrefletidas no branchmain. Você também deve receber uma resposta semelhante a esta:**
+Agora, podemos mesclar as alterações que fizemos no branchtestno branchmainexecutando git merge test. **Neste ponto, você verá todas as alterações feitas no branchtestrefletidas no branchmain. Você também deve receber uma resposta semelhante a esta:**
 
-![Screenshot--100-]()git** merge**
+![Screenshot--100-](./assets/gitmerge.png)
 
 Aqui está uma representação visual do nosso repositório:
 
-![g816]()git** merge**
+![g816](./assets/gitmerge2.png)
 
 Se você continuar a enviar seu repositório para o GitHub, verá que o branchtest não será enviado. Ele permanecerá apenas em seu repositório local. Se você quiser enviar seu branchtest**, mude para ele usando git checkout test e execute o comando gitpush** -u origin test**.**
 
-### **Como extrair um repositório no Git **
+### **Como extrair um repositório no Git**
 
 Fazer pullno Git significa clonar o estado atual de um repositório remoto em seu computador/repositório. Isso é útil quando você deseja trabalhar em seu repositório de um computador diferente ou quando está contribuindo para um projeto de código aberto on-line.
 
-Para testar isso, não se preocupe em mudar para um novo computador. Basta executar cd .. para sair do diretório atual e voltar uma etapa. No meu caso, naveguei de volta para a minha área de trabalho.** **
+Para testar isso, não se preocupe em mudar para um novo computador. Basta executar cd .. para sair do diretório atual e voltar uma etapa. No meu caso, naveguei de volta para a minha área de trabalho.
 
 Vá para o GitHub e, na página principal do seu repositório, você verá um botão verde que diz "Code". Ao clicar no botão, você deverá ver algumas opções em um menu suspenso. Vá em frente e copie o URL no formato HTTPS.
 
-Depois disso, execute git clone SEU_URL_DE_HTTPS. Este comando puxa o repositório remoto para seu computador local em uma pasta chamada git-and-git-tutorial. Isto é o que você deverá ver em seu terminal:** **
+Depois disso, execute git clone SEU_URL_DE_HTTPS. Este comando puxa o repositório remoto para seu computador local em uma pasta chamada git-and-git-tutorial. Isto é o que você deverá ver em seu terminal:
 
-![Screenshot--101-]()git** clone**
+![Screenshot--101-](./assets/gitclone.png)
 
 ### Conclusão
 
@@ -297,17 +297,17 @@ Este artigo abordou os comandos básicos que ajudarão você a começar a usar o
 
 Se você seguiu até este ponto, parabéns. Você está pronto para seguir em frente. Agora, você pode usar o Git em seus projetos, independentemente da linguagem de programação que estiver usando.
 
-Você deve saber que esses não são todos os comandos que existem no Git – portanto, sinta-se à vontade para fazer mais pesquisas para aprender mais comandos e seus usos. Esteé um ótimo lugar para ver uma lista detalhada de mais comandos do Git (em inglês).** **
+Você deve saber que esses não são todos os comandos que existem no Git – portanto, sinta-se à vontade para fazer mais pesquisas para aprender mais comandos e seus usos.
 
 ---
 
 ## **Links**
 
-git - guia prático** **
+**git - guia prático**
 
-** **[https://rogerdudler.github.io/git-guide/index.pt_BR.html](https://rogerdudler.github.io/git-guide/index.pt_BR.html)
+**[https://rogerdudler.github.io/git-guide/index.pt_BR.html](https://rogerdudler.github.io/git-guide/index.pt_BR.html)**
 
-**--fast-version-control **
+**--fast-version-control**
 
 [https://git-scm.com/book/pt-br/v2](https://git-scm.com/book/pt-br/v2)
 
@@ -315,11 +315,11 @@ Interactive, Visual Git
 
 [https://the-turing-way.netlify.app/reproducible-research/vcs/vcs-git-interactive](https://the-turing-way.netlify.app/reproducible-research/vcs/vcs-git-interactive)
 
-LearnGitBranching!** **
+**LearnGitBranching!**
 
 [https://learngitbranching.js.org/?locale=pt_BR](https://learngitbranching.js.org/?locale=pt_BR)
 
-UnderstandingGitthroughimages** **
+**UnderstandingGitthroughimages**
 
 [https://dev.to/nopenoshishi/understanding-git-through-images-4an1](https://dev.to/nopenoshishi/understanding-git-through-images-4an1)
 
@@ -331,7 +331,7 @@ A Grip OnGit
 
 [https://agripongit.vincenttunru.com/](https://agripongit.vincenttunru.com/)
 
-VisualizingGitConceptswith** D3**
+**Visualizing Git Concept swith D3**
 
 [https://onlywei.github.io/explain-git-with-d3/#rebase](https://onlywei.github.io/explain-git-with-d3/#rebase)
 
