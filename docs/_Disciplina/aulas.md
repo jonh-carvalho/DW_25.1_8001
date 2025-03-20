@@ -6,9 +6,9 @@
 | __02__ - 20/02/25     | [Introdução ao HTML](../docs/02_Introducao_HTML.pdf) |
 | __03__ - 27/02/25     | HTML |
 | __04__ - 13/03/25     | - Formulários <br>- [Introdução ao CSS](../docs/03_Introducao_CSS.pdf)  |
+| __05__ - 04/09/24     | [span](https://www.w3schools.com/tags/tag_span.asp), [div](https://www.w3schools.com/html/html_div.asp), [class](https://www.w3schools.com/html/html_classes.asp), [id](https://www.w3schools.com/html/html_id.asp), [Selectors](https://www.w3schools.com/css/css_selectors.asp), etc...                |
+
 <!--
-
-
 | __04__ - 28/08/24     | [Introdução ao CSS](../docs/03_Introducao_CSS.pdf)  |
 
 | __05__ - 04/09/24     | [span](https://www.w3schools.com/tags/tag_span.asp), [div](https://www.w3schools.com/html/html_div.asp), [class](https://www.w3schools.com/html/html_classes.asp), [id](https://www.w3schools.com/html/html_id.asp), [Selectors](https://www.w3schools.com/css/css_selectors.asp), etc...                |
