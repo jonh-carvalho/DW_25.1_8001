@@ -44,9 +44,9 @@ A próxima coisa que você precisa fazer é definir seu nome de usuário e ender
 
 Para definir seu nome de usuário, digite e execute estes comandos:
 
-    gitconfig --global user.name "SEU_NOME_DE_USUARIO"**
+    git config --global user.name "SEU_NOME_DE_USUARIO"
 
-    gitconfig --global user.email "SEU_E-MAIL"**.
+    git config --global user.email "SEU_E-MAIL"
 
 Apenas certifique-se de substituir "SEU_NOME_DE_USUARIO" e "SEU_E-MAIL" pelos valores que você escolher — ou seja, seu nome de usuário e seu e-mail reais.
 
