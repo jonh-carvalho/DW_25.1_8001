@@ -1,5 +1,5 @@
 ### **AC2: Página da Web com Formulários e Multimídia**
-<!--
+
 **Objetivo** :
 
 Os alunos devem ser capazes de implementar e compreender a funcionalidade dos formulários HTML e integrar elementos multimídia em uma página da web.
@@ -32,4 +32,3 @@ Os alunos devem ser capazes de implementar e compreender a funcionalidade dos fo
 * Comente suas seções de código para melhorar a legibilidade.
 
 Ao concluir essas atividades, os alunos terão experiência prática na criação de páginas da web com elementos variados, desde estruturas básicas até formulários e conteúdo multimídia.
--->

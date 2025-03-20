@@ -1,0 +1,45 @@
+body{
+    margin: 0px;
+}section {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+  } 
+
+article {
+    background-color: black;
+    color: red;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+  } 
+
+  header {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+    
+  } 
+
+  footer {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+    
+  } 
+
+  li{
+    display: inline;
+}
+
+.esporte{
+    background-color: teal;
+}
+
+.politica{
+    background-color: turquoise;
+}
+
+.entretenimento{
+    background-color: thistle;
+}
