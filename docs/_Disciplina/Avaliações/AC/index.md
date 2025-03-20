@@ -8,9 +8,10 @@
 
 Repositório de Avaliações ACs e APs
 
-* [xxx](https://github.com/xxx)
-* [xxx](https://github.com/xxx)
-* [xxx](https://github.com/xxx)
-* [xxx](https://github.com/xxx)
-* [xxx](https://github.com/xxx)
-* [xxx](https://github.com/xxx)
+* [Kaio](https://github.com/alvesskaio/DW_Kaio_Alves)
+* [Ana Clara](https://github.com/anaclara-hs/dw)
+* [Riessz](https://github.com/riessz/-)
+* [Rechuanz](https://github.com/Rechuanz/DW)
+* [Arthur Maurity](https://github.com/ArthurMaurity/Dw)
+* [ernardo Miller](https://github.com/bernardomiller/Dw)
+* [João Victor](https://github.com/JVictor-De/aulaJohn)
