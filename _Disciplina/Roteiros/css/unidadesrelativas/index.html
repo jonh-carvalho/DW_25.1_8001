@@ -461,75 +461,67 @@
 <h2 id="1-em-relativo-ao-tamanho-da-fonte">1. <strong><code>em</code></strong> (relativo ao tamanho da fonte)</h2>
 <p>A unidade <code>em</code> é relativa ao tamanho da fonte do elemento pai. Se o tamanho da fonte do elemento pai for <code>16px</code>, por exemplo, <code>1em</code> será equivalente a <code>16px</code>. </p>
 <ul>
-<li>
-<p>Exemplo:</p>
-<p>```css
-body {
-    font-size: 16px;
-}</p>
-<p>h1 {
-    font-size: 2em; /<em> 32px </em>/
-}</p>
-<p>p {
-    font-size: 1em; /<em> 16px </em>/
-}
-```</p>
-</li>
+<li>Exemplo:</li>
 </ul>
+<pre><code class="language-css">    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2em; /* 32px */
+    }
+
+    p {
+        font-size: 1em; /* 16px */
+    }
+</code></pre>
 <h2 id="2-rem-relativo-ao-tamanho-da-fonte-raiz">2. <strong><code>rem</code></strong> (relativo ao tamanho da fonte raiz)</h2>
 <p>A unidade <code>rem</code> é relativa ao tamanho da fonte da raiz do documento, geralmente o elemento <code>html</code>. É útil para manter a consistência no design, pois sempre se refere ao tamanho de fonte definido no <code>html</code>.</p>
 <ul>
-<li>
-<p>Exemplo:</p>
-<p>```css
-html {
-    font-size: 16px; /<em> 1rem = 16px </em>/
-}</p>
-<p>h1 {
-    font-size: 2rem; /<em> 32px </em>/
-}</p>
-<p>p {
-    font-size: 1rem; /<em> 16px </em>/
-}
-```</p>
-</li>
+<li>Exemplo:</li>
 </ul>
+<pre><code class="language-css">    html {
+        font-size: 16px; /* 1rem = 16px */
+    }
+
+    h1 {
+        font-size: 2rem; /* 32px */
+    }
+
+    p {
+        font-size: 1rem; /* 16px */
+    }
+</code></pre>
 <h2 id="3-porcentagem">3. <strong><code>%</code></strong> (porcentagem)</h2>
 <p>As porcentagens são usadas para definir tamanhos relativos ao elemento pai. Elas podem ser aplicadas a margens, larguras, alturas, etc.</p>
 <ul>
-<li>
-<p>Exemplo:</p>
-<p><code>css
-div {
-    width: 50%; /* 50% da largura do elemento pai */
-    height: 100%; /* 100% da altura do elemento pai */
-}</code></p>
-</li>
+<li>Exemplo:</li>
 </ul>
+<pre><code class="language-css">    div {
+        width: 50%; /* 50% da largura do elemento pai */
+        height: 100%; /* 100% da altura do elemento pai */
+    }
+</code></pre>
 <h2 id="4-vh-e-vw-viewport-height-e-viewport-width">4. <strong><code>vh</code> e <code>vw</code></strong> (viewport height e viewport width)</h2>
 <p>As unidades <code>vh</code> e <code>vw</code> são relativas à altura e largura da <strong>viewport</strong> (janela visível). <code>1vh</code> equivale a 1% da altura da viewport, e <code>1vw</code> equivale a 1% da largura da viewport.</p>
 <ul>
-<li>
-<p>Exemplo:</p>
-<p><code>css
-section {
-    width: 100vw; /* 100% da largura da viewport */
-    height: 50vh; /* 50% da altura da viewport */
-}</code></p>
-</li>
+<li>Exemplo:</li>
 </ul>
+<pre><code class="language-css">    section {
+        width: 100vw; /* 100% da largura da viewport */
+        height: 50vh; /* 50% da altura da viewport */
+    }
+</code></pre>
 <h2 id="5-min-width-max-width-min-height-max-height">5. <strong><code>min-width</code>, <code>max-width</code>, <code>min-height</code>, <code>max-height</code></strong></h2>
 <p>Essas propriedades controlam o tamanho mínimo e máximo dos elementos, tornando-os mais responsivos em diferentes telas.</p>
 <ul>
-<li>
-<p>Exemplo:</p>
-<p><code>css
-div {
-    max-width: 100%; /* Não excede 100% da largura da tela */
-    min-height: 300px; /* Altura mínima de 300px */
-}</code></p>
-</li>
+<li>Exemplo:</li>
 </ul>
+<pre><code class="language-css">    div {
+        max-width: 100%; /* Não excede 100% da largura da tela */
+        min-height: 300px; /* Altura mínima de 300px */
+    }
+</code></pre>
 <h2 id="exemplo-pratico-de-site-responsivo">Exemplo Prático de Site Responsivo</h2>
 <p>Aqui está um exemplo prático aplicando algumas dessas unidades para criar um site responsivo:</p>
 <pre><code class="language-html">&lt;!DOCTYPE html&gt;
