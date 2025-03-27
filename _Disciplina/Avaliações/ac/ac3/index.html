@@ -438,114 +438,176 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#ac3-questoes-molde-enade">AC3: Questões molde enade</a></li>
+        <li class="first-level active"><a href="#ac3-questoes-molde-enade">AC3: Questões Molde Enade</a></li>
+            <li class="second-level"><a href="#questao">Questão</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="ac3-questoes-molde-enade"><strong>AC3: Questões molde enade</strong></h3>
-<p><strong><em>Duração</em> : 70 minutos</strong></p>
-<p><strong>Objetivo</strong> : Os alunos aplicarão seletores, propriedades e valores CSS para aprimorar o design de uma determinada página HTML básica.</p>
-<p><strong>Instruções</strong> :</p>
+<h3 id="ac3-questoes-molde-enade"><strong>AC3: Questões Molde Enade</strong></h3>
 <ol>
 <li>
-<p><strong>Estrutura da página</strong> :</p>
+<p>Um desenvolvedor front-end está criando um site responsivo para uma biblioteca comunitária. O layout deve se adaptar a dispositivos móveis, tablets e desktops, seguindo as melhores práticas de acessibilidade e semântica HTML. O design inclui:  </p>
 </li>
 <li>
-<p>Baixe a página HTML básica fornecida, que inclui um cabeçalho, alguns parágrafos, uma imagem e uma lista. Você também pode usar o arquivo HTML que desenvolveu para se apresentar.</p>
+<p>Um cabeçalho com logo e menu de navegação  </p>
 </li>
-<li>Comece adicionando um estilo geral:</li>
-<li>Defina uma cor de fundo para a página inteira.</li>
-<li>
-<p>Defina uma largura máxima para o conteúdo e centralize-o.</p>
-</li>
-<li>
-<p><strong>Tipografia e cor</strong> :</p>
-</li>
-<li>
-<p>Modifique o texto:</p>
-</li>
-<li>Defina um tamanho de fonte base e uma altura de linha para a página inteira.</li>
-<li>Escolha uma família de fontes para cabeçalhos e outra para o corpo do texto.</li>
-<li>Ajuste a cor e o peso dos cabeçalhos.</li>
-<li>
-<p>Adicione alterações de cor instantâneas para links.</p>
-</li>
-<li>
-<p><strong>Estilizando imagens e listas</strong> :</p>
-</li>
-<li>
-<p>Para a imagem:</p>
-</li>
-<li>Adicione uma borda.</li>
-<li>Adicione um pouco de sombra para um efeito lifting.</li>
-<li>Certifique-se de que seja responsivo, diminuindo com a largura da página.</li>
-<li>Para a lista:</li>
-<li>Adicione marcadores ou números personalizados.</li>
-<li>
-<p>Ajuste as margens e o preenchimento para obter o espaçamento adequado.</p>
-</li>
-<li>
-<p><strong>Feedback e revisão</strong> :</p>
-</li>
-<li>
-<p>Junte-se a outro aluno e revise o trabalho um do outro.</p>
-</li>
-<li>Ofereça feedback sobre suas escolhas de design e quaisquer melhorias que possam ser feitas.</li>
+<li>Uma seção hero com imagem de fundo e texto sobreposto  </li>
+<li>Um grid de livros em destaque  </li>
+<li>Um rodapé com informações de contato  </li>
 </ol>
-<p>Essas atividades são estruturadas para garantir que os alunos não apenas pratiquem os aspectos técnicos do CSS, mas também pensem nas decisões de design e obtenham feedback. No final, eles devem ter uma boa compreensão de como projetar e fazer o layout de uma página da Web usando CSS.</p>
-<p>ARQUIVO HTML:</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;Styling with CSS Activity&lt;/title&gt;
-    &lt;!-- 
-    &lt;style&gt;
-        Put your CSS here. For now, it's commented out.
-    &lt;/style&gt;
+<p>O código HTML parcial é:  </p>
+<pre><code class="language-html">&lt;header class=&quot;cabecalho&quot;&gt;
+  &lt;img src=&quot;logo.svg&quot; alt=&quot;Logo Biblioteca Comunitária&quot;&gt;
+  &lt;nav aria-label=&quot;Navegação principal&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#inicio&quot;&gt;Início&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#acervo&quot;&gt;Acervo&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#eventos&quot;&gt;Eventos&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
 
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;header&gt;
-        &lt;h1&gt;Welcome to My Page&lt;/h1&gt;
-        &lt;p&gt;This is a brief introduction about the page.&lt;/p&gt;
-    &lt;/header&gt;
-
-    &lt;main&gt;
-        &lt;section&gt;
-            &lt;h2&gt;About Me&lt;/h2&gt;
-            &lt;p&gt;My name is Jane Doe and I'm a web developer from New York. I love creating responsive and interactive websites. In my free time, I enjoy hiking, reading, and exploring new cafes in the city.&lt;/p&gt;
-            &lt;img src=&quot;https://via.placeholder.com/350x150&quot; alt=&quot;A placeholder image of Jane Doe&quot;&gt;
-        &lt;/section&gt;
-
-        &lt;section&gt;
-            &lt;h2&gt;My Favorite Books&lt;/h2&gt;
-            &lt;ul&gt;
-                &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/The_Great_Gatsby&quot;&gt;The Great Gatsby&lt;/a&gt; by F. Scott Fitzgerald&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird&quot;&gt;To Kill a Mockingbird&lt;/a&gt; by Harper Lee&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Nineteen_Eighty-Four&quot;&gt;1984&lt;/a&gt; by George Orwell&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Pride_and_Prejudice&quot;&gt;Pride and Prejudice&lt;/a&gt; by Jane Austen&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/section&gt;
-    &lt;/main&gt;
-
-    &lt;footer&gt;
-        &lt;p&gt;© 2023 by Jane Doe. All Rights Reserved.&lt;/p&gt;
-    &lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+&lt;section class=&quot;hero&quot;&gt;
+  &lt;h1&gt;Leitura para todos&lt;/h1&gt;
+  &lt;p&gt;Explore nosso acervo com mais de 10.000 títulos&lt;/p&gt;
+&lt;/section&gt;
 </code></pre>
-<p>Esta página contém:</p>
-<ol>
-<li>Um <strong>cabeçalho</strong> com um título principal e introdução.</li>
-<li>Uma área de conteúdo principal com duas seções:</li>
-<li>Uma seção "Sobre mim" com uma pequena biografia e uma imagem.</li>
-<li>Uma seção listando livros favoritos.</li>
-<li>Um <strong>rodapé</strong> com um aviso de direitos autorais.</li>
-</ol>
-<p>Espera-se que os alunos estilizem isso usando CSS, conforme descrito na atividade. O link da imagem é um espaço reservado e pode ser substituído por qualquer imagem que os alunos desejem usar.</p></div>
+<h4 id="questao">Questão</h4>
+<p>Ao implementar o CSS para atender aos requisitos de responsividade e acessibilidade, qual das seguintes abordagens é <strong>MAIS adequada</strong>?</p>
+<p>A) Usar unidades fixas como pixels para todos os elementos, garantindo fidelidade ao layout original em todos os dispositivos.<br />
+B) Utilizar media queries com breakpoints baseados em dispositivos específicos (ex: @media (max-width: 768px) para iPads).<br />
+C) Combinar unidades relativas (rem, %), container queries e media queries com breakpoints baseados no conteúdo.<br />
+D) Priorizar o uso de !important para sobrescrever estilos em diferentes viewports, garantindo consistência visual.<br />
+E) Implementar todos os estilos diretamente nos elementos HTML usando atributos style, sem folhas de CSS externas.</p>
+<p>--</p>
+<p>2./ Um desenvolvedor está criando um formulário de cadastro para um site de cursos online. Os requisitos incluem:</p>
+<ul>
+<li>Campos para <strong>nome</strong>, <strong>e-mail</strong>, <strong>senha</strong> e <strong>telefone</strong>.</li>
+<li>Validação em tempo real (client-side).</li>
+<li>Estilização consistente e acessível.</li>
+<li>Mensagens de erro claras.</li>
+<li>Compatibilidade com leitores de tela.</li>
+</ul>
+<p>O código HTML atual é:</p>
+<pre><code class="language-html">&lt;form id=&quot;cadastro&quot;&gt;
+  &lt;div&gt;
+    &lt;label&gt;Nome:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;nome&quot;&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label&gt;E-mail:&lt;/label&gt;
+    &lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label&gt;Senha:&lt;/label&gt;
+    &lt;input type=&quot;password&quot; name=&quot;senha&quot;&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label&gt;Telefone:&lt;/label&gt;
+    &lt;input type=&quot;tel&quot; name=&quot;telefone&quot;&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;submit&quot;&gt;Cadastrar&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<p><strong>Questão</strong></p>
+<p>Qual das seguintes modificações <strong>melhora significativamente</strong> a acessibilidade e usabilidade do formulário?</p>
+<p>A) Substituir os <code>&lt;label&gt;</code> por <code>&lt;span&gt;</code> e estilizá-los com CSS para ficarem mais atraentes visualmente.<br />
+B) Adicionar <code>autocomplete="off"</code> em todos os campos para evitar sugestões do navegador.<br />
+C) Incluir <code>aria-label</code> em cada input e remover as tags <code>&lt;label&gt;</code> para simplificar o código.<br />
+D) Associar cada <code>&lt;label&gt;</code> ao respectivo input usando <code>for</code> e <code>id</code>, e adicionar <code>aria-describedby</code> para mensagens de erro.<br />
+E) Substituir os inputs de senha por texto (<code>type="text"</code>) para melhorar a experiência do usuário.  </p>
+<p>--</p>
+<p>3./ Um desenvolvedor está atualizando um site antigo que utiliza <code>float</code> para criar um layout de duas colunas. O código HTML/CSS original é:  </p>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;box left&quot;&gt;Conteúdo à esquerda&lt;/div&gt;
+  &lt;div class=&quot;box right&quot;&gt;Conteúdo à direita&lt;/div&gt;
+  &lt;div class=&quot;footer&quot;&gt;Rodapé&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.box {
+  width: 45%;
+  padding: 10px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.footer {
+  background-color: #eee;
+}
+</code></pre>
+<p>Porém, o <strong>rodapé (<code>footer</code>)</strong> está aparecendo <strong>ao lado dos elementos flutuantes</strong>, em vez de abaixo deles, como deveria.  </p>
+<hr />
+<p><strong>Questão:</strong>  </p>
+<p>Qual das seguintes soluções <strong>resolve corretamente</strong> o problema do rodapé e <strong>mantém o layout de duas colunas</strong>?  </p>
+<p>A) Adicionar <code>overflow: hidden;</code> ao seletor <code>.footer</code> para conter os elementos flutuantes.<br />
+B) Usar <code>clear: both;</code> no <code>.footer</code> para forçá-lo a aparecer abaixo dos elementos flutuantes.<br />
+C) Substituir os <code>float</code> por <code>display: inline-block;</code> nos elementos <code>.box</code> e remover as propriedades <code>float</code>.<br />
+D) Adicionar <code>position: absolute;</code> ao <code>.footer</code> para posicioná-lo manualmente abaixo das colunas.<br />
+E) Aplicar <code>flexbox</code> no <code>.container</code> (<code>display: flex;</code>) e remover todas as propriedades <code>float</code>.  </p>
+<hr />
+<p>4./ Um desenvolvedor está criando uma tabela para exibir dados de produtos em um e-commerce. Os requisitos incluem:  </p>
+<ul>
+<li><strong>Design responsivo</strong> (adaptável a mobile/desktop).  </li>
+<li><strong>Estilização avançada</strong> (linhas zebradas, hover effects).  </li>
+<li><strong>Acessibilidade</strong> (leitura semântica por leitores de tela).  </li>
+</ul>
+<p>O código HTML inicial é:  </p>
+<pre><code class="language-html">&lt;table class=&quot;produtos&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;ID&lt;/th&gt;
+    &lt;th&gt;Nome&lt;/th&gt;
+    &lt;th&gt;Preço&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;001&lt;/td&gt;
+    &lt;td&gt;Smartphone XYZ&lt;/td&gt;
+    &lt;td&gt;R$ 1.999&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;!-- Mais linhas... --&gt;
+&lt;/table&gt;
+</code></pre>
+<p><strong>Questão:</strong>  </p>
+<p>Qual das seguintes abordagens de CSS <strong>atende melhor</strong> aos requisitos do projeto?  </p>
+<p>A) Usar apenas <code>display: block;</code> em todos os elementos da tabela (<code>table</code>, <code>tr</code>, <code>td</code>) para facilitar a responsividade.<br />
+B) Manter a estrutura semântica da tabela e aplicar:  </p>
+<p><code>css
+   .produtos {
+     width: 100%;
+     border-collapse: collapse;
+   }
+   .produtos th, .produtos td {
+     padding: 12px;
+     text-align: left;
+     border-bottom: 1px solid #ddd;
+   }
+   .produtos tr:nth-child(even) {
+     background-color: #f2f2f2;
+   }
+   .produtos tr:hover {
+     background-color: #e6f7ff;
+   }
+   @media (max-width: 600px) {
+     .produtos thead { display: none; }
+     .produtos td { display: block; }
+     .produtos td::before {
+       content: attr(data-label);
+       font-weight: bold;
+       display: inline-block;
+       width: 120px;
+     }
+   }</code>  </p>
+<p>E adicionar <code>data-label="Nome"</code> (por exemplo) em cada <code>&lt;td&gt;</code>.  </p>
+<p>C) Substituir a tabela por <code>&lt;div&gt;</code>s estilizadas com <code>flexbox</code> para evitar os problemas de layout de tabelas tradicionais.<br />
+D) Utilizar <code>float: left;</code> em cada célula (<code>td</code>) e definir larguras fixas em pixels para garantir alinhamento.<br />
+E) Adicionar <code>position: absolute;</code> aos cabeçalhos (<code>th</code>) para fixá-los no topo durante o scroll.  </p></div>
         
         
     </div>
