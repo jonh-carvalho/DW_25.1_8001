@@ -4,7 +4,7 @@
 
 Você foi contratado para desenvolver um site para uma pequena empresa de turismo que deseja oferecer pacotes de viagens personalizados. O site deve ser responsivo, acessível e seguir as melhores práticas de desenvolvimento web. A empresa solicitou que o site tenha uma página inicial com uma breve descrição dos serviços, uma seção de destinos populares e um formulário de contato.
 
-## Instruções
+## Instruções Primeira Parte
 
 1. Crie uma estrutura HTML básica para a página inicial do site.
 2. Inclua um cabeçalho com o nome da empresa e um menu de navegação com links para as seções "Serviços", "Destinos" e "Contato".
@@ -29,6 +29,51 @@ Você foi contratado para desenvolver um site para uma pequena empresa de turism
 - Formatação, comentários e organização do código
 - Funcionalidade do formulário
 - Responsividade
+
+--
+
+## Instruções Segunda Parte
+
+Você está desenvolvendo um site para a "EcoTour Brasil", uma empresa de turismo sustentável. O site deve incluir:
+
+- Um formulário de reserva com validação
+- Tabela responsiva com pacotes turísticos
+- Adaptação para 3 breakpoints (desktop, tablet, mobile)
+- Uso exclusivo de float, media queries e unidades relativa
+
+### Elementos de Responsividade Implementados:
+
+**Tabela Responsiva:**
+
+- Scroll horizontal em telas pequenas
+- Redução de padding e font-size em mobile
+- Layout otimizado para diferentes tamanhos de tela
+- Formulário com Validação Avançada:
+- Validação HTML5 (required, pattern, minlength)
+- Mensagens de erro contextualizadas
+- Feedback visual para campos inválidos
+- Padrão de máscara para telefone
+
+**Melhores Práticas no Formulário:**
+
+- Foco em acessibilidade (labels associados)
+- Estilização de estados (:focus, :invalid)
+- Feedback visual no hover do botão
+- Campos obrigatórios claramente marcados
+
+**Media Queries Estratégicas:**
+
+- Breakpoints em 900px (tablet) e 600px (mobile)
+- Ajuste de tamanhos de fonte
+- Mudança no layout de navegação
+- Redução de espaçamentos em mobile
+
+**Uso de Unidades Relativas:**
+
+- rem para tamanhos de fonte
+- em para paddings e margens
+- % para larguras de containers
+- vw para elementos de layout
 
 **Total: 80 pontos**
 
