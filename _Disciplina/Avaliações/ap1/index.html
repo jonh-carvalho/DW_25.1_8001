@@ -110,63 +110,48 @@
         
             
   <li class="dropdown-submenu">
-    <a tabindex="-1" href="">AC</a>
+    <a tabindex="-1" href="">Ac</a>
     <ul class="dropdown-menu">
         
             
 <li >
-    <a href="../AC/">Index</a>
+    <a href="../ac/">Index</a>
 </li>
 
         
             
 <li >
-    <a href="../AC/ac1/">Ac1</a>
+    <a href="../ac/ac1/">Ac1</a>
 </li>
 
         
             
 <li >
-    <a href="../AC/ac2/">Ac2</a>
+    <a href="../ac/ac2/">Ac2</a>
 </li>
 
         
             
 <li >
-    <a href="../AC/ac3/">Ac3</a>
+    <a href="../ac/ac3/">Ac3</a>
 </li>
 
         
             
 <li >
-    <a href="../AC/ac4/">Ac4</a>
+    <a href="../ac/ac4/">Ac4</a>
 </li>
 
         
             
 <li >
-    <a href="../AC/ac5/">Ac5</a>
+    <a href="../ac/ac5/">Ac5</a>
 </li>
 
         
             
 <li >
-    <a href="../AC/ac6/">Ac6</a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-            
-  <li class="dropdown-submenu">
-    <a tabindex="-1" href="">AP2</a>
-    <ul class="dropdown-menu">
-        
-            
-<li >
-    <a href="../AP2/">AP2</a>
+    <a href="../ac/ac6/">Ac6</a>
 </li>
 
         
@@ -182,6 +167,27 @@
             
 <li class="active">
     <a href="./">AP1</a>
+</li>
+
+        
+            
+<li >
+    <a href="indexold/">AP1</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Ap2</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../ap2/">AP2</a>
 </li>
 
         
@@ -410,12 +416,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../AP2/">
+                        <a rel="prev" href="../ac/ac6/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../../Exerc%C3%ADcios/Javascript/">
+                        <a rel="next" href="indexold/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -433,115 +439,46 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="first-level active"><a href="#ap1">AP1</a></li>
-            <li class="second-level"><a href="#objetivo">Objetivo:</a></li>
+            <li class="second-level"><a href="#contexto">Contexto</a></li>
                 
+            <li class="second-level"><a href="#instrucoes">Instruções</a></li>
+                
+                <li class="third-level"><a href="#criterios-de-avaliacao">Critérios de Avaliação</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
 <h1 id="ap1">AP1</h1>
-<h2 id="objetivo">Objetivo:</h2>
-<!--
-Desenvolver um site responsivo utilizando **HTML**, **CSS** e técnicas de layout como **Flexbox** e **CSS Grid**, seguindo boas práticas de design web. Escolha um tema(Loja de hardware, brinquedos, clubes, fâ-clube, etc.)
-
-## Entrega:
-
-- **Prazo:** 25/09/2024 até as 9:20h.
-- Enviar o projeto para o repositório em que o professor foi adicionado como colaborador em uma pasta chamada ap1 dentro da pasta docs, com  **HTML**, **CSS**, e **imagens** utilizados.
-
-## Critérios de Avaliação:
-
-* Uso correto das **tags HTML5** semânticas.
-* Implementação de **layout responsivo** com Flexbox e/ou Grid para o nav e footer.
-* **Design** e **usabilidade** do site (estética, organização visual, navegação).
-* **Organização e clareza** do código.
-* Implementação correta de **media queries** para diferentes dispositivos.
-* Funcionalidade e layout do  **formulário de contato** .
-
-## Requisitos:
-
-1. **Estrutura do site:**
-
-   * O site deverá conter, no mínimo, **4 páginas interligadas** (Home, Sobre, Serviços, Contato).
-   * Utilização correta de **tags semânticas** do HTML5 (ex.: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`).
-   * Adicione estilos globais iniciais: tamanho da fonte, família, cor de fundo, etc.
-2. **Design da barra de navegação:**
-
-   * Usando flexbox ou grid, crie uma barra de navegação que:
-   * Exibe seus itens em uma linha no desktop(telas grandes.)
-   * Empilha itens verticalmente para celular(tamanhos pequenos.
-   * Tem um logotipo à esquerda e links de navegação à direita.
-3. **Responsividade:**
-
-   * O site deve se adaptar corretamente a **diferentes tamanhos de tela** (desktop e smartphone).
-   * Utilização de **media queries** no CSS para ajustar o layout conforme a largura da tela.
-4. **Layout:**
-
-   * Deverá ser possível ver diferentes layouts de página dependendo do dispositivo (ex.: layout em uma coluna para mobile, e em duas ou mais colunas para desktop).
-5. **Conteúdo:**
-
-   * Cada página deve conter conteúdo informativo fictício (utilizar **Lorem Ipsum** quando necessário).
-   * Incluir **imagens** e **vídeos** relevantes e de alta qualidade. Certifique-se de que as imagens sejam redimensionáveis e não distorçam em diferentes resoluções.
-   * Uma **navegação clara** entre as páginas deve ser possível por meio de um menu no `<nav>`, que deve ser responsivo.
-   * Na página inicial o conteúdo principal deve usar a estrutura abaixo. Usando o sistema de layout de sua escolha:
-   * Crie um layout de três colunas.
-   * Garanta preenchimento consistente e margem entre os elementos.
-
-
-<pre><code class="language-html">&lt;main&gt;
-    &lt;article&gt;
-        &lt;h2&gt;Lorem ipsum dolor sit amet&lt;/h2&gt;
-        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.&lt;/p&gt;
-    &lt;/article&gt;
-
-    &lt;section class=&quot;flex-gallery&quot;&gt;
-        &lt;figure&gt;
-            &lt;img src=&quot;https://via.placeholder.com/150x150&quot; alt=&quot;Placeholder Image 1&quot;&gt;
-            &lt;figcaption&gt;Image 1&lt;/figcaption&gt;
-        &lt;/figure&gt;
-        &lt;figure&gt;
-            &lt;img src=&quot;https://via.placeholder.com/150x150&quot; alt=&quot;Placeholder Image 2&quot;&gt;
-            &lt;figcaption&gt;Image 2&lt;/figcaption&gt;
-        &lt;/figure&gt;
-        &lt;figure&gt;
-            &lt;img src=&quot;https://via.placeholder.com/150x150&quot; alt=&quot;Placeholder Image 3&quot;&gt;
-            &lt;figcaption&gt;Image 3&lt;/figcaption&gt;
-        &lt;/figure&gt;
-    &lt;/section&gt;
-
-    &lt;section class=&quot;grid-layout&quot;&gt;
-        &lt;div&gt;Grid Item A&lt;/div&gt;
-        &lt;div&gt;Grid Item B&lt;/div&gt;
-        &lt;div&gt;Grid Item C&lt;/div&gt;
-        &lt;div&gt;Grid Item D&lt;/div&gt;
-        &lt;/section&gt;
-&lt;/main&gt;
-</code></pre>
-
-
-6.**Formulário de Contato:**
-
-* Incluir um formulário de contato funcional na página "Contato", com os campos: **nome**, **e-mail**, **mensagem**.
-* Validação básica dos campos no **HTML5** (ex.: campos obrigatórios, e-mail válido).
-
-7.**Design de rodapé:**
-
-* Usando flexbox ou grid:
-  * Crie um rodapé que tenha três seções: Sobre, Links e ícones de mídia social.
-
-8.**Estilo e Design:**
-
-* Aplicar um esquema de cores consistente e harmonioso.
-* O design deve ser moderno e seguir boas práticas de **UX/UI**, com foco na legibilidade e usabilidade.
-* Uso de **tipografia** apropriada, com pelo menos **duas fontes** diferentes.
-* Usar **ícones** quando necessário (ex.: Font Awesome).
-
-9.**Código organizado:**
-
-* O código deve ser organizado, indentado e comentado adequadamente.
-* O **CSS** deve ser escrito em um arquivo separado e vinculado corretamente ao HTML.
-* As imagens devem ser colocadas em uma subpasta "imagens"
---></div>
+<h2 id="contexto">Contexto</h2>
+<p>Você foi contratado para desenvolver um site para uma pequena empresa de turismo que deseja oferecer pacotes de viagens personalizados. O site deve ser responsivo, acessível e seguir as melhores práticas de desenvolvimento web. A empresa solicitou que o site tenha uma página inicial com uma breve descrição dos serviços, uma seção de destinos populares e um formulário de contato.</p>
+<h2 id="instrucoes">Instruções</h2>
+<ol>
+<li>Crie uma estrutura HTML básica para a página inicial do site.</li>
+<li>Inclua um cabeçalho com o nome da empresa e um menu de navegação com links para as seções "Serviços", "Destinos" e "Contato".</li>
+<li>Adicione uma seção de "Serviços" com um parágrafo descrevendo os pacotes de viagens personalizados.</li>
+<li>Crie uma seção de "Destinos Populares" com uma lista não ordenada de pelo menos três destinos.</li>
+<li>Inclua um formulário de contato com campos para nome, e-mail, mensagem e um botão de envio.</li>
+<li>Utilize elementos semânticos do HTML5 para estruturar o conteúdo.</li>
+<li>Certifique-se de que o código HTML esteja bem formatado e siga as boas práticas de acessibilidade.</li>
+</ol>
+<h3 id="criterios-de-avaliacao">Critérios de Avaliação</h3>
+<ol>
+<li><strong>Estrutura HTML:</strong> O código deve seguir a estrutura básica de um documento HTML5, com elementos semânticos adequados.</li>
+<li><strong>Acessibilidade:</strong> O código deve incluir atributos e elementos que garantam a acessibilidade, como <code>label</code> para os campos do formulário e <code>alt</code> para imagens (caso sejam adicionadas).</li>
+<li><strong>Formatação:</strong> O código deve estar bem formatado, com indentação e organização adequadas.</li>
+<li><strong>Funcionalidade:</strong> O formulário deve estar funcional, com campos obrigatórios e um botão de envio.</li>
+<li><strong>Responsividade:</strong> O código deve incluir a meta tag <code>viewport</code> para garantir que o site seja responsivo.</li>
+</ol>
+<p><strong>Pontuação:</strong></p>
+<ul>
+<li>Estrutura HTML e semântica</li>
+<li>Acessibilidade</li>
+<li>Formatação, comentários e organização do código</li>
+<li>Funcionalidade do formulário</li>
+<li>Responsividade</li>
+</ul>
+<p><strong>Total: 80 pontos</strong></p>
+<p>Essa questão avalia a capacidade do candidato de criar uma página web básica, seguindo as melhores práticas de desenvolvimento web, incluindo semântica, acessibilidade e responsividade.</p></div>
         
         
     </div>
