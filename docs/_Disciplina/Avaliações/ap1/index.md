@@ -1,104 +1,35 @@
 # AP1
 
-## Objetivo:
+## Contexto
 
-<!--
-Desenvolver um site responsivo utilizando **HTML**, **CSS** e técnicas de layout como **Flexbox** e **CSS Grid**, seguindo boas práticas de design web. Escolha um tema(Loja de hardware, brinquedos, clubes, fâ-clube, etc.)
+Você foi contratado para desenvolver um site para uma pequena empresa de turismo que deseja oferecer pacotes de viagens personalizados. O site deve ser responsivo, acessível e seguir as melhores práticas de desenvolvimento web. A empresa solicitou que o site tenha uma página inicial com uma breve descrição dos serviços, uma seção de destinos populares e um formulário de contato.
 
-## Entrega:
+## Instruções
 
-- **Prazo:** 25/09/2024 até as 9:20h.
-- Enviar o projeto para o repositório em que o professor foi adicionado como colaborador em uma pasta chamada ap1 dentro da pasta docs, com  **HTML**, **CSS**, e **imagens** utilizados.
+1. Crie uma estrutura HTML básica para a página inicial do site.
+2. Inclua um cabeçalho com o nome da empresa e um menu de navegação com links para as seções "Serviços", "Destinos" e "Contato".
+3. Adicione uma seção de "Serviços" com um parágrafo descrevendo os pacotes de viagens personalizados.
+4. Crie uma seção de "Destinos Populares" com uma lista não ordenada de pelo menos três destinos.
+5. Inclua um formulário de contato com campos para nome, e-mail, mensagem e um botão de envio.
+6. Utilize elementos semânticos do HTML5 para estruturar o conteúdo.
+7. Certifique-se de que o código HTML esteja bem formatado e siga as boas práticas de acessibilidade.
 
-## Critérios de Avaliação:
+### Critérios de Avaliação
 
-* Uso correto das **tags HTML5** semânticas.
-* Implementação de **layout responsivo** com Flexbox e/ou Grid para o nav e footer.
-* **Design** e **usabilidade** do site (estética, organização visual, navegação).
-* **Organização e clareza** do código.
-* Implementação correta de **media queries** para diferentes dispositivos.
-* Funcionalidade e layout do  **formulário de contato** .
+1. **Estrutura HTML:** O código deve seguir a estrutura básica de um documento HTML5, com elementos semânticos adequados.
+2. **Acessibilidade:** O código deve incluir atributos e elementos que garantam a acessibilidade, como `label` para os campos do formulário e `alt` para imagens (caso sejam adicionadas).
+3. **Formatação:** O código deve estar bem formatado, com indentação e organização adequadas.
+4. **Funcionalidade:** O formulário deve estar funcional, com campos obrigatórios e um botão de envio.
+5. **Responsividade:** O código deve incluir a meta tag `viewport` para garantir que o site seja responsivo.
 
-## Requisitos:
+**Pontuação:**
 
-1. **Estrutura do site:**
+- Estrutura HTML e semântica
+- Acessibilidade
+- Formatação, comentários e organização do código
+- Funcionalidade do formulário
+- Responsividade
 
-   * O site deverá conter, no mínimo, **4 páginas interligadas** (Home, Sobre, Serviços, Contato).
-   * Utilização correta de **tags semânticas** do HTML5 (ex.: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`).
-   * Adicione estilos globais iniciais: tamanho da fonte, família, cor de fundo, etc.
-2. **Design da barra de navegação:**
+**Total: 80 pontos**
 
-   * Usando flexbox ou grid, crie uma barra de navegação que:
-   * Exibe seus itens em uma linha no desktop(telas grandes.)
-   * Empilha itens verticalmente para celular(tamanhos pequenos.
-   * Tem um logotipo à esquerda e links de navegação à direita.
-3. **Responsividade:**
-
-   * O site deve se adaptar corretamente a **diferentes tamanhos de tela** (desktop e smartphone).
-   * Utilização de **media queries** no CSS para ajustar o layout conforme a largura da tela.
-4. **Layout:**
-
-   * Deverá ser possível ver diferentes layouts de página dependendo do dispositivo (ex.: layout em uma coluna para mobile, e em duas ou mais colunas para desktop).
-5. **Conteúdo:**
-
-   * Cada página deve conter conteúdo informativo fictício (utilizar **Lorem Ipsum** quando necessário).
-   * Incluir **imagens** e **vídeos** relevantes e de alta qualidade. Certifique-se de que as imagens sejam redimensionáveis e não distorçam em diferentes resoluções.
-   * Uma **navegação clara** entre as páginas deve ser possível por meio de um menu no `<nav>`, que deve ser responsivo.
-   * Na página inicial o conteúdo principal deve usar a estrutura abaixo. Usando o sistema de layout de sua escolha:
-   * Crie um layout de três colunas.
-   * Garanta preenchimento consistente e margem entre os elementos.
-
-```html
-<main>
-    <article>
-        <h2>Lorem ipsum dolor sit amet</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
-    </article>
-
-    <section class="flex-gallery">
-        <figure>
-            <img src="https://via.placeholder.com/150x150" alt="Placeholder Image 1">
-            <figcaption>Image 1</figcaption>
-        </figure>
-        <figure>
-            <img src="https://via.placeholder.com/150x150" alt="Placeholder Image 2">
-            <figcaption>Image 2</figcaption>
-        </figure>
-        <figure>
-            <img src="https://via.placeholder.com/150x150" alt="Placeholder Image 3">
-            <figcaption>Image 3</figcaption>
-        </figure>
-    </section>
-
-    <section class="grid-layout">
-        <div>Grid Item A</div>
-        <div>Grid Item B</div>
-        <div>Grid Item C</div>
-        <div>Grid Item D</div>
-        </section>
-</main>
-```
-
-6.**Formulário de Contato:**
-
-* Incluir um formulário de contato funcional na página "Contato", com os campos: **nome**, **e-mail**, **mensagem**.
-* Validação básica dos campos no **HTML5** (ex.: campos obrigatórios, e-mail válido).
-
-7.**Design de rodapé:**
-
-* Usando flexbox ou grid:
-  * Crie um rodapé que tenha três seções: Sobre, Links e ícones de mídia social.
-
-8.**Estilo e Design:**
-
-* Aplicar um esquema de cores consistente e harmonioso.
-* O design deve ser moderno e seguir boas práticas de **UX/UI**, com foco na legibilidade e usabilidade.
-* Uso de **tipografia** apropriada, com pelo menos **duas fontes** diferentes.
-* Usar **ícones** quando necessário (ex.: Font Awesome).
-
-9.**Código organizado:**
-
-* O código deve ser organizado, indentado e comentado adequadamente.
-* O **CSS** deve ser escrito em um arquivo separado e vinculado corretamente ao HTML.
-* As imagens devem ser colocadas em uma subpasta "imagens"
--->
+Essa questão avalia a capacidade do candidato de criar uma página web básica, seguindo as melhores práticas de desenvolvimento web, incluindo semântica, acessibilidade e responsividade.
