@@ -1,54 +1,95 @@
-### **AC4: Criando um Gerenciador de Lista de Tarefas**
+### **AC3: Estilizando uma página da Web básica com CSS**
 
-<!-- 
-** *Duração* : 70 minutos**
+***Duração* : 70 minutos**
 
-**Objetivo:** Desenvolver um pequeno programa que permite gerenciar uma lista de tarefas. Esse programa irá adicionar, remover e listar as tarefas com base nas opções fornecidas pelo usuário.
+**Objetivo** : Os alunos aplicarão seletores, propriedades e valores CSS para aprimorar o design de uma determinada página HTML básica.
 
-#### **Instruções** :
+ **Instruções** :
 
-1. **Variáveis e Tipos de Dados:**
+1. **Estrutura da página** :
 
-   - Declare uma variável que será uma lista (array) vazia para armazenar as tarefas.
-   - Use diferentes tipos de dados, como strings para as tarefas e números para a escolha do usuário.
-2. **Operadores e Controle de Fluxo:**
+* Baixe a página HTML básica fornecida, que inclui um cabeçalho, alguns parágrafos, uma imagem e uma lista. Você também pode usar o arquivo HTML que desenvolveu para se apresentar.
+* Comece adicionando um estilo geral:
+  * Defina uma cor de fundo para a página inteira.
+  * Defina uma largura máxima para o conteúdo e centralize-o.
 
-   - Use operadores de comparação para verificar a escolha do usuário.
-   - Use um loop para permitir que o usuário continue gerenciando a lista até que ele escolha sair.
-3. **Funções com Arrays e Strings:**
+1. **Tipografia e cor** :
 
-   - Adicionar uma nova tarefa.
-   - Remover uma tarefa específica.
-   - Listar todas as tarefas.
+* Modifique o texto:
+  * Defina um tamanho de fonte base e uma altura de linha para a página inteira.
+  * Escolha uma família de fontes para cabeçalhos e outra para o corpo do texto.
+  * Ajuste a cor e o peso dos cabeçalhos.
+  * Adicione alterações de cor instantâneas para links.
 
-### Instruções:
+1. **Estilizando imagens e listas** :
 
-1. Crie um arquivo `todo.js` e adicione o código JavaScript a seguir.
-2. Execute-o em um navegador ou vscode para testar.
+* Para a imagem:
+  * Adicione uma borda.
+  * Adicione um pouco de sombra para um efeito lifting.
+  * Certifique-se de que seja responsivo, diminuindo com a largura da página.
+* Para a lista:
+  * Adicione marcadores ou números personalizados.
+  * Ajuste as margens e o preenchimento para obter o espaçamento adequado.
 
-### Conceitos Envolvidos:
+1. **Feedback e revisão** :
 
-1. **Variáveis (`let`, `const`, `var`)**:
+* Junte-se a outro aluno e revise o trabalho um do outro.
+* Ofereça feedback sobre suas escolhas de design e quaisquer melhorias que possam ser feitas.
 
-   - `let tasks = []`: Uma variável que pode mudar durante o programa (array).
-   - `const newTask`: Uma variável constante que não mudará após ser definida.
-2. **Tipos de Dados:**
+Essas atividades são estruturadas para garantir que os alunos não apenas pratiquem os aspectos técnicos do CSS, mas também pensem nas decisões de design e obtenham feedback. No final, devem ter uma boa compreensão de como projetar e fazer o layout de uma página da Web usando CSS.
 
-   - `tasks`: Um array que armazena strings.
-   - `newTask`: Uma string que representa o nome da tarefa.
-3. **Fluxo de Controle:**
+ARQUIVO HTML:
 
-   - `switch-case`: Usado para tratar as opções do menu.
-   - `while`: Mantém o programa em execução até o usuário escolher sair.
-4. **Arrays:**
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling with CSS Activity</title>
+    <!-- 
+    <style>
+        Put your CSS here. For now, it's commented out.
+    </style>
+  
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Page</h1>
+        <p>This is a brief introduction about the page.</p>
+    </header>
 
-   - Métodos como `.push()` para adicionar uma nova tarefa e `.splice()` para remover uma tarefa do array.
-5. **Strings:**
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>My name is Jane Doe and I'm a web developer from New York. I love creating responsive and interactive websites. In my free time, I enjoy hiking, reading, and exploring new cafes in the city.</p>
+            <img src="https://via.placeholder.com/350x150" alt="A placeholder image of Jane Doe">
+        </section>
 
-   - Manipulação de strings para exibir mensagens e armazenar o nome das tarefas.
-6. **Operadores:**
+        <section>
+            <h2>My Favorite Books</h2>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/The_Great_Gatsby">The Great Gatsby</a> by F. Scott Fitzgerald</li>
+                <li><a href="https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird">To Kill a Mockingbird</a> by Harper Lee</li>
+                <li><a href="https://en.wikipedia.org/wiki/Nineteen_Eighty-Four">1984</a> by George Orwell</li>
+                <li><a href="https://en.wikipedia.org/wiki/Pride_and_Prejudice">Pride and Prejudice</a> by Jane Austen</li>
+            </ul>
+        </section>
+    </main>
 
-   - Operadores de comparação (como `>=`, `<`, e `===`) para verificar as entradas do usuário.
+    <footer>
+        <p>© 2023 by Jane Doe. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+```
 
----
--->
+Esta página contém:
+
+1. Um **cabeçalho** com um título principal e introdução.
+2. Uma área de conteúdo principal com duas seções:
+   * Uma seção "Sobre mim" com uma pequena biografia e uma imagem.
+   * Uma seção listando livros favoritos.
+3. Um **rodapé** com um aviso de direitos autorais.
+
+Espera-se que os alunos estilizem isso usando CSS, conforme descrito na atividade. O link da imagem é um espaço reservado e pode ser substituído por qualquer imagem que os alunos desejem usar.

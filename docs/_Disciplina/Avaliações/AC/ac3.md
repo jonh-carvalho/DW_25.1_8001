@@ -1,7 +1,6 @@
-### **AC3: Estilizando uma página da Web básica com CSS**
+### **AC3: Questões molde enade**
 
-<!-- 
-** *Duração* : 70 minutos**
+***Duração* : 70 minutos**
 
 **Objetivo** : Os alunos aplicarão seletores, propriedades e valores CSS para aprimorar o design de uma determinada página HTML básica.
 
@@ -52,7 +51,7 @@ ARQUIVO HTML:
     <style>
         Put your CSS here. For now, it's commented out.
     </style>
-    
+  
 </head>
 <body>
     <header>
@@ -94,5 +93,3 @@ Esta página contém:
 3. Um **rodapé** com um aviso de direitos autorais.
 
 Espera-se que os alunos estilizem isso usando CSS, conforme descrito na atividade. O link da imagem é um espaço reservado e pode ser substituído por qualquer imagem que os alunos desejem usar.
-
--->
