@@ -1,7 +1,7 @@
 # Avaliações
 
 - ACs
-- AP1 - Entrega xx/xx/2025 - Envio no Github(Prof. adicionado como colaborador) do aluno Até as 9:20h
+- AP1 - Entrega 03/04/2025 - Envio no Github(Prof. adicionado como colaborador) do aluno Até as 9:20h
 - AP2 - Entrega xx/xx/2025 - Envio no Github (Prof. adicionado como colaborador) do aluno Até as 9:20h
 - AS - Prova com a matéria toda e questões objetivas, discursivas e de desenvolvimento de código.
 
