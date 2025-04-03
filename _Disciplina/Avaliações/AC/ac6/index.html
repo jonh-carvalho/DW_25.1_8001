@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../../img/favicon.ico">
 
     
-    <title>Ac3 - DW</title>
+    <title>Ac6 - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -110,7 +110,7 @@
         
             
   <li class="dropdown-submenu">
-    <a tabindex="-1" href="">Ac</a>
+    <a tabindex="-1" href="">AC</a>
     <ul class="dropdown-menu">
         
             
@@ -132,8 +132,8 @@
 
         
             
-<li class="active">
-    <a href="./">Ac3</a>
+<li >
+    <a href="../ac3/">Ac3</a>
 </li>
 
         
@@ -150,8 +150,23 @@
 
         
             
+<li class="active">
+    <a href="./">Ac6</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">AP2</a>
+    <ul class="dropdown-menu">
+        
+            
 <li >
-    <a href="../ac6/">Ac6</a>
+    <a href="../../AP2/">AP2</a>
 </li>
 
         
@@ -167,21 +182,6 @@
             
 <li >
     <a href="../../ap1/">AP1</a>
-</li>
-
-        
-    </ul>
-  </li>
-
-        
-            
-  <li class="dropdown-submenu">
-    <a tabindex="-1" href="">Ap2</a>
-    <ul class="dropdown-menu">
-        
-            
-<li >
-    <a href="../../ap2/">AP2</a>
 </li>
 
         
@@ -410,17 +410,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../ac2/">
+                        <a rel="prev" href="../ac5/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../ac4/">
+                        <a rel="next" href="../../AP2/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_24.2_8003/edit/master/docs/_Disciplina/Avaliações/ac/ac3.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_24.2_8003/edit/master/docs/_Disciplina/Avaliações/AC/ac6.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -432,176 +432,222 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#ac3-questoes-molde-enade">AC3: Questões Molde Enade</a></li>
-            <li class="second-level"><a href="#questao">Questão</a></li>
-                
+        <li class="first-level active"><a href="#ac6-manipulando-formularios-com-javascript">AC6: Manipulando Formulários com Javascript</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="ac3-questoes-molde-enade"><strong>AC3: Questões Molde Enade</strong></h3>
-<ol>
-<li>
-<p>Um desenvolvedor front-end está criando um site responsivo para uma biblioteca comunitária. O layout deve se adaptar a dispositivos móveis, tablets e desktops, seguindo as melhores práticas de acessibilidade e semântica HTML. O design inclui:  </p>
-</li>
-<li>
-<p>Um cabeçalho com logo e menu de navegação  </p>
-</li>
-<li>Uma seção hero com imagem de fundo e texto sobreposto  </li>
-<li>Um grid de livros em destaque  </li>
-<li>Um rodapé com informações de contato  </li>
-</ol>
-<p>O código HTML parcial é:  </p>
-<pre><code class="language-html">&lt;header class=&quot;cabecalho&quot;&gt;
-  &lt;img src=&quot;logo.svg&quot; alt=&quot;Logo Biblioteca Comunitária&quot;&gt;
-  &lt;nav aria-label=&quot;Navegação principal&quot;&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#inicio&quot;&gt;Início&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#acervo&quot;&gt;Acervo&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#eventos&quot;&gt;Eventos&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;
+<h3 id="ac6-manipulando-formularios-com-javascript"><strong>AC6: Manipulando Formulários com Javascript</strong></h3>
+<!--
+** *Duração* : 70 minutos**
 
-&lt;section class=&quot;hero&quot;&gt;
-  &lt;h1&gt;Leitura para todos&lt;/h1&gt;
-  &lt;p&gt;Explore nosso acervo com mais de 10.000 títulos&lt;/p&gt;
-&lt;/section&gt;
+<div style="color:red">IMPORTANTE: Todas as questões precisam ser devidamente comentadas com explicações precisas do que ocorre.
+</div>
+
+**Objetivo:** Desenvolver um formulário que terá os seus campos validados e monitorados por javascript.
+
+---
+
+### Uso de javascript em formulários
+
+Plano
+
+- Criar um formulário HTML simples com campos de entrada.
+- Adicionar um botão para enviar o formulário.
+- Escrever um script JavaScript para validar os dados do formulário.
+- Exibir mensagens de erro ou sucesso com base na validação.
+
+
+<pre><code class="language-html">
+&lt;!DOCTYPEhtml&gt;
+
+&lt;htmllang=&quot;pt-BR&quot;&gt;
+
+&lt;head&gt;
+    &lt;metacharset=&quot;UTF-8&quot;&gt;
+    &lt;metaname=&quot;viewport&quot;content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Formulário com JavaScript&lt;/title&gt;
+    &lt;linkrel=&quot;stylesheet&quot;href=&quot;styles.css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Formulário de Contato&lt;/h1&gt;
+
+    &lt;formid=&quot;contactForm&quot;&gt;
+        &lt;divclass=&quot;form-group&quot;&gt;
+            &lt;labelfor=&quot;name&quot;&gt;Nome:&lt;/label&gt;
+            &lt;inputtype=&quot;text&quot;id=&quot;name&quot;name=&quot;name&quot;required&gt;
+        &lt;/div&gt;
+
+        &lt;divclass=&quot;form-group&quot;&gt;
+            &lt;labelfor=&quot;email&quot;&gt;Email:&lt;/label&gt;
+            &lt;inputtype=&quot;email&quot;id=&quot;email&quot;name=&quot;email&quot;required&gt;
+        &lt;/div&gt;
+
+
+        &lt;divclass=&quot;form-group&quot;&gt;
+            &lt;labelfor=&quot;message&quot;&gt;Mensagem:&lt;/label&gt;
+            &lt;textareaid=&quot;message&quot;name=&quot;message&quot;required&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+
+        &lt;buttontype=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;
+
+    &lt;scriptsrc=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
-<h4 id="questao">Questão</h4>
-<p>Ao implementar o CSS para atender aos requisitos de responsividade e acessibilidade, qual das seguintes abordagens é <strong>MAIS adequada</strong>?</p>
-<p>A) Usar unidades fixas como pixels para todos os elementos, garantindo fidelidade ao layout original em todos os dispositivos.<br />
-B) Utilizar media queries com breakpoints baseados em dispositivos específicos (ex: @media (max-width: 768px) para iPads).<br />
-C) Combinar unidades relativas (rem, %), container queries e media queries com breakpoints baseados no conteúdo.<br />
-D) Priorizar o uso de !important para sobrescrever estilos em diferentes viewports, garantindo consistência visual.<br />
-E) Implementar todos os estilos diretamente nos elementos HTML usando atributos style, sem folhas de CSS externas.</p>
-<p>--</p>
-<p>2./ Um desenvolvedor está criando um formulário de cadastro para um site de cursos online. Os requisitos incluem:</p>
-<ul>
-<li>Campos para <strong>nome</strong>, <strong>e-mail</strong>, <strong>senha</strong> e <strong>telefone</strong>.</li>
-<li>Validação em tempo real (client-side).</li>
-<li>Estilização consistente e acessível.</li>
-<li>Mensagens de erro claras.</li>
-<li>Compatibilidade com leitores de tela.</li>
-</ul>
-<p>O código HTML atual é:</p>
-<pre><code class="language-html">&lt;form id=&quot;cadastro&quot;&gt;
-  &lt;div&gt;
-    &lt;label&gt;Nome:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;nome&quot;&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label&gt;E-mail:&lt;/label&gt;
-    &lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label&gt;Senha:&lt;/label&gt;
-    &lt;input type=&quot;password&quot; name=&quot;senha&quot;&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label&gt;Telefone:&lt;/label&gt;
-    &lt;input type=&quot;tel&quot; name=&quot;telefone&quot;&gt;
-  &lt;/div&gt;
-  &lt;button type=&quot;submit&quot;&gt;Cadastrar&lt;/button&gt;
-&lt;/form&gt;
-</code></pre>
-<p><strong>Questão</strong></p>
-<p>Qual das seguintes modificações <strong>melhora significativamente</strong> a acessibilidade e usabilidade do formulário?</p>
-<p>A) Substituir os <code>&lt;label&gt;</code> por <code>&lt;span&gt;</code> e estilizá-los com CSS para ficarem mais atraentes visualmente.<br />
-B) Adicionar <code>autocomplete="off"</code> em todos os campos para evitar sugestões do navegador.<br />
-C) Incluir <code>aria-label</code> em cada input e remover as tags <code>&lt;label&gt;</code> para simplificar o código.<br />
-D) Associar cada <code>&lt;label&gt;</code> ao respectivo input usando <code>for</code> e <code>id</code>, e adicionar <code>aria-describedby</code> para mensagens de erro.<br />
-E) Substituir os inputs de senha por texto (<code>type="text"</code>) para melhorar a experiência do usuário.  </p>
-<p>--</p>
-<p>3./ Um desenvolvedor está atualizando um site antigo que utiliza <code>float</code> para criar um layout de duas colunas. O código HTML/CSS original é:  </p>
-<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
-  &lt;div class=&quot;box left&quot;&gt;Conteúdo à esquerda&lt;/div&gt;
-  &lt;div class=&quot;box right&quot;&gt;Conteúdo à direita&lt;/div&gt;
-  &lt;div class=&quot;footer&quot;&gt;Rodapé&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<pre><code class="language-css">.box {
-  width: 45%;
-  padding: 10px;
+
+
+
+<pre><code class="language-css">body {
+
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.left {
-  float: left;
+
+h1 {
+    text-align: center;
+    color: #333;
 }
 
-.right {
-  float: right;
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0010px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
 }
 
-.footer {
-  background-color: #eee;
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+
+input[type=&quot;text&quot;],
+input[type=&quot;email&quot;],
+textarea,
+input[type=&quot;file&quot;] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+button[type=&quot;submit&quot;] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+button[type=&quot;submit&quot;]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+button[type=&quot;submit&quot;]:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#spinner {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+#imagePreview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+#imagePreviewimg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
 }
 </code></pre>
-<p>Porém, o <strong>rodapé (<code>footer</code>)</strong> está aparecendo <strong>ao lado dos elementos flutuantes</strong>, em vez de abaixo deles, como deveria.  </p>
-<hr />
-<p><strong>Questão:</strong>  </p>
-<p>Qual das seguintes soluções <strong>resolve corretamente</strong> o problema do rodapé e <strong>mantém o layout de duas colunas</strong>?  </p>
-<p>A) Adicionar <code>overflow: hidden;</code> ao seletor <code>.footer</code> para conter os elementos flutuantes.<br />
-B) Usar <code>clear: both;</code> no <code>.footer</code> para forçá-lo a aparecer abaixo dos elementos flutuantes.<br />
-C) Substituir os <code>float</code> por <code>display: inline-block;</code> nos elementos <code>.box</code> e remover as propriedades <code>float</code>.<br />
-D) Adicionar <code>position: absolute;</code> ao <code>.footer</code> para posicioná-lo manualmente abaixo das colunas.<br />
-E) Aplicar <code>flexbox</code> no <code>.container</code> (<code>display: flex;</code>) e remover todas as propriedades <code>float</code>.  </p>
-<hr />
-<p>4./ Um desenvolvedor está criando uma tabela para exibir dados de produtos em um e-commerce. Os requisitos incluem:  </p>
-<ul>
-<li><strong>Design responsivo</strong> (adaptável a mobile/desktop).  </li>
-<li><strong>Estilização avançada</strong> (linhas zebradas, hover effects).  </li>
-<li><strong>Acessibilidade</strong> (leitura semântica por leitores de tela).  </li>
-</ul>
-<p>O código HTML inicial é:  </p>
-<pre><code class="language-html">&lt;table class=&quot;produtos&quot;&gt;
-  &lt;tr&gt;
-    &lt;th&gt;ID&lt;/th&gt;
-    &lt;th&gt;Nome&lt;/th&gt;
-    &lt;th&gt;Preço&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;001&lt;/td&gt;
-    &lt;td&gt;Smartphone XYZ&lt;/td&gt;
-    &lt;td&gt;R$ 1.999&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;!-- Mais linhas... --&gt;
-&lt;/table&gt;
-</code></pre>
-<p><strong>Questão:</strong>  </p>
-<p>Qual das seguintes abordagens de CSS <strong>atende melhor</strong> aos requisitos do projeto?  </p>
-<p>A) Usar apenas <code>display: block;</code> em todos os elementos da tabela (<code>table</code>, <code>tr</code>, <code>td</code>) para facilitar a responsividade.<br />
-B) Manter a estrutura semântica da tabela e aplicar:  </p>
-<p><code>css
-   .produtos {
-     width: 100%;
-     border-collapse: collapse;
-   }
-   .produtos th, .produtos td {
-     padding: 12px;
-     text-align: left;
-     border-bottom: 1px solid #ddd;
-   }
-   .produtos tr:nth-child(even) {
-     background-color: #f2f2f2;
-   }
-   .produtos tr:hover {
-     background-color: #e6f7ff;
-   }
-   @media (max-width: 600px) {
-     .produtos thead { display: none; }
-     .produtos td { display: block; }
-     .produtos td::before {
-       content: attr(data-label);
-       font-weight: bold;
-       display: inline-block;
-       width: 120px;
-     }
-   }</code>  </p>
-<p>E adicionar <code>data-label="Nome"</code> (por exemplo) em cada <code>&lt;td&gt;</code>.  </p>
-<p>C) Substituir a tabela por <code>&lt;div&gt;</code>s estilizadas com <code>flexbox</code> para evitar os problemas de layout de tabelas tradicionais.<br />
-D) Utilizar <code>float: left;</code> em cada célula (<code>td</code>) e definir larguras fixas em pixels para garantir alinhamento.<br />
-E) Adicionar <code>position: absolute;</code> aos cabeçalhos (<code>th</code>) para fixá-los no topo durante o scroll.  </p></div>
+
+
+#### Explicação
+
+- HTML: Cria um formulário com campos para nome, email e mensagem.
+- JavaScript: Adiciona um ouvinte de evento para o envio do formulário, valida os campos e exibe uma mensagem de erro ou sucesso.
+
+## Questões
+
+1\. Como você pode acessar os valores dos inputs do formulário?
+
+2\. Atualizar o conteúdo de uma página web com o conteúdo do campos(escrever na página sem clicar no botão)?
+
+3\. Validar cada entrada do formulário antes de enviar o form? [Nome obrigatório, Email no formato, Mensagem obrigatória]
+
+4\. Redefinir as entradas do formulário após enviar o formulário?
+
+5\. Desativar o botão enviar até que todas as entradas do formulário sejam preenchidas?
+
+6\. Mostrar um botão giratório(spinner) de carregamento enquanto o formulário está sendo enviado?
+
+7\. Eibir uma mensagem de sucesso após o envio do formulário e depois redirecionar para outra página?
+
+8\. Adicionar Validação de Tamanho da Mensagem
+
+- Objetivo: Adicionar validação para garantir que a mensagem tenha pelo menos 100 caracteres.
+
+9\. Adicionar Feedback Visual para Campos Inválidos
+
+- Objetivo: Adicionar feedback visual (como bordas vermelhas) aos campos que não passam na validação.
+
+10\. Adicionar um Campo de Telefone com Máscara. [ (país) (ddd) xxxxx-xxxx ]
+
+11\. Adicionar um Campo de Seleção de Assunto. [Elogio, Reclamação e Sugestão]
+
+- Exiba uma mensagem de erro se nenhum assunto for selecionado.
+
+12\. Adicionar um Campo de Arquivo ao Formulário para permitir o upload de imagens.
+
+- Modifique o JavaScript para Exibir a Pré-visualização do Arquivo Selecionado
+
+- FileReader: Usa FileReader para ler o arquivo de imagem e exibir a pré-visualização.
+
+- Limpar Pré-visualização: Limpa a pré-visualização da imagem quando o formulário é enviado e redefinido.
+
+--></div>
         
         
     </div>
