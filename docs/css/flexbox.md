@@ -187,6 +187,88 @@ Permite que um item individual tenha um comportamento de alinhamento diferente d
 
 Recrie um layout flexível usando `flexbox`, onde os elementos devem se reorganizar de acordo com o tamanho da tela. Por exemplo, três colunas de conteúdo que se ajustam em uma linha única em telas grandes e se reorganizam verticalmente em telas menores.
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Responsivo</title>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px; /* Substitui as margens dos itens */
+      padding: 20px;
+      border: 2px solid black;
+      background-color: #f0f0f0;
+    }
+    
+    .item {
+      background-color: lightblue;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1 1 calc(33.333% - 20px); /* Base para 3 colunas com gap */
+      min-width: 250px; /* Largura mínima antes de quebrar */
+      box-sizing: border-box;
+    }
+    
+    /* Media query para tablets */
+    @media (max-width: 900px) {
+      .item {
+        flex: 1 1 calc(50% - 20px); /* 2 colunas */
+      }
+    }
+    
+    /* Media query para mobile */
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+      }
+      
+      .item {
+        flex: 1 1 auto; /* Uma coluna */
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+</body>
+</html>
+```
+
+### Melhorias realizadas:
+
+1. **Sistema de gap**: Utilizada a propriedade `gap` no container para espaçamento consistente entre os itens.
+
+2. **Flexibilidade responsiva**:
+   - Telas grandes (>900px): 3 colunas
+   - Tablets (600px-900px): 2 colunas
+   - Mobile (<600px): 1 coluna (empilhamento vertical)
+
+3. **Propriedade flex shorthand**:
+   - `flex: 1 1 calc(33.333% - 20px)` permite que os itens cresçam e encolham mantendo aproximadamente 3 colunas
+
+4. **Design melhorado**:
+   - Adicionado sombras e bordas arredondadas
+   - Padding no container para melhor espaçamento
+   - Fundo cinza claro para melhor contraste
+
+5. **Remoção da altura fixa**:
+   - Eliminada a altura fixa de 300px para que o container possa crescer naturalmente
+
+Este layout agora se adapta automaticamente a diferentes tamanhos de tela, reorganizando os itens de forma inteligente e mantendo uma aparência profissional em todos os dispositivos.
+
+---
+
 ### Sites
 
 Aqui estão alguns dos principais sites de demonstração e aprendizado do Flexbox CSS que ajudam a entender como ele funciona através de exemplos interativos e visuais:

@@ -1,9 +1,13 @@
 ---
-title: Arrays
-slug: Learn/JavaScript/First_steps/Arrays
+title: 01 - Arrays
+slug: Arrays
 ---
-Neste artigo final do módulo, nós vamos dar uma olhada em arrays - um elegante meio de armazenar uma lista de itens em uma mesmo variável. Aqui nós vemos o porquê isto é útil, depois exploraremos como criar uma array, recuperar, adicionar e remover itens armazenados em uma array, e mais.
 
+## Arrays
+
+Vamos dar uma olhada em arrays - um elegante meio de armazenar uma lista de itens em uma mesmo variável. Aqui nós vemos o porquê isto é útil, depois exploraremos como criar uma array, recuperar, adicionar e remover itens armazenados em uma array, e mais.
+
+```html
 <table class="learn-box standard-table">
   <tbody>
     <tr>
@@ -19,6 +23,7 @@ Neste artigo final do módulo, nós vamos dar uma olhada em arrays - um elegante
     </tr>
   </tbody>
 </table>
+```
 
 ### O que é uma array?
 
@@ -26,38 +31,40 @@ Arrays são geralmente descritas como "lista de objetos"; elas são basicamente 
 
 Se nós não tivessemos arrays, teríamos que armazenar cada item em uma variável separada, então chamar o código para mostrar e adicionar separadamente cada item. Isto seria muito mais longo de escrever, menos eficiente e mais suscetível a erros. Se nós temos 10 itens para adicionar na fatura, isto é ruim o bastante, mas e se fosse 100 itens ou 1000? Nós vamos retornar a este exemplo mais tarde neste artigo.
 
-#### Criando uma array
+### Criando uma array
 
 Arrays são contruídas de colchetes, os quais contém uma lista de itens separada por vírgulas.
 
-1. Vamos supor que queremos armazenar uma lista de compras em uma array — nós temos algo como o seguinte. Digite as linhas abaixo no seu console:
+Vamos supor que queremos armazenar uma lista de compras em uma array — nós temos algo como o seguinte. Digite as linhas abaixo no seu console
 
-```javascript
+```js
 var shopping = ["bread", "milk", "cheese", "hummus", "noodles"];
 shopping;
 ```
 
-2. Neste caso, cada item na array é uma string, mas tenha em mente que você pode armazenar qualquer item em uma array — string, número, objeto, outra variável, até outra array. Você pode também misturar e combinar tipos de itens — eles não têm que ser todos números, strings, etc. Tente isto:
+Neste caso, cada item na array é uma string, mas tenha em mente que você pode armazenar qualquer item em uma array — string, número, objeto, outra variável, até outra array. Você pode também misturar e combinar tipos de itens — eles não têm que ser todos números, strings, etc. Tente isto:
 
-```javascript
-var sequence = [1, 1, 2, 3, 5, 8, 13];
-var random = ["tree", 795, [0, 1, 2]];
+```js
+  var sequence = [1, 1, 2, 3, 5, 8, 13];
+  var random = ["tree", 795, [0, 1, 2]];
 ```
 
-1. **Tente criar um par de arrays você mesmo, antes de seguir em frente.**
+**Tente criar um par de arrays você mesmo, antes de seguir em frente.**
 
-#### Acessando e modificando itens de uma array
+---
+
+### Acessando e modificando itens de uma array
 
 Você pode acessar itens individuais em uma array usando a notação de colchetes, da mesma forma que você [acessa as letras em uma string](/en-US/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character).
 
-1. Digite o seguinte no seu console:
+Digite o seguinte no seu console:
 
 ```javascript
    shopping[0];
    // returns "bread"
 ```
 
-2. Você também pode modificar um item em uma array simplesmente dando um novo valor ao item. Tente isto:
+Você também pode modificar um item em uma array simplesmente dando um novo valor ao item. Tente isto:
 
 ```javascript
    shopping[0] = "tahini";
@@ -67,13 +74,15 @@ Você pode acessar itens individuais em uma array usando a notação de colchete
 
 > Nós dissemos isto antes, mas como lembrete — computadores começam a contar do 0!
 
-3. Note que uma array dentro de uma array é chamada de array multidimensional. Você pode acessar um item dentro de uma array que está localizada dentro de outra array, colocando dois conjuntos de colchetes juntos. Por exemplo, para acessar um dos itens dentro de uma array, que é o terceiro item dentro da array `random` (veja a seção anterior), nós podemos fazer algo tipo isto:
+**Note que uma array dentro de uma array é chamada de array multidimensional.**
+
+Você pode acessar um item dentro de uma array que está localizada dentro de outra array, colocando dois conjuntos de colchetes juntos. Por exemplo, para acessar um dos itens dentro de uma array, que é o terceiro item dentro da array `random` (veja a seção anterior), nós podemos fazer algo tipo isto:
 
 ```javascript
 random[2][2];
 ```
 
-1. Antes de continuar, faça algumas modificações nos exemplos, crie seus próprios arrays e veja o que funciona e o que não funciona. Divirta-se!
+Antes de continuar, faça algumas modificações nos exemplos, crie seus próprios arrays e veja o que funciona e o que não funciona. Divirta-se!
 
 ### Encontrando o comprimento de uma array
 
@@ -99,7 +108,7 @@ Você irá aprender sobre laços propriamente em um artigo futuro, mas, brevemen
 2. Pare o laço no item de número igual ao comprimento da array. Isto funcionará para uma array de qualquer tamanho, mas neste caso vai parar o laço no item 7 (isto é bom, como o último item — que nós queremos que o laço cubra — é 6.
 3. Para cada item, imprima no console do navegador com [`console.log()`](/pt-BR/docs/Web/API/Console/log).
 
-## Alguns métodos úteis em array
+### Alguns métodos úteis em array
 
 Nesta seção vamos ver alguns métodos relacionados a array úteis que nos permitem dividir strings em itens de array e vice-versa, e adicionar novos itens em arrays.
 
@@ -212,7 +221,7 @@ Antes de tudo, para adicionar ou remover um item no final de uma array, nós pod
    removedItem;
 ```
 
-## Aprendizado ativo: Imprimindo aqueles produtos!
+## Aprendizado ativo: Imprimindo aqueles produtos
 
 Vamos retornar ao exemplo que descrevemos antes — imprimindo nomes de produtos e preços em uma fatura, então totalizando os preços e imprindindo eles ao final. No exemplo editável abaixo há comentários contendo números — cada um deles marcam um lugar onde você tem que acidionar algo ao código. Eles são como segue:
 
