@@ -9,10 +9,21 @@
 | __05__ - 20/03/25 | - [span](https://www.w3schools.com/tags/tag_span.asp) <br> - [div](https://www.w3schools.com/html/html_div.asp) <br> - [class](https://www.w3schools.com/html/html_classes.asp) <br> - [id](https://www.w3schools.com/html/html_id.asp) <br> - [Selectors](https://www.w3schools.com/css/css_selectors.asp) |
 | __06__ - 27/03/25 | - [Posicionamento](https://jonh-carvalho.github.io/DW_25.1_8001/_Disciplina/Roteiros/css/posicionamento/) <br> - [Responsividade](https://jonh-carvalho.github.io/DW_25.1_8001/_Disciplina/Roteiros/css/siteresponsivo/) |
 | __07__ - 03/04/25 | - AP1 <br> - Envio do Site <br> - Prova Escrita no Laboratório  |
+| __08__ - 10/04/25     | Layout - [FlexBox](https://jonh-carvalho.github.io/DW_24.2_8003/_Disciplina/Roteiros/posicionamento/) e [Grid](https://jonh-carvalho.github.io/DW_24.2_8003/_Disciplina/Roteiros/grid/) CSS |
+| __09__ - 17/04/25     | JS |
+| __10__ - 25/04/25     | JS |
+| __11__ - 01/05/25     | Feriado |
+| __12__ - 08/05/25     | JS |
+| __13__ - 15/05/25     | JS |
+| __14__ - 22/05/25     | JS |
+| __15__ - 29/05/25     | JS |
+| __16__ - 05/06/25     | JS |
+| __17__ - 12/06/25     | AP2 |
+| __18__ - 19/06/25     | AS |
 <!--
-| __07__ - 11/09/24     |  e Layout - [FlexBox](https://jonh-carvalho.github.io/DW_24.2_8003/_Disciplina/Roteiros/posicionamento/) e [Grid](https://jonh-carvalho.github.io/DW_24.2_8003/_Disciplina/Roteiros/grid/) CSS |
+| __07__ - 11/09/24     |  e  |
 
-| __07__ - 18/09/24     |                                                                                                                                                                                           |
+| __07__ - 18/09/24     |  |
 | __08__ - 25/09/24     | AP1   |
 
 | __09__ - 02/10/24     | [Introdução ao Javascript](./docs/04_Introducao_JavaScript.pdf)  |

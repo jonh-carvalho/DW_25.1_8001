@@ -15,5 +15,5 @@ Crie um repositório "DW, todas as atividades de avaliação devem ser publicada
 
 ![Alt text](pages.png)
 
-- Em Branch fazer a seleção da pasta /docs para a publicação
+- Na Branch fazer a seleção da pasta /docs para a publicação
 - Salvar
