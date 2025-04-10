@@ -1100,5 +1100,3 @@ Esses sites são ótimos para aprender, praticar e experimentar com o CSS Grid e
 1. Crie um layout com 4 colunas e 3 linhas, e adicione diferentes cores aos elementos.
 2. Use o Grid para criar um layout de página com cabeçalho, barra lateral, conteúdo principal e rodapé.
 3. Ajuste o layout criado para que seja responsivo utilizando `minmax()` e `auto-fit`.
-
-Essa aula pode ser complementada com explicações teóricas e desafios práticos que incentivem a experimentação dos alunos com o Grid CSS.
