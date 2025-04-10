@@ -187,8 +187,6 @@ Permite que um item individual tenha um comportamento de alinhamento diferente d
 
 Recrie um layout flexível usando `flexbox`, onde os elementos devem se reorganizar de acordo com o tamanho da tela. Por exemplo, três colunas de conteúdo que se ajustam em uma linha única em telas grandes e se reorganizam verticalmente em telas menores.
 
-Vou criar um layout flexível que se adapta a diferentes tamanhos de tela, mantendo três colunas em telas grandes e reorganizando verticalmente em telas menores. Vou melhorar o código atual adicionando media queries e ajustando algumas propriedades flexbox:
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
