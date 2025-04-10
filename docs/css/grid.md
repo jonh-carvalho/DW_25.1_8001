@@ -74,6 +74,12 @@ Para transformar um elemento em um container grid, use:
 .container {
   display: grid; /* Ativa o Grid Layout */
 }
+
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid #333;
+}
 ```
 
 Isso faz com que todos os filhos diretos desse container se tornem **itens da grade**.
