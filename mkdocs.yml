@@ -4,11 +4,14 @@ theme:
   custom_dir: 'cinder'
   locale: pt_BR
   highlightjs: true
+  colors:
+    primary: '#FF5733'
+    secondary: '#C70039'
   hljs_languages:
     - yaml
     - python
     - html
     - css
     - javascript
-repo_url: "https://github.com/jonh-carvalho/DW_24.2_8003"
+repo_url: "https://github.com/jonh-carvalho/DW_25.1_8001"
 
