@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>W3Schools - DW</title>
+    <title>05 Http - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -219,31 +219,31 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Ferramentas <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../Sites%20Importantes/">Sites Importantes</a>
+    <a href="../../_Ferramentas/Sites%20Importantes/">Sites Importantes</a>
 </li>
 
                         
                             
 <li >
-    <a href="../validadores/">Validadores</a>
+    <a href="../../_Ferramentas/validadores/">Validadores</a>
 </li>
 
                         
                             
 <li >
-    <a href="../w3c/">W3C Web Standards</a>
+    <a href="../../_Ferramentas/w3c/">W3C Web Standards</a>
 </li>
 
                         
                             
-<li class="active">
-    <a href="./">W3Schools</a>
+<li >
+    <a href="../../_Ferramentas/w3schools/">W3Schools</a>
 </li>
 
                         
@@ -324,67 +324,67 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Js <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../../js/01_Arrays/">01 - Arrays</a>
+    <a href="../01_Arrays/">01 - Arrays</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/02_Maps_Sets/">02 Maps Sets</a>
+    <a href="../02_Maps_Sets/">02 Maps Sets</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/03_ChartMap/">03 ChartMap</a>
+    <a href="../03_ChartMap/">03 ChartMap</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/04_Forms/">04 Forms</a>
+    <a href="../04_Forms/">04 Forms</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">05 Http</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/05_Http/">05 Http</a>
+    <a href="../07_Fetch/">07 Fetch</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/07_Fetch/">07 Fetch</a>
+    <a href="../08_Lendo%20Json/">08 Lendo Json</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/08_Lendo%20Json/">08 Lendo Json</a>
+    <a href="../09_FetchApi/">09 FetchApi</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/09_FetchApi/">09 FetchApi</a>
+    <a href="../10_JsonServer/">10 JsonServer</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/10_JsonServer/">10 JsonServer</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../js/11_FormsJS/">11 Manipulando html com js</a>
+    <a href="../11_FormsJS/">11 Manipulando html com js</a>
 </li>
 
                         
@@ -401,17 +401,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../w3c/">
+                        <a rel="prev" href="../04_Forms/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../../_Html/blocos/">
+                        <a rel="next" href="../07_Fetch/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/_Ferramentas/w3schools.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/js/05_Http.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -423,13 +423,198 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#w3schools">w3schools</a></li>
+        <li class="first-level active"><a href="#1-introducao-ao-protocolo-http">1. Introdução ao Protocolo HTTP</a></li>
+            <li class="second-level"><a href="#http-a-base-da-comunicacao-na-web">HTTP: A Base da Comunicação na Web</a></li>
+                
+        <li class="first-level "><a href="#como-funciona">Como funciona?</a></li>
+        <li class="first-level "><a href="#por-que-o-http-e-importante">Por que o HTTP é importante?</a></li>
+        <li class="first-level "><a href="#http-vs-https">HTTP vs. HTTPS</a></li>
+        <li class="first-level "><a href="#2-metodos-http">2. Métodos HTTP</a></li>
+        <li class="first-level "><a href="#3-status-http">3. Status HTTP</a></li>
+            <li class="second-level"><a href="#1xx-informacional">1xx – Informacional</a></li>
+                
+            <li class="second-level"><a href="#2xx-sucesso">2xx – Sucesso</a></li>
+                
+            <li class="second-level"><a href="#3xx-redirecionamento">3xx – Redirecionamento</a></li>
+                
+            <li class="second-level"><a href="#4xx-erro-do-cliente">4xx – Erro do Cliente</a></li>
+                
+            <li class="second-level"><a href="#5xx-erro-do-servidor">5xx – Erro do Servidor</a></li>
+                
+        <li class="first-level "><a href="#4-exemplo-pratico-de-requisicao-http">4. Exemplo Prático de Requisição HTTP</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h2 id="w3schools"><a href="https://www.w3schools.com/">w3schools</a></h2>
-<p>O W3Schools  <strong>é um site em língua inglesa criado em 1998 e voltado para quem quer aprender mais sobre desenvolvimento e programação para a web</strong> . O W3Schools é uma ótima indicação para iniciantes e profissionais que se interessem em avançar no estudo de linguagens de programação.</p></div>
+<p>Aqui está uma sugestão para preparar a aula sobre métodos e status HTTP:</p>
+<h3 id="1-introducao-ao-protocolo-http">1. Introdução ao Protocolo HTTP</h3>
+<h4 id="http-a-base-da-comunicacao-na-web">HTTP: A Base da Comunicação na Web</h4>
+<p><strong>HTTP</strong> é a sigla para <strong>Hypertext Transfer Protocol</strong> ou, em português, <strong>Protocolo de Transferência de Hipertexto</strong>. É o protocolo fundamental que permite a comunicação entre navegadores web (como o Chrome, Firefox, Safari) e servidores web (onde estão hospedados os sites).</p>
+<p><strong>Em resumo, o HTTP é como a linguagem que seu navegador e os servidores da internet usam para "conversar" e mostrar as páginas que você visita.</strong></p>
+<h3 id="como-funciona">Como funciona?</h3>
+<p>1.<strong>Você digita um endereço (URL) na barra de endereços do seu navegador.</strong></p>
+<p>2.<strong>Seu navegador envia uma solicitação HTTP para o servidor onde está hospedado o site.</strong></p>
+<p>3.<strong>O servidor processa a solicitação e envia uma resposta HTTP com o conteúdo da página.</strong></p>
+<p>4.<strong>Seu navegador recebe a resposta e exibe a página na sua tela.</strong></p>
+<p><strong>Imagine o HTTP como um garçom em um restaurante:</strong> você faz um pedido (a solicitação HTTP), o garçom leva o pedido para a cozinha (o servidor), a cozinha prepara o prato (processa a solicitação) e o garçom traz o prato para você (a resposta HTTP).</p>
+<h3 id="por-que-o-http-e-importante">Por que o HTTP é importante?</h3>
+<p><strong>*Base da World Wide Web (WWW):</strong> É o protocolo que permite a existência da internet como a conhecemos, com páginas interligadas por links.</p>
+<p><strong>*Facilita a navegação:</strong> Permite que você navegue entre diferentes páginas de um site e de diferentes sites com facilidade.</p>
+<p><strong>*Transfere diversos tipos de dados:</strong> Não se limita a texto, mas também permite a transferência de imagens, vídeos, arquivos e outros tipos de dados.</p>
+<h3 id="http-vs-https">HTTP vs. HTTPS</h3>
+<p>É comum confundir HTTP com HTTPS. A principal diferença é que o <strong>HTTPS</strong> é uma versão segura do HTTP. Ele utiliza criptografia para proteger a comunicação entre o seu navegador e o servidor, garantindo a privacidade e a integridade dos dados transmitidos. Por isso, é altamente recomendado acessar sites que utilizam HTTPS, especialmente aqueles que envolvem transações financeiras ou informações pessoais.</p>
+<p><strong>Em resumo, o HTTP é o protocolo que torna a internet possível, permitindo que você acesse e interaja com milhões de sites ao redor do mundo.</strong></p>
+<p><strong>Gostaria de saber mais sobre algum aspecto específico do HTTP?</strong> Por exemplo, você pode me perguntar sobre:</p>
+<p><strong>*Métodos HTTP:</strong> GET, POST, PUT, DELETE e outros.</p>
+<p><strong>*Cabeçalhos HTTP:</strong> informações adicionais que acompanham as solicitações e respostas.</p>
+<p><strong>*Códigos de status HTTP:</strong> como 200 (OK), 404 (Não encontrado) e 500 (Erro interno do servidor).</p>
+<p><strong>*Diferenças entre HTTP e HTTPS.</strong></p>
+<p><strong>Se tiver alguma outra dúvida, fique à vontade para perguntar!</strong></p>
+<h3 id="2-metodos-http">2. Métodos HTTP</h3>
+<p>-<strong>GET</strong>: Usado para solicitar dados de um servidor. Não altera o estado do servidor (idempotente).</p>
+<pre><code>- Exemplo: acessar uma página da web ou recuperar uma lista de produtos.
+
+```http
+
+GET /produtos HTTP/1.1
+
+Host: www.exemplo.com
+
+```
+</code></pre>
+<p>-<strong>POST</strong>: Envia dados ao servidor para criar ou modificar um recurso.</p>
+<pre><code>- Exemplo: enviar um formulário de cadastro.
+
+```http
+
+POST /cadastro HTTP/1.1
+
+Host: www.exemplo.com
+
+Content-Type: application/json
+
+{
+
+"nome": "João",
+
+"email": "joao@example.com"
+
+}
+
+```
+</code></pre>
+<ul>
+<li>
+<p><strong>PUT</strong>: Envia dados para substituir um recurso existente no servidor.</p>
+<ul>
+<li>Exemplo: atualizar o perfil de um usuário.</li>
+</ul>
+</li>
+</ul>
+<p>-<strong>PATCH</strong>: Semelhante ao <code>PUT</code>, mas usado para modificações parciais de um recurso.</p>
+<ul>
+<li>
+<p><strong>DELETE</strong>: Remove um recurso do servidor.</p>
+<ul>
+<li>Exemplo: excluir uma conta de usuário.</li>
+</ul>
+</li>
+<li>
+<p><strong>HEAD</strong>: Igual ao <code>GET</code>, mas sem o corpo da resposta. Usado para verificar se o recurso existe ou para recuperar metadados.</p>
+</li>
+<li>
+<p><strong>OPTIONS</strong>: Pergunta ao servidor quais métodos e opções são suportados para um determinado recurso.</p>
+</li>
+<li>
+<p><strong>TRACE</strong>: Usado para diagnóstico, retorna o conteúdo exato da requisição recebida pelo servidor.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Atividade prática</strong>: Utilize uma ferramenta como o Postman ou <code>curl</code> para testar os métodos HTTP.</p>
+</blockquote>
+<h3 id="3-status-http">3. Status HTTP</h3>
+<p>Os códigos de status HTTP indicam o resultado de uma requisição. Eles são divididos em cinco categorias:</p>
+<h4 id="1xx-informacional">1xx – Informacional</h4>
+<p>Indicam que a requisição foi recebida e está sendo processada.</p>
+<ul>
+<li><strong>100 Continue</strong>: O servidor está pronto para receber o corpo da requisição.</li>
+</ul>
+<h4 id="2xx-sucesso">2xx – Sucesso</h4>
+<p>Indicam que a requisição foi bem-sucedida.</p>
+<ul>
+<li>
+<p><strong>200 OK</strong>: A requisição foi bem-sucedida.</p>
+</li>
+<li>
+<p><strong>201 Created</strong>: Um novo recurso foi criado (geralmente após um <code>POST</code>).</p>
+</li>
+<li>
+<p><strong>204 No Content</strong>: A requisição foi bem-sucedida, mas não há conteúdo para retornar.</p>
+</li>
+</ul>
+<h4 id="3xx-redirecionamento">3xx – Redirecionamento</h4>
+<p>Indicam que o cliente precisa realizar uma ação adicional para completar a requisição.</p>
+<ul>
+<li>
+<p><strong>301 Moved Permanently</strong>: O recurso foi movido permanentemente para uma nova URL.</p>
+</li>
+<li>
+<p><strong>302 Found</strong>: O recurso foi temporariamente movido para outra URL.</p>
+</li>
+</ul>
+<h4 id="4xx-erro-do-cliente">4xx – Erro do Cliente</h4>
+<p>Indicam que houve um erro por parte do cliente.</p>
+<ul>
+<li>
+<p><strong>400 Bad Request</strong>: A requisição está malformada ou inválida.</p>
+</li>
+<li>
+<p><strong>401 Unauthorized</strong>: Acesso negado, geralmente por falta de autenticação.</p>
+</li>
+<li>
+<p><strong>403 Forbidden</strong>: Acesso negado, mesmo com autenticação.</p>
+</li>
+<li>
+<p><strong>404 Not Found</strong>: O recurso solicitado não foi encontrado no servidor.</p>
+</li>
+</ul>
+<h4 id="5xx-erro-do-servidor">5xx – Erro do Servidor</h4>
+<p>Indicam que o servidor encontrou um erro ao tentar processar a requisição.</p>
+<ul>
+<li>
+<p><strong>500 Internal Server Error</strong>: Um erro genérico no servidor.</p>
+</li>
+<li>
+<p><strong>502 Bad Gateway</strong>: O servidor recebeu uma resposta inválida de outro servidor.</p>
+</li>
+<li>
+<p><strong>503 Service Unavailable</strong>: O servidor está temporariamente indisponível (sobrecarga ou manutenção).</p>
+</li>
+</ul>
+<h3 id="4-exemplo-pratico-de-requisicao-http">4. Exemplo Prático de Requisição HTTP</h3>
+<ul>
+<li>Montar uma requisição <code>GET</code> e uma <code>POST</code> usando JavaScript com o <code>fetch</code>.</li>
+<li>Mostrar a diferença entre os métodos e como lidar com os diferentes status HTTP retornados.</li>
+</ul>
+<p>```javascript</p>
+<p>fetch('https://api.exemplo.com/recurso')</p>
+<pre><code>.then(response=&gt;{
+
+  if (!response.ok) {
+
+    thrownewError(`Erro: ${response.status}`);
+
+  }
+
+  return response.json();
+
+})
+
+.then(data=&gt; console.log(data))
+
+.catch(error=&gt; console.error(error));
+</code></pre>
+<p>```</p></div>
         
         
     </div>
@@ -449,7 +634,7 @@
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -465,7 +650,7 @@
 
     <script>var base_url = "../.."</script>
     
-    <script src="../../js/base.js"></script>
+    <script src="../base.js"></script>
     <script src="../../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">

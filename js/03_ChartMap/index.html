@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>W3Schools - DW</title>
+    <title>03 ChartMap - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -219,31 +219,31 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Ferramentas <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../Sites%20Importantes/">Sites Importantes</a>
+    <a href="../../_Ferramentas/Sites%20Importantes/">Sites Importantes</a>
 </li>
 
                         
                             
 <li >
-    <a href="../validadores/">Validadores</a>
+    <a href="../../_Ferramentas/validadores/">Validadores</a>
 </li>
 
                         
                             
 <li >
-    <a href="../w3c/">W3C Web Standards</a>
+    <a href="../../_Ferramentas/w3c/">W3C Web Standards</a>
 </li>
 
                         
                             
-<li class="active">
-    <a href="./">W3Schools</a>
+<li >
+    <a href="../../_Ferramentas/w3schools/">W3Schools</a>
 </li>
 
                         
@@ -324,67 +324,67 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Js <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../../js/01_Arrays/">01 - Arrays</a>
+    <a href="../01_Arrays/">01 - Arrays</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/02_Maps_Sets/">02 Maps Sets</a>
+    <a href="../02_Maps_Sets/">02 Maps Sets</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">03 ChartMap</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/03_ChartMap/">03 ChartMap</a>
+    <a href="../04_Forms/">04 Forms</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/04_Forms/">04 Forms</a>
+    <a href="../05_Http/">05 Http</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/05_Http/">05 Http</a>
+    <a href="../07_Fetch/">07 Fetch</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/07_Fetch/">07 Fetch</a>
+    <a href="../08_Lendo%20Json/">08 Lendo Json</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/08_Lendo%20Json/">08 Lendo Json</a>
+    <a href="../09_FetchApi/">09 FetchApi</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/09_FetchApi/">09 FetchApi</a>
+    <a href="../10_JsonServer/">10 JsonServer</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/10_JsonServer/">10 JsonServer</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../js/11_FormsJS/">11 Manipulando html com js</a>
+    <a href="../11_FormsJS/">11 Manipulando html com js</a>
 </li>
 
                         
@@ -401,17 +401,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../w3c/">
+                        <a rel="prev" href="../02_Maps_Sets/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../../_Html/blocos/">
+                        <a rel="next" href="../04_Forms/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/_Ferramentas/w3schools.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/js/03_ChartMap.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -423,13 +423,83 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#w3schools">w3schools</a></li>
+        <li class="first-level active"><a href="#criando-um-grafico-de-linhas-simples-com-javascript-e-o-metodo-map">Criando um Gráfico de Linhas Simples com JavaScript e o Método map()</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h2 id="w3schools"><a href="https://www.w3schools.com/">w3schools</a></h2>
-<p>O W3Schools  <strong>é um site em língua inglesa criado em 1998 e voltado para quem quer aprender mais sobre desenvolvimento e programação para a web</strong> . O W3Schools é uma ótima indicação para iniciantes e profissionais que se interessem em avançar no estudo de linguagens de programação.</p></div>
+<h3 id="criando-um-grafico-de-linhas-simples-com-javascript-e-o-metodo-map">Criando um Gráfico de Linhas Simples com JavaScript e o Método <code>map()</code></h3>
+<p><strong>Entendendo o Problema:</strong></p>
+<p>Queremos transformar um conjunto de dados em um formato que possa ser utilizado para desenhar um gráfico de linhas. Para isso, vamos utilizar o método <code>map()</code> para gerar um array de coordenadas (x, y) a partir dos nossos dados.</p>
+<p><strong>Bibliotecas para Visualização:</strong></p>
+<p>Existem diversas bibliotecas JavaScript que facilitam a criação de gráficos, como:</p>
+<ul>
+<li><strong>Chart.js:</strong> Popular por sua facilidade de uso e customização.</li>
+<li><strong>D3.js:</strong> Uma biblioteca mais poderosa e flexível, ideal para gráficos complexos.</li>
+<li><strong>Plotly.js:</strong> Uma biblioteca interativa com diversos tipos de gráficos.</li>
+</ul>
+<p><strong>Exemplo com Chart.js:</strong></p>
+<p>Vamos supor que temos um array de dados representando a temperatura ao longo de uma semana:</p>
+<pre><code class="language-javascript">const temperaturas = [18, 22, 25, 20, 19, 23, 24];
+</code></pre>
+<p>Para criar um gráfico de linhas com Chart.js, precisamos de um elemento HTML <code>&lt;canvas&gt;</code> e um conjunto de dados no formato adequado. Utilizaremos o <code>map()</code> para transformar o array de temperaturas em um array de objetos, onde cada objeto representa um ponto no gráfico:</p>
+<pre><code class="language-javascript">const ctx = document.getElementById('myChart').getContext('2d');
+
+const labels = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'Temperatura (°C)',
+    data: temperaturas,
+    borderColor: 'rgb(75, 192, 192)',
+    fill: false
+  }]
+};
+
+const myChart = new Chart(ctx, {
+  type: 'line',
+  data: data,
+  options: {}
+});
+</code></pre>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Gráfico de Linhas com Chart.js&lt;/title&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;canvas id=&quot;myChart&quot;&gt;&lt;/canvas&gt;
+
+  &lt;script&gt;
+    // JavaScript (já mostrado anteriormente)
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>Explicando o Código:</strong></p>
+<ul>
+<li><strong>Criamos um canvas:</strong> O elemento <code>&lt;canvas&gt;</code> é onde o gráfico será desenhado.</li>
+<li><strong>Definimos os rótulos:</strong> O array <code>labels</code> contém os rótulos para cada ponto do eixo x (dias da semana).</li>
+<li><strong>Transformamos os dados:</strong> O <code>map()</code> é usado para criar um novo array de objetos, onde cada objeto possui as propriedades <code>x</code> (índice) e <code>y</code> (temperatura). No entanto, para o Chart.js, não precisamos criar explicitamente as coordenadas x, pois os rótulos já servem como essa informação.</li>
+<li><strong>Configuramos o gráfico:</strong> Criamos um novo objeto Chart, definindo o tipo do gráfico (linha), os dados e as opções de configuração.</li>
+</ul>
+<p><strong>Personalizando o Gráfico:</strong></p>
+<p>O Chart.js oferece diversas opções para personalizar o gráfico, como cores, espessura das linhas, marcadores, etc. Consulte a documentação oficial para mais detalhes: <a href="https://www.google.com/url?sa=E&amp;source=gmail&amp;q=https://www.chartjs.org/docs/latest/">https://www.chartjs.org/docs/latest/</a></p>
+<p><strong>Outros Exemplos:</strong></p>
+<ul>
+<li><strong>Gráfico de barras:</strong> Substitua <code>type: 'line'</code> por <code>type: 'bar'</code>.</li>
+<li><strong>Gráfico de pizza:</strong> Utilize <code>type: 'pie'</code>.</li>
+<li><strong>Múltiplas séries:</strong> Adicione mais datasets ao objeto <code>data</code> para comparar diferentes conjuntos de dados.</li>
+</ul>
+<p><strong>Desafio:</strong></p>
+<p>Adapte o exemplo acima para criar um gráfico de linhas que mostre a evolução do preço de uma ação ao longo de um mês. Você pode gerar dados aleatórios para simular os preços.</p>
+<p><strong>Recursos Adicionais:</strong></p>
+<ul>
+<li><strong>Documentação Chart.js:</strong> <a href="https://www.google.com/url?sa=E&amp;source=gmail&amp;q=https://www.chartjs.org/docs/latest/">https://www.chartjs.org/docs/latest/</a></li>
+</ul>
+<p>Com o <code>map()</code> e bibliotecas como Chart.js, você pode criar gráficos personalizados e informativos para visualizar seus dados de forma eficaz.</p></div>
         
         
     </div>
@@ -449,7 +519,7 @@
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -465,7 +535,7 @@
 
     <script>var base_url = "../.."</script>
     
-    <script src="../../js/base.js"></script>
+    <script src="../base.js"></script>
     <script src="../../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">

@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>W3Schools - DW</title>
+    <title>07 Fetch - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -219,31 +219,31 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Ferramentas <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../Sites%20Importantes/">Sites Importantes</a>
+    <a href="../../_Ferramentas/Sites%20Importantes/">Sites Importantes</a>
 </li>
 
                         
                             
 <li >
-    <a href="../validadores/">Validadores</a>
+    <a href="../../_Ferramentas/validadores/">Validadores</a>
 </li>
 
                         
                             
 <li >
-    <a href="../w3c/">W3C Web Standards</a>
+    <a href="../../_Ferramentas/w3c/">W3C Web Standards</a>
 </li>
 
                         
                             
-<li class="active">
-    <a href="./">W3Schools</a>
+<li >
+    <a href="../../_Ferramentas/w3schools/">W3Schools</a>
 </li>
 
                         
@@ -324,67 +324,67 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Js <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../../js/01_Arrays/">01 - Arrays</a>
+    <a href="../01_Arrays/">01 - Arrays</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/02_Maps_Sets/">02 Maps Sets</a>
+    <a href="../02_Maps_Sets/">02 Maps Sets</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/03_ChartMap/">03 ChartMap</a>
+    <a href="../03_ChartMap/">03 ChartMap</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/04_Forms/">04 Forms</a>
+    <a href="../04_Forms/">04 Forms</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/05_Http/">05 Http</a>
+    <a href="../05_Http/">05 Http</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">07 Fetch</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/07_Fetch/">07 Fetch</a>
+    <a href="../08_Lendo%20Json/">08 Lendo Json</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/08_Lendo%20Json/">08 Lendo Json</a>
+    <a href="../09_FetchApi/">09 FetchApi</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/09_FetchApi/">09 FetchApi</a>
+    <a href="../10_JsonServer/">10 JsonServer</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../js/10_JsonServer/">10 JsonServer</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../js/11_FormsJS/">11 Manipulando html com js</a>
+    <a href="../11_FormsJS/">11 Manipulando html com js</a>
 </li>
 
                         
@@ -401,17 +401,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../w3c/">
+                        <a rel="prev" href="../05_Http/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../../_Html/blocos/">
+                        <a rel="next" href="../08_Lendo%20Json/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/_Ferramentas/w3schools.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/js/07_Fetch.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -423,13 +423,79 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#w3schools">w3schools</a></li>
+        <li class="first-level active"><a href="#caracteristicas-principais-do-fetch">Características principais do fetch:</a></li>
+        <li class="first-level "><a href="#exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do fetch:</a></li>
+            <li class="second-level"><a href="#um-exemplo-de-como-usar-o-fetch-com-a-api-do-jsonplaceholder-uma-api-publica-para-testes-e-prototipagem">Um exemplo de como usar o fetch com a API do JSONPlaceholder, uma API pública para testes e prototipagem:</a></li>
+                
+                <li class="third-level"><a href="#exemplo-de-requisicao-get">Exemplo de requisição GET</a></li>
+                <li class="third-level"><a href="#exemplo-de-requisicao-post">Exemplo de requisição POST</a></li>
+        <li class="first-level "><a href="#explicacao">Explicação:</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h2 id="w3schools"><a href="https://www.w3schools.com/">w3schools</a></h2>
-<p>O W3Schools  <strong>é um site em língua inglesa criado em 1998 e voltado para quem quer aprender mais sobre desenvolvimento e programação para a web</strong> . O W3Schools é uma ótima indicação para iniciantes e profissionais que se interessem em avançar no estudo de linguagens de programação.</p></div>
+<p><code>fetch</code> é uma API nativa do JavaScript que permite realizar requisições HTTP de forma simples e moderna. Ela é usada principalmente para buscar (ou "fetch") recursos de um servidor, como dados de uma API, arquivos ou outros tipos de conteúdo. O <code>fetch</code> retorna uma <em>Promise</em>, o que significa que ele trabalha de forma assíncrona, permitindo que o JavaScript continue a executar outras operações enquanto a requisição está em andamento.</p>
+<h3 id="caracteristicas-principais-do-fetch">Características principais do <code>fetch</code>:</h3>
+<ol>
+<li><strong>Simplicidade</strong>: Comparado ao antigo <code>XMLHttpRequest</code>, o <code>fetch</code> possui uma sintaxe muito mais fácil de usar.</li>
+<li><strong>Promessas (Promises)</strong>: O <code>fetch</code> retorna uma <code>Promise</code>, o que facilita o tratamento de operações assíncronas.</li>
+<li><strong>Suporte a múltiplos métodos HTTP</strong>: Pode ser usado para diferentes tipos de requisições, como <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, etc.</li>
+<li><strong>Configuração flexível</strong>: Permite configurar cabeçalhos, enviar dados no corpo da requisição, e muito mais.</li>
+</ol>
+<h3 id="exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do <code>fetch</code>:</h3>
+<pre><code class="language-javascript">fetch('https://api.exemplo.com/dados')
+  .then(response =&gt; response.json())  // Converte a resposta para JSON
+  .then(data =&gt; console.log(data))    // Exibe os dados no console
+  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
+</code></pre>
+<p>Neste exemplo, o <code>fetch</code> faz uma requisição <code>GET</code> para a URL fornecida, processa a resposta como JSON, e lida com possíveis erros.</p>
+<h4 id="um-exemplo-de-como-usar-o-fetch-com-a-api-do-jsonplaceholder-uma-api-publica-para-testes-e-prototipagem">Um exemplo de como usar o <code>fetch</code> com a API do JSONPlaceholder, uma API pública para testes e prototipagem:</h4>
+<h5 id="exemplo-de-requisicao-get">Exemplo de requisição <code>GET</code></h5>
+<p>Neste exemplo, vamos buscar uma lista de posts da API usando o <code>fetch</code>.</p>
+<pre><code class="language-javascript">// Fazendo uma requisição GET para obter posts da API JSONPlaceholder
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response =&gt; {
+    if (!response.ok) {
+      throw new Error('Erro na requisição: ' + response.status);
+    }
+    return response.json();  // Converte a resposta para JSON
+  })
+  .then(posts =&gt; {
+    console.log(posts);  // Exibe os posts no console
+  })
+  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
+</code></pre>
+<h5 id="exemplo-de-requisicao-post">Exemplo de requisição <code>POST</code></h5>
+<p>Neste exemplo, vamos enviar um novo post para a API com uma requisição <code>POST</code>.</p>
+<pre><code class="language-javascript">// Enviando dados para criar um novo post
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    title: 'Meu novo post',
+    body: 'Este é o conteúdo do post',
+    userId: 1
+  }),
+})
+  .then(response =&gt; {
+    if (!response.ok) {
+      throw new Error('Erro na requisição: ' + response.status);
+    }
+    return response.json();  // Converte a resposta para JSON
+  })
+  .then(post =&gt; {
+    console.log('Post criado:', post);  // Exibe o post criado
+  })
+  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
+</code></pre>
+<h3 id="explicacao">Explicação:</h3>
+<ul>
+<li><strong>GET</strong>: O primeiro exemplo faz uma requisição para obter uma lista de posts, e a resposta é convertida para JSON e exibida no console.</li>
+<li><strong>POST</strong>: No segundo exemplo, criamos um novo post com os campos <code>title</code>, <code>body</code> e <code>userId</code>, enviando esses dados como JSON no corpo da requisição.</li>
+</ul>
+<p>A API do JSONPlaceholder é ótima para testes rápidos e experimentação com <code>fetch</code>.</p></div>
         
         
     </div>
@@ -449,7 +515,7 @@
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -465,7 +531,7 @@
 
     <script>var base_url = "../.."</script>
     
-    <script src="../../js/base.js"></script>
+    <script src="../base.js"></script>
     <script src="../../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">

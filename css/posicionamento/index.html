@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>W3Schools - DW</title>
+    <title>Posicionamento - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../../css/base.min.css" rel="stylesheet">
-    <link href="../../css/cinder.min.css" rel="stylesheet">
+    <link href="../bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../base.min.css" rel="stylesheet">
+    <link href="../cinder.min.css" rel="stylesheet">
 
     
         
@@ -219,31 +219,31 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Ferramentas <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../Sites%20Importantes/">Sites Importantes</a>
+    <a href="../../_Ferramentas/Sites%20Importantes/">Sites Importantes</a>
 </li>
 
                         
                             
 <li >
-    <a href="../validadores/">Validadores</a>
+    <a href="../../_Ferramentas/validadores/">Validadores</a>
 </li>
 
                         
                             
 <li >
-    <a href="../w3c/">W3C Web Standards</a>
+    <a href="../../_Ferramentas/w3c/">W3C Web Standards</a>
 </li>
 
                         
                             
-<li class="active">
-    <a href="./">W3Schools</a>
+<li >
+    <a href="../../_Ferramentas/w3schools/">W3Schools</a>
 </li>
 
                         
@@ -285,37 +285,37 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Css <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../../css/flexbox/">Flexbox</a>
+    <a href="../flexbox/">Flexbox</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../css/grid/">Grid CSS - Estruturando Layouts Modernos</a>
+    <a href="../grid/">Grid CSS - Estruturando Layouts Modernos</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Posicionamento</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../css/posicionamento/">Posicionamento</a>
+    <a href="../siteresponsivo/">Responsividade</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../css/siteresponsivo/">Responsividade</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../css/unidadesrelativas/">Unidades Relativas</a>
+    <a href="../unidadesrelativas/">Unidades Relativas</a>
 </li>
 
                         
@@ -401,17 +401,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../w3c/">
+                        <a rel="prev" href="../grid/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../../_Html/blocos/">
+                        <a rel="next" href="../siteresponsivo/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/_Ferramentas/w3schools.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/css/posicionamento.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -423,13 +423,168 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#w3schools">w3schools</a></li>
+        <li class="first-level active"><a href="#posicionamento">Posicionamento</a></li>
+            <li class="second-level"><a href="#1-introducao-ao-posicionamento-no-css">1. Introdução ao Posicionamento no CSS</a></li>
+                
+            <li class="second-level"><a href="#2-valores-da-propriedade-position">2. Valores da Propriedade position</a></li>
+                
+                <li class="third-level"><a href="#21-static-padrao">2.1. static (Padrão)</a></li>
+                <li class="third-level"><a href="#22-relative">2.2. relative</a></li>
+                <li class="third-level"><a href="#23-absolute">2.3. absolute</a></li>
+                <li class="third-level"><a href="#24-fixed">2.4. fixed</a></li>
+                <li class="third-level"><a href="#25-sticky">2.5. sticky</a></li>
+            <li class="second-level"><a href="#3-propriedades-auxiliares">3. Propriedades Auxiliares</a></li>
+                
+            <li class="second-level"><a href="#4-exercicio-pratico">4. Exercício Prático</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h2 id="w3schools"><a href="https://www.w3schools.com/">w3schools</a></h2>
-<p>O W3Schools  <strong>é um site em língua inglesa criado em 1998 e voltado para quem quer aprender mais sobre desenvolvimento e programação para a web</strong> . O W3Schools é uma ótima indicação para iniciantes e profissionais que se interessem em avançar no estudo de linguagens de programação.</p></div>
+<h1 id="posicionamento">Posicionamento</h1>
+<p>Nesse roteiro apresentamos o <strong>posicionamento em CSS</strong>, cobrindo os conceitos principais de forma clara e prática. O foco será nos diferentes valores da propriedade <code>position</code> e suas interações com outras propriedades de layout, como <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>, e <code>z-index</code>.</p>
+<h4 id="1-introducao-ao-posicionamento-no-css">1. <strong>Introdução ao Posicionamento no CSS</strong></h4>
+<ul>
+<li>A propriedade <code>position</code> é importante para controlar o layout dos elementos.</li>
+<li>Conceitos de fluxo de documento normal (o comportamento padrão dos elementos no HTML).</li>
+</ul>
+<h4 id="2-valores-da-propriedade-position">2. <strong>Valores da Propriedade <code>position</code></strong></h4>
+<h5 id="21-static-padrao">2.1. <strong><code>static</code> (Padrão)</strong></h5>
+<ul>
+<li><strong>Descrição</strong>: O valor padrão. O elemento segue o fluxo normal da página e não é afetado por <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>.</li>
+<li><strong>Exemplo</strong>:</li>
+</ul>
+<pre><code>  &lt;div class=&quot;static-box&quot;&gt;Eu sou estático!&lt;/div&gt;`
+</code></pre>
+<pre><code>  .static-box {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    position: static;
+  }
+</code></pre>
+<h5 id="22-relative">2.2. <strong><code>relative</code></strong></h5>
+<ul>
+<li><strong>Descrição</strong>: O elemento é posicionado em relação à sua posição original. As propriedades <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> podem movê-lo, mas ele ainda ocupa o espaço original.</li>
+<li><strong>Exemplo</strong>:</li>
+</ul>
+<pre><code class="language-html">  &lt;div class=&quot;relative-box&quot;&gt;Eu sou relativo!&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">  .relative-box {
+    width: 200px;
+    height: 100px;
+    background-color: lightgreen;
+    position: relative;
+    top: 20px; /* Movido 20px para baixo */
+    left: 15px; /* Movido 15px para a direita */
+  }
+</code></pre>
+<h5 id="23-absolute">2.3. <strong><code>absolute</code></strong></h5>
+<ul>
+<li><strong>Descrição</strong>: O elemento é removido do fluxo normal do documento e posicionado em relação ao seu elemento pai mais próximo que tenha <code>position</code> diferente de <code>static</code>. Se não houver um pai posicionado, será em relação ao <code>body</code>.</li>
+<li><strong>Exemplo</strong>:</li>
+</ul>
+<pre><code class="language-html">  &lt;div class=&quot;parent&quot;&gt;
+    &lt;div class=&quot;absolute-box&quot;&gt;Eu sou absoluto!&lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">  .parent {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: lightgray;
+  }
+
+  .absolute-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: salmon;
+  }
+</code></pre>
+<h5 id="24-fixed">2.4. <strong><code>fixed</code></strong></h5>
+<ul>
+<li><strong>Descrição</strong>: O elemento é posicionado em relação à janela de visualização (viewport) e não se move quando a página é rolada.</li>
+<li><strong>Exemplo</strong>:</li>
+</ul>
+<pre><code class="language-html">  &lt;div class=&quot;fixed-box&quot;&gt;Eu sou fixo!&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">  .fixed-box {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 50px;
+    background-color: yellow;
+  }
+</code></pre>
+<h5 id="25-sticky">2.5. <strong><code>sticky</code></strong></h5>
+<ul>
+<li><strong>Descrição</strong>: O elemento alterna entre o comportamento <code>relative</code> e <code>fixed</code>, dependendo da rolagem da página. Fica "preso" em uma posição quando você rola além de um certo ponto.</li>
+<li><strong>Exemplo</strong>:</li>
+</ul>
+<pre><code class="language-html">  &lt;div class=&quot;sticky-box&quot;&gt;Eu sou sticky!&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">  .sticky-box {
+    position: sticky;
+    top: 0; /* Fica &quot;preso&quot; no topo após rolar */
+    background-color: lightcoral;
+    padding: 10px;
+  }
+</code></pre>
+<h4 id="3-propriedades-auxiliares">3. <strong>Propriedades Auxiliares</strong></h4>
+<ul>
+<li><strong><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code></strong>: Controlam a posição do elemento posicionado. São aplicáveis quando <code>position</code> não é <code>static</code>.</li>
+<li><strong><code>z-index</code></strong>: Controla a ordem de sobreposição dos elementos. Elementos com valores maiores de <code>z-index</code> aparecem acima de elementos com valores menores.</li>
+</ul>
+<h4 id="4-exercicio-pratico">4. <strong>Exercício Prático</strong></h4>
+<ul>
+<li>Criar uma página com uma barra de navegação fixa (<code>fixed</code>), um conteúdo principal com um cabeçalho "sticky", e uma seção posicionada de forma relativa a um contêiner com <code>position: relative</code> e um botão posicionado de forma absoluta.</li>
+</ul>
+<p><strong>HTML</strong>:</p>
+<pre><code class="language-html">   &lt;nav class=&quot;fixed-nav&quot;&gt;Navegação&lt;/nav&gt;
+   &lt;header class=&quot;sticky-header&quot;&gt;Cabeçalho Sticky&lt;/header&gt;
+   &lt;section class=&quot;content&quot;&gt;
+     &lt;div class=&quot;relative-container&quot;&gt;
+       &lt;button class=&quot;absolute-button&quot;&gt;Eu sou absoluto&lt;/button&gt;
+     &lt;/div&gt;
+   &lt;/section&gt;
+</code></pre>
+<p><strong>CSS</strong>:</p>
+<pre><code class="language-css">.fixed-nav {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     background-color: #333;
+     color: white;
+     padding: 10px;
+   }
+
+   .sticky-header {
+     position: sticky;
+     top: 50px;
+     background-color: #f4f4f4;
+     padding: 15px;
+   }
+
+   .relative-container {
+     position: relative;
+     background-color: lightblue;
+     height: 300px;
+     margin: 20px;
+   }
+
+   .absolute-button {
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     padding: 10px;
+   }
+</code></pre>
+<p>Isso dá uma visão abrangente do sistema de posicionamento no CSS e como ele pode ser aplicado em páginas web.</p></div>
         
         
     </div>
