@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px; /* Substitui as margens dos itens */
+    padding: 10px;
+    border: 2px solid black;
+    background-color: #f0f0f0;
+  }
+
+  .item {
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1 1 calc(33.333% - 20px); /* Base para 3 colunas com gap */
+    min-width: 250px; /* Largura mínima antes de quebrar */
+    box-sizing: border-box;
+  }
+
+  /* Media query para tablets */
+  @media (max-width: 900px) {
+    .item {
+      flex: 1 1 calc(50% - 20px); /* 2 colunas */
+    }
+  }
+
+  /* Media query para mobile */
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .item {
+      flex: 1 1 auto; /* Uma coluna */
+      width: 100%;
+    }
+  }
