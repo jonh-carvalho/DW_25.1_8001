@@ -10,7 +10,7 @@
 | __06__ - 27/03/25 | - [Posicionamento](https://jonh-carvalho.github.io/DW_25.1_8001/_Disciplina/Roteiros/css/posicionamento/) <br> - [Responsividade](https://jonh-carvalho.github.io/DW_25.1_8001/_Disciplina/Roteiros/css/siteresponsivo/) |
 | __07__ - 03/04/25 | - AP1 <br> - Envio do Site <br> - Prova Escrita no Laboratório  |
 | __08__ - 10/04/25     | Layout - [FlexBox](https://jonh-carvalho.github.io/DW_25.1_8001/css/flexbox/) e [Grid](https://jonh-carvalho.github.io/DW_25.1_8001/css/grid/) CSS |
-| __09__ - 17/04/25     | JS |
+| __09__ - 17/04/25     | [Introdução ao Javascript](./docs/04_Introducao_JavaScript.pdf)  |
 | __10__ - 25/04/25     | JS |
 | __11__ - 01/05/25     | Feriado |
 | __12__ - 08/05/25     | JS |
@@ -26,7 +26,7 @@
 | __07__ - 18/09/24     |  |
 | __08__ - 25/09/24     | AP1   |
 
-| __09__ - 02/10/24     | [Introdução ao Javascript](./docs/04_Introducao_JavaScript.pdf)  |
+
 
 | __10__ - 09/10/24     | Javascript - [Variáveis](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types) - [String]() - [Array](./Roteiros/js/array.md)  |
 

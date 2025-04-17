@@ -1,10 +1,15 @@
-### O Comando Map em JavaScript
+---
+title: 02 - Map
+slug: Map
+---
 
-### Introdução
+# O Comando Map em JavaScript
+
+## Introdução
 
 O método `map()` é uma ferramenta poderosa em JavaScript que permite transformar cada elemento de um array em um novo elemento, criando um novo array com os resultados. É uma forma eficiente de aplicar uma função a cada item de um array, sem modificar o array original.
 
-### Objetivos da Aula
+## Objetivos da Aula
 
 * Compreender o conceito de `map()`;
 * Aprender a sintaxe e a utilização do `map()`;
@@ -12,52 +17,57 @@ O método `map()` é uma ferramenta poderosa em JavaScript que permite transform
 * Diferenciar `map()` de outros métodos como `forEach()`;
 * Aplicar `map()` em exemplos práticos.
 
-### Conteúdo da Aula
+## Conteúdo da Aula
 
-#### 1. O que é o `map()`?
+### 1. O que é o `map()`?
 
 * Definição e propósito do método.
 * Como o `map()` funciona internamente.
 * Comparação com outros métodos como `forEach()`.
 
-#### 2. Sintaxe do `map()`
+### 2. Sintaxe do `map()`
 
 * Estrutura básica do método.
 * Parâmetros da função de callback: elemento atual, índice, array original.
 * Retorno da função de callback.
 
-#### 3. Exemplos Básicos
+### 3. Exemplos Básicos
 
 * Dobrar todos os números de um array.
 * Transformar um array de nomes em letras maiúsculas.
 * Criar um novo array com os quadrados dos números.
 
-#### 4. Usos Comuns
+### 4. Usos Comuns
 
 * Criar novos arrays a partir de dados existentes.
 * Aplicar formatações a elementos de um array.
 * Extrair informações específicas de um array de objetos.
 
-#### 5. `map()` com Arrow Functions
+### 5. `map()` com Arrow Functions
 
 * Como utilizar arrow functions para simplificar o código.
 * Exemplos práticos.
 
-### Atividades Práticas
+## Atividades Práticas
 
-* **Exercícios:**
-  * Crie um array de números e utilize `map()` para obter um novo array com os números multiplicados por 2.
-  * Transforme um array de objetos (pessoas) em um novo array contendo apenas os nomes.
-  * Crie um array de strings e utilize `map()` para converter cada string em um elemento HTML (e.g., `<li>`).
-* **Projeto:**
-  * Crie uma aplicação simples que permita ao usuário adicionar itens a uma lista de compras. Utilize `map()` para exibir a lista formatada em HTML.
+**Exercícios:**
 
-### Recursos Adicionais
+* Crie um array de números e utilize `map()` para obter um novo array com os números multiplicados por 2.
+
+* Transforme um array de objetos (pessoas) em um novo array contendo apenas os nomes.
+
+* Crie um array de strings e utilize `map()` para converter cada string em um elemento HTML (e.g., `<li>`).
+
+**Projeto:**
+
+* Crie uma aplicação simples que permita ao usuário adicionar itens a uma lista de compras. Utilize `map()` para exibir a lista formatada em HTML.
+
+## Recursos Adicionais
 
 * **Documentação MDN:** A documentação oficial do JavaScript oferece exemplos e explicações detalhadas sobre o método `map()`.
 * **Exercícios interativos:** Sites como Exercism e Codewars oferecem desafios para praticar os conceitos aprendidos.
 
-### Exemplos Práticos
+## Exemplos Práticos
 
 ```javascript
 // Dobrar todos os números de um array
@@ -74,11 +84,9 @@ const quadrados = numeros.map(numero => numero * numero);
 
 ## Exemplos Práticos e Relevantes para o Método `map()` em JavaScript
 
-### Cenários e Exemplos
+### 1. **Manipulação de Dados de Usuários**
 
-#### 1. **Manipulação de Dados de Usuários**
-
-* **Exemplo:** Transformar um array de objetos representando usuários em um novo array contendo apenas os nomes.
+**Exemplo:** Transformar um array de objetos representando usuários em um novo array contendo apenas os nomes.
 
 ```javascript
 const usuarios = [
@@ -111,7 +119,7 @@ const listaHtml = itens.map(item => `<li>${item}</li>`).join('');
 console.log(listaHtml);
 ```
 
-#### 4. **Processamento de Dados de Formulários**
+### 4. **Processamento de Dados de Formulários**
 
 * **Exemplo:** Extrair os valores de um formulário e criar um objeto com os dados.
 
@@ -122,7 +130,7 @@ const dadosObjeto = [...dadosFormulario.entries()].map(([chave, valor]) => ({ [c
 console.log(dadosObjeto);
 ```
 
-#### 5. **Transformação de Unidades de Medida**
+### 5. **Transformação de Unidades de Medida**
 
 * **Exemplo:** Converter uma lista de temperaturas em Celsius para Fahrenheit.
 
@@ -131,7 +139,7 @@ const temperaturasCelsius = [0, 10, 20, 30];
 const temperaturasFahrenheit = temperaturasCelsius.map(celsius => (celsius * 9/5) + 32);
 ```
 
-#### 6. **Criação de Novos Objetos a Partir de Arrays**
+### 6. **Criação de Novos Objetos a Partir de Arrays**
 
 * **Exemplo:** Criar um array de objetos com propriedades chave-valor a partir de dois arrays.
 
@@ -141,7 +149,7 @@ const idades = [30, 25, 35];
 const pessoas = nomes.map((nome, index) => ({ nome, idade: idades[index] }));
 ```
 
-### Atividades Práticas
+## Atividades Práticas
 
 * **Criar um catálogo de produtos:** Dado um array de objetos representando produtos (nome, preço, categoria), criar um novo array com os produtos de uma categoria específica.
 * **Transformar uma lista de datas em um novo formato:** Converter um array de strings representando datas no formato "YYYY-MM-DD" para o formato "DD/MM/YYYY".
