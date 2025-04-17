@@ -20,4 +20,4 @@ Repositório de Avaliações ACs e APs
 * [João Victor](https://github.com/JVictor-De/jonhForms02)
 * [Victor Coutinho](https://github.com/victor-c-coutinho/Trabalho-AP1)
 * [Felipe Maia](https://github.com/felipefig21/DW)
-* [Bernardo Cicchelli](https://github.com/felipefig21/DW)
+* [Bernardo Cicchelli](https://github.com/BernardoCicchelli/dw-1)
