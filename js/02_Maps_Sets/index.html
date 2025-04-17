@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>02 Maps Sets - DW</title>
+    <title>02 - Map - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -336,7 +336,7 @@
                         
                             
 <li class="active">
-    <a href="./">02 Maps Sets</a>
+    <a href="./">02 - Map</a>
 </li>
 
                         
@@ -424,28 +424,26 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="first-level active"><a href="#o-comando-map-em-javascript">O Comando Map em JavaScript</a></li>
-        <li class="first-level "><a href="#introducao">Introdução</a></li>
-        <li class="first-level "><a href="#objetivos-da-aula">Objetivos da Aula</a></li>
-        <li class="first-level "><a href="#conteudo-da-aula">Conteúdo da Aula</a></li>
-            <li class="second-level"><a href="#1-o-que-e-o-map">1. O que é o map()?</a></li>
+            <li class="second-level"><a href="#introducao">Introdução</a></li>
                 
-            <li class="second-level"><a href="#2-sintaxe-do-map">2. Sintaxe do map()</a></li>
+            <li class="second-level"><a href="#objetivos-da-aula">Objetivos da Aula</a></li>
                 
-            <li class="second-level"><a href="#3-exemplos-basicos">3. Exemplos Básicos</a></li>
+            <li class="second-level"><a href="#conteudo-da-aula">Conteúdo da Aula</a></li>
                 
-            <li class="second-level"><a href="#4-usos-comuns">4. Usos Comuns</a></li>
+                <li class="third-level"><a href="#1-o-que-e-o-map">1. O que é o map()?</a></li>
+                <li class="third-level"><a href="#2-sintaxe-do-map">2. Sintaxe do map()</a></li>
+                <li class="third-level"><a href="#3-exemplos-basicos">3. Exemplos Básicos</a></li>
+                <li class="third-level"><a href="#4-usos-comuns">4. Usos Comuns</a></li>
+                <li class="third-level"><a href="#5-map-com-arrow-functions">5. map() com Arrow Functions</a></li>
+            <li class="second-level"><a href="#atividades-praticas">Atividades Práticas</a></li>
                 
-            <li class="second-level"><a href="#5-map-com-arrow-functions">5. map() com Arrow Functions</a></li>
+            <li class="second-level"><a href="#recursos-adicionais">Recursos Adicionais</a></li>
                 
-        <li class="first-level "><a href="#atividades-praticas">Atividades Práticas</a></li>
-        <li class="first-level "><a href="#recursos-adicionais">Recursos Adicionais</a></li>
-        <li class="first-level "><a href="#exemplos-praticos">Exemplos Práticos</a></li>
-        <li class="first-level "><a href="#exemplos-praticos-e-relevantes-para-o-metodo-map-em-javascript">Exemplos Práticos e Relevantes para o Método map() em JavaScript</a></li>
-            <li class="second-level"><a href="#cenarios-e-exemplos">Cenários e Exemplos</a></li>
+            <li class="second-level"><a href="#exemplos-praticos">Exemplos Práticos</a></li>
+                
+            <li class="second-level"><a href="#exemplos-praticos-e-relevantes-para-o-metodo-map-em-javascript">Exemplos Práticos e Relevantes para o Método map() em JavaScript</a></li>
                 
                 <li class="third-level"><a href="#1-manipulacao-de-dados-de-usuarios">1. Manipulação de Dados de Usuários</a></li>
-                <li class="third-level"><a href="#2-formatacao-de-dados-para-exibicao">2. Formatação de Dados para Exibição</a></li>
-                <li class="third-level"><a href="#3-criacao-de-elementos-html">3. Criação de Elementos HTML</a></li>
                 <li class="third-level"><a href="#4-processamento-de-dados-de-formularios">4. Processamento de Dados de Formulários</a></li>
                 <li class="third-level"><a href="#5-transformacao-de-unidades-de-medida">5. Transformação de Unidades de Medida</a></li>
                 <li class="third-level"><a href="#6-criacao-de-novos-objetos-a-partir-de-arrays">6. Criação de Novos Objetos a Partir de Arrays</a></li>
@@ -455,10 +453,10 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<h3 id="o-comando-map-em-javascript">O Comando Map em JavaScript</h3>
-<h3 id="introducao">Introdução</h3>
+<h1 id="o-comando-map-em-javascript">O Comando Map em JavaScript</h1>
+<h2 id="introducao">Introdução</h2>
 <p>O método <code>map()</code> é uma ferramenta poderosa em JavaScript que permite transformar cada elemento de um array em um novo elemento, criando um novo array com os resultados. É uma forma eficiente de aplicar uma função a cada item de um array, sem modificar o array original.</p>
-<h3 id="objetivos-da-aula">Objetivos da Aula</h3>
+<h2 id="objetivos-da-aula">Objetivos da Aula</h2>
 <ul>
 <li>Compreender o conceito de <code>map()</code>;</li>
 <li>Aprender a sintaxe e a utilização do <code>map()</code>;</li>
@@ -466,51 +464,59 @@
 <li>Diferenciar <code>map()</code> de outros métodos como <code>forEach()</code>;</li>
 <li>Aplicar <code>map()</code> em exemplos práticos.</li>
 </ul>
-<h3 id="conteudo-da-aula">Conteúdo da Aula</h3>
-<h4 id="1-o-que-e-o-map">1. O que é o <code>map()</code>?</h4>
+<h2 id="conteudo-da-aula">Conteúdo da Aula</h2>
+<h3 id="1-o-que-e-o-map">1. O que é o <code>map()</code>?</h3>
 <ul>
 <li>Definição e propósito do método.</li>
 <li>Como o <code>map()</code> funciona internamente.</li>
 <li>Comparação com outros métodos como <code>forEach()</code>.</li>
 </ul>
-<h4 id="2-sintaxe-do-map">2. Sintaxe do <code>map()</code></h4>
+<h3 id="2-sintaxe-do-map">2. Sintaxe do <code>map()</code></h3>
 <ul>
 <li>Estrutura básica do método.</li>
 <li>Parâmetros da função de callback: elemento atual, índice, array original.</li>
 <li>Retorno da função de callback.</li>
 </ul>
-<h4 id="3-exemplos-basicos">3. Exemplos Básicos</h4>
+<h3 id="3-exemplos-basicos">3. Exemplos Básicos</h3>
 <ul>
 <li>Dobrar todos os números de um array.</li>
 <li>Transformar um array de nomes em letras maiúsculas.</li>
 <li>Criar um novo array com os quadrados dos números.</li>
 </ul>
-<h4 id="4-usos-comuns">4. Usos Comuns</h4>
+<h3 id="4-usos-comuns">4. Usos Comuns</h3>
 <ul>
 <li>Criar novos arrays a partir de dados existentes.</li>
 <li>Aplicar formatações a elementos de um array.</li>
 <li>Extrair informações específicas de um array de objetos.</li>
 </ul>
-<h4 id="5-map-com-arrow-functions">5. <code>map()</code> com Arrow Functions</h4>
+<h3 id="5-map-com-arrow-functions">5. <code>map()</code> com Arrow Functions</h3>
 <ul>
 <li>Como utilizar arrow functions para simplificar o código.</li>
 <li>Exemplos práticos.</li>
 </ul>
-<h3 id="atividades-praticas">Atividades Práticas</h3>
+<h2 id="atividades-praticas">Atividades Práticas</h2>
+<p><strong>Exercícios:</strong></p>
 <ul>
-<li><strong>Exercícios:</strong></li>
-<li>Crie um array de números e utilize <code>map()</code> para obter um novo array com os números multiplicados por 2.</li>
-<li>Transforme um array de objetos (pessoas) em um novo array contendo apenas os nomes.</li>
-<li>Crie um array de strings e utilize <code>map()</code> para converter cada string em um elemento HTML (e.g., <code>&lt;li&gt;</code>).</li>
-<li><strong>Projeto:</strong></li>
+<li>
+<p>Crie um array de números e utilize <code>map()</code> para obter um novo array com os números multiplicados por 2.</p>
+</li>
+<li>
+<p>Transforme um array de objetos (pessoas) em um novo array contendo apenas os nomes.</p>
+</li>
+<li>
+<p>Crie um array de strings e utilize <code>map()</code> para converter cada string em um elemento HTML (e.g., <code>&lt;li&gt;</code>).</p>
+</li>
+</ul>
+<p><strong>Projeto:</strong></p>
+<ul>
 <li>Crie uma aplicação simples que permita ao usuário adicionar itens a uma lista de compras. Utilize <code>map()</code> para exibir a lista formatada em HTML.</li>
 </ul>
-<h3 id="recursos-adicionais">Recursos Adicionais</h3>
+<h2 id="recursos-adicionais">Recursos Adicionais</h2>
 <ul>
 <li><strong>Documentação MDN:</strong> A documentação oficial do JavaScript oferece exemplos e explicações detalhadas sobre o método <code>map()</code>.</li>
 <li><strong>Exercícios interativos:</strong> Sites como Exercism e Codewars oferecem desafios para praticar os conceitos aprendidos.</li>
 </ul>
-<h3 id="exemplos-praticos">Exemplos Práticos</h3>
+<h2 id="exemplos-praticos">Exemplos Práticos</h2>
 <pre><code class="language-javascript">// Dobrar todos os números de um array
 const numeros = [1, 2, 3, 4, 5];
 const numerosDobrados = numeros.map(numero =&gt; numero * 2);
@@ -523,11 +529,8 @@ const nomesMaiusculos = nomes.map(nome =&gt; nome.toUpperCase());
 const quadrados = numeros.map(numero =&gt; numero * numero);
 </code></pre>
 <h2 id="exemplos-praticos-e-relevantes-para-o-metodo-map-em-javascript">Exemplos Práticos e Relevantes para o Método <code>map()</code> em JavaScript</h2>
-<h3 id="cenarios-e-exemplos">Cenários e Exemplos</h3>
-<h4 id="1-manipulacao-de-dados-de-usuarios">1. <strong>Manipulação de Dados de Usuários</strong></h4>
-<ul>
-<li><strong>Exemplo:</strong> Transformar um array de objetos representando usuários em um novo array contendo apenas os nomes.</li>
-</ul>
+<h3 id="1-manipulacao-de-dados-de-usuarios">1. <strong>Manipulação de Dados de Usuários</strong></h3>
+<p><strong>Exemplo:</strong> Transformar um array de objetos representando usuários em um novo array contendo apenas os nomes.</p>
 <pre><code class="language-javascript">const usuarios = [
     { nome: 'Ana', idade: 30 },
     { nome: 'João', idade: 25 },
@@ -553,7 +556,7 @@ console.log(precosFormatados); // Output: ['R$ 10.99', 'R$ 25.49', 'R$ 15.99']
 const listaHtml = itens.map(item =&gt; `&lt;li&gt;${item}&lt;/li&gt;`).join('');
 console.log(listaHtml);
 </code></pre>
-<h4 id="4-processamento-de-dados-de-formularios">4. <strong>Processamento de Dados de Formulários</strong></h4>
+<h3 id="4-processamento-de-dados-de-formularios">4. <strong>Processamento de Dados de Formulários</strong></h3>
 <ul>
 <li><strong>Exemplo:</strong> Extrair os valores de um formulário e criar um objeto com os dados.</li>
 </ul>
@@ -562,14 +565,14 @@ const dadosFormulario = new FormData(formulario);
 const dadosObjeto = [...dadosFormulario.entries()].map(([chave, valor]) =&gt; ({ [chave]: valor }));
 console.log(dadosObjeto);
 </code></pre>
-<h4 id="5-transformacao-de-unidades-de-medida">5. <strong>Transformação de Unidades de Medida</strong></h4>
+<h3 id="5-transformacao-de-unidades-de-medida">5. <strong>Transformação de Unidades de Medida</strong></h3>
 <ul>
 <li><strong>Exemplo:</strong> Converter uma lista de temperaturas em Celsius para Fahrenheit.</li>
 </ul>
 <pre><code class="language-javascript">const temperaturasCelsius = [0, 10, 20, 30];
 const temperaturasFahrenheit = temperaturasCelsius.map(celsius =&gt; (celsius * 9/5) + 32);
 </code></pre>
-<h4 id="6-criacao-de-novos-objetos-a-partir-de-arrays">6. <strong>Criação de Novos Objetos a Partir de Arrays</strong></h4>
+<h3 id="6-criacao-de-novos-objetos-a-partir-de-arrays">6. <strong>Criação de Novos Objetos a Partir de Arrays</strong></h3>
 <ul>
 <li><strong>Exemplo:</strong> Criar um array de objetos com propriedades chave-valor a partir de dois arrays.</li>
 </ul>
@@ -577,7 +580,7 @@ const temperaturasFahrenheit = temperaturasCelsius.map(celsius =&gt; (celsius * 
 const idades = [30, 25, 35];
 const pessoas = nomes.map((nome, index) =&gt; ({ nome, idade: idades[index] }));
 </code></pre>
-<h3 id="atividades-praticas_1">Atividades Práticas</h3>
+<h2 id="atividades-praticas_1">Atividades Práticas</h2>
 <ul>
 <li><strong>Criar um catálogo de produtos:</strong> Dado um array de objetos representando produtos (nome, preço, categoria), criar um novo array com os produtos de uma categoria específica.</li>
 <li><strong>Transformar uma lista de datas em um novo formato:</strong> Converter um array de strings representando datas no formato "YYYY-MM-DD" para o formato "DD/MM/YYYY".</li>
