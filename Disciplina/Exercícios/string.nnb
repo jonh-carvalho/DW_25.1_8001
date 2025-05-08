@@ -1,0 +1,227 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# Strings: Condicionais e Loops  \r\n\r\nAqui estão exemplos e exercícios práticos para manipular **strings** usando:  \r\n\r\n- **Estruturas condicionais** (`if/else`, `switch`).  \r\n- **Estruturas de repetição** (`for`, `while`, `do...while`).  \r\n\r\n---\r\n\r\n## **1. Condicionais com Strings**  \r\n\r\n### **Exemplo 1: Verificar Palíndromo**  \r\n\r\nUm palíndromo é uma palavra que permanece a mesma se lida de trás para frente (ex: \"arara\").  \r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const palavra = \"arara\";\r\nlet inverso = \"\";\r\n\r\n// Usando for para inverter a string\r\nfor (let i = palavra.length - 1; i >= 0; i--) {\r\n  inverso += palavra[i];\r\n}\r\n\r\n// Verifica se é palíndromo\r\nif (palavra === inverso) {\r\n  console.log(`${palavra} é um palíndromo!`);\r\n} else {\r\n  console.log(`${palavra} não é um palíndromo.`);\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "arara é um palíndromo!",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Exercício:** Modifique o código para funcionar com frases (ex: \"Ame o poema\").  \r\n\r\n---\r\n\r\n### **Exemplo 2: Classificar Tamanho da String**  "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const texto = \"JavaScript\";\r\n\r\nif (texto.length > 10) {\r\n  console.log(\"Texto muito longo!\");\r\n} else if (texto.length >= 5) {\r\n  console.log(\"Texto de tamanho médio.\");\r\n} else {\r\n  console.log(\"Texto curto.\");\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Texto de tamanho médio.",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Exercício:** Peça ao usuário (usando `prompt`) que digite uma palavra e classifique-a.  \r\n\r\n---\r\n\r\n### **Exemplo 3: Switch com Strings**  "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "const diaSemana = \"segunda\";\r\n\r\nswitch (diaSemana.toLowerCase()) {\r\n  case \"segunda\":\r\n  case \"terça\":\r\n  case \"quarta\":\r\n  case \"quinta\":\r\n  case \"sexta\":\r\n    console.log(\"Dia útil.\");\r\n    break;\r\n  case \"sábado\":\r\n  case \"domingo\":\r\n    console.log(\"Fim de semana!\");\r\n    break;\r\n  default:\r\n    console.log(\"Dia inválido.\");\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Dia útil.",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Exercício:** Crie um sistema que verifique se um mês é de verão, inverno, etc.  \r\n\r\n---\r\n\r\n## **2. Loops com Strings**  \r\n\r\n### **Exemplo 4: Contar Vogais** "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const frase = \"Olá, mundo!\";\r\nlet contadorVogais = 0;\r\nconst vogais = \"aeiouáéíóúãõâêô\";\r\n\r\nfor (let letra of frase.toLowerCase()) {\r\n  if (vogais.includes(letra)) {\r\n    contadorVogais++;\r\n  }\r\n}\r\n\r\nconsole.log(`Número de vogais: ${contadorVogais}`);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Número de vogais: 4",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Exercício:** Modifique para contar consoantes também.  \r\n\r\n---\r\n\r\n### **Exemplo 5: Inverter String com While**  "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let palavra = \"JavaScript\";\r\nlet invertida = \"\";\r\nlet i = palavra.length - 1;\r\n\r\nwhile (i >= 0) {\r\n  invertida += palavra[i];\r\n  i--;\r\n}\r\n\r\nconsole.log(invertida); // \"tpircSavaJ\""
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "tpircSavaJ",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Exercício:** Faça o mesmo usando `do...while`.  \r\n\r\n---\r\n\r\n### **Exemplo 6: Remover Espaços em Branco**  "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let texto = \"  Exemplo  com   espaços  \";\r\nlet textoSemEspacos = \"\";\r\n\r\nfor (let i = 0; i < texto.length; i++) {\r\n  if (texto[i] !== \" \") {\r\n    textoSemEspacos += texto[i];\r\n  }\r\n}\r\n\r\nconsole.log(textoSemEspacos); // \"Exemplocomespaços\""
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Exemplocomespaços",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Exercício:** Melhore o código para remover **apenas espaços duplicados** (ex: \"Exemplo com espaços\").  \r\n\r\n---\r\n\r\n## **Exercícios Adicionais**  \r\n\r\n### **1. Verificar se uma String Contém Números**  \r\n\r\nUse `for` e `isNaN()` para verificar se há dígitos em uma string.  \r\n\r\n### **2. Converter Alternadamente Maiúsculas/Minúsculas**  \r\n\r\nExemplo:  \r\n\r\n- Entrada: \"AbCd\" → Saída: \"aBcD\"\r\n\r\n### **3. Encontrar a Maior Palavra em uma Frase**  \r\n\r\nDica: Use `split(\" \")` para separar palavras e compare seus `length`.  \r\n\r\n### **4. Gerar Acrônimos**  \r\n\r\nExemplo:  \r\n\r\n- Entrada: \"Universidade Federal do Rio\" → Saída: \"UFR\"  \r\n\r\n---\r\n\r\n## **Soluções dos Exercícios**  \r\n\r\n### **Solução 1: Palíndromo com Frase**  "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const frase = \"Ame o poema\";\r\nconst formatada = frase.toLowerCase().replace(/\\s/g, \"\");\r\nconst inverso = formatada.split(\"\").reverse().join(\"\");\r\n\r\nconsole.log(formatada === inverso ? \"É palíndromo!\" : \"Não é palíndromo.\");\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "É palíndromo!",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Solução 5: Inverter com `do...while`**  "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let palavra = \"JavaScript\";\r\nlet invertida = \"\";\r\nlet i = palavra.length - 1;\r\n\r\ndo {\r\n  invertida += palavra[i];\r\n  i--;\r\n} while (i >= 0);\r\n\r\nconsole.log(invertida);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "tpircSavaJ",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "\r\n**Recursos:**  \r\n\r\n- [MDN - Strings](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String)  \r\n- [JavaScript.info - Loops](https://javascript.info/while-for)  \r\n\r\nEsses exercícios ajudam a consolidar **lógica de programação** e manipulação de strings! 🚀\r\n"
+            ],
+            "outputs": []
+        }
+    ]
+}
