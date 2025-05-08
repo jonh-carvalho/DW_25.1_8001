@@ -1,158 +1,176 @@
-# Aula de Tipos de Dados em Programação
+# 00 - **Introdução ao JavaScript**
 
-## 1. Comentários
-Comentários são textos ignorados pelo compilador/interpretador, usados para documentar o código.
+## 1. Introdução ao JavaScript
 
-### 1.1 Sintaxe
+- **O que é JavaScript?**  
+
+  - Linguagem de programação para web (front-end e back-end com Node.js).  
+  - Comparação com HTML e CSS (HTML = estrutura, CSS = estilo, JS = interatividade).  
+
+- **Onde o JavaScript é usado?**  
+
+  - Páginas web dinâmicas (ex.: formulários, animações).  
+  - Aplicativos mobile (React Native, Ionic).  
+  - Back-end (Node.js), games, IoT.  
+
+- **Ferramentas necessárias:**  
+
+  - Navegador (Chrome + DevTools).  
+  - Editor de código (VS Code).  
+  - Node.js (opcional para rodar JS fora do navegador).  
+
+---
+
+### **2. Configurando o Ambiente**
+
+- **Instalação do VS Code e extensões úteis:**  
+  - Live Preview (para rodar páginas localmente).  
+  - Prettier (formatação automática).  
+
+- **Hello World no navegador:**  
+  - Criar um arquivo `index.html` com `<script>` embutido.  
+  - Usar `console.log("Hello World")` e inspecionar no DevTools (F12).  
+
+---
+
+### 3. Variáveis e Tipos de Dados  
+
+- **Declaração de variáveis:**  
+  - `var` (antigo, escopo global/função).  
+  - `let` (escopo de bloco, mutável).  
+  - `const` (escopo de bloco, imutável).
+  
+- **Tipos de dados primitivos:**  
+  - `String`, `Number`, `Boolean`, `null`, `undefined`, `Symbol`.  
+
+- **Operadores:**  
+  - Aritméticos (`+`, `-`, `*`, `/`).  
+  - Comparação (`==`, `===`, `!=`, `!==`).  
+  - Lógicos (`&&`, `||`, `!`).  
+
+- **Exemplo prático:**  
+
+  ```javascript
+  const nome = "João";
+  let idade = 25;
+  var isProgrammer = true;
+  console.log(`${nome} tem ${idade} anos. É programador? ${isProgrammer}`);
+  ```
+
+---
+
+### 4. Estruturas Condicionais  
+
+- **If/Else:**  
+
 ```javascript
-// Comentário de uma linha
+  if (idade >= 18) {
+    console.log("Maior de idade");
+  } else {
+    console.log("Menor de idade");
+  }
+```  
 
-/*
-Comentário de 
-múltiplas linhas
-*/
+- **Switch/Case:**  
+
+```javascript
+  switch (diaDaSemana) {
+    case 1: console.log("Segunda"); break;
+    case 2: console.log("Terça"); break;
+    default: console.log("Dia inválido");
+  }
+```  
+
+- **Operador ternário:**  
+
+```javascript
+  const status = (idade >= 18) ? "Adulto" : "Adolescente";
 ```
 
-### 1.2 Exemplo 1
-```javascript
-// Calcula a área do retângulo
-let area = largura * altura;
-```
+---
 
-### 1.3 Exemplo 2
+### **5. Estruturas de Repetição (30 min)**  
+
+- **For:**  
+
 ```javascript
-/*
-Função: calcularIMC
-Parâmetros:
-  - peso: em quilogramas
-  - altura: em metros
-Retorna o Índice de Massa Corporal
-*/
-function calcularIMC(peso, altura) {
-  return peso / (altura * altura);
+  for (let i = 0; i < 5; i++) {
+    console.log(`Número: ${i}`);
+  }
+```  
+
+- **While/Do-While:**  
+
+```javascript
+  let contador = 0;
+  while (contador < 3) {
+    console.log(contador);
+    contador++;
+  }
+```  
+
+- **Loop em arrays (prévia da Aula 3):**  
+
+```javascript
+  const frutas = ["Maçã", "Banana", "Uva"];
+  for (const fruta of frutas) {
+    console.log(fruta);
+  }
+  ```
+
+---
+
+### **6. Funções (30 min)**  
+
+- **Declaração vs. Expressão vs. Arrow Function:**  
+
+```javascript
+  // Declaração
+  function soma(a, b) { return a + b; }
+
+  // Expressão
+  const soma = function(a, b) { return a + b; };
+
+  // Arrow Function (ES6+)
+  const soma = (a, b) => a + b;
+```  
+
+- **Parâmetros e retorno:**  
+
+  - Valores padrão (`function greet(name = "Visitante")`).  
+- **Exercício:** Criar uma função que verifica se um número é par.  
+
+---
+
+### **7. Exercício Prático Final (30 min)**  
+
+**Desafio:** Criar uma calculadora simples no console:  
+
+1. Perguntar ao usuário dois números (usar `prompt`).  
+2. Perguntar a operação (`+`, `-`, `*`, `/`).  
+3. Exibir o resultado no console.  
+
+**Exemplo de solução:**  
+
+```javascript
+const num1 = parseFloat(prompt("Digite o primeiro número:"));
+const num2 = parseFloat(prompt("Digite o segundo número:"));
+const operacao = prompt("Digite a operação (+, -, *, /):");
+
+let resultado;
+switch (operacao) {
+  case "+": resultado = num1 + num2; break;
+  case "-": resultado = num1 - num2; break;
+  case "*": resultado = num1 * num2; break;
+  case "/": resultado = num1 / num2; break;
+  default: resultado = "Operação inválida";
 }
+console.log(`Resultado: ${resultado}`);
 ```
 
-## 2. Constantes
-Valores que não podem ser alterados após sua definição.
+---
 
-### 2.1 Sintaxe
-```javascript
-const NOME_DA_CONSTANTE = valor;
-```
+### Recursos Complementares
 
-### 2.2 Exemplos
-```javascript
-const PI = 3.14159;
-const DIAS_DA_SEMANA = 7;
-const URL_API = "https://api.exemplo.com/v1";
-```
-
-## 3. Variáveis
-Espaços na memória para armazenar valores que podem ser alterados.
-
-### 3.1 Sintaxe
-```javascript
-let nomeDaVariavel = valor;
-```
-
-### 3.2 Números Inteiros
-#### 3.2.1 Sintaxe
-```javascript
-let inteiro = 42;
-```
-
-#### 3.2.2 Exemplos:
-```javascript
-let idade = 25;
-let quantidadeProdutos = 100;
-let temperatura = -10;
-```
-
-### 3.3 Números reais
-#### 3.3.1 Sintaxe
-```javascript
-let real = 3.14;
-```
-
-#### 3.3.2 Exemplos:
-```javascript
-let preco = 19.99;
-let media = 7.5;
-let pi = 3.14159265359;
-```
-
-## 4. Booleanas
-Valores lógicos verdadeiro (`true`) ou falso (`false`).
-
-### 4.1 Sintaxe
-```javascript
-let booleano = true; // ou false
-```
-
-#### 4.1.1 Exemplos:
-```javascript
-let estaChovendo = false;
-let usuarioLogado = true;
-let maiorDeIdade = idade >= 18;
-```
-
-## 5. Strings
-Sequências de caracteres usadas para representar texto.
-
-### 5.1 Sintaxe
-```javascript
-let texto = "Isso é uma string";
-let outroTexto = 'Isso também é uma string';
-```
-
-### 5.2 Observação
-Strings podem ser concatenadas com o operador `+` e possuem propriedades e métodos úteis.
-
-### 5.3 Exemplos:
-```javascript
-let nome = "João Silva";
-let mensagem = "Olá, " + nome + "! Bem-vindo!";
-let endereco = 'Rua das Flores, 123';
-```
-
-#### 5.3.1 Exemplo formatado na página HTML/web:
-```javascript
-let htmlContent = "<h1>Título Principal</h1><p>Parágrafo com <strong>texto em negrito</strong>.</p>";
-document.getElementById("conteudo").innerHTML = htmlContent;
-```
-
-## 6. EVENTO Alert()
-Exibe uma caixa de diálogo com uma mensagem para o usuário.
-
-### 6.1 Exemplo:
-```javascript
-alert("Bem-vindo ao nosso site!");
-alert("Formulário enviado com sucesso!");
-```
-
-## 7. Exercícios
-
-1. Crie constantes para armazenar:
-   - O número de horas em um dia
-   - Seu nome completo
-   - O valor de π com 4 casas decimais
-
-2. Declare variáveis para:
-   - Sua idade
-   - O preço de um produto com impostos
-   - Se você está estudando atualmente (booleano)
-
-3. Crie uma string que concatene:
-   - Seu nome
-   - Sua idade
-   - Sua profissão
-   E exiba com alert()
-
-4. Escreva um programa que:
-   - Calcula a área de um círculo (π * raio²)
-   - Armazene o raio em uma variável
-   - Armazene π em uma constante
-   - Exiba o resultado com 2 casas decimais
-
-5. Crie comentários explicando cada linha do exercício 4.
+- [MDN JavaScript Guide](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide)  
+- [JavaScript.info](https://javascript.info/)
