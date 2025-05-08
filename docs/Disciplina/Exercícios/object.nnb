@@ -1,0 +1,358 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# **Exemplos e Exercícios com Objetos: Condicionais e Loops**\r\n\r\nAqui estão exemplos práticos e exercícios para trabalhar com **objetos** em JavaScript utilizando estruturas condicionais e de repetição.\r\n\r\n---\r\n\r\n## **1. Condicionais com Objetos**\r\n\r\n### **Exemplo 1: Verificar Propriedades de um Objeto**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const pessoa = {\r\n    nome: \"Maria\",\r\n    idade: 25,\r\n    profissao: \"Engenheira\"\r\n  };\r\n  \r\n  // Verifica se a pessoa é maior de idade\r\n  if (pessoa.idade >= 18) {\r\n    console.log(`${pessoa.nome} é maior de idade.`);\r\n  } else {\r\n    console.log(`${pessoa.nome} é menor de idade.`);\r\n  }"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Maria é maior de idade.",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "\r\n**Exercício:** Modifique para verificar se a pessoa tem uma profissão definida.\r\n\r\n---\r\n\r\n### **Exemplo 2: Classificar Objeto com Switch**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const animal = {\r\n    tipo: \"cachorro\",\r\n    raca: \"Labrador\"\r\n  };\r\n  \r\n  switch (animal.tipo) {\r\n    case \"cachorro\":\r\n      console.log(\"É um cachorro da raça \" + animal.raca);\r\n      break;\r\n    case \"gato\":\r\n      console.log(\"É um gato\");\r\n      break;\r\n    default:\r\n      console.log(\"Animal desconhecido\");\r\n    }"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "É um cachorro da raça Labrador",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "\r\n**Exercício:** Adicione mais casos (ex: \"pássaro\", \"peixe\") e uma propriedade `cor`.\r\n\r\n---\r\n\r\n### **Exemplo 3: Validar Formulário (Objeto)**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const usuario = {\r\n    nome: \"\",\r\n    email: \"user@example.com\",\r\n    senha: \"123456\"\r\n  };\r\n  \r\n  if (!usuario.nome) {\r\n    console.log(\"O nome é obrigatório!\");\r\n  } else if (usuario.senha.length < 6) {\r\n    console.log(\"A senha deve ter pelo menos 6 caracteres\");\r\n  } else {\r\n    console.log(\"Usuário válido!\");\r\n  }"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "O nome é obrigatório!",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Exercício:** Adicione validação para o formato de e-mail (usando `includes(\"@\")`).\r\n\r\n---\r\n\r\n## **2. Loops com Objetos**\r\n\r\n### **Exemplo 4: Iterar sobre Propriedades (for...in)**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const carro = {\r\n    marca: \"Toyota\",\r\n    modelo: \"Corolla\",\r\n    ano: 2022\r\n  };\r\n  \r\n  for (let propriedade in carro) {\r\n    console.log(`${propriedade}: ${carro[propriedade]}`);\r\n  }"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "marca: Toyota",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Exercício:** Conte quantas propriedades o objeto tem.\r\n\r\n---\r\n\r\n### **Exemplo 5: Filtrar Objetos em um Array (for)**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const produtos = [\r\n    { nome: \"Notebook\", preco: 2500 },\r\n    { nome: \"Celular\", preco: 800 },\r\n    { nome: \"Tablet\", preco: 1200 }\r\n  ];\r\n  \r\n  // Encontrar produtos com preço > R$1000\r\n  const caros = [];\r\n  for (let i = 0; i < produtos.length; i++) {\r\n    if (produtos[i].preco > 1000) {\r\n      caros.push(produtos[i]);\r\n    }\r\n  }\r\n  console.log(caros);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ { nome: 'Notebook', preco: 2500 }, { nome: 'Tablet', preco: 1200 } ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Exercício:** Use `while` para fazer o mesmo filtro.\r\n\r\n---\r\n\r\n### **Exemplo 6: Transformar Objeto em Array (Object.entries + for...of)**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const pessoa = {\r\n    nome: \"Carlos\",\r\n    idade: 30,\r\n    cidade: \"São Paulo\"\r\n  };\r\n  \r\n  for (let [chave, valor] of Object.entries(pessoa)) {\r\n    console.log(`${chave}: ${valor}`);\r\n  }"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "nome: Carlos",
+                                "idade: 30",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Exercício:** Crie um novo array apenas com os valores do objeto.\r\n\r\n---\r\n\r\n## **Exercícios Avançados**\r\n\r\n### **1. Mesclar Dois Objetos**\r\n\r\nCombine `objeto1` e `objeto2` em um novo objeto:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const objeto1 = { a: 1, b: 2 };\r\nconst objeto2 = { c: 3, d: 4 };\r\n// Resultado esperado: { a: 1, b: 2, c: 3, d: 4 }"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **2. Calcular Média de Notas**\r\n\r\nDado um objeto aluno:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const aluno = {\r\n    nome: \"Ana\",\r\n    notas: [7.5, 8, 6.5, 9]\r\n  };"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "// Calcule a média das notas\r\n```\r\n\r\n### **3. Encontrar Pessoa Mais Velha**\r\n\r\nEm um array de objetos:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const pessoas = [\r\n    { nome: \"João\", idade: 25 },\r\n    { nome: \"Maria\", idade: 30 },\r\n    { nome: \"Pedro\", idade: 20 }\r\n  ];\r\n  // Encontre a pessoa com maior idade"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **4. Validar Senha Forte**\r\n\r\nVerifique se a senha no objeto usuário tem:\r\n\r\n- Pelo menos 8 caracteres\r\n- Contém números e letras"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const usuario = {\r\n    nome: \"Admin\",\r\n    senha: \"Senha123\"\r\n  };"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "## **Soluções**\r\n\r\n### **Solução 1: Mesclar Objetos**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const novoObjeto = { ...objeto1, ...objeto2 };"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Solução 2: Média de Notas**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const soma = aluno.notas.reduce((total, nota) => total + nota, 0);\r\nconst media = soma / aluno.notas.length;"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Solução 3: Pessoa Mais Velha**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let maisVelha = pessoas[0];\r\nfor (let pessoa of pessoas) {\r\n  if (pessoa.idade > maisVelha.idade) {\r\n    maisVelha = pessoa;\r\n  }\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Solução 4: Senha Forte**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "const temNumero = /\\d/.test(usuario.senha);\r\nconst temLetra = /[a-zA-Z]/.test(usuario.senha);\r\nconst valida = usuario.senha.length >= 8 && temNumero && temLetra;"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Dicas:**\r\n\r\n- Use `Object.keys()`, `Object.values()`, e `Object.entries()` para iterar sobre objetos.\r\n- Combine `for...of` com `Object.entries()` para percorrer chaves e valores.\r\n\r\nEsses exercícios ajudam a dominar a manipulação de objetos em JavaScript! 🚀\r\n"
+            ],
+            "outputs": []
+        }
+    ]
+}
