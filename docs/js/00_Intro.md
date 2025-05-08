@@ -1,39 +1,38 @@
-# 00 - **Introdução ao JavaScript**
+# Introdução ao JavaScript
 
-## 1. Introdução ao JavaScript
+## Introdução
 
 - **O que é JavaScript?**  
-
   - Linguagem de programação para web (front-end e back-end com Node.js).  
   - Comparação com HTML e CSS (HTML = estrutura, CSS = estilo, JS = interatividade).  
 
 - **Onde o JavaScript é usado?**  
-
   - Páginas web dinâmicas (ex.: formulários, animações).  
   - Aplicativos mobile (React Native, Ionic).  
   - Back-end (Node.js), games, IoT.  
 
 - **Ferramentas necessárias:**  
-
   - Navegador (Chrome + DevTools).  
   - Editor de código (VS Code).  
   - Node.js (opcional para rodar JS fora do navegador).  
 
 ---
 
-### **2. Configurando o Ambiente**
+### Configurando o Ambiente
 
 - **Instalação do VS Code e extensões úteis:**  
+
   - Live Preview (para rodar páginas localmente).  
   - Prettier (formatação automática).  
 
 - **Hello World no navegador:**  
+
   - Criar um arquivo `index.html` com `<script>` embutido.  
   - Usar `console.log("Hello World")` e inspecionar no DevTools (F12).  
 
 ---
 
-### 3. Variáveis e Tipos de Dados  
+### Variáveis e Tipos de Dados  
 
 - **Declaração de variáveis:**  
   - `var` (antigo, escopo global/função).  
@@ -59,7 +58,7 @@
 
 ---
 
-### 4. Estruturas Condicionais  
+### Estruturas Condicionais  
 
 - **If/Else:**  
 
@@ -89,7 +88,7 @@
 
 ---
 
-### **5. Estruturas de Repetição (30 min)**  
+### Estruturas de Repetição  
 
 - **For:**  
 
@@ -120,7 +119,7 @@
 
 ---
 
-### **6. Funções (30 min)**  
+### Funções  
 
 - **Declaração vs. Expressão vs. Arrow Function:**  
 
@@ -142,7 +141,7 @@
 
 ---
 
-### **7. Exercício Prático Final (30 min)**  
+### Exercício Prático Final  
 
 **Desafio:** Criar uma calculadora simples no console:  
 
