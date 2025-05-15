@@ -21,6 +21,7 @@
   document.getElementsByClassName("classe"); // Retorna uma HTMLCollection
   document.getElementsByTagName("div");     // Retorna uma HTMLCollection
 ```  
+
 - **Métodos modernos (querySelector):**  
 
 ```javascript
