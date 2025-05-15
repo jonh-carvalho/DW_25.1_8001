@@ -1,4 +1,7 @@
-### Criando um Gráfico de Linhas Simples com JavaScript e o Método `map()`
+# 05 - Chart Map
+
+## Criando um Gráfico de Linhas Simples com JavaScript e o Método `map()`
+
 
 **Entendendo o Problema:**
 

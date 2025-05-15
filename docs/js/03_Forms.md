@@ -1,5 +1,8 @@
+# 04 - Validação de Formulários
+
 Site simples em HTML e CSS com validação de formulário usando JavaScript:
 
+## Estrutura
 
 ### 1. `index.html` (HTML)
 ```html

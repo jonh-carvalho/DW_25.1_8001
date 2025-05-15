@@ -1,4 +1,4 @@
-# **DOM e Manipulação de HTML com JavaScript**  
+# 03 - **DOM e Manipulação de HTML com JavaScript**  
 
 **Objetivo:** Aprender a interagir com elementos HTML usando JavaScript, manipular eventos e criar dinamicamente conteúdo na página.  
 

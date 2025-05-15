@@ -1,9 +1,4 @@
----
-title: 02 - Map
-slug: Map
----
-
-# O Comando Map em JavaScript
+# 04 - O Comando Map em JavaScript
 
 ## Introdução
 
