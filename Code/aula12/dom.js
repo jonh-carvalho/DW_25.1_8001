@@ -18,3 +18,34 @@ form.addEventListener("submit", (event) => {
     const nome = document.querySelector("#nome").value;
     alert(`Nome digitado: ${nome}`);    
 });
+// Adicionar Tarefas
+const botaoLista = document.querySelector("#adicionar");
+const lista = document.querySelector("#lista");
+
+botaoLista.addEventListener("click", () => {
+    const input = document.querySelector("#tarefa");
+    if (input.value.trim() === "") return; 
+    const li = document.createElement("li");
+    li.textContent = input.value;
+    lista.appendChild(li);
+    input.value = ""; // Limpa o campo de entrada
+});
+
+
+
+const inputNome = document.querySelector("#inputNome");
+const inputDescricao = document.querySelector("#inputDescricao");
+const corFundo = document.querySelector("#corFundo"); 
+const perfil = document.querySelector("#perfil");
+
+inputNome.addEventListener("keyup", () => {
+    document.querySelector("#nomePerfil").textContent = inputNome.value;
+    });
+
+inputDescricao.addEventListener("keyup", () => {
+    document.querySelector("#descricaoPerfil").textContent = inputDescricao.value;
+});
+
+corFundo.addEventListener("input", () => {
+    perfil.style.backgroundColor = corFundo.value;
+});
