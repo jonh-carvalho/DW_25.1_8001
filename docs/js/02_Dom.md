@@ -1,10 +1,10 @@
 # **DOM e Manipulação de HTML com JavaScript**  
 
-## **Objetivo:** Aprender a interagir com elementos HTML usando JavaScript, manipular eventos e criar dinamicamente conteúdo na página.  
+**Objetivo:** Aprender a interagir com elementos HTML usando JavaScript, manipular eventos e criar dinamicamente conteúdo na página.  
 
 ---
 
-## **1. Introdução ao DOM (30 min)**  
+## **1. Introdução ao DOM**  
 
 ### **O que é o DOM?**  
 
@@ -49,7 +49,7 @@
 
 ---
 
-## **2. Modificando Elementos (40 min)**  
+## **2. Modificando Elementos**  
 
 ### **Propriedades e Métodos Úteis:**  
 
@@ -83,7 +83,7 @@
 
 ---
 
-## **3. Eventos (50 min)**  
+## **3. Eventos**  
 
 ### **Principais Eventos:**  
 
@@ -117,7 +117,7 @@
 
 ---
 
-## **4. Criando e Removendo Elementos (40 min)**  
+## **4. Criando e Removendo Elementos**  
 
 ### **Métodos do DOM:**  
 
@@ -154,7 +154,7 @@
 
 ---
 
-## **5. Projeto Final da Aula (20 min)**  
+## **5. Projeto Final da Aula**  
 
 **Desafio:** Criar um **"Editor de Perfil"** onde o usuário possa:  
 
