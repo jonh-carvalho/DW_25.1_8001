@@ -222,6 +222,13 @@
                 "\r\n**Recursos:**  \r\n\r\n- [MDN - Strings](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String)  \r\n- [JavaScript.info - Loops](https://javascript.info/while-for)  \r\n\r\nEsses exercícios ajudam a consolidar **lógica de programação** e manipulação de strings! 🚀\r\n"
             ],
             "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
         }
     ]
 }
