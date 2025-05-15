@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>Arrays, Objetos e Métodos Avançados - DW</title>
+    <title>DOM e Manipulação de HTML com JavaScript - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -347,14 +347,14 @@
 
                         
                             
-<li class="active">
-    <a href="./">Arrays, Objetos e Métodos Avançados</a>
+<li >
+    <a href="../01_Arrays/">Arrays, Objetos e Métodos Avançados</a>
 </li>
 
                         
                             
-<li >
-    <a href="../02_Dom/">DOM e Manipulação de HTML com JavaScript</a>
+<li class="active">
+    <a href="./">DOM e Manipulação de HTML com JavaScript</a>
 </li>
 
                         
@@ -425,17 +425,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../00_Intro/">
+                        <a rel="prev" href="../01_Arrays/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../02_Dom/">
+                        <a rel="next" href="../02_Forms/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/js/01_Arrays.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/js/02_Dom.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -447,44 +447,185 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#arrays-objetos-e-metodos-avancados">Arrays, Objetos e Métodos Avançados</a></li>
-            <li class="second-level"><a href="#arrays-conceitos-e-metodos-basicos">Arrays: Conceitos e Métodos Básicos</a></li>
+        <li class="first-level active"><a href="#dom-e-manipulacao-de-html-com-javascript">DOM e Manipulação de HTML com JavaScript</a></li>
+            <li class="second-level"><a href="#1-introducao-ao-dom">1. Introdução ao DOM</a></li>
                 
-                <li class="third-level"><a href="#o-que-sao-arrays">O que são Arrays?</a></li>
-                <li class="third-level"><a href="#metodos-fundamentais">Métodos Fundamentais</a></li>
+                <li class="third-level"><a href="#o-que-e-o-dom">O que é o DOM?</a></li>
+                <li class="third-level"><a href="#selecionando-elementos">Selecionando Elementos</a></li>
+                <li class="third-level"><a href="#pratica-guiada">Prática Guiada:</a></li>
+            <li class="second-level"><a href="#2-modificando-elementos">2. Modificando Elementos</a></li>
+                
+                <li class="third-level"><a href="#propriedades-e-metodos-uteis">Propriedades e Métodos Úteis:</a></li>
+                <li class="third-level"><a href="#exercicio">Exercício:</a></li>
+            <li class="second-level"><a href="#3-eventos">3. Eventos</a></li>
+                
+                <li class="third-level"><a href="#principais-eventos">Principais Eventos:</a></li>
                 <li class="third-level"><a href="#pratica">Prática:</a></li>
-                <li class="third-level"><a href="#2-metodos-avancados-de-arrays">2. Métodos Avançados de Arrays</a></li>
-                <li class="third-level"><a href="#map">map()</a></li>
-                <li class="third-level"><a href="#filter">filter()</a></li>
-                <li class="third-level"><a href="#reduce">reduce()</a></li>
-                <li class="third-level"><a href="#exercicio">Exercício</a></li>
-                <li class="third-level"><a href="#3-objetos-em-javascript">3. Objetos em JavaScript</a></li>
-                <li class="third-level"><a href="#criacao-e-acesso">Criação e Acesso</a></li>
-                <li class="third-level"><a href="#metodos-em-objetos">Métodos em Objetos:</a></li>
-                <li class="third-level"><a href="#exercicios">Exercícios</a></li>
-                <li class="third-level"><a href="#4-desestruturacao-e-spread-operator">4. Desestruturação e Spread Operator</a></li>
-                <li class="third-level"><a href="#desestruturacao-de-objetos">Desestruturação de Objetos</a></li>
-                <li class="third-level"><a href="#spread-operator">Spread Operator (...)</a></li>
-                <li class="third-level"><a href="#exercicios-arraysobjetos">Exercícios arrays/objetos</a></li>
-                <li class="third-level"><a href="#5-projeto-pratico-lista-de-produtos">5. Projeto Prático: Lista de Produtos</a></li>
-                <li class="third-level"><a href="#dados-iniciais">Dados Iniciais:</a></li>
-                <li class="third-level"><a href="#solucao">Solução</a></li>
-                <li class="third-level"><a href="#recursos-complementares">Recursos Complementares:</a></li>
+            <li class="second-level"><a href="#4-criando-e-removendo-elementos">4. Criando e Removendo Elementos</a></li>
+                
+                <li class="third-level"><a href="#metodos-do-dom">Métodos do DOM:</a></li>
+                <li class="third-level"><a href="#exercicio-to-do-list">Exercício (To-Do List):</a></li>
+            <li class="second-level"><a href="#5-projeto-final-da-aula">5. Projeto Final da Aula</a></li>
+                
+            <li class="second-level"><a href="#recursos-complementares">Recursos Complementares:</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="arrays-objetos-e-metodos-avancados">Arrays, Objetos e Métodos Avançados</h1>
-<h2 id="arrays-conceitos-e-metodos-basicos">Arrays: Conceitos e Métodos Básicos</h2>
-<h3 id="o-que-sao-arrays"><strong>O que são Arrays?</strong></h3>
+<h1 id="dom-e-manipulacao-de-html-com-javascript"><strong>DOM e Manipulação de HTML com JavaScript</strong></h1>
+<p><strong>Objetivo:</strong> Aprender a interagir com elementos HTML usando JavaScript, manipular eventos e criar dinamicamente conteúdo na página.  </p>
+<hr />
+<h2 id="1-introducao-ao-dom"><strong>1. Introdução ao DOM</strong></h2>
+<h3 id="o-que-e-o-dom"><strong>O que é o DOM?</strong></h3>
 <ul>
-<li>Estrutura ordenada para armazenar múltiplos valores.  </li>
-<li>Sintaxe:  </li>
+<li><strong>DOM (Document Object Model):</strong> Representação estruturada do HTML como uma árvore de objetos.  </li>
+<li><strong>Como o JavaScript interage com o DOM?</strong>  </li>
+<li>Acessa, modifica e remove elementos.  </li>
+<li>Reage a eventos (cliques, teclas, formulários).  </li>
 </ul>
-<pre><code class="language-javascript">  const frutas = [&quot;Maçã&quot;, &quot;Banana&quot;, &quot;Uva&quot;];  
-  const numeros = [1, 2, 3, 4, 5];  
+<h3 id="selecionando-elementos"><strong>Selecionando Elementos</strong></h3>
+<ul>
+<li><strong>Métodos clássicos:</strong>  </li>
+</ul>
+<pre><code class="language-javascript">  document.getElementById(&quot;meuId&quot;);          // Retorna um único elemento
+  document.getElementsByClassName(&quot;classe&quot;); // Retorna uma HTMLCollection
+  document.getElementsByTagName(&quot;div&quot;);     // Retorna uma HTMLCollection
 </code></pre>
-<h3 id="metodos-fundamentais">Métodos Fundamentais</h3>
+<ul>
+<li><strong>Métodos modernos (querySelector):</strong>  </li>
+</ul>
+<pre><code class="language-javascript">  document.querySelector(&quot;#meuId&quot;);         // Retorna o PRIMEIRO elemento que corresponde
+  document.querySelectorAll(&quot;.classe&quot;);      // Retorna uma NodeList (todos os elementos)
+</code></pre>
+<h3 id="pratica-guiada"><strong>Prática Guiada:</strong></h3>
+<ul>
+<li>Criar uma página HTML com:  </li>
+</ul>
+<pre><code class="language-html">  &lt;h1 id=&quot;titulo&quot;&gt;Olá, DOM!&lt;/h1&gt;
+  &lt;p class=&quot;texto&quot;&gt;Texto 1&lt;/p&gt;
+  &lt;p class=&quot;texto&quot;&gt;Texto 2&lt;/p&gt;
+</code></pre>
+<ul>
+<li>No console:  </li>
+</ul>
+<pre><code class="language-javascript">  const titulo = document.querySelector(&quot;#titulo&quot;);
+  titulo.textContent = &quot;Novo Título!&quot;;
+  const textos = document.querySelectorAll(&quot;.texto&quot;);
+  textos.forEach(texto =&gt; texto.style.color = &quot;blue&quot;);
+</code></pre>
+<hr />
+<h2 id="2-modificando-elementos"><strong>2. Modificando Elementos</strong></h2>
+<h3 id="propriedades-e-metodos-uteis"><strong>Propriedades e Métodos Úteis:</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Propriedade/Método</th>
+<th>Descrição</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>textContent</code></td>
+<td>Altera o texto interno</td>
+<td><code>elemento.textContent = "Novo texto"</code></td>
+</tr>
+<tr>
+<td><code>innerHTML</code></td>
+<td>Permite inserir HTML</td>
+<td><code>elemento.innerHTML = "&lt;strong&gt;Negrito&lt;/strong&gt;"</code></td>
+</tr>
+<tr>
+<td><code>setAttribute()</code></td>
+<td>Altera atributos</td>
+<td><code>img.setAttribute("src", "foto.jpg")</code></td>
+</tr>
+<tr>
+<td><code>style</code></td>
+<td>Modifica CSS inline</td>
+<td><code>elemento.style.backgroundColor = "red"</code></td>
+</tr>
+<tr>
+<td><code>classList</code></td>
+<td>Manipula classes CSS</td>
+<td><code>elemento.classList.add("destaque")</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="exercicio"><strong>Exercício:</strong></h3>
+<ol>
+<li>Criar um botão em HTML:  </li>
+</ol>
+<pre><code class="language-html">   &lt;button id=&quot;mudarCor&quot;&gt;Mudar Cor&lt;/button&gt;
+   &lt;div id=&quot;caixa&quot; style=&quot;width: 100px; height: 100px; background: yellow;&quot;&gt;&lt;/div&gt;
+</code></pre>
+<ol>
+<li>No JavaScript:  </li>
+</ol>
+<pre><code class="language-javascript">   const botao = document.querySelector(&quot;#mudarCor&quot;);
+   const caixa = document.querySelector(&quot;#caixa&quot;);
+
+   botao.addEventListener(&quot;click&quot;, () =&gt; {
+     caixa.style.backgroundColor = &quot;purple&quot;;
+   });
+</code></pre>
+<hr />
+<h2 id="3-eventos"><strong>3. Eventos</strong></h2>
+<h3 id="principais-eventos"><strong>Principais Eventos:</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Evento</th>
+<th>Descrição</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>click</code></td>
+<td>Clique do mouse</td>
+<td><code>botao.addEventListener("click", função)</code></td>
+</tr>
+<tr>
+<td><code>submit</code></td>
+<td>Envio de formulário</td>
+<td><code>form.addEventListener("submit", função)</code></td>
+</tr>
+<tr>
+<td><code>keypress</code></td>
+<td>Tecla pressionada</td>
+<td><code>input.addEventListener("keypress", função)</code></td>
+</tr>
+<tr>
+<td><code>mouseover</code></td>
+<td>Mouse sobre o elemento</td>
+<td><code>div.addEventListener("mouseover", função)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pratica"><strong>Prática:</strong></h3>
+<ol>
+<li>Criar um formulário:  </li>
+</ol>
+<pre><code class="language-html">   &lt;form id=&quot;meuForm&quot;&gt;
+     &lt;input type=&quot;text&quot; id=&quot;nome&quot; placeholder=&quot;Seu nome&quot;&gt;
+     &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+   &lt;/form&gt;
+</code></pre>
+<ol>
+<li>Validar o formulário:  </li>
+</ol>
+<pre><code class="language-javascript">   const form = document.querySelector(&quot;#meuForm&quot;);
+   form.addEventListener(&quot;submit&quot;, (event) =&gt; {
+     event.preventDefault(); // Evita o recarregamento
+     const nome = document.querySelector(&quot;#nome&quot;).value;
+     alert(`Nome digitado: ${nome}`);
+   });
+</code></pre>
+<hr />
+<h2 id="4-criando-e-removendo-elementos"><strong>4. Criando e Removendo Elementos</strong></h2>
+<h3 id="metodos-do-dom"><strong>Métodos do DOM:</strong></h3>
 <table>
 <thead>
 <tr>
@@ -495,145 +636,86 @@
 </thead>
 <tbody>
 <tr>
-<td><code>push()</code></td>
-<td>Adiciona ao final</td>
-<td><code>frutas.push("Morango")</code></td>
+<td><code>createElement()</code></td>
+<td>Cria um novo elemento</td>
+<td><code>const div = document.createElement("div")</code></td>
 </tr>
 <tr>
-<td><code>pop()</code></td>
-<td>Remove do final</td>
-<td><code>frutas.pop()</code></td>
+<td><code>appendChild()</code></td>
+<td>Adiciona ao final de um elemento pai</td>
+<td><code>pai.appendChild(div)</code></td>
 </tr>
 <tr>
-<td><code>shift()</code></td>
-<td>Remove do início</td>
-<td><code>frutas.shift()</code></td>
-</tr>
-<tr>
-<td><code>unshift()</code></td>
-<td>Adiciona no início</td>
-<td><code>frutas.unshift("Pera")</code></td>
-</tr>
-<tr>
-<td><code>length</code></td>
-<td>Tamanho do array</td>
-<td><code>frutas.length</code></td>
+<td><code>remove()</code></td>
+<td>Remove um elemento</td>
+<td><code>elemento.remove()</code></td>
 </tr>
 </tbody>
 </table>
-<h3 id="pratica"><strong>Prática:</strong></h3>
-<pre><code class="language-javascript">const listaCompras = [&quot;Leite&quot;, &quot;Ovos&quot;];  
-listaCompras.push(&quot;Pão&quot;);  
-console.log(listaCompras); // [&quot;Leite&quot;, &quot;Ovos&quot;, &quot;Pão&quot;]  
-</code></pre>
-<hr />
-<h3 id="2-metodos-avancados-de-arrays">2. Métodos Avançados de Arrays</h3>
-<h3 id="map"><code>map()</code></h3>
-<ul>
-<li>Cria um novo array transformando cada item.  </li>
-</ul>
-<pre><code class="language-javascript">const numerosDobrados = numeros.map(num =&gt; num * 2);  
-// [2, 4, 6, 8, 10]  
-</code></pre>
-<h3 id="filter"><strong><code>filter()</code></strong></h3>
-<ul>
-<li>Filtra itens com base em uma condição.  </li>
-</ul>
-<pre><code class="language-javascript">const pares = numeros.filter(num =&gt; num % 2 === 0);  
-// [2, 4]  
-</code></pre>
-<h3 id="reduce"><code>reduce()</code></h3>
-<ul>
-<li>Reduz o array a um único valor (soma, média, etc).  </li>
-</ul>
-<pre><code class="language-javascript">const soma = numeros.reduce((total, num) =&gt; total + num, 0);  
-// 15  
-</code></pre>
-<h3 id="exercicio">Exercício</h3>
-<p>Dado o array <code>[10, 20, 30, 40]</code>:  </p>
+<h3 id="exercicio-to-do-list"><strong>Exercício (To-Do List):</strong></h3>
 <ol>
-<li>Calcular o dobro de cada número (<code>map</code>).  </li>
-<li>Filtrar valores maiores que 25 (<code>filter</code>).  </li>
-<li>Somar todos os valores (<code>reduce</code>).  </li>
+<li>Estrutura HTML:  </li>
 </ol>
-<hr />
-<h3 id="3-objetos-em-javascript">3. Objetos em JavaScript</h3>
-<h3 id="criacao-e-acesso">Criação e Acesso</h3>
-<pre><code class="language-javascript">const pessoa = {  
-  nome: &quot;Ana&quot;,  
-  idade: 30,  
-  profissao: &quot;Engenheira&quot;  
-};  
+<pre><code class="language-html">   &lt;input type=&quot;text&quot; id=&quot;tarefa&quot;&gt;
+   &lt;button id=&quot;adicionar&quot;&gt;Adicionar&lt;/button&gt;
+   &lt;ul id=&quot;lista&quot;&gt;&lt;/ul&gt;
+</code></pre>
+<ol>
+<li>JavaScript:  </li>
+</ol>
+<pre><code class="language-javascript">   const botao = document.querySelector(&quot;#adicionar&quot;);
+   const lista = document.querySelector(&quot;#lista&quot;);
 
-console.log(pessoa.nome); // &quot;Ana&quot;  
-</code></pre>
-<h3 id="metodos-em-objetos"><strong>Métodos em Objetos:</strong></h3>
-<pre><code class="language-javascript">const pessoa = {  
-  nome: &quot;Carlos&quot;,  
-  cumprimentar() {  
-    return `Olá, eu sou ${this.nome}!`;  
-  }  
-};  
+   botao.addEventListener(&quot;click&quot;, () =&gt; {
+     const input = document.querySelector(&quot;#tarefa&quot;);
+     if (input.value.trim() === &quot;&quot;) return; // Evita tarefa vazia
 
-console.log(pessoa.cumprimentar());  
+     const li = document.createElement(&quot;li&quot;);
+     li.textContent = input.value;
+     lista.appendChild(li);
+     input.value = &quot;&quot;; // Limpa o input
+   });
 </code></pre>
-<h3 id="exercicios">Exercícios</h3>
-<p>Criar um objeto <code>livro</code> com:</p>
-<ul>
-<li>Título, autor, ano de publicação.  </li>
-<li>Método <code>info()</code> que retorna:<br />
-<code>"O livro [TÍTULO] foi escrito por [AUTOR] em [ANO]."</code>  </li>
-</ul>
 <hr />
-<h3 id="4-desestruturacao-e-spread-operator">4. Desestruturação e Spread Operator</h3>
-<h4 id="desestruturacao-de-arrays"><strong>Desestruturação de Arrays:</strong></h4>
-<pre><code class="language-javascript">const [primeiro, segundo] = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;];  
-console.log(primeiro); // &quot;A&quot;  
-</code></pre>
-<h3 id="desestruturacao-de-objetos">Desestruturação de Objetos</h3>
-<pre><code class="language-javascript">const { nome, idade } = pessoa;  
-console.log(nome); // &quot;Ana&quot;  
-</code></pre>
-<h3 id="spread-operator">Spread Operator (<code>...</code>)</h3>
-<ul>
-<li>Copiar arrays/objetos ou combinar.  </li>
-</ul>
-<pre><code class="language-javascript">const novoArray = [...numeros, 6, 7]; // [1, 2, 3, 4, 5, 6, 7]  
-const novoObjeto = { ...pessoa, cidade: &quot;São Paulo&quot; };  
-</code></pre>
-<h3 id="exercicios-arraysobjetos">Exercícios arrays/objetos</h3>
+<h2 id="5-projeto-final-da-aula"><strong>5. Projeto Final da Aula</strong></h2>
+<p><strong>Desafio:</strong> Criar um <strong>"Editor de Perfil"</strong> onde o usuário possa:  </p>
 <ol>
-<li>Desestruturar um array <code>[100, 200, 300]</code> em variáveis <code>a</code>, <code>b</code>, <code>c</code>.  </li>
-<li>Combinar dois objetos (<code>usuario</code> e <code>endereco</code>) em um novo.  </li>
+<li>Digitar um nome e ver a atualização em tempo real (<code>keyup</code>).  </li>
+<li>Escolher uma cor para o fundo do perfil.  </li>
+<li>Adicionar uma descrição via <code>textarea</code> e exibi-la abaixo.  </li>
 </ol>
-<hr />
-<h3 id="5-projeto-pratico-lista-de-produtos">5. Projeto Prático: Lista de Produtos</h3>
-<p><strong>Objetivo:</strong> Criar um sistema que:  </p>
-<ol>
-<li>Filtra produtos com preço &gt; R$50.  </li>
-<li>Aplica 10% de desconto nos produtos (<code>map</code>).  </li>
-<li>Calcula o total da compra (<code>reduce</code>).  </li>
-</ol>
-<h3 id="dados-iniciais"><strong>Dados Iniciais:</strong></h3>
-<pre><code class="language-javascript">const produtos = [  
-  { nome: &quot;Notebook&quot;, preco: 2500 },  
-  { nome: &quot;Celular&quot;, preco: 800 },  
-  { nome: &quot;Tablet&quot;, preco: 1200 }  
-];  
+<p><strong>Exemplo de Solução:</strong>  </p>
+<pre><code class="language-html">&lt;div id=&quot;perfil&quot; style=&quot;border: 1px solid #000; padding: 20px;&quot;&gt;
+  &lt;h2 id=&quot;nomePerfil&quot;&gt;Nome&lt;/h2&gt;
+  &lt;p id=&quot;descricao&quot;&gt;Descrição...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;input type=&quot;text&quot; id=&quot;inputNome&quot; placeholder=&quot;Seu nome&quot;&gt;
+&lt;textarea id=&quot;inputDescricao&quot; placeholder=&quot;Sua descrição&quot;&gt;&lt;/textarea&gt;
+&lt;input type=&quot;color&quot; id=&quot;corFundo&quot;&gt;
 </code></pre>
-<h3 id="solucao">Solução</h3>
-<pre><code class="language-javascript">const produtosFiltrados = produtos.filter(p =&gt; p.preco &gt; 50);  
-const comDesconto = produtosFiltrados.map(p =&gt; ({  
-  ...p,  
-  preco: p.preco * 0.9  
-}));  
-const total = comDesconto.reduce((soma, p) =&gt; soma + p.preco, 0);  
+<pre><code class="language-javascript">const inputNome = document.querySelector(&quot;#inputNome&quot;);
+const inputDescricao = document.querySelector(&quot;#inputDescricao&quot;);
+const corFundo = document.querySelector(&quot;#corFundo&quot;);
+const perfil = document.querySelector(&quot;#perfil&quot;);
+
+inputNome.addEventListener(&quot;keyup&quot;, () =&gt; {
+  document.querySelector(&quot;#nomePerfil&quot;).textContent = inputNome.value;
+});
+
+inputDescricao.addEventListener(&quot;keyup&quot;, () =&gt; {
+  document.querySelector(&quot;#descricao&quot;).textContent = inputDescricao.value;
+});
+
+corFundo.addEventListener(&quot;input&quot;, () =&gt; {
+  perfil.style.backgroundColor = corFundo.value;
+});
 </code></pre>
 <hr />
-<h3 id="recursos-complementares"><strong>Recursos Complementares:</strong></h3>
+<h2 id="recursos-complementares"><strong>Recursos Complementares:</strong></h2>
 <ul>
-<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array">MDN - Array Methods</a>  </li>
-<li><a href="https://javascript.info/object">JavaScript.info - Objetos</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model">MDN - DOM</a>  </li>
+<li><a href="https://javascript.info/events">JavaScript.info - Eventos</a>  </li>
 </ul></div>
         
         
