@@ -450,87 +450,83 @@
         <li class="first-level active"><a href="#ac5-criando-um-gerenciador-de-lista-de-tarefas">AC5: Criando um Gerenciador de Lista de Tarefas</a></li>
             <li class="second-level"><a href="#instrucoes">Instruções :</a></li>
                 
+                <li class="third-level"><a href="#1-variaveis-e-tipos-de-dados">1. Variáveis e Tipos de Dados:</a></li>
+                <li class="third-level"><a href="#2-operadores-e-controle-de-fluxo">2. Operadores e Controle de Fluxo:</a></li>
+                <li class="third-level"><a href="#3-funcoes-com-arrays-e-strings">3. Funções com Arrays e Strings:</a></li>
         <li class="first-level "><a href="#instrucoes_1">Instruções:</a></li>
         <li class="first-level "><a href="#conceitos-envolvidos">Conceitos Envolvidos:</a></li>
+            <li class="second-level"><a href="#1-variaveis-let-const-var">1. Variáveis (let, const, var):</a></li>
+                
+            <li class="second-level"><a href="#2-tipos-de-dados">2. Tipos de Dados:</a></li>
+                
+            <li class="second-level"><a href="#3-fluxo-de-controle">3. Fluxo de Controle:</a></li>
+                
+            <li class="second-level"><a href="#4-arrays">4. Arrays:</a></li>
+                
+            <li class="second-level"><a href="#5-strings">5. Strings:</a></li>
+                
+            <li class="second-level"><a href="#6-operadores">6. Operadores:</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
 <h3 id="ac5-criando-um-gerenciador-de-lista-de-tarefas"><strong>AC5: Criando um Gerenciador de Lista de Tarefas</strong></h3>
-<p>** <em>Duração</em> : 70 minutos**</p>
 <p><strong>Objetivo:</strong> Desenvolver um pequeno programa que permite gerenciar uma lista de tarefas. Esse programa irá adicionar, remover e listar as tarefas com base nas opções fornecidas pelo usuário.</p>
 <h4 id="instrucoes"><strong>Instruções</strong> :</h4>
-<ol>
-<li>
-<p><strong>Variáveis e Tipos de Dados:</strong></p>
-</li>
-<li>
-<p>Declare uma variável que será uma lista (array) vazia para armazenar as tarefas.</p>
-</li>
+<h5 id="1-variaveis-e-tipos-de-dados">1. <strong>Variáveis e Tipos de Dados:</strong></h5>
+<ul>
+<li>Declare uma variável que será uma lista (array) vazia para armazenar as tarefas.</li>
 <li>Use diferentes tipos de dados, como strings para as tarefas e números para a escolha do usuário.</li>
-<li>
-<p><strong>Operadores e Controle de Fluxo:</strong></p>
-</li>
-<li>
-<p>Use operadores de comparação para verificar a escolha do usuário.</p>
-</li>
+</ul>
+<h5 id="2-operadores-e-controle-de-fluxo">2. <strong>Operadores e Controle de Fluxo:</strong></h5>
+<ul>
+<li>Use operadores de comparação para verificar a escolha do usuário.</li>
 <li>Use um loop para permitir que o usuário continue gerenciando a lista até que ele escolha sair.</li>
-<li>
-<p><strong>Funções com Arrays e Strings:</strong></p>
-</li>
-<li>
-<p>Adicionar uma nova tarefa.</p>
-</li>
+</ul>
+<h5 id="3-funcoes-com-arrays-e-strings">3. <strong>Funções com Arrays e Strings:</strong></h5>
+<ul>
+<li>Adicionar uma nova tarefa.</li>
 <li>Remover uma tarefa específica.</li>
 <li>Listar todas as tarefas.</li>
-</ol>
+</ul>
 <h3 id="instrucoes_1">Instruções:</h3>
 <ol>
-<li>Crie um arquivo <code>todo.js</code> e adicione o código JavaScript a seguir.</li>
-<li>Execute-o em um navegador ou vscode para testar.</li>
+<li>
+<p>Crie um arquivo <code>todo.js</code> e adicione o código JavaScript a seguir.</p>
+</li>
+<li>
+<p>Execute-o em um navegador ou vscode para testar.</p>
+</li>
 </ol>
 <h3 id="conceitos-envolvidos">Conceitos Envolvidos:</h3>
-<ol>
-<li>
-<p><strong>Variáveis (<code>let</code>, <code>const</code>, <code>var</code>)</strong>:</p>
-</li>
-<li>
-<p><code>let tasks = []</code>: Uma variável que pode mudar durante o programa (array).</p>
-</li>
+<h4 id="1-variaveis-let-const-var">1. <strong>Variáveis (<code>let</code>, <code>const</code>, <code>var</code>)</strong>:</h4>
+<ul>
+<li><code>let tasks = []</code>: Uma variável que pode mudar durante o programa (array).</li>
 <li><code>const newTask</code>: Uma variável constante que não mudará após ser definida.</li>
-<li>
-<p><strong>Tipos de Dados:</strong></p>
-</li>
-<li>
-<p><code>tasks</code>: Um array que armazena strings.</p>
-</li>
+</ul>
+<h4 id="2-tipos-de-dados">2. <strong>Tipos de Dados:</strong></h4>
+<ul>
+<li><code>tasks</code>: Um array que armazena strings.</li>
 <li><code>newTask</code>: Uma string que representa o nome da tarefa.</li>
-<li>
-<p><strong>Fluxo de Controle:</strong></p>
-</li>
-<li>
-<p><code>switch-case</code>: Usado para tratar as opções do menu.</p>
-</li>
+</ul>
+<h4 id="3-fluxo-de-controle">3. <strong>Fluxo de Controle:</strong></h4>
+<ul>
+<li><code>switch-case</code>: Usado para tratar as opções do menu.</li>
 <li><code>while</code>: Mantém o programa em execução até o usuário escolher sair.</li>
-<li>
-<p><strong>Arrays:</strong></p>
-</li>
-<li>
-<p>Métodos como <code>.push()</code> para adicionar uma nova tarefa e <code>.splice()</code> para remover uma tarefa do array.</p>
-</li>
-<li>
-<p><strong>Strings:</strong></p>
-</li>
-<li>
-<p>Manipulação de strings para exibir mensagens e armazenar o nome das tarefas.</p>
-</li>
-<li>
-<p><strong>Operadores:</strong></p>
-</li>
-<li>
-<p>Operadores de comparação (como <code>&gt;=</code>, <code>&lt;</code>, e <code>===</code>) para verificar as entradas do usuário.</p>
-</li>
-</ol>
+</ul>
+<h4 id="4-arrays">4. <strong>Arrays:</strong></h4>
+<ul>
+<li>Métodos como <code>.push()</code> para adicionar uma nova tarefa e <code>.splice()</code> para remover uma tarefa do array.</li>
+</ul>
+<h4 id="5-strings">5. <strong>Strings:</strong></h4>
+<ul>
+<li>Manipulação de strings para exibir mensagens e armazenar o nome das tarefas.</li>
+</ul>
+<h4 id="6-operadores">6. <strong>Operadores:</strong></h4>
+<ul>
+<li>Operadores de comparação (como <code>&gt;=</code>, <code>&lt;</code>, e <code>===</code>) para verificar as entradas do usuário.</li>
+</ul>
 <hr /></div>
         
         
