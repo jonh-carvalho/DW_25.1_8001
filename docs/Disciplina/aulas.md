@@ -13,8 +13,8 @@
 | __09__ - 17/04/25     | [Introdução ao Javascript](./docs/04_Introducao_JavaScript.pdf)  |
 | __10__ - 25/04/25     | JS - [Variáveis](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types) - [String]() - [Array](./Roteiros/js/array.md) |
 | __11__ - 01/05/25     | Feriado |
-| __12__ - 08/05/25     | JS |
-| __13__ - 15/05/25     | JS |
+| __12__ - 08/05/25     | RoteirosJS Array, Objetos |
+| __13__ - 15/05/25     | Roteiros JS DOM, Forms |
 | __14__ - 22/05/25     | JS |
 | __15__ - 29/05/25     | JS |
 | __16__ - 05/06/25     | JS |
