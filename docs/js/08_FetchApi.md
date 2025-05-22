@@ -1,3 +1,5 @@
+# 08 - Consumindo com Fetch API - 
+
 Um exemplo simples de como consumir uma API usando `fetch` em JavaScript. Vou usar a [API pública JSONPlaceholder](https://jsonplaceholder.typicode.com/), que simula dados típicos (como posts, comentários, etc.) para desenvolvimento e testes.
 
 O exemplo abaixo faz uma requisição para a rota `/posts` dessa API, que retorna uma lista de posts fictícios. Vamos exibir os títulos desses posts em uma lista no HTML.
