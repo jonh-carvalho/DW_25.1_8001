@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="quiz-container" class="quiz-container">
+        <h1>Quiz de Conhecimentos Gerais</h1>
+
+        <div id="questions-area">
+            </div>
+
+        <div id="message-box" class="message-box"></div>
+
+        <div class="nav-buttons">
+            <button id="prev-button" class="btn-secondary hidden-btn">Anterior</button>
+            <button id="next-button" class="btn-primary">Próximo</button>
+            <button id="finish-button" class="btn-finish hidden-btn">Finalizar Quiz</button>
+        </div>
+    </div>
+
+    <div id="report-container" class="report-container">
+        <h1>Relatório do Quiz</h1>
+        <div class="flex-col items-center mb-8">
+            <p>Sua Pontuação: <span id="score-display" class="text-blue-600">0/0</span></p>
+            <div class="w-full max-w-md">
+                <canvas id="resultsChart"></canvas>
+            </div>
+        </div>
+
+        <h2>Respostas Detalhadas:</h2>
+        <ul id="detailed-answers" class="detailed-answers">
+            </ul>
+        <button id="restart-button" class="btn-primary mt-6 w-full">Refazer Quiz</button>
+    </div>
+    <script src="script.js"></script>ript
+</body>
+</html>
