@@ -95,6 +95,7 @@ function renderQuestion() {
   questionTitle.textContent = `${currentQuestionIndex + 1}. ${
     questionData.question
   }`;
+  
   slideDiv.appendChild(questionTitle);
 
   // Contêiner para as opções de resposta
