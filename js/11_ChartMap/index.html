@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>10 JsonServer - DW</title>
+    <title>05 - Chart Map - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -366,49 +366,55 @@
                         
                             
 <li >
-    <a href="../04_ChartMap/">05 - Chart Map</a>
+    <a href="../04_Http/">05 - Http</a>
 </li>
 
                         
                             
 <li >
-    <a href="../04_Maps_Sets/">04 - O Comando Map em JavaScript</a>
+    <a href="../05_Lendo%20Json/">05 Lendo Json</a>
 </li>
 
                         
                             
 <li >
-    <a href="../05_Http/">05 Http</a>
+    <a href="../06_Json/">06 - JavaScript JSON</a>
 </li>
 
                         
                             
 <li >
-    <a href="../07_Fetch/">07 Fetch</a>
+    <a href="../07_Fetch/">07 - Fetch API</a>
 </li>
 
                         
                             
 <li >
-    <a href="../08_Lendo%20Json/">08 Lendo Json</a>
+    <a href="../08_FetchApi/">08 - Consumindo com Fetch API -</a>
 </li>
 
                         
                             
 <li >
-    <a href="../09_FetchApi/">09 FetchApi</a>
+    <a href="../09_JsonServer/">09 - JsonServer</a>
 </li>
 
                         
                             
 <li >
-    <a href="../09_FormsJS/">11 Manipulando html com js</a>
+    <a href="../10_FormsJS/">11 Manipulando html com js</a>
 </li>
 
                         
                             
 <li class="active">
-    <a href="./">10 JsonServer</a>
+    <a href="./">05 - Chart Map</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../11_Maps_Sets/">04 - O Comando Map em JavaScript</a>
 </li>
 
                         
@@ -425,17 +431,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../09_FormsJS/">
+                        <a rel="prev" href="../10_FormsJS/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="../11_Maps_Sets/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/js/10_JsonServer.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/js/11_ChartMap.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -447,147 +453,86 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#passo-1-instalar-o-json-server">Passo 1: Instalar o JSON Server</a></li>
-        <li class="first-level "><a href="#passo-2-criar-o-arquivo-dbjson">Passo 2: Criar o Arquivo db.json</a></li>
-        <li class="first-level "><a href="#passo-3-executar-o-json-server">Passo 3: Executar o JSON Server</a></li>
-        <li class="first-level "><a href="#endpoints-criados-pelo-json-server">Endpoints Criados pelo json-server</a></li>
-        <li class="first-level "><a href="#passo-4-consumir-a-api-com-fetch">Passo 4: Consumir a API com fetch</a></li>
-            <li class="second-level"><a href="#arquivo-indexhtml">Arquivo index.html</a></li>
+        <li class="first-level active"><a href="#05-chart-map">05 - Chart Map</a></li>
+            <li class="second-level"><a href="#criando-um-grafico-de-linhas-simples-com-javascript-e-o-metodo-map">Criando um Gráfico de Linhas Simples com JavaScript e o Método map()</a></li>
                 
-            <li class="second-level"><a href="#arquivo-scriptjs">Arquivo script.js</a></li>
-                
-        <li class="first-level "><a href="#explicacao-do-funcionamento">Explicação do Funcionamento</a></li>
-        <li class="first-level "><a href="#manipulando-outros-endpoints">Manipulando Outros Endpoints</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>Vou te mostrar como criar uma API simples usando o <code>json-server</code> para simular uma API RESTful, baseado nos exemplos anteriores com dados de posts e usuários.</p>
-<h3 id="passo-1-instalar-o-json-server">Passo 1: Instalar o JSON Server</h3>
-<p>Se você ainda não tem o <code>json-server</code>, pode instalá-lo globalmente com o npm:</p>
-<pre><code class="language-bash">npm install -g json-server
-</code></pre>
-<h3 id="passo-2-criar-o-arquivo-dbjson">Passo 2: Criar o Arquivo <code>db.json</code></h3>
-<p>Esse arquivo conterá os dados que serão expostos pela API. Crie um arquivo chamado <code>db.json</code> na pasta do projeto e insira os seguintes dados:</p>
-<pre><code class="language-json">{
-  &quot;posts&quot;: [
-    {
-      &quot;id&quot;: 1,
-      &quot;title&quot;: &quot;Primeiro Post&quot;,
-      &quot;body&quot;: &quot;Conteúdo do primeiro post.&quot;
-    },
-    {
-      &quot;id&quot;: 2,
-      &quot;title&quot;: &quot;Segundo Post&quot;,
-      &quot;body&quot;: &quot;Conteúdo do segundo post.&quot;
-    },
-    {
-      &quot;id&quot;: 3,
-      &quot;title&quot;: &quot;Terceiro Post&quot;,
-      &quot;body&quot;: &quot;Conteúdo do terceiro post.&quot;
-    }
-  ],
-  &quot;users&quot;: [
-    {
-      &quot;id&quot;: 1,
-      &quot;nome&quot;: &quot;Maria&quot;,
-      &quot;idade&quot;: 30,
-      &quot;cidade&quot;: &quot;São Paulo&quot;
-    },
-    {
-      &quot;id&quot;: 2,
-      &quot;nome&quot;: &quot;Carlos&quot;,
-      &quot;idade&quot;: 25,
-      &quot;cidade&quot;: &quot;Rio de Janeiro&quot;
-    },
-    {
-      &quot;id&quot;: 3,
-      &quot;nome&quot;: &quot;Ana&quot;,
-      &quot;idade&quot;: 28,
-      &quot;cidade&quot;: &quot;Salvador&quot;
-    }
-  ]
-}
-</code></pre>
+<h1 id="05-chart-map">05 - Chart Map</h1>
+<h2 id="criando-um-grafico-de-linhas-simples-com-javascript-e-o-metodo-map">Criando um Gráfico de Linhas Simples com JavaScript e o Método <code>map()</code></h2>
+<p><strong>Entendendo o Problema:</strong></p>
+<p>Queremos transformar um conjunto de dados em um formato que possa ser utilizado para desenhar um gráfico de linhas. Para isso, vamos utilizar o método <code>map()</code> para gerar um array de coordenadas (x, y) a partir dos nossos dados.</p>
+<p><strong>Bibliotecas para Visualização:</strong></p>
+<p>Existem diversas bibliotecas JavaScript que facilitam a criação de gráficos, como:</p>
 <ul>
-<li><strong>Posts</strong>: Simula uma lista de posts com <code>id</code>, <code>title</code> e <code>body</code>.</li>
-<li><strong>Users</strong>: Simula uma lista de usuários com <code>id</code>, <code>nome</code>, <code>idade</code> e <code>cidade</code>.</li>
+<li><strong>Chart.js:</strong> Popular por sua facilidade de uso e customização.</li>
+<li><strong>D3.js:</strong> Uma biblioteca mais poderosa e flexível, ideal para gráficos complexos.</li>
+<li><strong>Plotly.js:</strong> Uma biblioteca interativa com diversos tipos de gráficos.</li>
 </ul>
-<h3 id="passo-3-executar-o-json-server">Passo 3: Executar o JSON Server</h3>
-<p>Agora que temos o <code>db.json</code> configurado, inicie o <code>json-server</code> com o seguinte comando:</p>
-<pre><code class="language-bash">json-server --watch db.json --port 3000
+<p><strong>Exemplo com Chart.js:</strong></p>
+<p>Vamos supor que temos um array de dados representando a temperatura ao longo de uma semana:</p>
+<pre><code class="language-javascript">const temperaturas = [18, 22, 25, 20, 19, 23, 24];
 </code></pre>
-<blockquote>
-<p>Aqui, o servidor será iniciado na porta 3000. Você pode mudar a porta conforme necessário.</p>
-</blockquote>
-<h3 id="endpoints-criados-pelo-json-server">Endpoints Criados pelo <code>json-server</code></h3>
-<p>Com o JSON Server, os dados em <code>db.json</code> são automaticamente transformados em endpoints RESTful. Aqui estão alguns endpoints que serão criados automaticamente:</p>
-<ul>
-<li><strong>GET /posts</strong> – Retorna todos os posts.</li>
-<li><strong>GET /posts/{id}</strong> – Retorna um post específico pelo <code>id</code>.</li>
-<li><strong>POST /posts</strong> – Adiciona um novo post.</li>
-<li><strong>PUT /posts/{id}</strong> – Atualiza um post pelo <code>id</code>.</li>
-<li><strong>DELETE /posts/{id}</strong> – Deleta um post pelo <code>id</code>.</li>
-<li><strong>GET /users</strong> – Retorna todos os usuários.</li>
-<li><strong>GET /users/{id}</strong> – Retorna um usuário específico pelo <code>id</code>.</li>
-</ul>
-<h3 id="passo-4-consumir-a-api-com-fetch">Passo 4: Consumir a API com <code>fetch</code></h3>
-<p>Com a API rodando no <code>json-server</code>, você pode consumir os dados a partir de uma página HTML. Vou mostrar um exemplo de como listar os títulos dos posts.</p>
-<h4 id="arquivo-indexhtml">Arquivo <code>index.html</code></h4>
+<p>Para criar um gráfico de linhas com Chart.js, precisamos de um elemento HTML <code>&lt;canvas&gt;</code> e um conjunto de dados no formato adequado. Utilizaremos o <code>map()</code> para transformar o array de temperaturas em um array de objetos, onde cada objeto representa um ponto no gráfico:</p>
+<pre><code class="language-javascript">const ctx = document.getElementById('myChart').getContext('2d');
+
+const labels = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'Temperatura (°C)',
+    data: temperaturas,
+    borderColor: 'rgb(75, 192, 192)',
+    fill: false
+  }]
+};
+
+const myChart = new Chart(ctx, {
+  type: 'line',
+  data: data,
+  options: {}
+});
+</code></pre>
 <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;html&gt;
 &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;Consumindo API com JSON Server&lt;/title&gt;
+  &lt;title&gt;Gráfico de Linhas com Chart.js&lt;/title&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;h1&gt;Posts da API Local&lt;/h1&gt;
-    &lt;ul id=&quot;postsList&quot;&gt;&lt;/ul&gt;
+  &lt;canvas id=&quot;myChart&quot;&gt;&lt;/canvas&gt;
 
-    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // JavaScript (já mostrado anteriormente)
+  &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<h4 id="arquivo-scriptjs">Arquivo <code>script.js</code></h4>
-<pre><code class="language-javascript">// URL da API local do JSON Server
-const apiUrl = 'http://localhost:3000/posts';
-
-// Função para buscar e exibir os posts
-function fetchPosts() {
-  fetch(apiUrl)
-    .then(response =&gt; {
-      if (!response.ok) {
-        throw new Error('Erro ao obter dados da API');
-      }
-      return response.json(); // Converte a resposta em JSON
-    })
-    .then(data =&gt; {
-      const postsList = document.getElementById('postsList');
-      // Itera pelos posts e cria itens de lista
-      data.forEach(post =&gt; {
-        const listItem = document.createElement('li');
-        listItem.textContent = post.title;
-        postsList.appendChild(listItem);
-      });
-    })
-    .catch(error =&gt; {
-      console.error(error);
-      document.getElementById('postsList').textContent = 'Erro ao carregar os posts';
-    });
-}
-
-// Chama a função ao carregar a página
-fetchPosts();
-</code></pre>
-<h3 id="explicacao-do-funcionamento">Explicação do Funcionamento</h3>
-<ol>
-<li><strong>Servidor JSON</strong>: Com <code>json-server</code>, a API local expõe endpoints para os dados em <code>db.json</code>.</li>
-<li><strong>HTML e JavaScript</strong>: O arquivo <code>script.js</code> faz uma requisição GET para <code>http://localhost:3000/posts</code> e exibe os títulos dos posts.</li>
-<li><strong>Teste</strong>: Abra o <code>index.html</code> em um navegador com o <code>json-server</code> rodando. Os títulos dos posts serão exibidos na lista.</li>
-</ol>
-<h3 id="manipulando-outros-endpoints">Manipulando Outros Endpoints</h3>
-<p>Para acessar os dados de usuários (<code>/users</code>), basta alterar a URL no <code>fetch</code> para <code>http://localhost:3000/users</code>.</p></div>
+<p><strong>Explicando o Código:</strong></p>
+<ul>
+<li><strong>Criamos um canvas:</strong> O elemento <code>&lt;canvas&gt;</code> é onde o gráfico será desenhado.</li>
+<li><strong>Definimos os rótulos:</strong> O array <code>labels</code> contém os rótulos para cada ponto do eixo x (dias da semana).</li>
+<li><strong>Transformamos os dados:</strong> O <code>map()</code> é usado para criar um novo array de objetos, onde cada objeto possui as propriedades <code>x</code> (índice) e <code>y</code> (temperatura). No entanto, para o Chart.js, não precisamos criar explicitamente as coordenadas x, pois os rótulos já servem como essa informação.</li>
+<li><strong>Configuramos o gráfico:</strong> Criamos um novo objeto Chart, definindo o tipo do gráfico (linha), os dados e as opções de configuração.</li>
+</ul>
+<p><strong>Personalizando o Gráfico:</strong></p>
+<p>O Chart.js oferece diversas opções para personalizar o gráfico, como cores, espessura das linhas, marcadores, etc. Consulte a documentação oficial para mais detalhes: <a href="https://www.google.com/url?sa=E&amp;source=gmail&amp;q=https://www.chartjs.org/docs/latest/">https://www.chartjs.org/docs/latest/</a></p>
+<p><strong>Outros Exemplos:</strong></p>
+<ul>
+<li><strong>Gráfico de barras:</strong> Substitua <code>type: 'line'</code> por <code>type: 'bar'</code>.</li>
+<li><strong>Gráfico de pizza:</strong> Utilize <code>type: 'pie'</code>.</li>
+<li><strong>Múltiplas séries:</strong> Adicione mais datasets ao objeto <code>data</code> para comparar diferentes conjuntos de dados.</li>
+</ul>
+<p><strong>Desafio:</strong></p>
+<p>Adapte o exemplo acima para criar um gráfico de linhas que mostre a evolução do preço de uma ação ao longo de um mês. Você pode gerar dados aleatórios para simular os preços.</p>
+<p><strong>Recursos Adicionais:</strong></p>
+<ul>
+<li><strong>Documentação Chart.js:</strong> <a href="https://www.google.com/url?sa=E&amp;source=gmail&amp;q=https://www.chartjs.org/docs/latest/">https://www.chartjs.org/docs/latest/</a></li>
+</ul>
+<p>Com o <code>map()</code> e bibliotecas como Chart.js, você pode criar gráficos personalizados e informativos para visualizar seus dados de forma eficaz.</p></div>
         
         
     </div>

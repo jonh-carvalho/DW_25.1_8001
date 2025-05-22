@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>05 Http - DW</title>
+    <title>08 - Consumindo com Fetch API - - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -366,49 +366,55 @@
                         
                             
 <li >
-    <a href="../04_ChartMap/">05 - Chart Map</a>
+    <a href="../04_Http/">05 - Http</a>
 </li>
 
                         
                             
 <li >
-    <a href="../04_Maps_Sets/">04 - O Comando Map em JavaScript</a>
+    <a href="../05_Lendo%20Json/">05 Lendo Json</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../06_Json/">06 - JavaScript JSON</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../07_Fetch/">07 - Fetch API</a>
 </li>
 
                         
                             
 <li class="active">
-    <a href="./">05 Http</a>
+    <a href="./">08 - Consumindo com Fetch API -</a>
 </li>
 
                         
                             
 <li >
-    <a href="../07_Fetch/">07 Fetch</a>
+    <a href="../09_JsonServer/">09 - JsonServer</a>
 </li>
 
                         
                             
 <li >
-    <a href="../08_Lendo%20Json/">08 Lendo Json</a>
+    <a href="../10_FormsJS/">11 Manipulando html com js</a>
 </li>
 
                         
                             
 <li >
-    <a href="../09_FetchApi/">09 FetchApi</a>
+    <a href="../11_ChartMap/">05 - Chart Map</a>
 </li>
 
                         
                             
 <li >
-    <a href="../09_FormsJS/">11 Manipulando html com js</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../10_JsonServer/">10 JsonServer</a>
+    <a href="../11_Maps_Sets/">04 - O Comando Map em JavaScript</a>
 </li>
 
                         
@@ -425,17 +431,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../04_Maps_Sets/">
+                        <a rel="prev" href="../07_Fetch/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../07_Fetch/">
+                        <a rel="next" href="../09_JsonServer/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/js/05_Http.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/js/08_FetchApi.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -447,198 +453,87 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#1-introducao-ao-protocolo-http">1. Introdução ao Protocolo HTTP</a></li>
-            <li class="second-level"><a href="#http-a-base-da-comunicacao-na-web">HTTP: A Base da Comunicação na Web</a></li>
+        <li class="first-level active"><a href="#08-consumindo-com-fetch-api-">08 - Consumindo com Fetch API -</a></li>
+            <li class="second-level"><a href="#estrutura-do-projeto">Estrutura do projeto</a></li>
                 
-        <li class="first-level "><a href="#como-funciona">Como funciona?</a></li>
-        <li class="first-level "><a href="#por-que-o-http-e-importante">Por que o HTTP é importante?</a></li>
-        <li class="first-level "><a href="#http-vs-https">HTTP vs. HTTPS</a></li>
-        <li class="first-level "><a href="#2-metodos-http">2. Métodos HTTP</a></li>
-        <li class="first-level "><a href="#3-status-http">3. Status HTTP</a></li>
-            <li class="second-level"><a href="#1xx-informacional">1xx – Informacional</a></li>
+            <li class="second-level"><a href="#passo-1-criando-o-html-indexhtml">Passo 1: Criando o HTML (index.html)</a></li>
                 
-            <li class="second-level"><a href="#2xx-sucesso">2xx – Sucesso</a></li>
+            <li class="second-level"><a href="#passo-2-criando-o-javascript-scriptjs">Passo 2: Criando o JavaScript (script.js)</a></li>
                 
-            <li class="second-level"><a href="#3xx-redirecionamento">3xx – Redirecionamento</a></li>
+            <li class="second-level"><a href="#explicacao-do-codigo">Explicação do Código</a></li>
                 
-            <li class="second-level"><a href="#4xx-erro-do-cliente">4xx – Erro do Cliente</a></li>
+            <li class="second-level"><a href="#resultado">Resultado</a></li>
                 
-            <li class="second-level"><a href="#5xx-erro-do-servidor">5xx – Erro do Servidor</a></li>
-                
-        <li class="first-level "><a href="#4-exemplo-pratico-de-requisicao-http">4. Exemplo Prático de Requisição HTTP</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>Aqui está uma sugestão para preparar a aula sobre métodos e status HTTP:</p>
-<h3 id="1-introducao-ao-protocolo-http">1. Introdução ao Protocolo HTTP</h3>
-<h4 id="http-a-base-da-comunicacao-na-web">HTTP: A Base da Comunicação na Web</h4>
-<p><strong>HTTP</strong> é a sigla para <strong>Hypertext Transfer Protocol</strong> ou, em português, <strong>Protocolo de Transferência de Hipertexto</strong>. É o protocolo fundamental que permite a comunicação entre navegadores web (como o Chrome, Firefox, Safari) e servidores web (onde estão hospedados os sites).</p>
-<p><strong>Em resumo, o HTTP é como a linguagem que seu navegador e os servidores da internet usam para "conversar" e mostrar as páginas que você visita.</strong></p>
-<h3 id="como-funciona">Como funciona?</h3>
-<p>1.<strong>Você digita um endereço (URL) na barra de endereços do seu navegador.</strong></p>
-<p>2.<strong>Seu navegador envia uma solicitação HTTP para o servidor onde está hospedado o site.</strong></p>
-<p>3.<strong>O servidor processa a solicitação e envia uma resposta HTTP com o conteúdo da página.</strong></p>
-<p>4.<strong>Seu navegador recebe a resposta e exibe a página na sua tela.</strong></p>
-<p><strong>Imagine o HTTP como um garçom em um restaurante:</strong> você faz um pedido (a solicitação HTTP), o garçom leva o pedido para a cozinha (o servidor), a cozinha prepara o prato (processa a solicitação) e o garçom traz o prato para você (a resposta HTTP).</p>
-<h3 id="por-que-o-http-e-importante">Por que o HTTP é importante?</h3>
-<p><strong>*Base da World Wide Web (WWW):</strong> É o protocolo que permite a existência da internet como a conhecemos, com páginas interligadas por links.</p>
-<p><strong>*Facilita a navegação:</strong> Permite que você navegue entre diferentes páginas de um site e de diferentes sites com facilidade.</p>
-<p><strong>*Transfere diversos tipos de dados:</strong> Não se limita a texto, mas também permite a transferência de imagens, vídeos, arquivos e outros tipos de dados.</p>
-<h3 id="http-vs-https">HTTP vs. HTTPS</h3>
-<p>É comum confundir HTTP com HTTPS. A principal diferença é que o <strong>HTTPS</strong> é uma versão segura do HTTP. Ele utiliza criptografia para proteger a comunicação entre o seu navegador e o servidor, garantindo a privacidade e a integridade dos dados transmitidos. Por isso, é altamente recomendado acessar sites que utilizam HTTPS, especialmente aqueles que envolvem transações financeiras ou informações pessoais.</p>
-<p><strong>Em resumo, o HTTP é o protocolo que torna a internet possível, permitindo que você acesse e interaja com milhões de sites ao redor do mundo.</strong></p>
-<p><strong>Gostaria de saber mais sobre algum aspecto específico do HTTP?</strong> Por exemplo, você pode me perguntar sobre:</p>
-<p><strong>*Métodos HTTP:</strong> GET, POST, PUT, DELETE e outros.</p>
-<p><strong>*Cabeçalhos HTTP:</strong> informações adicionais que acompanham as solicitações e respostas.</p>
-<p><strong>*Códigos de status HTTP:</strong> como 200 (OK), 404 (Não encontrado) e 500 (Erro interno do servidor).</p>
-<p><strong>*Diferenças entre HTTP e HTTPS.</strong></p>
-<p><strong>Se tiver alguma outra dúvida, fique à vontade para perguntar!</strong></p>
-<h3 id="2-metodos-http">2. Métodos HTTP</h3>
-<p>-<strong>GET</strong>: Usado para solicitar dados de um servidor. Não altera o estado do servidor (idempotente).</p>
-<pre><code>- Exemplo: acessar uma página da web ou recuperar uma lista de produtos.
+<h1 id="08-consumindo-com-fetch-api-">08 - Consumindo com Fetch API -</h1>
+<p>Um exemplo simples de como consumir uma API usando <code>fetch</code> em JavaScript. Vou usar a <a href="https://jsonplaceholder.typicode.com/">API pública JSONPlaceholder</a>, que simula dados típicos (como posts, comentários, etc.) para desenvolvimento e testes.</p>
+<p>O exemplo abaixo faz uma requisição para a rota <code>/posts</code> dessa API, que retorna uma lista de posts fictícios. Vamos exibir os títulos desses posts em uma lista no HTML.</p>
+<h3 id="estrutura-do-projeto">Estrutura do projeto</h3>
+<p>Crie uma pasta com os seguintes arquivos:
+1. <code>index.html</code>: o arquivo HTML principal.
+2. <code>script.js</code>: o arquivo JavaScript com o código de consumo da API.</p>
+<h3 id="passo-1-criando-o-html-indexhtml">Passo 1: Criando o HTML (<code>index.html</code>)</h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Consumo de API com Fetch&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Posts da API JSONPlaceholder&lt;/h1&gt;
+    &lt;ul id=&quot;postsList&quot;&gt;&lt;/ul&gt;
 
-```http
-
-GET /produtos HTTP/1.1
-
-Host: www.exemplo.com
-
-```
+    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
-<p>-<strong>POST</strong>: Envia dados ao servidor para criar ou modificar um recurso.</p>
-<pre><code>- Exemplo: enviar um formulário de cadastro.
+<h3 id="passo-2-criando-o-javascript-scriptjs">Passo 2: Criando o JavaScript (<code>script.js</code>)</h3>
+<p>Aqui está o código JavaScript que faz a requisição à API e exibe os dados no HTML.</p>
+<pre><code class="language-javascript">// URL da API
+const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
 
-```http
-
-POST /cadastro HTTP/1.1
-
-Host: www.exemplo.com
-
-Content-Type: application/json
-
-{
-
-"nome": "João",
-
-"email": "joao@example.com"
-
+// Função para buscar e exibir os posts
+function fetchPosts() {
+  fetch(apiUrl)
+    .then(response =&gt; {
+      if (!response.ok) {
+        throw new Error('Erro ao obter dados da API');
+      }
+      return response.json(); // Converte a resposta em JSON
+    })
+    .then(data =&gt; {
+      const postsList = document.getElementById('postsList');
+      // Itera pelos posts e cria itens de lista
+      data.forEach(post =&gt; {
+        const listItem = document.createElement('li');
+        listItem.textContent = post.title;
+        postsList.appendChild(listItem);
+      });
+    })
+    .catch(error =&gt; {
+      console.error(error);
+      document.getElementById('postsList').textContent = 'Erro ao carregar os posts';
+    });
 }
 
-```
+// Chama a função ao carregar a página
+fetchPosts();
 </code></pre>
-<ul>
-<li>
-<p><strong>PUT</strong>: Envia dados para substituir um recurso existente no servidor.</p>
-<ul>
-<li>Exemplo: atualizar o perfil de um usuário.</li>
-</ul>
-</li>
-</ul>
-<p>-<strong>PATCH</strong>: Semelhante ao <code>PUT</code>, mas usado para modificações parciais de um recurso.</p>
-<ul>
-<li>
-<p><strong>DELETE</strong>: Remove um recurso do servidor.</p>
-<ul>
-<li>Exemplo: excluir uma conta de usuário.</li>
-</ul>
-</li>
-<li>
-<p><strong>HEAD</strong>: Igual ao <code>GET</code>, mas sem o corpo da resposta. Usado para verificar se o recurso existe ou para recuperar metadados.</p>
-</li>
-<li>
-<p><strong>OPTIONS</strong>: Pergunta ao servidor quais métodos e opções são suportados para um determinado recurso.</p>
-</li>
-<li>
-<p><strong>TRACE</strong>: Usado para diagnóstico, retorna o conteúdo exato da requisição recebida pelo servidor.</p>
-</li>
-</ul>
-<blockquote>
-<p><strong>Atividade prática</strong>: Utilize uma ferramenta como o Postman ou <code>curl</code> para testar os métodos HTTP.</p>
-</blockquote>
-<h3 id="3-status-http">3. Status HTTP</h3>
-<p>Os códigos de status HTTP indicam o resultado de uma requisição. Eles são divididos em cinco categorias:</p>
-<h4 id="1xx-informacional">1xx – Informacional</h4>
-<p>Indicam que a requisição foi recebida e está sendo processada.</p>
-<ul>
-<li><strong>100 Continue</strong>: O servidor está pronto para receber o corpo da requisição.</li>
-</ul>
-<h4 id="2xx-sucesso">2xx – Sucesso</h4>
-<p>Indicam que a requisição foi bem-sucedida.</p>
-<ul>
-<li>
-<p><strong>200 OK</strong>: A requisição foi bem-sucedida.</p>
-</li>
-<li>
-<p><strong>201 Created</strong>: Um novo recurso foi criado (geralmente após um <code>POST</code>).</p>
-</li>
-<li>
-<p><strong>204 No Content</strong>: A requisição foi bem-sucedida, mas não há conteúdo para retornar.</p>
-</li>
-</ul>
-<h4 id="3xx-redirecionamento">3xx – Redirecionamento</h4>
-<p>Indicam que o cliente precisa realizar uma ação adicional para completar a requisição.</p>
-<ul>
-<li>
-<p><strong>301 Moved Permanently</strong>: O recurso foi movido permanentemente para uma nova URL.</p>
-</li>
-<li>
-<p><strong>302 Found</strong>: O recurso foi temporariamente movido para outra URL.</p>
-</li>
-</ul>
-<h4 id="4xx-erro-do-cliente">4xx – Erro do Cliente</h4>
-<p>Indicam que houve um erro por parte do cliente.</p>
-<ul>
-<li>
-<p><strong>400 Bad Request</strong>: A requisição está malformada ou inválida.</p>
-</li>
-<li>
-<p><strong>401 Unauthorized</strong>: Acesso negado, geralmente por falta de autenticação.</p>
-</li>
-<li>
-<p><strong>403 Forbidden</strong>: Acesso negado, mesmo com autenticação.</p>
-</li>
-<li>
-<p><strong>404 Not Found</strong>: O recurso solicitado não foi encontrado no servidor.</p>
-</li>
-</ul>
-<h4 id="5xx-erro-do-servidor">5xx – Erro do Servidor</h4>
-<p>Indicam que o servidor encontrou um erro ao tentar processar a requisição.</p>
-<ul>
-<li>
-<p><strong>500 Internal Server Error</strong>: Um erro genérico no servidor.</p>
-</li>
-<li>
-<p><strong>502 Bad Gateway</strong>: O servidor recebeu uma resposta inválida de outro servidor.</p>
-</li>
-<li>
-<p><strong>503 Service Unavailable</strong>: O servidor está temporariamente indisponível (sobrecarga ou manutenção).</p>
-</li>
-</ul>
-<h3 id="4-exemplo-pratico-de-requisicao-http">4. Exemplo Prático de Requisição HTTP</h3>
-<ul>
-<li>Montar uma requisição <code>GET</code> e uma <code>POST</code> usando JavaScript com o <code>fetch</code>.</li>
-<li>Mostrar a diferença entre os métodos e como lidar com os diferentes status HTTP retornados.</li>
-</ul>
-<p>```javascript</p>
-<p>fetch('https://api.exemplo.com/recurso')</p>
-<pre><code>.then(response=&gt;{
-
-  if (!response.ok) {
-
-    thrownewError(`Erro: ${response.status}`);
-
-  }
-
-  return response.json();
-
-})
-
-.then(data=&gt; console.log(data))
-
-.catch(error=&gt; console.error(error));
-</code></pre>
-<p>```</p></div>
+<h3 id="explicacao-do-codigo">Explicação do Código</h3>
+<ol>
+<li><strong>URL da API</strong>: A constante <code>apiUrl</code> contém o endpoint da API para obter os posts.</li>
+<li><strong>Função <code>fetchPosts()</code></strong>: Esta função faz a requisição usando <code>fetch</code>:</li>
+<li>Verifica se a resposta está <code>ok</code> (código de status 200–299). Em caso de erro, lança uma mensagem de erro.</li>
+<li>Converte a resposta JSON em um objeto JavaScript com <code>response.json()</code>.</li>
+<li>Itera pela lista de posts (<code>data</code>) e adiciona cada título como um item (<code>&lt;li&gt;</code>) na lista HTML (<code>&lt;ul id="postsList"&gt;</code>).</li>
+<li><strong>Tratamento de Erros</strong>: Qualquer erro na requisição ou na conversão para JSON é capturado e exibido no console e na página.</li>
+</ol>
+<h3 id="resultado">Resultado</h3>
+<p>Ao abrir o <code>index.html</code> no navegador, a página exibirá uma lista com os títulos dos posts. Este é um exemplo de como consumir dados de uma API com <code>fetch</code> e exibi-los dinamicamente em HTML.</p></div>
         
         
     </div>

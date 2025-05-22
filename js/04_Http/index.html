@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>04 - O Comando Map em JavaScript - DW</title>
+    <title>05 - Http - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -365,50 +365,56 @@
 
                         
                             
-<li >
-    <a href="../04_ChartMap/">05 - Chart Map</a>
-</li>
-
-                        
-                            
 <li class="active">
-    <a href="./">04 - O Comando Map em JavaScript</a>
+    <a href="./">05 - Http</a>
 </li>
 
                         
                             
 <li >
-    <a href="../05_Http/">05 Http</a>
+    <a href="../05_Lendo%20Json/">05 Lendo Json</a>
 </li>
 
                         
                             
 <li >
-    <a href="../07_Fetch/">07 Fetch</a>
+    <a href="../06_Json/">06 - JavaScript JSON</a>
 </li>
 
                         
                             
 <li >
-    <a href="../08_Lendo%20Json/">08 Lendo Json</a>
+    <a href="../07_Fetch/">07 - Fetch API</a>
 </li>
 
                         
                             
 <li >
-    <a href="../09_FetchApi/">09 FetchApi</a>
+    <a href="../08_FetchApi/">08 - Consumindo com Fetch API -</a>
 </li>
 
                         
                             
 <li >
-    <a href="../09_FormsJS/">11 Manipulando html com js</a>
+    <a href="../09_JsonServer/">09 - JsonServer</a>
 </li>
 
                         
                             
 <li >
-    <a href="../10_JsonServer/">10 JsonServer</a>
+    <a href="../10_FormsJS/">11 Manipulando html com js</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../11_ChartMap/">05 - Chart Map</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../11_Maps_Sets/">04 - O Comando Map em JavaScript</a>
 </li>
 
                         
@@ -425,17 +431,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../04_ChartMap/">
+                        <a rel="prev" href="../03_Forms/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../05_Http/">
+                        <a rel="next" href="../05_Lendo%20Json/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/js/04_Maps_Sets.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/js/04_Http.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -447,178 +453,200 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#04-o-comando-map-em-javascript">04 - O Comando Map em JavaScript</a></li>
-            <li class="second-level"><a href="#introducao">Introdução</a></li>
+        <li class="first-level active"><a href="#05-http">05 - Http</a></li>
+            <li class="second-level"><a href="#1-introducao-ao-protocolo-http">1. Introdução ao Protocolo HTTP</a></li>
                 
-            <li class="second-level"><a href="#objetivos-da-aula">Objetivos da Aula</a></li>
+                <li class="third-level"><a href="#http-a-base-da-comunicacao-na-web">HTTP: A Base da Comunicação na Web</a></li>
+            <li class="second-level"><a href="#como-funciona">Como funciona?</a></li>
                 
-            <li class="second-level"><a href="#conteudo-da-aula">Conteúdo da Aula</a></li>
+            <li class="second-level"><a href="#por-que-o-http-e-importante">Por que o HTTP é importante?</a></li>
                 
-                <li class="third-level"><a href="#1-o-que-e-o-map">1. O que é o map()?</a></li>
-                <li class="third-level"><a href="#2-sintaxe-do-map">2. Sintaxe do map()</a></li>
-                <li class="third-level"><a href="#3-exemplos-basicos">3. Exemplos Básicos</a></li>
-                <li class="third-level"><a href="#4-usos-comuns">4. Usos Comuns</a></li>
-                <li class="third-level"><a href="#5-map-com-arrow-functions">5. map() com Arrow Functions</a></li>
-            <li class="second-level"><a href="#atividades-praticas">Atividades Práticas</a></li>
+            <li class="second-level"><a href="#http-vs-https">HTTP vs. HTTPS</a></li>
                 
-            <li class="second-level"><a href="#recursos-adicionais">Recursos Adicionais</a></li>
+            <li class="second-level"><a href="#2-metodos-http">2. Métodos HTTP</a></li>
                 
-            <li class="second-level"><a href="#exemplos-praticos">Exemplos Práticos</a></li>
+            <li class="second-level"><a href="#3-status-http">3. Status HTTP</a></li>
                 
-            <li class="second-level"><a href="#exemplos-praticos-e-relevantes-para-o-metodo-map-em-javascript">Exemplos Práticos e Relevantes para o Método map() em JavaScript</a></li>
-                
-                <li class="third-level"><a href="#1-manipulacao-de-dados-de-usuarios">1. Manipulação de Dados de Usuários</a></li>
-                <li class="third-level"><a href="#4-processamento-de-dados-de-formularios">4. Processamento de Dados de Formulários</a></li>
-                <li class="third-level"><a href="#5-transformacao-de-unidades-de-medida">5. Transformação de Unidades de Medida</a></li>
-                <li class="third-level"><a href="#6-criacao-de-novos-objetos-a-partir-de-arrays">6. Criação de Novos Objetos a Partir de Arrays</a></li>
-            <li class="second-level"><a href="#atividades-praticas_1">Atividades Práticas</a></li>
+                <li class="third-level"><a href="#1xx-informacional">1xx – Informacional</a></li>
+                <li class="third-level"><a href="#2xx-sucesso">2xx – Sucesso</a></li>
+                <li class="third-level"><a href="#3xx-redirecionamento">3xx – Redirecionamento</a></li>
+                <li class="third-level"><a href="#4xx-erro-do-cliente">4xx – Erro do Cliente</a></li>
+                <li class="third-level"><a href="#5xx-erro-do-servidor">5xx – Erro do Servidor</a></li>
+            <li class="second-level"><a href="#4-exemplo-pratico-de-requisicao-http">4. Exemplo Prático de Requisição HTTP</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="04-o-comando-map-em-javascript">04 - O Comando Map em JavaScript</h1>
-<h2 id="introducao">Introdução</h2>
-<p>O método <code>map()</code> é uma ferramenta poderosa em JavaScript que permite transformar cada elemento de um array em um novo elemento, criando um novo array com os resultados. É uma forma eficiente de aplicar uma função a cada item de um array, sem modificar o array original.</p>
-<h2 id="objetivos-da-aula">Objetivos da Aula</h2>
-<ul>
-<li>Compreender o conceito de <code>map()</code>;</li>
-<li>Aprender a sintaxe e a utilização do <code>map()</code>;</li>
-<li>Realizar operações comuns com <code>map()</code>;</li>
-<li>Diferenciar <code>map()</code> de outros métodos como <code>forEach()</code>;</li>
-<li>Aplicar <code>map()</code> em exemplos práticos.</li>
-</ul>
-<h2 id="conteudo-da-aula">Conteúdo da Aula</h2>
-<h3 id="1-o-que-e-o-map">1. O que é o <code>map()</code>?</h3>
-<ul>
-<li>Definição e propósito do método.</li>
-<li>Como o <code>map()</code> funciona internamente.</li>
-<li>Comparação com outros métodos como <code>forEach()</code>.</li>
-</ul>
-<h3 id="2-sintaxe-do-map">2. Sintaxe do <code>map()</code></h3>
-<ul>
-<li>Estrutura básica do método.</li>
-<li>Parâmetros da função de callback: elemento atual, índice, array original.</li>
-<li>Retorno da função de callback.</li>
-</ul>
-<h3 id="3-exemplos-basicos">3. Exemplos Básicos</h3>
-<ul>
-<li>Dobrar todos os números de um array.</li>
-<li>Transformar um array de nomes em letras maiúsculas.</li>
-<li>Criar um novo array com os quadrados dos números.</li>
-</ul>
-<h3 id="4-usos-comuns">4. Usos Comuns</h3>
-<ul>
-<li>Criar novos arrays a partir de dados existentes.</li>
-<li>Aplicar formatações a elementos de um array.</li>
-<li>Extrair informações específicas de um array de objetos.</li>
-</ul>
-<h3 id="5-map-com-arrow-functions">5. <code>map()</code> com Arrow Functions</h3>
-<ul>
-<li>Como utilizar arrow functions para simplificar o código.</li>
-<li>Exemplos práticos.</li>
-</ul>
-<h2 id="atividades-praticas">Atividades Práticas</h2>
-<p><strong>Exercícios:</strong></p>
+<h1 id="05-http">05 - Http</h1>
+<h3 id="1-introducao-ao-protocolo-http">1. Introdução ao Protocolo HTTP</h3>
+<h4 id="http-a-base-da-comunicacao-na-web">HTTP: A Base da Comunicação na Web</h4>
+<p><strong>HTTP</strong> é a sigla para <strong>Hypertext Transfer Protocol</strong> ou, em português, <strong>Protocolo de Transferência de Hipertexto</strong>. É o protocolo fundamental que permite a comunicação entre navegadores web (como o Chrome, Firefox, Safari) e servidores web (onde estão hospedados os sites).</p>
+<p><strong>Em resumo, o HTTP é como a linguagem que seu navegador e os servidores da internet usam para "conversar" e mostrar as páginas que você visita.</strong></p>
+<h3 id="como-funciona">Como funciona?</h3>
+<p>1.<strong>Você digita um endereço (URL) na barra de endereços do seu navegador.</strong></p>
+<p>2.<strong>Seu navegador envia uma solicitação HTTP para o servidor onde está hospedado o site.</strong></p>
+<p>3.<strong>O servidor processa a solicitação e envia uma resposta HTTP com o conteúdo da página.</strong></p>
+<p>4.<strong>Seu navegador recebe a resposta e exibe a página na sua tela.</strong></p>
+<p><strong>Imagine o HTTP como um garçom em um restaurante:</strong> você faz um pedido (a solicitação HTTP), o garçom leva o pedido para a cozinha (o servidor), a cozinha prepara o prato (processa a solicitação) e o garçom traz o prato para você (a resposta HTTP).</p>
+<h3 id="por-que-o-http-e-importante">Por que o HTTP é importante?</h3>
+<p><strong>*Base da World Wide Web (WWW):</strong> É o protocolo que permite a existência da internet como a conhecemos, com páginas interligadas por links.</p>
+<p><strong>*Facilita a navegação:</strong> Permite que você navegue entre diferentes páginas de um site e de diferentes sites com facilidade.</p>
+<p><strong>*Transfere diversos tipos de dados:</strong> Não se limita a texto, mas também permite a transferência de imagens, vídeos, arquivos e outros tipos de dados.</p>
+<h3 id="http-vs-https">HTTP vs. HTTPS</h3>
+<p>É comum confundir HTTP com HTTPS. A principal diferença é que o <strong>HTTPS</strong> é uma versão segura do HTTP. Ele utiliza criptografia para proteger a comunicação entre o seu navegador e o servidor, garantindo a privacidade e a integridade dos dados transmitidos. Por isso, é altamente recomendado acessar sites que utilizam HTTPS, especialmente aqueles que envolvem transações financeiras ou informações pessoais.</p>
+<p><strong>Em resumo, o HTTP é o protocolo que torna a internet possível, permitindo que você acesse e interaja com milhões de sites ao redor do mundo.</strong></p>
+<p><strong>Gostaria de saber mais sobre algum aspecto específico do HTTP?</strong> Por exemplo, você pode me perguntar sobre:</p>
+<p><strong>*Métodos HTTP:</strong> GET, POST, PUT, DELETE e outros.</p>
+<p><strong>*Cabeçalhos HTTP:</strong> informações adicionais que acompanham as solicitações e respostas.</p>
+<p><strong>*Códigos de status HTTP:</strong> como 200 (OK), 404 (Não encontrado) e 500 (Erro interno do servidor).</p>
+<p><strong>*Diferenças entre HTTP e HTTPS.</strong></p>
+<p><strong>Se tiver alguma outra dúvida, fique à vontade para perguntar!</strong></p>
+<h3 id="2-metodos-http">2. Métodos HTTP</h3>
+<p>-<strong>GET</strong>: Usado para solicitar dados de um servidor. Não altera o estado do servidor (idempotente).</p>
+<pre><code>- Exemplo: acessar uma página da web ou recuperar uma lista de produtos.
+
+```http
+
+GET /produtos HTTP/1.1
+
+Host: www.exemplo.com
+
+```
+</code></pre>
+<p>-<strong>POST</strong>: Envia dados ao servidor para criar ou modificar um recurso.</p>
+<pre><code>- Exemplo: enviar um formulário de cadastro.
+
+```http
+
+POST /cadastro HTTP/1.1
+
+Host: www.exemplo.com
+
+Content-Type: application/json
+
+{
+
+"nome": "João",
+
+"email": "joao@example.com"
+
+}
+
+```
+</code></pre>
 <ul>
 <li>
-<p>Crie um array de números e utilize <code>map()</code> para obter um novo array com os números multiplicados por 2.</p>
+<p><strong>PUT</strong>: Envia dados para substituir um recurso existente no servidor.</p>
+<ul>
+<li>Exemplo: atualizar o perfil de um usuário.</li>
+</ul>
+</li>
+</ul>
+<p>-<strong>PATCH</strong>: Semelhante ao <code>PUT</code>, mas usado para modificações parciais de um recurso.</p>
+<ul>
+<li>
+<p><strong>DELETE</strong>: Remove um recurso do servidor.</p>
+<ul>
+<li>Exemplo: excluir uma conta de usuário.</li>
+</ul>
 </li>
 <li>
-<p>Transforme um array de objetos (pessoas) em um novo array contendo apenas os nomes.</p>
+<p><strong>HEAD</strong>: Igual ao <code>GET</code>, mas sem o corpo da resposta. Usado para verificar se o recurso existe ou para recuperar metadados.</p>
 </li>
 <li>
-<p>Crie um array de strings e utilize <code>map()</code> para converter cada string em um elemento HTML (e.g., <code>&lt;li&gt;</code>).</p>
+<p><strong>OPTIONS</strong>: Pergunta ao servidor quais métodos e opções são suportados para um determinado recurso.</p>
+</li>
+<li>
+<p><strong>TRACE</strong>: Usado para diagnóstico, retorna o conteúdo exato da requisição recebida pelo servidor.</p>
 </li>
 </ul>
-<p><strong>Projeto:</strong></p>
+<blockquote>
+<p><strong>Atividade prática</strong>: Utilize uma ferramenta como o Postman ou <code>curl</code> para testar os métodos HTTP.</p>
+</blockquote>
+<h3 id="3-status-http">3. Status HTTP</h3>
+<p>Os códigos de status HTTP indicam o resultado de uma requisição. Eles são divididos em cinco categorias:</p>
+<h4 id="1xx-informacional">1xx – Informacional</h4>
+<p>Indicam que a requisição foi recebida e está sendo processada.</p>
 <ul>
-<li>Crie uma aplicação simples que permita ao usuário adicionar itens a uma lista de compras. Utilize <code>map()</code> para exibir a lista formatada em HTML.</li>
+<li><strong>100 Continue</strong>: O servidor está pronto para receber o corpo da requisição.</li>
 </ul>
-<h2 id="recursos-adicionais">Recursos Adicionais</h2>
+<h4 id="2xx-sucesso">2xx – Sucesso</h4>
+<p>Indicam que a requisição foi bem-sucedida.</p>
 <ul>
-<li><strong>Documentação MDN:</strong> A documentação oficial do JavaScript oferece exemplos e explicações detalhadas sobre o método <code>map()</code>.</li>
-<li><strong>Exercícios interativos:</strong> Sites como Exercism e Codewars oferecem desafios para praticar os conceitos aprendidos.</li>
+<li>
+<p><strong>200 OK</strong>: A requisição foi bem-sucedida.</p>
+</li>
+<li>
+<p><strong>201 Created</strong>: Um novo recurso foi criado (geralmente após um <code>POST</code>).</p>
+</li>
+<li>
+<p><strong>204 No Content</strong>: A requisição foi bem-sucedida, mas não há conteúdo para retornar.</p>
+</li>
 </ul>
-<h2 id="exemplos-praticos">Exemplos Práticos</h2>
-<pre><code class="language-javascript">// Dobrar todos os números de um array
-const numeros = [1, 2, 3, 4, 5];
-const numerosDobrados = numeros.map(numero =&gt; numero * 2);
+<h4 id="3xx-redirecionamento">3xx – Redirecionamento</h4>
+<p>Indicam que o cliente precisa realizar uma ação adicional para completar a requisição.</p>
+<ul>
+<li>
+<p><strong>301 Moved Permanently</strong>: O recurso foi movido permanentemente para uma nova URL.</p>
+</li>
+<li>
+<p><strong>302 Found</strong>: O recurso foi temporariamente movido para outra URL.</p>
+</li>
+</ul>
+<h4 id="4xx-erro-do-cliente">4xx – Erro do Cliente</h4>
+<p>Indicam que houve um erro por parte do cliente.</p>
+<ul>
+<li>
+<p><strong>400 Bad Request</strong>: A requisição está malformada ou inválida.</p>
+</li>
+<li>
+<p><strong>401 Unauthorized</strong>: Acesso negado, geralmente por falta de autenticação.</p>
+</li>
+<li>
+<p><strong>403 Forbidden</strong>: Acesso negado, mesmo com autenticação.</p>
+</li>
+<li>
+<p><strong>404 Not Found</strong>: O recurso solicitado não foi encontrado no servidor.</p>
+</li>
+</ul>
+<h4 id="5xx-erro-do-servidor">5xx – Erro do Servidor</h4>
+<p>Indicam que o servidor encontrou um erro ao tentar processar a requisição.</p>
+<ul>
+<li>
+<p><strong>500 Internal Server Error</strong>: Um erro genérico no servidor.</p>
+</li>
+<li>
+<p><strong>502 Bad Gateway</strong>: O servidor recebeu uma resposta inválida de outro servidor.</p>
+</li>
+<li>
+<p><strong>503 Service Unavailable</strong>: O servidor está temporariamente indisponível (sobrecarga ou manutenção).</p>
+</li>
+</ul>
+<h3 id="4-exemplo-pratico-de-requisicao-http">4. Exemplo Prático de Requisição HTTP</h3>
+<ul>
+<li>Montar uma requisição <code>GET</code> e uma <code>POST</code> usando JavaScript com o <code>fetch</code>.</li>
+<li>Mostrar a diferença entre os métodos e como lidar com os diferentes status HTTP retornados.</li>
+</ul>
+<p>```javascript</p>
+<p>fetch('https://api.exemplo.com/recurso')</p>
+<pre><code>.then(response=&gt;{
 
-// Transformar um array de nomes em letras maiúsculas
-const nomes = ['ana', 'joão', 'maria'];
-const nomesMaiusculos = nomes.map(nome =&gt; nome.toUpperCase());
+  if (!response.ok) {
 
-// Criar um novo array com os quadrados dos números
-const quadrados = numeros.map(numero =&gt; numero * numero);
-</code></pre>
-<h2 id="exemplos-praticos-e-relevantes-para-o-metodo-map-em-javascript">Exemplos Práticos e Relevantes para o Método <code>map()</code> em JavaScript</h2>
-<h3 id="1-manipulacao-de-dados-de-usuarios">1. <strong>Manipulação de Dados de Usuários</strong></h3>
-<p><strong>Exemplo:</strong> Transformar um array de objetos representando usuários em um novo array contendo apenas os nomes.</p>
-<pre><code class="language-javascript">const usuarios = [
-    { nome: 'Ana', idade: 30 },
-    { nome: 'João', idade: 25 },
-    { nome: 'Maria', idade: 35 }
-];
+    thrownewError(`Erro: ${response.status}`);
 
-const nomes = usuarios.map(usuario =&gt; usuario.nome);
-console.log(nomes); // Output: ['Ana', 'João', 'Maria']
+  }
+
+  return response.json();
+
+})
+
+.then(data=&gt; console.log(data))
+
+.catch(error=&gt; console.error(error));
 </code></pre>
-<h4 id="2-formatacao-de-dados-para-exibicao">2. <strong>Formatação de Dados para Exibição</strong></h4>
-<ul>
-<li><strong>Exemplo:</strong> Formatar um array de preços para exibir com o símbolo de real e duas casas decimais.</li>
-</ul>
-<pre><code class="language-javascript">const precos = [10.99, 25.49, 15.99];
-const precosFormatados = precos.map(preco =&gt; `R$ ${preco.toFixed(2)}`);
-console.log(precosFormatados); // Output: ['R$ 10.99', 'R$ 25.49', 'R$ 15.99']
-</code></pre>
-<h4 id="3-criacao-de-elementos-html">3. <strong>Criação de Elementos HTML</strong></h4>
-<ul>
-<li><strong>Exemplo:</strong> Criar uma lista não ordenada (ul) com os itens de um array.</li>
-</ul>
-<pre><code class="language-javascript">const itens = ['maçã', 'banana', 'laranja'];
-const listaHtml = itens.map(item =&gt; `&lt;li&gt;${item}&lt;/li&gt;`).join('');
-console.log(listaHtml);
-</code></pre>
-<h3 id="4-processamento-de-dados-de-formularios">4. <strong>Processamento de Dados de Formulários</strong></h3>
-<ul>
-<li><strong>Exemplo:</strong> Extrair os valores de um formulário e criar um objeto com os dados.</li>
-</ul>
-<pre><code class="language-javascript">const formulario = document.querySelector('form');
-const dadosFormulario = new FormData(formulario);
-const dadosObjeto = [...dadosFormulario.entries()].map(([chave, valor]) =&gt; ({ [chave]: valor }));
-console.log(dadosObjeto);
-</code></pre>
-<h3 id="5-transformacao-de-unidades-de-medida">5. <strong>Transformação de Unidades de Medida</strong></h3>
-<ul>
-<li><strong>Exemplo:</strong> Converter uma lista de temperaturas em Celsius para Fahrenheit.</li>
-</ul>
-<pre><code class="language-javascript">const temperaturasCelsius = [0, 10, 20, 30];
-const temperaturasFahrenheit = temperaturasCelsius.map(celsius =&gt; (celsius * 9/5) + 32);
-</code></pre>
-<h3 id="6-criacao-de-novos-objetos-a-partir-de-arrays">6. <strong>Criação de Novos Objetos a Partir de Arrays</strong></h3>
-<ul>
-<li><strong>Exemplo:</strong> Criar um array de objetos com propriedades chave-valor a partir de dois arrays.</li>
-</ul>
-<pre><code class="language-javascript">const nomes = ['Ana', 'João', 'Maria'];
-const idades = [30, 25, 35];
-const pessoas = nomes.map((nome, index) =&gt; ({ nome, idade: idades[index] }));
-</code></pre>
-<h2 id="atividades-praticas_1">Atividades Práticas</h2>
-<ul>
-<li><strong>Criar um catálogo de produtos:</strong> Dado um array de objetos representando produtos (nome, preço, categoria), criar um novo array com os produtos de uma categoria específica.</li>
-<li><strong>Transformar uma lista de datas em um novo formato:</strong> Converter um array de strings representando datas no formato "YYYY-MM-DD" para o formato "DD/MM/YYYY".</li>
-<li><strong>Validar um formulário:</strong> Utilizar <code>map()</code> para verificar se todos os campos obrigatórios de um formulário foram preenchidos.</li>
-<li><strong>Criar um gráfico simples:</strong> Gerar um array de coordenadas a partir de um conjunto de dados e utilizá-lo para criar um gráfico de linhas básico.</li>
-</ul>
-<p><strong>Dicas Adicionais:</strong></p>
-<ul>
-<li><strong>Enfatize a imutabilidade:</strong> O <code>map()</code> cria um novo array, não modificando o original.</li>
-<li><strong>Explore diferentes cenários:</strong> Apresente exemplos que envolvam diferentes tipos de dados e estruturas.</li>
-<li><strong>Incentive a experimentação:</strong> Deixe os alunos explorarem diferentes formas de utilizar o <code>map()</code>.</li>
-<li><strong>Relacione com outros métodos:</strong> Mostre como o <code>map()</code> pode ser combinado com outros métodos como <code>filter</code> e <code>reduce</code> para realizar operações mais complexas.</li>
-</ul>
-<p>Com esses exemplos e atividades, seus alunos terão uma base sólida para utilizar o <code>map()</code> em seus projetos JavaScript.</p></div>
+<p>```</p></div>
         
         
     </div>

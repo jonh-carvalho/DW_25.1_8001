@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>07 Fetch - DW</title>
+    <title>07 - Fetch API - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -366,49 +366,55 @@
                         
                             
 <li >
-    <a href="../04_ChartMap/">05 - Chart Map</a>
+    <a href="../04_Http/">05 - Http</a>
 </li>
 
                         
                             
 <li >
-    <a href="../04_Maps_Sets/">04 - O Comando Map em JavaScript</a>
+    <a href="../05_Lendo%20Json/">05 Lendo Json</a>
 </li>
 
                         
                             
 <li >
-    <a href="../05_Http/">05 Http</a>
+    <a href="../06_Json/">06 - JavaScript JSON</a>
 </li>
 
                         
                             
 <li class="active">
-    <a href="./">07 Fetch</a>
+    <a href="./">07 - Fetch API</a>
 </li>
 
                         
                             
 <li >
-    <a href="../08_Lendo%20Json/">08 Lendo Json</a>
+    <a href="../08_FetchApi/">08 - Consumindo com Fetch API -</a>
 </li>
 
                         
                             
 <li >
-    <a href="../09_FetchApi/">09 FetchApi</a>
+    <a href="../09_JsonServer/">09 - JsonServer</a>
 </li>
 
                         
                             
 <li >
-    <a href="../09_FormsJS/">11 Manipulando html com js</a>
+    <a href="../10_FormsJS/">11 Manipulando html com js</a>
 </li>
 
                         
                             
 <li >
-    <a href="../10_JsonServer/">10 JsonServer</a>
+    <a href="../11_ChartMap/">05 - Chart Map</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../11_Maps_Sets/">04 - O Comando Map em JavaScript</a>
 </li>
 
                         
@@ -425,12 +431,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../05_Http/">
+                        <a rel="prev" href="../06_Json/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../08_Lendo%20Json/">
+                        <a rel="next" href="../08_FetchApi/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -447,17 +453,18 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#caracteristicas-principais-do-fetch">Características principais do fetch:</a></li>
-        <li class="first-level "><a href="#exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do fetch:</a></li>
-            <li class="second-level"><a href="#um-exemplo-de-como-usar-o-fetch-com-a-api-do-jsonplaceholder-uma-api-publica-para-testes-e-prototipagem">Um exemplo de como usar o fetch com a API do JSONPlaceholder, uma API pública para testes e prototipagem:</a></li>
+        <li class="first-level active"><a href="#07-fetch-api">07 - Fetch API</a></li>
+            <li class="second-level"><a href="#introducao-ao-fetch">Introdução ao fetch</a></li>
                 
-                <li class="third-level"><a href="#exemplo-de-requisicao-get">Exemplo de requisição GET</a></li>
-                <li class="third-level"><a href="#exemplo-de-requisicao-post">Exemplo de requisição POST</a></li>
-        <li class="first-level "><a href="#explicacao">Explicação:</a></li>
+                <li class="third-level"><a href="#caracteristicas-principais-do-fetch">Características principais do fetch:</a></li>
+                <li class="third-level"><a href="#exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do fetch:</a></li>
+                <li class="third-level"><a href="#explicacao">Explicação:</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
+<h1 id="07-fetch-api">07 - Fetch API</h1>
+<h2 id="introducao-ao-fetch">Introdução ao <code>fetch</code></h2>
 <p><code>fetch</code> é uma API nativa do JavaScript que permite realizar requisições HTTP de forma simples e moderna. Ela é usada principalmente para buscar (ou "fetch") recursos de um servidor, como dados de uma API, arquivos ou outros tipos de conteúdo. O <code>fetch</code> retorna uma <em>Promise</em>, o que significa que ele trabalha de forma assíncrona, permitindo que o JavaScript continue a executar outras operações enquanto a requisição está em andamento.</p>
 <h3 id="caracteristicas-principais-do-fetch">Características principais do <code>fetch</code>:</h3>
 <ol>

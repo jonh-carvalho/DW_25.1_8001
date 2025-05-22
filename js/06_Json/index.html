@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>05 - Chart Map - DW</title>
+    <title>06 - JavaScript JSON - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -365,50 +365,56 @@
 
                         
                             
+<li >
+    <a href="../04_Http/">05 - Http</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../05_Lendo%20Json/">05 Lendo Json</a>
+</li>
+
+                        
+                            
 <li class="active">
-    <a href="./">05 - Chart Map</a>
+    <a href="./">06 - JavaScript JSON</a>
 </li>
 
                         
                             
 <li >
-    <a href="../04_Maps_Sets/">04 - O Comando Map em JavaScript</a>
+    <a href="../07_Fetch/">07 - Fetch API</a>
 </li>
 
                         
                             
 <li >
-    <a href="../05_Http/">05 Http</a>
+    <a href="../08_FetchApi/">08 - Consumindo com Fetch API -</a>
 </li>
 
                         
                             
 <li >
-    <a href="../07_Fetch/">07 Fetch</a>
+    <a href="../09_JsonServer/">09 - JsonServer</a>
 </li>
 
                         
                             
 <li >
-    <a href="../08_Lendo%20Json/">08 Lendo Json</a>
+    <a href="../10_FormsJS/">11 Manipulando html com js</a>
 </li>
 
                         
                             
 <li >
-    <a href="../09_FetchApi/">09 FetchApi</a>
+    <a href="../11_ChartMap/">05 - Chart Map</a>
 </li>
 
                         
                             
 <li >
-    <a href="../09_FormsJS/">11 Manipulando html com js</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../10_JsonServer/">10 JsonServer</a>
+    <a href="../11_Maps_Sets/">04 - O Comando Map em JavaScript</a>
 </li>
 
                         
@@ -425,17 +431,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../03_Forms/">
+                        <a rel="prev" href="../05_Lendo%20Json/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../04_Maps_Sets/">
+                        <a rel="next" href="../07_Fetch/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/js/04_ChartMap.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/js/06_Json.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -447,86 +453,101 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#05-chart-map">05 - Chart Map</a></li>
-            <li class="second-level"><a href="#criando-um-grafico-de-linhas-simples-com-javascript-e-o-metodo-map">Criando um Gráfico de Linhas Simples com JavaScript e o Método map()</a></li>
+        <li class="first-level active"><a href="#06-javascript-json">06 - JavaScript JSON</a></li>
+            <li class="second-level"><a href="#introducao">Introdução</a></li>
                 
+                <li class="third-level"><a href="#o-que-e-json">O que é JSON?</a></li>
+                <li class="third-level"><a href="#regras-de-sintaxe-json">Regras de sintaxe JSON</a></li>
+                <li class="third-level"><a href="#dados-json-um-nome-e-um-valor">Dados JSON - Um nome e um valor</a></li>
+                <li class="third-level"><a href="#objetos-json">Objetos JSON</a></li>
+                <li class="third-level"><a href="#matrizes-json">Matrizes JSON</a></li>
+                <li class="third-level"><a href="#convertendo-um-texto-json-em-um-objeto-javascript">Convertendo um texto JSON em um objeto JavaScript</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="05-chart-map">05 - Chart Map</h1>
-<h2 id="criando-um-grafico-de-linhas-simples-com-javascript-e-o-metodo-map">Criando um Gráfico de Linhas Simples com JavaScript e o Método <code>map()</code></h2>
-<p><strong>Entendendo o Problema:</strong></p>
-<p>Queremos transformar um conjunto de dados em um formato que possa ser utilizado para desenhar um gráfico de linhas. Para isso, vamos utilizar o método <code>map()</code> para gerar um array de coordenadas (x, y) a partir dos nossos dados.</p>
-<p><strong>Bibliotecas para Visualização:</strong></p>
-<p>Existem diversas bibliotecas JavaScript que facilitam a criação de gráficos, como:</p>
+<h1 id="06-javascript-json">06 - JavaScript JSON</h1>
+<h2 id="introducao">Introdução</h2>
+<p>JSON é um formato para armazenar e transportar dados.</p>
+<p>O JSON é frequentemente usado quando os dados são enviados de um servidor para uma web página.</p>
+<h3 id="o-que-e-json">O que é JSON?</h3>
 <ul>
-<li><strong>Chart.js:</strong> Popular por sua facilidade de uso e customização.</li>
-<li><strong>D3.js:</strong> Uma biblioteca mais poderosa e flexível, ideal para gráficos complexos.</li>
-<li><strong>Plotly.js:</strong> Uma biblioteca interativa com diversos tipos de gráficos.</li>
+<li>JSON significa JavaScript Object Notation</li>
+<li>JSON é um formato leve de intercâmbio de dados</li>
+<li>JSON é independente de idioma *</li>
+<li>JSON é "autodescritivo" e fácil de entender</li>
 </ul>
-<p><strong>Exemplo com Chart.js:</strong></p>
-<p>Vamos supor que temos um array de dados representando a temperatura ao longo de uma semana:</p>
-<pre><code class="language-javascript">const temperaturas = [18, 22, 25, 20, 19, 23, 24];
+<blockquote>
+<p>A sintaxe JSON é derivada da sintaxe de notação de objeto JavaScript, mas o formato JSON é apenas texto. O código para leitura e geração de dados JSON pode ser escrito em qualquer programação Idioma.</p>
+</blockquote>
+<h4 id="exemplo-de-json">Exemplo de JSON</h4>
+<p>Essa sintaxe JSON define um objeto employees: uma matriz de 3 registros de funcionários (objetos):</p>
+<pre><code class="language-js">{
+&quot;employees&quot;:[
+  {&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;},
+  {&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;},
+  {&quot;firstName&quot;:&quot;Peter&quot;, &quot;lastName&quot;:&quot;Jones&quot;}
+]
+}
 </code></pre>
-<p>Para criar um gráfico de linhas com Chart.js, precisamos de um elemento HTML <code>&lt;canvas&gt;</code> e um conjunto de dados no formato adequado. Utilizaremos o <code>map()</code> para transformar o array de temperaturas em um array de objetos, onde cada objeto representa um ponto no gráfico:</p>
-<pre><code class="language-javascript">const ctx = document.getElementById('myChart').getContext('2d');
-
-const labels = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
-
-const data = {
-  labels: labels,
-  datasets: [{
-    label: 'Temperatura (°C)',
-    data: temperaturas,
-    borderColor: 'rgb(75, 192, 192)',
-    fill: false
-  }]
-};
-
-const myChart = new Chart(ctx, {
-  type: 'line',
-  data: data,
-  options: {}
-});
+<p>O formato JSON é avaliado como objetos JavaScript</p>
+<p><strong>O formato JSON é sintaticamente idêntico ao código para criar Objetos JavaScript.</strong></p>
+<p>Devido a essa semelhança, um programa JavaScript pode facilmente converter dados JSON em nativos Objetos JavaScript.</p>
+<h3 id="regras-de-sintaxe-json">Regras de sintaxe JSON</h3>
+<ul>
+<li>Os dados estão em pares de nome/valor</li>
+<li>Os dados são separados por vírgulas</li>
+<li>Chaves seguram objetos</li>
+<li>Os colchetes contêm matrizes</li>
+</ul>
+<h3 id="dados-json-um-nome-e-um-valor">Dados JSON - Um nome e um valor</h3>
+<p>Os dados JSON são gravados como pares de nome/valor, assim como o objeto JavaScript Propriedades.</p>
+<p>Um par nome/valor consiste em um nome de campo (entre aspas duplas), seguido por dois pontos, seguido por um valor:</p>
+<pre><code class="language-js">&quot;firstName&quot;:&quot;John&quot;
 </code></pre>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Gráfico de Linhas com Chart.js&lt;/title&gt;
-  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;canvas id=&quot;myChart&quot;&gt;&lt;/canvas&gt;
-
-  &lt;script&gt;
-    // JavaScript (já mostrado anteriormente)
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<p><strong>Os nomes JSON exigem aspas duplas. Nomes JavaScript não.</strong></p>
+<h3 id="objetos-json">Objetos JSON</h3>
+<p>Os objetos JSON são gravados dentro de chaves.</p>
+<p>Assim como em JavaScript, os objetos podem conter vários pares de nome/valor:</p>
+<pre><code class="language-js">{&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;}
 </code></pre>
-<p><strong>Explicando o Código:</strong></p>
-<ul>
-<li><strong>Criamos um canvas:</strong> O elemento <code>&lt;canvas&gt;</code> é onde o gráfico será desenhado.</li>
-<li><strong>Definimos os rótulos:</strong> O array <code>labels</code> contém os rótulos para cada ponto do eixo x (dias da semana).</li>
-<li><strong>Transformamos os dados:</strong> O <code>map()</code> é usado para criar um novo array de objetos, onde cada objeto possui as propriedades <code>x</code> (índice) e <code>y</code> (temperatura). No entanto, para o Chart.js, não precisamos criar explicitamente as coordenadas x, pois os rótulos já servem como essa informação.</li>
-<li><strong>Configuramos o gráfico:</strong> Criamos um novo objeto Chart, definindo o tipo do gráfico (linha), os dados e as opções de configuração.</li>
-</ul>
-<p><strong>Personalizando o Gráfico:</strong></p>
-<p>O Chart.js oferece diversas opções para personalizar o gráfico, como cores, espessura das linhas, marcadores, etc. Consulte a documentação oficial para mais detalhes: <a href="https://www.google.com/url?sa=E&amp;source=gmail&amp;q=https://www.chartjs.org/docs/latest/">https://www.chartjs.org/docs/latest/</a></p>
-<p><strong>Outros Exemplos:</strong></p>
-<ul>
-<li><strong>Gráfico de barras:</strong> Substitua <code>type: 'line'</code> por <code>type: 'bar'</code>.</li>
-<li><strong>Gráfico de pizza:</strong> Utilize <code>type: 'pie'</code>.</li>
-<li><strong>Múltiplas séries:</strong> Adicione mais datasets ao objeto <code>data</code> para comparar diferentes conjuntos de dados.</li>
-</ul>
-<p><strong>Desafio:</strong></p>
-<p>Adapte o exemplo acima para criar um gráfico de linhas que mostre a evolução do preço de uma ação ao longo de um mês. Você pode gerar dados aleatórios para simular os preços.</p>
-<p><strong>Recursos Adicionais:</strong></p>
-<ul>
-<li><strong>Documentação Chart.js:</strong> <a href="https://www.google.com/url?sa=E&amp;source=gmail&amp;q=https://www.chartjs.org/docs/latest/">https://www.chartjs.org/docs/latest/</a></li>
-</ul>
-<p>Com o <code>map()</code> e bibliotecas como Chart.js, você pode criar gráficos personalizados e informativos para visualizar seus dados de forma eficaz.</p></div>
+<h3 id="matrizes-json">Matrizes JSON</h3>
+<p>As matrizes JSON são escritas entre colchetes.</p>
+<p>Assim como em JavaScript, um array pode conter objetos:</p>
+<pre><code class="language-js">&quot;employees&quot;:[
+  {&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;},
+  {&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;},
+  {&quot;firstName&quot;:&quot;Peter&quot;, &quot;lastName&quot;:&quot;Jones&quot;}
+]
+</code></pre>
+<p>No exemplo acima, o objeto "funcionários" é uma matriz. Ele contém três Objetos.</p>
+<p>Cada objeto é um registro de uma pessoa (com um nome e um sobrenome).</p>
+<h3 id="convertendo-um-texto-json-em-um-objeto-javascript">Convertendo um texto JSON em um objeto JavaScript</h3>
+<p>Um uso comum do JSON é ler dados de um servidor web, e exibir os dados em uma página da web.</p>
+<p>Para simplificar, isso pode ser demonstrado usando uma string como entrada.</p>
+<p>Primeiro, crie uma string JavaScript contendo a sintaxe JSON:</p>
+<p>let text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';</p>
+<pre><code class="language-js">let text = '{ &quot;employees&quot; : [' +
+'{ &quot;firstName&quot;:&quot;John&quot; , &quot;lastName&quot;:&quot;Doe&quot; },' +
+'{ &quot;firstName&quot;:&quot;Anna&quot; , &quot;lastName&quot;:&quot;Smith&quot; },' +
+'{ &quot;firstName&quot;:&quot;Peter&quot; , &quot;lastName&quot;:&quot;Jones&quot; } ]}';
+</code></pre>
+<p>Em seguida, use a função interna do JavaScript para converter a string em um objeto JavaScript:JSON.parse()</p>
+<pre><code class="language-js">const obj = JSON.parse(text);
+</code></pre>
+<p>Por fim, use o novo objeto JavaScript em sua página:</p>
+<pre><code class="language-html">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById(&quot;demo&quot;).innerHTML =
+obj.employees[1].firstName + &quot; &quot; + obj.employees[1].lastName;
+&lt;/script&gt;
+</code></pre>
+<p>const obj = JSON.parse(text);
+obj.employees[1].firstName + " " + obj.employees[1].lastName;</p></div>
         
         
     </div>
