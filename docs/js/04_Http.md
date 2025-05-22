@@ -10,13 +10,13 @@
 
 ### Como funciona?
 
-1.**Você digita um endereço (URL) na barra de endereços do seu navegador.**
+1. **Você digita um endereço (URL) na barra de endereços do seu navegador.**
 
-2.**Seu navegador envia uma solicitação HTTP para o servidor onde está hospedado o site.**
+2. **Seu navegador envia uma solicitação HTTP para o servidor onde está hospedado o site.**
 
-3.**O servidor processa a solicitação e envia uma resposta HTTP com o conteúdo da página.**
+3. **O servidor processa a solicitação e envia uma resposta HTTP com o conteúdo da página.**
 
-4.**Seu navegador recebe a resposta e exibe a página na sua tela.**
+4. **Seu navegador recebe a resposta e exibe a página na sua tela.**
 
 **Imagine o HTTP como um garçom em um restaurante:** você faz um pedido (a solicitação HTTP), o garçom leva o pedido para a cozinha (o servidor), a cozinha prepara o prato (processa a solicitação) e o garçom traz o prato para você (a resposta HTTP).
 
