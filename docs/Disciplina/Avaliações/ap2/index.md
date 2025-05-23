@@ -2,16 +2,18 @@
 
 ## Objetivo
 
-<!--
-Desenvolver um site responsivo utilizando **HTML**, **CSS, JS** e técnicas de layout como **Flexbox** e **CSS Grid**, seguindo boas práticas de design web e Mobile First. Crie uma aplicação web interativa que utilize a API Pokémon para exibir informações detalhadas sobre Pokémons. A aplicação deve ser responsiva (mobile-first) e seguir os **padrões web**.
+
+Desenvolver um site responsivo utilizando **HTML**, **CSS, JS** e técnicas de layout como **Flexbox** e **CSS Grid**, seguindo boas práticas de design web e Mobile First. Crie uma aplicação web interativa que utilize uma API  para exibir informações.
+
+<a href="https://simulador.btgpactual.com/" target="_blank"><img src="image.png" alt="Alt Text" width="600" height="400"></a>
 
 ### Entrega
 
-- **Prazo:** 27/11/2024 até as 9:20h (**AP2 ocorrerá antes do intervalo**).
+- **Prazo:** 12/06/2025 até as 15:20h (**AP2 ocorrerá antes do intervalo**).
 - **Obrigatório** a presença em sala de aula.
 - **Enviar o projeto** para o repositório em que o professor foi adicionado como colaborador em uma pasta chamada ap2 dentro da pasta docs, com  **HTML**, **CSS**, **JAVASCRIPT** e **imagens** utilizados.
 - Deve ser feita a publicação da pasta docs no **github-pages**, na pasta docs portanto devem estar a pasta ac, ap1 e ap2 e páginas disponíveis para serem visualizadas na Web
-- **Apresentação** individualmente para o professor em sala de aula das **07:30 às 9:20h.**
+- **Apresentação** individualmente para o professor em sala de aula das **13:30 às 15:20h.**
 
 ### Critérios de Avaliação
 
@@ -65,6 +67,7 @@ Desenvolver um site responsivo utilizando **HTML**, **CSS, JS** e técnicas de l
 - O **Javascript** deve ser escrito em um arquivo separado e vinculado corretamente ao HTML.
 - As imagens devem ser colocadas em uma subpasta "imagens"
 
+<!--
 8\. **Plano em Pseudocódigo**
 
 * Criar a estrutura de arquivos:
@@ -210,3 +213,6 @@ Agora, você pode abrir o arquivo index.html no seu navegador e buscar informaç
 - [Pocket Gallery](https://play.google.com/store/apps/details?id=com.eurekaffeine.pokedex.renaissance&hl=pt)
 
 -->
+
+ 
+

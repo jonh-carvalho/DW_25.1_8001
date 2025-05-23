@@ -91,23 +91,40 @@ fetch('data.json')
   */
 
 // Fazendo uma requisição GET para obter posts da API JSONPlaceholder
-fetch('https://dummyjson.com/posts')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro na requisição: ' + response.status);
-        }
-        return response.json();  // Converte a resposta para JSON
-    })
+fetch("https://dummyjson.com/posts")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Erro na requisição: " + response.status);
+    }
+    return response.json(); // Converte a resposta para JSON
+  })
 
-    .then(posts => {
-        console.log(posts);  // Exibe os posts no console
-    })
+  .then((postsData) => {
+    console.log(postsData); // Exibe os posts no console
 
-    .catch(error => console.error('Erro:', error));
+    // Imprimindo os posts no HTML
+    const postsContainer = document.getElementById("jsonplaceholder");
+
+    // Se a resposta da API for um objeto com a propriedade "posts", use-a
+    const postsArray = postsData.posts ? postsData.posts : postsData;
+    
+    postsArray.forEach((post) => {
+      const postElement = document.createElement("div");
+      postElement.classList.add("post");
+      postElement.innerHTML = `
+            <h2>${post.title}</h2>
+            <p>${post.body}</p>
+        `;
+      postsContainer.appendChild(postElement);
+    });
+  })
+
+  .catch((error) => console.error("Erro:", error));
 
 // Lida com erros
 // Imprimindo os posts no HTML
     const postsContainer = document.getElementById('jsonplaceholder');
+    
     posts.forEach(post => {
     const postElement = document.createElement('div');
     postElement.classList.add('post');
