@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>Tabelas - DW</title>
+    <title>Unidades Relativas - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -231,37 +231,37 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Css <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../../_Css/flexbox/">Flexbox</a>
+    <a href="../flexbox/">Flexbox</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../_Css/grid/">Grid CSS - Estruturando Layouts Modernos</a>
+    <a href="../grid/">Grid CSS - Estruturando Layouts Modernos</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../_Css/posicionamento/">Posicionamento</a>
+    <a href="../posicionamento/">Posicionamento</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../_Css/siteresponsivo/">Responsividade</a>
+    <a href="../siteresponsivo/">Responsividade</a>
 </li>
 
                         
                             
-<li >
-    <a href="../../_Css/unidadesrelativas/">Unidades Relativas</a>
+<li class="active">
+    <a href="./">Unidades Relativas</a>
 </li>
 
                         
@@ -270,31 +270,31 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Html <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../blocos/">Blocos HTML básicos: &lt;span&gt;, &lt;div&gt;, class e id.</a>
+    <a href="../../_Html/blocos/">Blocos HTML básicos: &lt;span&gt;, &lt;div&gt;, class e id.</a>
 </li>
 
                         
                             
 <li >
-    <a href="../forms/">Introdução e Uso Incremental de Formulários HTML**</a>
-</li>
-
-                        
-                            
-<li class="active">
-    <a href="./">Tabelas</a>
+    <a href="../../_Html/forms/">Introdução e Uso Incremental de Formulários HTML**</a>
 </li>
 
                         
                             
 <li >
-    <a href="../tags%20sem%C3%A2ntica/">Tags semântica</a>
+    <a href="../../_Html/tabelas/">Tabelas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../_Html/tags%20sem%C3%A2ntica/">Tags semântica</a>
 </li>
 
                         
@@ -431,17 +431,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../forms/">
+                        <a rel="prev" href="../siteresponsivo/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../tags%20sem%C3%A2ntica/">
+                        <a rel="next" href="../../_Html/blocos/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/_Html/tabelas.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/_Css/unidadesrelativas.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -453,330 +453,154 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#aula-introducao-as-tabelas-em-html">Aula: Introdução às Tabelas em HTML</a></li>
-            <li class="second-level"><a href="#objetivo">Objetivo</a></li>
+        <li class="first-level active"><a href="#unidades-relativas">Unidades Relativas</a></li>
+            <li class="second-level"><a href="#1-em-relativo-ao-tamanho-da-fonte">1. em (relativo ao tamanho da fonte)</a></li>
                 
-        <li class="first-level "><a href="#etapa-1-introducao-ao-conceito-de-tabelas">Etapa 1: Introdução ao Conceito de Tabelas</a></li>
-        <li class="first-level "><a href="#etapa-2-adicionando-estilo">Etapa 2: Adicionando Estilo</a></li>
-        <li class="first-level "><a href="#etapa-3-estrutura-avancada">Etapa 3: Estrutura Avançada</a></li>
-        <li class="first-level "><a href="#etapa-4-boas-praticas-e-acessibilidade">Etapa 4: Boas Práticas e Acessibilidade</a></li>
-        <li class="first-level "><a href="#etapa-5-exercicios-praticos">Etapa 5: Exercícios Práticos</a></li>
-        <li class="first-level "><a href="#conclusao">Conclusão</a></li>
-        <li class="first-level "><a href="#similar-code-found-with-2-license-types">Similar code found with 2 license types</a></li>
-        <li class="first-level "><a href="#exemplos">Exemplos</a></li>
-            <li class="second-level"><a href="#exemplo-1-adicionar-um-rodape-com-total">Exemplo 1: Adicionar um Rodapé com Total</a></li>
+            <li class="second-level"><a href="#2-rem-relativo-ao-tamanho-da-fonte-raiz">2. rem (relativo ao tamanho da fonte raiz)</a></li>
                 
-            <li class="second-level"><a href="#exemplo-2-mesclar-celulas-com-colspan-e-rowspan">Exemplo 2: Mesclar Células com colspan e rowspan</a></li>
+            <li class="second-level"><a href="#3-porcentagem">3. % (porcentagem)</a></li>
                 
-            <li class="second-level"><a href="#exemplo-3-adicionar-estilo-com-classes">Exemplo 3: Adicionar Estilo com Classes</a></li>
+            <li class="second-level"><a href="#4-vh-e-vw-viewport-height-e-viewport-width">4. vh e vw (viewport height e viewport width)</a></li>
                 
-            <li class="second-level"><a href="#exemplo-4-melhorar-acessibilidade-com-scope-e-caption">Exemplo 4: Melhorar Acessibilidade com scope e caption</a></li>
+            <li class="second-level"><a href="#5-min-width-max-width-min-height-max-height">5. min-width, max-width, min-height, max-height</a></li>
                 
-            <li class="second-level"><a href="#exemplo-5-tabela-responsiva">Exemplo 5: Tabela Responsiva</a></li>
+            <li class="second-level"><a href="#exemplo-pratico-de-site-responsivo">Exemplo Prático de Site Responsivo</a></li>
                 
+                <li class="third-level"><a href="#consideracoes-finais">Considerações Finais</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>Aqui está uma proposta de aula incremental para ensinar os conceitos de tabelas HTML. A aula é dividida em etapas, começando com os fundamentos e avançando gradualmente para conceitos mais complexos.</p>
-<hr />
-<h3 id="aula-introducao-as-tabelas-em-html"><strong>Aula: Introdução às Tabelas em HTML</strong></h3>
-<h4 id="objetivo"><strong>Objetivo</strong></h4>
-<p>Ensinar os conceitos básicos e avançados de tabelas HTML, incluindo estruturação, estilização e boas práticas.</p>
-<hr />
-<h3 id="etapa-1-introducao-ao-conceito-de-tabelas"><strong>Etapa 1: Introdução ao Conceito de Tabelas</strong></h3>
-<ol>
-<li><strong>Explicação Teórica</strong>:</li>
-<li>O que é uma tabela e para que serve.</li>
-<li>
-<p>Elementos básicos: <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code>.</p>
-</li>
-<li>
-<p><strong>Exemplo Prático</strong>:
-   ```html
-   <!DOCTYPE html></p>
-</li>
-</ol>
-<html lang="pt-br">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Tabela Simples</title>
-   </head>
-   <body>
-       <h1>Minha Primeira Tabela</h1>
-       <table border="1">
-           <tr>
-               <th>Nome</th>
-               <th>Idade</th>
-           </tr>
-           <tr>
-               <td>João</td>
-               <td>25</td>
-           </tr>
-           <tr>
-               <td>Maria</td>
-               <td>30</td>
-           </tr>
-       </table>
-   </body>
-   </html>
-<p>```</p>
-<hr />
-<h3 id="etapa-2-adicionando-estilo"><strong>Etapa 2: Adicionando Estilo</strong></h3>
-<ol>
-<li><strong>Explicação Teórica</strong>:</li>
-<li>Uso de CSS para estilizar tabelas.</li>
-<li>
-<p>Propriedades como <code>border</code>, <code>padding</code>, <code>text-align</code>, <code>background-color</code>.</p>
-</li>
-<li>
-<p><strong>Exemplo Prático</strong>:
-   ```html
- <br />
-<style>
-       table {
-           width: 50%;
-           border-collapse: collapse;
-           margin: 20px 0;
-       }
-       th, td {
-           border: 1px solid #ddd;
-           padding: 8px;
-           text-align: left;
-       }
-       th {
-           background-color: #f4f4f4;
-       }
-   </style></p>
-</li>
-</ol>
-<p>```</p>
-<hr />
-<h3 id="etapa-3-estrutura-avancada"><strong>Etapa 3: Estrutura Avançada</strong></h3>
-<ol>
-<li><strong>Explicação Teórica</strong>:</li>
-<li>Uso de <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> e <code>&lt;tfoot&gt;</code>.</li>
-<li>
-<p>Colspan e rowspan para mesclar células.</p>
-</li>
-<li>
-<p><strong>Exemplo Prático</strong>:
-   ```html
- <br />
-<table>
-       <thead>
-           <tr>
-               <th>Produto</th>
-               <th>Quantidade</th>
-               <th>Preço</th>
-           </tr>
-       </thead>
-       <tbody>
-           <tr>
-               <td>Arroz</td>
-               <td>2</td>
-               <td>R$ 10,00</td>
-           </tr>
-           <tr>
-               <td>Feijão</td>
-               <td>1</td>
-               <td>R$ 8,00</td>
-           </tr>
-       </tbody>
-       <tfoot>
-           <tr>
-               <td colspan="2">Total</td>
-               <td>R$ 18,00</td>
-           </tr>
-       </tfoot>
-   </table></p>
-</li>
-</ol>
-<p>```</p>
-<hr />
-<h3 id="etapa-4-boas-praticas-e-acessibilidade"><strong>Etapa 4: Boas Práticas e Acessibilidade</strong></h3>
-<ol>
-<li><strong>Explicação Teórica</strong>:</li>
-<li>Uso de atributos como <code>scope</code> e <code>caption</code> para melhorar a acessibilidade.</li>
-<li>
-<p>Importância de tabelas semânticas.</p>
-</li>
-<li>
-<p><strong>Exemplo Prático</strong>:
-   ```html
- <br />
-<table>
-       <caption>Tabela de Vendas</caption>
-       <thead>
-           <tr>
-               <th scope="col">Produto</th>
-               <th scope="col">Quantidade</th>
-               <th scope="col">Preço</th>
-           </tr>
-       </thead>
-       <tbody>
-           <tr>
-               <td>Arroz</td>
-               <td>2</td>
-               <td>R$ 10,00</td>
-           </tr>
-           <tr>
-               <td>Feijão</td>
-               <td>1</td>
-               <td>R$ 8,00</td>
-           </tr>
-       </tbody>
-   </table></p>
-</li>
-</ol>
-<p>```</p>
-<hr />
-<h3 id="etapa-5-exercicios-praticos"><strong>Etapa 5: Exercícios Práticos</strong></h3>
-<ol>
-<li>Criar uma tabela de horários de aulas.</li>
-<li>Criar uma tabela de preços de produtos com total calculado.</li>
-<li>Estilizar uma tabela com CSS.</li>
-</ol>
-<hr />
-<h3 id="conclusao"><strong>Conclusão</strong></h3>
+<h1 id="unidades-relativas">Unidades Relativas</h1>
+<p>As <strong>unidades relativas</strong> são essenciais no design responsivo, pois se adaptam a diferentes tamanhos de tela, oferecendo flexibilidade e escalabilidade no layout. Vamos explorar as principais unidades relativas utilizadas no CSS:</p>
+<h2 id="1-em-relativo-ao-tamanho-da-fonte">1. <strong><code>em</code></strong> (relativo ao tamanho da fonte)</h2>
+<p>A unidade <code>em</code> é relativa ao tamanho da fonte do elemento pai. Se o tamanho da fonte do elemento pai for <code>16px</code>, por exemplo, <code>1em</code> será equivalente a <code>16px</code>. </p>
 <ul>
-<li>Recapitular os conceitos aprendidos.</li>
-<li>Discutir quando usar tabelas e quando evitar (ex.: não usar para layout).</li>
+<li>Exemplo:</li>
 </ul>
-<p>Essa abordagem incremental garante que os alunos compreendam os fundamentos antes de avançar para tópicos mais complexos.</p>
-<h2 id="similar-code-found-with-2-license-types">Similar code found with 2 license types</h2>
-<h2 id="exemplos">Exemplos</h2>
-<p>Com base no código fornecido, aqui estão alguns exemplos práticos que podem ser incrementados para enriquecer o aprendizado sobre tabelas HTML:</p>
-<hr />
-<h3 id="exemplo-1-adicionar-um-rodape-com-total"><strong>Exemplo 1: Adicionar um Rodapé com Total</strong></h3>
-<p>Adicione um <code>&lt;tfoot&gt;</code> para exibir o total dos preços.</p>
-<pre><code class="language-html">&lt;tfoot&gt;
-    &lt;tr&gt;
-        &lt;td colspan=&quot;2&quot;&gt;Total&lt;/td&gt;
-        &lt;td&gt;R$ 18,00&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/tfoot&gt;
+<pre><code class="language-css">body {
+    font-size: 16px;
+}
+h1 {
+    font-size: 2em; /* 32px */
+}
+p {
+    font-size: 1em; /* 16px */
+}
 </code></pre>
-<p><strong>Resultado Final:</strong></p>
-<pre><code class="language-html">&lt;table&gt;
-    &lt;caption&gt;Tabela de Vendas&lt;/caption&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th scope=&quot;col&quot;&gt;Produto&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Quantidade&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Preço&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Arroz&lt;/td&gt;
-            &lt;td&gt;2&lt;/td&gt;
-            &lt;td&gt;R$ 10,00&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Feijão&lt;/td&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;R$ 8,00&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-    &lt;tfoot&gt;
-        &lt;tr&gt;
-            &lt;td colspan=&quot;2&quot;&gt;Total&lt;/td&gt;
-            &lt;td&gt;R$ 18,00&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tfoot&gt;
-&lt;/table&gt;
+<h2 id="2-rem-relativo-ao-tamanho-da-fonte-raiz">2. <strong><code>rem</code></strong> (relativo ao tamanho da fonte raiz)</h2>
+<p>A unidade <code>rem</code> é relativa ao tamanho da fonte da raiz do documento, geralmente o elemento <code>html</code>. É útil para manter a consistência no design, pois sempre se refere ao tamanho de fonte definido no <code>html</code>.</p>
+<ul>
+<li>Exemplo:</li>
+</ul>
+<pre><code class="language-css">html {
+    font-size: 16px; /* 1rem = 16px */
+}
+h1 {
+    font-size: 2rem; /* 32px */
+}
+p {
+    font-size: 1rem; /* 16px */
+}
 </code></pre>
-<hr />
-<h3 id="exemplo-2-mesclar-celulas-com-colspan-e-rowspan"><strong>Exemplo 2: Mesclar Células com <code>colspan</code> e <code>rowspan</code></strong></h3>
-<p>Demonstre como mesclar células para criar uma tabela mais complexa.</p>
-<pre><code class="language-html">&lt;tr&gt;
-    &lt;td rowspan=&quot;2&quot;&gt;Arroz&lt;/td&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;R$ 5,00&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-    &lt;td&gt;1&lt;/td&gt;
-    &lt;td&gt;R$ 5,00&lt;/td&gt;
-&lt;/tr&gt;
+<h2 id="3-porcentagem">3. <strong><code>%</code></strong> (porcentagem)</h2>
+<p>As porcentagens são usadas para definir tamanhos relativos ao elemento pai. Elas podem ser aplicadas a margens, larguras, alturas, etc.</p>
+<ul>
+<li>Exemplo:</li>
+</ul>
+<pre><code class="language-css">div {
+    width: 50%; /* 50% da largura do elemento pai */
+    height: 100%; /* 100% da altura do elemento pai */
+}
 </code></pre>
-<p><strong>Resultado Final:</strong></p>
-<pre><code class="language-html">&lt;table&gt;
-    &lt;caption&gt;Tabela de Vendas&lt;/caption&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th scope=&quot;col&quot;&gt;Produto&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Quantidade&lt;/th&gt;
-            &lt;th scope=&quot;col&quot;&gt;Preço&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td rowspan=&quot;2&quot;&gt;Arroz&lt;/td&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;R$ 5,00&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;R$ 5,00&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;Feijão&lt;/td&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;R$ 8,00&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
+<h2 id="4-vh-e-vw-viewport-height-e-viewport-width">4. <strong><code>vh</code> e <code>vw</code></strong> (viewport height e viewport width)</h2>
+<p>As unidades <code>vh</code> e <code>vw</code> são relativas à altura e largura da <strong>viewport</strong> (janela visível). <code>1vh</code> equivale a 1% da altura da viewport, e <code>1vw</code> equivale a 1% da largura da viewport.</p>
+<ul>
+<li>Exemplo:</li>
+</ul>
+<pre><code class="language-css">section {
+    width: 100vw; /* 100% da largura da viewport */
+    height: 50vh; /* 50% da altura da viewport */
+}
 </code></pre>
-<hr />
-<h3 id="exemplo-3-adicionar-estilo-com-classes"><strong>Exemplo 3: Adicionar Estilo com Classes</strong></h3>
-<p>Use classes CSS para estilizar linhas alternadas.</p>
-<pre><code class="language-html">&lt;style&gt;
-    .linha-par {
-        background-color: #f9f9f9;
-    }
-&lt;/style&gt;
+<h2 id="5-min-width-max-width-min-height-max-height">5. <strong><code>min-width</code>, <code>max-width</code>, <code>min-height</code>, <code>max-height</code></strong></h2>
+<p>Essas propriedades controlam o tamanho mínimo e máximo dos elementos, tornando-os mais responsivos em diferentes telas.</p>
+<ul>
+<li>Exemplo:</li>
+</ul>
+<pre><code class="language-css">div {
+    max-width: 100%; /* Não excede 100% da largura da tela */
+    min-height: 300px; /* Altura mínima de 300px */
+}
 </code></pre>
-<p><strong>HTML Atualizado:</strong></p>
-<pre><code class="language-html">&lt;tbody&gt;
-    &lt;tr class=&quot;linha-par&quot;&gt;
-        &lt;td&gt;Arroz&lt;/td&gt;
-        &lt;td&gt;2&lt;/td&gt;
-        &lt;td&gt;R$ 10,00&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Feijão&lt;/td&gt;
-        &lt;td&gt;1&lt;/td&gt;
-        &lt;td&gt;R$ 8,00&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/tbody&gt;
+<h2 id="exemplo-pratico-de-site-responsivo">Exemplo Prático de Site Responsivo</h2>
+<p>Aqui está um exemplo prático aplicando algumas dessas unidades para criar um site responsivo:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-BR&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Exemplo Responsivo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Site Responsivo&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;box&quot;&gt;
+            &lt;p&gt;Esta é uma caixa que usa unidades relativas para se adaptar a diferentes tamanhos de tela.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;box&quot;&gt;
+            &lt;p&gt;A largura da página está definida em porcentagens, e o espaçamento em `rem` e `em`.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;Rodapé do site&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
-<hr />
-<h3 id="exemplo-4-melhorar-acessibilidade-com-scope-e-caption"><strong>Exemplo 4: Melhorar Acessibilidade com <code>scope</code> e <code>caption</code></strong></h3>
-<p>Já está parcialmente implementado no seu código, mas pode ser reforçado com explicações sobre como o atributo <code>scope</code> ajuda leitores de tela.</p>
-<pre><code class="language-html">&lt;caption&gt;Tabela de Vendas&lt;/caption&gt;
-&lt;th scope=&quot;col&quot;&gt;Produto&lt;/th&gt;
-&lt;th scope=&quot;col&quot;&gt;Quantidade&lt;/th&gt;
-&lt;th scope=&quot;col&quot;&gt;Preço&lt;/th&gt;
+<pre><code class="language-css">body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.box {
+    background-color: #f4f4f4;
+    margin: 1rem 0;
+     padding: 2em;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+}
 </code></pre>
-<hr />
-<h3 id="exemplo-5-tabela-responsiva"><strong>Exemplo 5: Tabela Responsiva</strong></h3>
-<p>Adicione um contêiner para tornar a tabela responsiva em dispositivos móveis.</p>
-<pre><code class="language-html">&lt;style&gt;
-    .tabela-responsiva {
-        overflow-x: auto;
-    }
-&lt;/style&gt;
-&lt;div class=&quot;tabela-responsiva&quot;&gt;
-    &lt;table&gt;
-        &lt;!-- conteúdo da tabela --&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-</code></pre>
-<hr />
-<p>Esses exemplos incrementais ajudam a explorar diferentes aspectos das tabelas HTML, desde estrutura básica até estilização e acessibilidade.</p>
-<p>Similar code found with 2 license types</p></div>
+<h3 id="consideracoes-finais">Considerações Finais</h3>
+<p>Ao combinar essas unidades relativas, você pode criar layouts que se adaptam a diferentes tamanhos de tela, tornando seu site mais responsivo e acessível em dispositivos móveis. É importante testar os tamanhos e espaçamentos em várias resoluções para garantir uma boa experiência de usuário.</p></div>
         
         
     </div>
