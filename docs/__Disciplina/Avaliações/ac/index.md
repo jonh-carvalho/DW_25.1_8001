@@ -5,7 +5,7 @@
 * AC3 - Entrega 03/04/2025 - Questões Enade
 * AC4 - Entrega 17/04/2025 - CSS
 * AC5 - Entrega 22/05/2025 - Intro JS - Lista de Tarefas
-* AC6 - Entrega 05/06/2025 - DOM Formulário Validação
+* AC6 - Entrega 12/06/2025 - DOM Formulário Validação
 
 Repositório de Avaliações ACs e APs
 

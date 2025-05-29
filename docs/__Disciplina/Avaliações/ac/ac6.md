@@ -1,7 +1,5 @@
 ### **AC6: Manipulando Formulários com Javascript**
 
-<!--
-** *Duração* : 70 minutos**
 
 <div style="color:red">IMPORTANTE: Todas as questões precisam ser devidamente comentadas com explicações precisas do que ocorre.
 </div>
@@ -207,4 +205,3 @@ button[type="submit"]:hover:not(:disabled) {
   
 - Limpar Pré-visualização: Limpa a pré-visualização da imagem quando o formulário é enviado e redefinido.
 
--->
