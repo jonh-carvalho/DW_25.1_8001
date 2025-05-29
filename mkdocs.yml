@@ -13,5 +13,8 @@ theme:
     - html
     - css
     - javascript
+plugins:
+   - search
+   - awesome-nav
 repo_url: "https://github.com/jonh-carvalho/DW_25.1_8001"
 
