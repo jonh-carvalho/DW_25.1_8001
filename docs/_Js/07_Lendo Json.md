@@ -1,3 +1,7 @@
+# 07 - Lendo Json
+
+## Introdução
+
 Ler dados em JavaScript pode ser feito de várias formas dependendo da origem dos dados. Vou te mostrar três abordagens comuns: 
 
 1. **Ler dados de um arquivo JSON local:**

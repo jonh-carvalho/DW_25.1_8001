@@ -1,4 +1,4 @@
-# 07 - Fetch API
+# 08 - Fetch API
 
 ## Introdução ao `fetch`
 
