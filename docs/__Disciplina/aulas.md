@@ -15,9 +15,9 @@
 | __11__ - 01/05/25     | Feriado |
 | __12__ - 08/05/25     | RoteirosJS Array, Objetos |
 | __13__ - 15/05/25     | Roteiros JS DOM, Forms |
-| __14__ - 22/05/25     | JS |
-| __15__ - 29/05/25     | JS |
-| __16__ - 05/06/25     | JS |
+| __14__ - 22/05/25     | Roteiro Dados, Fetch, Api |
+| __15__ - 29/05/25     | Roteiro Site, Tabelas com JS |
+| __16__ - 05/06/25     | Revisão JS |
 | __17__ - 12/06/25     | AP2 |
 | __18__ - 19/06/25     | AS |
 <!--
