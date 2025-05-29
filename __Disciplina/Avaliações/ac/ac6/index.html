@@ -369,7 +369,7 @@
                         
                             
 <li >
-    <a href="../../../../_Js/11_FormsJS/">11 Manipulando html com js</a>
+    <a href="../../../../_Js/11_TabelaJS/">11 Manipulando html com js</a>
 </li>
 
                         
@@ -454,31 +454,28 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="first-level active"><a href="#ac6-manipulando-formularios-com-javascript">AC6: Manipulando Formulários com Javascript</a></li>
+        <li class="first-level "><a href="#uso-de-javascript-em-formularios">Uso de javascript em formulários</a></li>
+            <li class="second-level"><a href="#explicacao">Explicação</a></li>
+                
+        <li class="first-level "><a href="#questoes">Questões</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
 <h3 id="ac6-manipulando-formularios-com-javascript"><strong>AC6: Manipulando Formulários com Javascript</strong></h3>
-<!--
-** *Duração* : 70 minutos**
-
 <div style="color:red">IMPORTANTE: Todas as questões precisam ser devidamente comentadas com explicações precisas do que ocorre.
 </div>
 
-**Objetivo:** Desenvolver um formulário que terá os seus campos validados e monitorados por javascript.
-
----
-
-### Uso de javascript em formulários
-
-Plano
-
-- Criar um formulário HTML simples com campos de entrada.
-- Adicionar um botão para enviar o formulário.
-- Escrever um script JavaScript para validar os dados do formulário.
-- Exibir mensagens de erro ou sucesso com base na validação.
-
-
+<p><strong>Objetivo:</strong> Desenvolver um formulário que terá os seus campos validados e monitorados por javascript.</p>
+<hr />
+<h3 id="uso-de-javascript-em-formularios">Uso de javascript em formulários</h3>
+<p>Plano</p>
+<ul>
+<li>Criar um formulário HTML simples com campos de entrada.</li>
+<li>Adicionar um botão para enviar o formulário.</li>
+<li>Escrever um script JavaScript para validar os dados do formulário.</li>
+<li>Exibir mensagens de erro ou sucesso com base na validação.</li>
+</ul>
 <pre><code class="language-html">
 &lt;!DOCTYPEhtml&gt;
 
@@ -518,9 +515,6 @@ Plano
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-
-
-
 <pre><code class="language-css">body {
 
     font-family: Arial, sans-serif;
@@ -623,52 +617,44 @@ button[type=&quot;submit&quot;]:hover:not(:disabled) {
     border-radius: 4px;
 }
 </code></pre>
-
-
-#### Explicação
-
-- HTML: Cria um formulário com campos para nome, email e mensagem.
-- JavaScript: Adiciona um ouvinte de evento para o envio do formulário, valida os campos e exibe uma mensagem de erro ou sucesso.
-
-## Questões
-
-1\. Como você pode acessar os valores dos inputs do formulário?
-
-2\. Atualizar o conteúdo de uma página web com o conteúdo do campos(escrever na página sem clicar no botão)?
-
-3\. Validar cada entrada do formulário antes de enviar o form? [Nome obrigatório, Email no formato, Mensagem obrigatória]
-
-4\. Redefinir as entradas do formulário após enviar o formulário?
-
-5\. Desativar o botão enviar até que todas as entradas do formulário sejam preenchidas?
-
-6\. Mostrar um botão giratório(spinner) de carregamento enquanto o formulário está sendo enviado?
-
-7\. Eibir uma mensagem de sucesso após o envio do formulário e depois redirecionar para outra página?
-
-8\. Adicionar Validação de Tamanho da Mensagem
-
-- Objetivo: Adicionar validação para garantir que a mensagem tenha pelo menos 100 caracteres.
-
-9\. Adicionar Feedback Visual para Campos Inválidos
-
-- Objetivo: Adicionar feedback visual (como bordas vermelhas) aos campos que não passam na validação.
-
-10\. Adicionar um Campo de Telefone com Máscara. [ (país) (ddd) xxxxx-xxxx ]
-
-11\. Adicionar um Campo de Seleção de Assunto. [Elogio, Reclamação e Sugestão]
-
-- Exiba uma mensagem de erro se nenhum assunto for selecionado.
-
-12\. Adicionar um Campo de Arquivo ao Formulário para permitir o upload de imagens.
-
-- Modifique o JavaScript para Exibir a Pré-visualização do Arquivo Selecionado
-
-- FileReader: Usa FileReader para ler o arquivo de imagem e exibir a pré-visualização.
-
-- Limpar Pré-visualização: Limpa a pré-visualização da imagem quando o formulário é enviado e redefinido.
-
---></div>
+<h4 id="explicacao">Explicação</h4>
+<ul>
+<li>HTML: Cria um formulário com campos para nome, email e mensagem.</li>
+<li>JavaScript: Adiciona um ouvinte de evento para o envio do formulário, valida os campos e exibe uma mensagem de erro ou sucesso.</li>
+</ul>
+<h2 id="questoes">Questões</h2>
+<p>1. Como você pode acessar os valores dos inputs do formulário?</p>
+<p>2. Atualizar o conteúdo de uma página web com o conteúdo do campos(escrever na página sem clicar no botão)?</p>
+<p>3. Validar cada entrada do formulário antes de enviar o form? [Nome obrigatório, Email no formato, Mensagem obrigatória]</p>
+<p>4. Redefinir as entradas do formulário após enviar o formulário?</p>
+<p>5. Desativar o botão enviar até que todas as entradas do formulário sejam preenchidas?</p>
+<p>6. Mostrar um botão giratório(spinner) de carregamento enquanto o formulário está sendo enviado?</p>
+<p>7. Eibir uma mensagem de sucesso após o envio do formulário e depois redirecionar para outra página?</p>
+<p>8. Adicionar Validação de Tamanho da Mensagem</p>
+<ul>
+<li>Objetivo: Adicionar validação para garantir que a mensagem tenha pelo menos 100 caracteres.</li>
+</ul>
+<p>9. Adicionar Feedback Visual para Campos Inválidos</p>
+<ul>
+<li>Objetivo: Adicionar feedback visual (como bordas vermelhas) aos campos que não passam na validação.</li>
+</ul>
+<p>10. Adicionar um Campo de Telefone com Máscara. [ (país) (ddd) xxxxx-xxxx ]</p>
+<p>11. Adicionar um Campo de Seleção de Assunto. [Elogio, Reclamação e Sugestão]</p>
+<ul>
+<li>Exiba uma mensagem de erro se nenhum assunto for selecionado.</li>
+</ul>
+<p>12. Adicionar um Campo de Arquivo ao Formulário para permitir o upload de imagens.</p>
+<ul>
+<li>
+<p>Modifique o JavaScript para Exibir a Pré-visualização do Arquivo Selecionado</p>
+</li>
+<li>
+<p>FileReader: Usa FileReader para ler o arquivo de imagem e exibir a pré-visualização.</p>
+</li>
+<li>
+<p>Limpar Pré-visualização: Limpa a pré-visualização da imagem quando o formulário é enviado e redefinido.</p>
+</li>
+</ul></div>
         
         
     </div>
