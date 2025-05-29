@@ -45,8 +45,8 @@ Desenvolver um site responsivo utilizando **HTML**, **CSS, JS** e técnicas de l
 
 3\.**Formulário de Contato:**
 
-- Deve possui um placeholder para a orientação sobre o preenchimento
-- Validação básica dos campos com **JAVASCRIPT** [Não permitindo a inserção de números e caracteres especiais]
+- Deve possui um placeholder para a orientação sobre o preenchimento caso necessário.
+- Validação básica dos campos com **JAVASCRIPT** [Não permitindo a inserção de números e caracteres especiais], quando for necessário.
 
 5\.**Design de rodapé:**
 
@@ -66,6 +66,120 @@ Desenvolver um site responsivo utilizando **HTML**, **CSS, JS** e técnicas de l
 - O **CSS** deve ser escrito em um arquivo separado e vinculado corretamente ao HTML.
 - O **Javascript** deve ser escrito em um arquivo separado e vinculado corretamente ao HTML.
 - As imagens devem ser colocadas em uma subpasta "imagens"
+
+## Cenário
+
+Você deve desenvolver um site que dará apoio a tomada de decisão de investimento de acordo com o seu perfil e objetivo. Desenvolver uma página web responsiva e interativa com slides em que marcamos resposta(s) e no final há um relátório com as conclusões e um info gráficos. A simulação deve consumir uma API externa e permita aos usuários comparar diferentes tipos de investimentos (renda fixa, renda variável, criptomoedas, etc.) com base em parâmetros personalizados. A página deve fornecer uma análise visual clara dos retornos esperados, riscos associados e outros fatores relevantes para ajudar os usuários a tomar decisões informadas.
+
+## Desenvolvimento
+
+- **Header:** deve ser exibido no topo da página com um menu de navegação simples. O menu deve conter links para diferentes páginas do site: "Dados Econômicos" e "Investimentos".
+
+- **Main: Slides** deve conter o slide com o questionário e a conclusão do relatório com gráficos. O slide será simples, mas funcional, com foco na usabilidade e na apresentação clara das informações. Ela permitirá que o usuário insira valores iniciais, selecione tipos de investimento e visualize os resultados em tabelas e gráficos interativos. Além disso, oferecerá explicações breves sobre cada tipo de investimento para educar os usuários.
+  
+  - Estrutura de Slides
+  - Formulários Interativos
+  - Consumo de API externa
+  - Gráficos Interativos 
+  
+- **Main: Dados Econômicos**
+
+  - Tabela de Dados Econômicos construída com JS a partir de dados de uma API externa.
+  
+
+- **Main: Investimentos**
+
+  - Tabela de Investimentos construida com JS a partir de dados de uma API externa.
+
+- **Footer:** deve ter dados de contato, links para redes sociais e informações de copyright. 
+
+#### Plano de Desenvolvimento Faseado
+
+**Fase 1:** Estrutura Básica e Slides
+Comece com a estrutura HTML, adicione os estilos CSS para responsividade e a funcionalidade básica de slides com JavaScript.
+
+**Fase 2:** Formulários e Entrada de Dados
+Integre os formulários para o usuário inserir informações como o valor inicial e as seleções de investimento.
+
+**Fase 3:** Consumo de API e Lógica de Comparação (Mock)
+Nesta fase, você pode simular o consumo de uma API com dados "mock" (fictícios) enquanto decide qual API de dados financeiros usar. Implemente a lógica inicial para comparar investimentos com base em dados pré-definidos.
+
+**Fase 4:** Visualização de Dados (Gráficos)
+Integre uma biblioteca de gráficos (como Chart.js ou Plotly) para exibir os resultados visualmente.
+
+**Fase 5:** Relatório Final e Aprimoramentos
+Crie a seção do relatório final e refine a interface do usuário, adicione as explicações educacionais e teste a responsividade.
+
+### Dados Econômicos
+
+APIs de Dados Financeiros Reais:
+
+##### API do Banco Central do Brasil
+  
+O Banco Central disponibiliza uma série de dados abertos sobre a economia brasileira, incluindo taxas de câmbio, índices econômicos (como IPCA e IGP-M), e informações sobre operações financeiras.
+  - URL : [Banco Central](https://www.bcb.gov.br/)
+  - Endpoints populares :
+    - Taxa de câmbio (Dólar, Euro, etc.)
+    - Índice Nacional de Preços ao Consumidor Amplo (IPCA)
+    - Taxa Selic
+  
+##### Awesome API (Moedas e Finanças)
+
+Uma API gratuita que fornece informações sobre cotações de moedas, criptomoedas, impostos e outros dados financeiros. É especialmente útil para projetos envolvendo conversões de moedas e acompanhamento de ativos financeiros.
+
+- URL : [Awesome API](https://docs.awesomeapi.com.br/)
+
+- Endpoints populares :
+  - /json/last/:currency (Cotações de moedas como Dólar, Euro, Bitcoin, etc.)
+  - /json/taxes (Informações sobre impostos e tributos)
+
+##### Brasil API
+
+Descrição : Uma API pública que fornece dados úteis para o Brasil, como CNPJ, CEP, dados fiscais (NFe), e informações sobre bancos e instituições financeiras.
+
+- URL : [Brasil API](https://brasilapi.com.br/)
+- Endpoints populares :
+  -/api/cnpj/v1/{cnpj} (Consulta de CNPJ com informações detalhadas sobre empresas)
+  -/api/banks/v1 (Lista de bancos e instituições financeiras no Brasil)
+  -/api/cep/v1/{cep} (Consulta de endereços por CEP)
+
+#### Alpha Vantage (Mercado Financeiro Global)
+
+Descrição : Uma API global que fornece dados de ações, commodities, moedas e criptomoedas. Embora seja uma API internacional, ela pode ser usada para acompanhar ativos negociados no Brasil, como ações da B3.
+
+- URL : [Alpha Vantage](https://www.alphavantage.co/)
+- Endpoints populares :
+  - /query?function=TIME_SERIES_DAILY (Dados históricos de ações)
+  - /query?function=CURRENCY_EXCHANGE_RATE (Taxas de câmbio)
+
+#### Receita Federal (Dados Abertos)
+
+ A Receita Federal disponibiliza alguns dados abertos relacionados a impostos, contribuições e fiscalização. Embora não seja uma API tradicional, é possível acessar esses dados por meio de arquivos CSV ou JSON.
+
+- URL : [Receita Federal](http://idg.receita.fazenda.gov.br/dadosabertos/)
+
+- Endpoints populares :
+  - Arrecadação federal por estado e município.
+  - Informações sobre regimes tributários (Simples Nacional, Lucro Presumido, etc.).
+
+#### IBGE (Instituto Brasileiro de Geografia e Estatística)
+O IBGE oferece uma API com dados estatísticos e geográficos do Brasil, incluindo PIB, população, inflação e outras métricas econômicas.
+
+- URL : [IBGE](https://servicodados.ibge.gov.br/api/docs)
+- Endpoints populares :
+  - /estatisticas (Dados econômicos e sociais)
+  - /localidades (Informações geográficas, como estados e municípios)
+
+#### API de Tributos e Impostos (Calculadoras de Impostos)
+Existem APIs especializadas em cálculo de impostos e tributos no Brasil, como ICMS, ISS, IPI, e outros. Alguns exemplos incluem:
+
+- URL: [Calculadoras de Impostos](https://tributos.io/)
+
+- Calculadora de Impostos: Serviços personalizados para calcular impostos com base em regras fiscais.
+
+> Importante: A maioria das APIs financeiras robustas exige chaves de API e, em alguns casos, são pagas ou têm limites de uso para planos gratuitos. Nunca exponha suas chaves de API diretamente no código JavaScript do lado do cliente (frontend).
+
+
 
 <!--
 8\. **Plano em Pseudocódigo**
