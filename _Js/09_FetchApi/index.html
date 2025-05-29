@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>07 - Fetch API - DW</title>
+    <title>09 - Consumindo com Fetch API - - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -309,37 +309,31 @@
                         
                             
 <li >
-    <a href="../00_Intro/">01 - Introdução ao JavaScript</a>
+    <a href="../01_Intro/">01 - Introdução ao JavaScript</a>
 </li>
 
                         
                             
 <li >
-    <a href="../01_Arrays/">02 - Arrays, Objetos e Métodos Avançados</a>
+    <a href="../02_Arrays/">02 - Arrays, Objetos e Métodos Avançados</a>
 </li>
 
                         
                             
 <li >
-    <a href="../02_Dom/">03 - DOM e Manipulação de HTML com JavaScript</a>
+    <a href="../03_Dom/">03 - DOM e Manipulação de HTML com JavaScript</a>
 </li>
 
                         
                             
 <li >
-    <a href="../03_Forms/">04 - Validação de Formulários</a>
+    <a href="../04_Forms/">04 - Validação de Formulários</a>
 </li>
 
                         
                             
 <li >
-    <a href="../04_Http/">05 - Http</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../05_Lendo%20Json/">05 Lendo Json</a>
+    <a href="../05_Http/">05 - Http</a>
 </li>
 
                         
@@ -350,38 +344,44 @@
 
                         
                             
+<li >
+    <a href="../07_Lendo%20Json/">07 - Lendo Json</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../08_Fetch/">08 - Fetch API</a>
+</li>
+
+                        
+                            
 <li class="active">
-    <a href="./">07 - Fetch API</a>
+    <a href="./">09 - Consumindo com Fetch API -</a>
 </li>
 
                         
                             
 <li >
-    <a href="../08_FetchApi/">08 - Consumindo com Fetch API -</a>
+    <a href="../10_JsonServer/">10 - JsonServer</a>
 </li>
 
                         
                             
 <li >
-    <a href="../09_JsonServer/">09 - JsonServer</a>
+    <a href="../11_FormsJS/">11 Manipulando html com js</a>
 </li>
 
                         
                             
 <li >
-    <a href="../10_FormsJS/">11 Manipulando html com js</a>
+    <a href="../12_ChartMap/">12 - Chart Map</a>
 </li>
 
                         
                             
 <li >
-    <a href="../11_ChartMap/">05 - Chart Map</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../11_Maps_Sets/">04 - O Comando Map em JavaScript</a>
+    <a href="../13_Maps_Sets/">13 - O Comando Map em JavaScript</a>
 </li>
 
                         
@@ -431,17 +431,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../06_Json/">
+                        <a rel="prev" href="../08_Fetch/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../08_FetchApi/">
+                        <a rel="next" href="../10_JsonServer/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/_Js/07_Fetch.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/_Js/09_FetchApi.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -453,80 +453,87 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#07-fetch-api">07 - Fetch API</a></li>
-            <li class="second-level"><a href="#introducao-ao-fetch">Introdução ao fetch</a></li>
+        <li class="first-level active"><a href="#09-consumindo-com-fetch-api-">09 - Consumindo com Fetch API -</a></li>
+            <li class="second-level"><a href="#estrutura-do-projeto">Estrutura do projeto</a></li>
                 
-                <li class="third-level"><a href="#caracteristicas-principais-do-fetch">Características principais do fetch:</a></li>
-                <li class="third-level"><a href="#exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do fetch:</a></li>
-                <li class="third-level"><a href="#explicacao">Explicação:</a></li>
+            <li class="second-level"><a href="#passo-1-criando-o-html-indexhtml">Passo 1: Criando o HTML (index.html)</a></li>
+                
+            <li class="second-level"><a href="#passo-2-criando-o-javascript-scriptjs">Passo 2: Criando o JavaScript (script.js)</a></li>
+                
+            <li class="second-level"><a href="#explicacao-do-codigo">Explicação do Código</a></li>
+                
+            <li class="second-level"><a href="#resultado">Resultado</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="07-fetch-api">07 - Fetch API</h1>
-<h2 id="introducao-ao-fetch">Introdução ao <code>fetch</code></h2>
-<p><code>fetch</code> é uma API nativa do JavaScript que permite realizar requisições HTTP de forma simples e moderna. Ela é usada principalmente para buscar (ou "fetch") recursos de um servidor, como dados de uma API, arquivos ou outros tipos de conteúdo. O <code>fetch</code> retorna uma <em>Promise</em>, o que significa que ele trabalha de forma assíncrona, permitindo que o JavaScript continue a executar outras operações enquanto a requisição está em andamento.</p>
-<h3 id="caracteristicas-principais-do-fetch">Características principais do <code>fetch</code>:</h3>
+<h1 id="09-consumindo-com-fetch-api-">09 - Consumindo com Fetch API -</h1>
+<p>Um exemplo simples de como consumir uma API usando <code>fetch</code> em JavaScript. Vou usar a <a href="https://jsonplaceholder.typicode.com/">API pública JSONPlaceholder</a>, que simula dados típicos (como posts, comentários, etc.) para desenvolvimento e testes.</p>
+<p>O exemplo abaixo faz uma requisição para a rota <code>/posts</code> dessa API, que retorna uma lista de posts fictícios. Vamos exibir os títulos desses posts em uma lista no HTML.</p>
+<h3 id="estrutura-do-projeto">Estrutura do projeto</h3>
+<p>Crie uma pasta com os seguintes arquivos:
+1. <code>index.html</code>: o arquivo HTML principal.
+2. <code>script.js</code>: o arquivo JavaScript com o código de consumo da API.</p>
+<h3 id="passo-1-criando-o-html-indexhtml">Passo 1: Criando o HTML (<code>index.html</code>)</h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Consumo de API com Fetch&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Posts da API JSONPlaceholder&lt;/h1&gt;
+    &lt;ul id=&quot;postsList&quot;&gt;&lt;/ul&gt;
+
+    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="passo-2-criando-o-javascript-scriptjs">Passo 2: Criando o JavaScript (<code>script.js</code>)</h3>
+<p>Aqui está o código JavaScript que faz a requisição à API e exibe os dados no HTML.</p>
+<pre><code class="language-javascript">// URL da API
+const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+
+// Função para buscar e exibir os posts
+function fetchPosts() {
+  fetch(apiUrl)
+    .then(response =&gt; {
+      if (!response.ok) {
+        throw new Error('Erro ao obter dados da API');
+      }
+      return response.json(); // Converte a resposta em JSON
+    })
+    .then(data =&gt; {
+      const postsList = document.getElementById('postsList');
+      // Itera pelos posts e cria itens de lista
+      data.forEach(post =&gt; {
+        const listItem = document.createElement('li');
+        listItem.textContent = post.title;
+        postsList.appendChild(listItem);
+      });
+    })
+    .catch(error =&gt; {
+      console.error(error);
+      document.getElementById('postsList').textContent = 'Erro ao carregar os posts';
+    });
+}
+
+// Chama a função ao carregar a página
+fetchPosts();
+</code></pre>
+<h3 id="explicacao-do-codigo">Explicação do Código</h3>
 <ol>
-<li><strong>Simplicidade</strong>: Comparado ao antigo <code>XMLHttpRequest</code>, o <code>fetch</code> possui uma sintaxe muito mais fácil de usar.</li>
-<li><strong>Promessas (Promises)</strong>: O <code>fetch</code> retorna uma <code>Promise</code>, o que facilita o tratamento de operações assíncronas.</li>
-<li><strong>Suporte a múltiplos métodos HTTP</strong>: Pode ser usado para diferentes tipos de requisições, como <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, etc.</li>
-<li><strong>Configuração flexível</strong>: Permite configurar cabeçalhos, enviar dados no corpo da requisição, e muito mais.</li>
+<li><strong>URL da API</strong>: A constante <code>apiUrl</code> contém o endpoint da API para obter os posts.</li>
+<li><strong>Função <code>fetchPosts()</code></strong>: Esta função faz a requisição usando <code>fetch</code>:</li>
+<li>Verifica se a resposta está <code>ok</code> (código de status 200–299). Em caso de erro, lança uma mensagem de erro.</li>
+<li>Converte a resposta JSON em um objeto JavaScript com <code>response.json()</code>.</li>
+<li>Itera pela lista de posts (<code>data</code>) e adiciona cada título como um item (<code>&lt;li&gt;</code>) na lista HTML (<code>&lt;ul id="postsList"&gt;</code>).</li>
+<li><strong>Tratamento de Erros</strong>: Qualquer erro na requisição ou na conversão para JSON é capturado e exibido no console e na página.</li>
 </ol>
-<h3 id="exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do <code>fetch</code>:</h3>
-<pre><code class="language-javascript">fetch('https://api.exemplo.com/dados')
-  .then(response =&gt; response.json())  // Converte a resposta para JSON
-  .then(data =&gt; console.log(data))    // Exibe os dados no console
-  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
-</code></pre>
-<p>Neste exemplo, o <code>fetch</code> faz uma requisição <code>GET</code> para a URL fornecida, processa a resposta como JSON, e lida com possíveis erros.</p>
-<h4 id="um-exemplo-de-como-usar-o-fetch-com-a-api-do-jsonplaceholder-uma-api-publica-para-testes-e-prototipagem">Um exemplo de como usar o <code>fetch</code> com a API do JSONPlaceholder, uma API pública para testes e prototipagem:</h4>
-<h5 id="exemplo-de-requisicao-get">Exemplo de requisição <code>GET</code></h5>
-<p>Neste exemplo, vamos buscar uma lista de posts da API usando o <code>fetch</code>.</p>
-<pre><code class="language-javascript">// Fazendo uma requisição GET para obter posts da API JSONPlaceholder
-fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(response =&gt; {
-    if (!response.ok) {
-      throw new Error('Erro na requisição: ' + response.status);
-    }
-    return response.json();  // Converte a resposta para JSON
-  })
-  .then(posts =&gt; {
-    console.log(posts);  // Exibe os posts no console
-  })
-  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
-</code></pre>
-<h5 id="exemplo-de-requisicao-post">Exemplo de requisição <code>POST</code></h5>
-<p>Neste exemplo, vamos enviar um novo post para a API com uma requisição <code>POST</code>.</p>
-<pre><code class="language-javascript">// Enviando dados para criar um novo post
-fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    title: 'Meu novo post',
-    body: 'Este é o conteúdo do post',
-    userId: 1
-  }),
-})
-  .then(response =&gt; {
-    if (!response.ok) {
-      throw new Error('Erro na requisição: ' + response.status);
-    }
-    return response.json();  // Converte a resposta para JSON
-  })
-  .then(post =&gt; {
-    console.log('Post criado:', post);  // Exibe o post criado
-  })
-  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
-</code></pre>
-<h3 id="explicacao">Explicação:</h3>
-<ul>
-<li><strong>GET</strong>: O primeiro exemplo faz uma requisição para obter uma lista de posts, e a resposta é convertida para JSON e exibida no console.</li>
-<li><strong>POST</strong>: No segundo exemplo, criamos um novo post com os campos <code>title</code>, <code>body</code> e <code>userId</code>, enviando esses dados como JSON no corpo da requisição.</li>
-</ul>
-<p>A API do JSONPlaceholder é ótima para testes rápidos e experimentação com <code>fetch</code>.</p></div>
+<h3 id="resultado">Resultado</h3>
+<p>Ao abrir o <code>index.html</code> no navegador, a página exibirá uma lista com os títulos dos posts. Este é um exemplo de como consumir dados de uma API com <code>fetch</code> e exibi-los dinamicamente em HTML.</p></div>
         
         
     </div>

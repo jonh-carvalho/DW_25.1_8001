@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>04 - O Comando Map em JavaScript - DW</title>
+    <title>03 - DOM e Manipulação de HTML com JavaScript - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -309,37 +309,31 @@
                         
                             
 <li >
-    <a href="../00_Intro/">01 - Introdução ao JavaScript</a>
+    <a href="../01_Intro/">01 - Introdução ao JavaScript</a>
 </li>
 
                         
                             
 <li >
-    <a href="../01_Arrays/">02 - Arrays, Objetos e Métodos Avançados</a>
+    <a href="../02_Arrays/">02 - Arrays, Objetos e Métodos Avançados</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">03 - DOM e Manipulação de HTML com JavaScript</a>
 </li>
 
                         
                             
 <li >
-    <a href="../02_Dom/">03 - DOM e Manipulação de HTML com JavaScript</a>
+    <a href="../04_Forms/">04 - Validação de Formulários</a>
 </li>
 
                         
                             
 <li >
-    <a href="../03_Forms/">04 - Validação de Formulários</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../04_Http/">05 - Http</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../05_Lendo%20Json/">05 Lendo Json</a>
+    <a href="../05_Http/">05 - Http</a>
 </li>
 
                         
@@ -351,37 +345,43 @@
                         
                             
 <li >
-    <a href="../07_Fetch/">07 - Fetch API</a>
+    <a href="../07_Lendo%20Json/">07 - Lendo Json</a>
 </li>
 
                         
                             
 <li >
-    <a href="../08_FetchApi/">08 - Consumindo com Fetch API -</a>
+    <a href="../08_Fetch/">08 - Fetch API</a>
 </li>
 
                         
                             
 <li >
-    <a href="../09_JsonServer/">09 - JsonServer</a>
+    <a href="../09_FetchApi/">09 - Consumindo com Fetch API -</a>
 </li>
 
                         
                             
 <li >
-    <a href="../10_FormsJS/">11 Manipulando html com js</a>
+    <a href="../10_JsonServer/">10 - JsonServer</a>
 </li>
 
                         
                             
 <li >
-    <a href="../11_ChartMap/">05 - Chart Map</a>
+    <a href="../11_FormsJS/">11 Manipulando html com js</a>
 </li>
 
                         
                             
-<li class="active">
-    <a href="./">04 - O Comando Map em JavaScript</a>
+<li >
+    <a href="../12_ChartMap/">12 - Chart Map</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../13_Maps_Sets/">13 - O Comando Map em JavaScript</a>
 </li>
 
                         
@@ -431,17 +431,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../11_ChartMap/">
+                        <a rel="prev" href="../02_Arrays/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../../Ferramentas/Sites%20Importantes/">
+                        <a rel="next" href="../04_Forms/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/_Js/11_Maps_Sets.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/_Js/03_Dom.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -453,178 +453,276 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#04-o-comando-map-em-javascript">04 - O Comando Map em JavaScript</a></li>
-            <li class="second-level"><a href="#introducao">Introdução</a></li>
+        <li class="first-level active"><a href="#03-dom-e-manipulacao-de-html-com-javascript">03 - DOM e Manipulação de HTML com JavaScript</a></li>
+            <li class="second-level"><a href="#1-introducao-ao-dom">1. Introdução ao DOM</a></li>
                 
-            <li class="second-level"><a href="#objetivos-da-aula">Objetivos da Aula</a></li>
+                <li class="third-level"><a href="#o-que-e-o-dom">O que é o DOM?</a></li>
+                <li class="third-level"><a href="#selecionando-elementos">Selecionando Elementos</a></li>
+                <li class="third-level"><a href="#pratica-guiada">Prática Guiada:</a></li>
+            <li class="second-level"><a href="#2-modificando-elementos">2. Modificando Elementos</a></li>
                 
-            <li class="second-level"><a href="#conteudo-da-aula">Conteúdo da Aula</a></li>
+                <li class="third-level"><a href="#propriedades-e-metodos-uteis">Propriedades e Métodos Úteis:</a></li>
+                <li class="third-level"><a href="#exercicio">Exercício:</a></li>
+            <li class="second-level"><a href="#3-eventos">3. Eventos</a></li>
                 
-                <li class="third-level"><a href="#1-o-que-e-o-map">1. O que é o map()?</a></li>
-                <li class="third-level"><a href="#2-sintaxe-do-map">2. Sintaxe do map()</a></li>
-                <li class="third-level"><a href="#3-exemplos-basicos">3. Exemplos Básicos</a></li>
-                <li class="third-level"><a href="#4-usos-comuns">4. Usos Comuns</a></li>
-                <li class="third-level"><a href="#5-map-com-arrow-functions">5. map() com Arrow Functions</a></li>
-            <li class="second-level"><a href="#atividades-praticas">Atividades Práticas</a></li>
+                <li class="third-level"><a href="#principais-eventos">Principais Eventos:</a></li>
+                <li class="third-level"><a href="#pratica">Prática:</a></li>
+            <li class="second-level"><a href="#4-criando-e-removendo-elementos">4. Criando e Removendo Elementos</a></li>
                 
-            <li class="second-level"><a href="#recursos-adicionais">Recursos Adicionais</a></li>
+                <li class="third-level"><a href="#metodos-do-dom">Métodos do DOM:</a></li>
+                <li class="third-level"><a href="#exercicio-to-do-list">Exercício (To-Do List):</a></li>
+            <li class="second-level"><a href="#5-projeto-final-da-aula">5. Projeto Final da Aula</a></li>
                 
-            <li class="second-level"><a href="#exemplos-praticos">Exemplos Práticos</a></li>
-                
-            <li class="second-level"><a href="#exemplos-praticos-e-relevantes-para-o-metodo-map-em-javascript">Exemplos Práticos e Relevantes para o Método map() em JavaScript</a></li>
-                
-                <li class="third-level"><a href="#1-manipulacao-de-dados-de-usuarios">1. Manipulação de Dados de Usuários</a></li>
-                <li class="third-level"><a href="#4-processamento-de-dados-de-formularios">4. Processamento de Dados de Formulários</a></li>
-                <li class="third-level"><a href="#5-transformacao-de-unidades-de-medida">5. Transformação de Unidades de Medida</a></li>
-                <li class="third-level"><a href="#6-criacao-de-novos-objetos-a-partir-de-arrays">6. Criação de Novos Objetos a Partir de Arrays</a></li>
-            <li class="second-level"><a href="#atividades-praticas_1">Atividades Práticas</a></li>
+            <li class="second-level"><a href="#recursos-complementares">Recursos Complementares:</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="04-o-comando-map-em-javascript">04 - O Comando Map em JavaScript</h1>
-<h2 id="introducao">Introdução</h2>
-<p>O método <code>map()</code> é uma ferramenta poderosa em JavaScript que permite transformar cada elemento de um array em um novo elemento, criando um novo array com os resultados. É uma forma eficiente de aplicar uma função a cada item de um array, sem modificar o array original.</p>
-<h2 id="objetivos-da-aula">Objetivos da Aula</h2>
+<h1 id="03-dom-e-manipulacao-de-html-com-javascript">03 - <strong>DOM e Manipulação de HTML com JavaScript</strong></h1>
+<p><strong>Objetivo:</strong> Aprender a interagir com elementos HTML usando JavaScript, manipular eventos e criar dinamicamente conteúdo na página.  </p>
+<hr />
+<h2 id="1-introducao-ao-dom"><strong>1. Introdução ao DOM</strong></h2>
+<h3 id="o-que-e-o-dom"><strong>O que é o DOM?</strong></h3>
 <ul>
-<li>Compreender o conceito de <code>map()</code>;</li>
-<li>Aprender a sintaxe e a utilização do <code>map()</code>;</li>
-<li>Realizar operações comuns com <code>map()</code>;</li>
-<li>Diferenciar <code>map()</code> de outros métodos como <code>forEach()</code>;</li>
-<li>Aplicar <code>map()</code> em exemplos práticos.</li>
+<li><strong>DOM (Document Object Model):</strong> Representação estruturada do HTML como uma árvore de objetos.  </li>
+<li><strong>Como o JavaScript interage com o DOM?</strong>  </li>
+<li>Acessa, modifica e remove elementos.  </li>
+<li>Reage a eventos (cliques, teclas, formulários).  </li>
 </ul>
-<h2 id="conteudo-da-aula">Conteúdo da Aula</h2>
-<h3 id="1-o-que-e-o-map">1. O que é o <code>map()</code>?</h3>
+<h3 id="selecionando-elementos"><strong>Selecionando Elementos</strong></h3>
 <ul>
-<li>Definição e propósito do método.</li>
-<li>Como o <code>map()</code> funciona internamente.</li>
-<li>Comparação com outros métodos como <code>forEach()</code>.</li>
+<li><strong>Métodos clássicos:</strong>  </li>
 </ul>
-<h3 id="2-sintaxe-do-map">2. Sintaxe do <code>map()</code></h3>
+<pre><code class="language-javascript">  document.getElementById(&quot;meuId&quot;);          // Retorna um único elemento
+  document.getElementsByClassName(&quot;classe&quot;); // Retorna uma HTMLCollection
+  document.getElementsByTagName(&quot;div&quot;);     // Retorna uma HTMLCollection
+</code></pre>
 <ul>
-<li>Estrutura básica do método.</li>
-<li>Parâmetros da função de callback: elemento atual, índice, array original.</li>
-<li>Retorno da função de callback.</li>
+<li><strong>Métodos modernos (querySelector):</strong>  </li>
 </ul>
-<h3 id="3-exemplos-basicos">3. Exemplos Básicos</h3>
+<pre><code class="language-javascript">  document.querySelector(&quot;#meuId&quot;);         // Retorna o PRIMEIRO elemento que corresponde
+  document.querySelectorAll(&quot;.classe&quot;);      // Retorna uma NodeList (todos os elementos)
+</code></pre>
+<h3 id="pratica-guiada"><strong>Prática Guiada:</strong></h3>
 <ul>
-<li>Dobrar todos os números de um array.</li>
-<li>Transformar um array de nomes em letras maiúsculas.</li>
-<li>Criar um novo array com os quadrados dos números.</li>
+<li>Criar uma página HTML com:  </li>
 </ul>
-<h3 id="4-usos-comuns">4. Usos Comuns</h3>
+<pre><code class="language-html">  &lt;h1 id=&quot;titulo&quot;&gt;Olá, DOM!&lt;/h1&gt;
+  &lt;p class=&quot;texto&quot;&gt;Texto 1&lt;/p&gt;
+  &lt;p class=&quot;texto&quot;&gt;Texto 2&lt;/p&gt;
+</code></pre>
 <ul>
-<li>Criar novos arrays a partir de dados existentes.</li>
-<li>Aplicar formatações a elementos de um array.</li>
-<li>Extrair informações específicas de um array de objetos.</li>
+<li>No console:  </li>
 </ul>
-<h3 id="5-map-com-arrow-functions">5. <code>map()</code> com Arrow Functions</h3>
-<ul>
-<li>Como utilizar arrow functions para simplificar o código.</li>
-<li>Exemplos práticos.</li>
-</ul>
-<h2 id="atividades-praticas">Atividades Práticas</h2>
-<p><strong>Exercícios:</strong></p>
-<ul>
-<li>
-<p>Crie um array de números e utilize <code>map()</code> para obter um novo array com os números multiplicados por 2.</p>
-</li>
-<li>
-<p>Transforme um array de objetos (pessoas) em um novo array contendo apenas os nomes.</p>
-</li>
-<li>
-<p>Crie um array de strings e utilize <code>map()</code> para converter cada string em um elemento HTML (e.g., <code>&lt;li&gt;</code>).</p>
-</li>
-</ul>
-<p><strong>Projeto:</strong></p>
-<ul>
-<li>Crie uma aplicação simples que permita ao usuário adicionar itens a uma lista de compras. Utilize <code>map()</code> para exibir a lista formatada em HTML.</li>
-</ul>
-<h2 id="recursos-adicionais">Recursos Adicionais</h2>
-<ul>
-<li><strong>Documentação MDN:</strong> A documentação oficial do JavaScript oferece exemplos e explicações detalhadas sobre o método <code>map()</code>.</li>
-<li><strong>Exercícios interativos:</strong> Sites como Exercism e Codewars oferecem desafios para praticar os conceitos aprendidos.</li>
-</ul>
-<h2 id="exemplos-praticos">Exemplos Práticos</h2>
-<pre><code class="language-javascript">// Dobrar todos os números de um array
-const numeros = [1, 2, 3, 4, 5];
-const numerosDobrados = numeros.map(numero =&gt; numero * 2);
+<pre><code class="language-javascript">  const titulo = document.querySelector(&quot;#titulo&quot;);
+  titulo.textContent = &quot;Novo Título!&quot;;
+  const textos = document.querySelectorAll(&quot;.texto&quot;);
+  textos.forEach(texto =&gt; texto.style.color = &quot;blue&quot;);
+</code></pre>
+<hr />
+<h2 id="2-modificando-elementos"><strong>2. Modificando Elementos</strong></h2>
+<h3 id="propriedades-e-metodos-uteis"><strong>Propriedades e Métodos Úteis:</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Propriedade/Método</th>
+<th>Descrição</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>textContent</code></td>
+<td>Altera o texto interno</td>
+<td><code>elemento.textContent = "Novo texto"</code></td>
+</tr>
+<tr>
+<td><code>innerHTML</code></td>
+<td>Permite inserir HTML</td>
+<td><code>elemento.innerHTML = "&lt;strong&gt;Negrito&lt;/strong&gt;"</code></td>
+</tr>
+<tr>
+<td><code>setAttribute()</code></td>
+<td>Altera atributos</td>
+<td><code>img.setAttribute("src", "foto.jpg")</code></td>
+</tr>
+<tr>
+<td><code>style</code></td>
+<td>Modifica CSS inline</td>
+<td><code>elemento.style.backgroundColor = "red"</code></td>
+</tr>
+<tr>
+<td><code>classList</code></td>
+<td>Manipula classes CSS</td>
+<td><code>elemento.classList.add("destaque")</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="exercicio"><strong>Exercício:</strong></h3>
+<ol>
+<li>Criar um botão em HTML:  </li>
+</ol>
+<pre><code class="language-html">   &lt;button id=&quot;mudarCor&quot;&gt;Mudar Cor&lt;/button&gt;
+   &lt;div id=&quot;caixa&quot; style=&quot;width: 100px; height: 100px; background: yellow;&quot;&gt;&lt;/div&gt;
+</code></pre>
+<ol>
+<li>No JavaScript:  </li>
+</ol>
+<pre><code class="language-javascript">   const botao = document.querySelector(&quot;#mudarCor&quot;);
+   const caixa = document.querySelector(&quot;#caixa&quot;);
 
-// Transformar um array de nomes em letras maiúsculas
-const nomes = ['ana', 'joão', 'maria'];
-const nomesMaiusculos = nomes.map(nome =&gt; nome.toUpperCase());
+   botao.addEventListener(&quot;click&quot;, () =&gt; {
+     caixa.style.backgroundColor = &quot;purple&quot;;
+   });
+</code></pre>
+<hr />
+<h2 id="3-eventos"><strong>3. Eventos</strong></h2>
+<h3 id="principais-eventos"><strong>Principais Eventos:</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Evento</th>
+<th>Descrição</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>click</code></td>
+<td>Clique do mouse</td>
+<td><code>botao.addEventListener("click", função)</code></td>
+</tr>
+<tr>
+<td><code>submit</code></td>
+<td>Envio de formulário</td>
+<td><code>form.addEventListener("submit", função)</code></td>
+</tr>
+<tr>
+<td><code>keypress</code></td>
+<td>Tecla pressionada</td>
+<td><code>input.addEventListener("keypress", função)</code></td>
+</tr>
+<tr>
+<td><code>mouseover</code></td>
+<td>Mouse sobre o elemento</td>
+<td><code>div.addEventListener("mouseover", função)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pratica"><strong>Prática:</strong></h3>
+<ol>
+<li>Criar um formulário:  </li>
+</ol>
+<pre><code class="language-html">   &lt;form id=&quot;meuForm&quot;&gt;
+     &lt;input type=&quot;text&quot; id=&quot;nome&quot; placeholder=&quot;Seu nome&quot;&gt;
+     &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+   &lt;/form&gt;
+</code></pre>
+<ol>
+<li>Validar o formulário:  </li>
+</ol>
+<pre><code class="language-javascript">   const form = document.querySelector(&quot;#meuForm&quot;);
+   form.addEventListener(&quot;submit&quot;, (event) =&gt; {
+     event.preventDefault(); // Evita o recarregamento
+     const nome = document.querySelector(&quot;#nome&quot;).value;
+     alert(`Nome digitado: ${nome}`);
+   });
+</code></pre>
+<hr />
+<h2 id="4-criando-e-removendo-elementos"><strong>4. Criando e Removendo Elementos</strong></h2>
+<h3 id="metodos-do-dom"><strong>Métodos do DOM:</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Descrição</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>createElement()</code></td>
+<td>Cria um novo elemento</td>
+<td><code>const div = document.createElement("div")</code></td>
+</tr>
+<tr>
+<td><code>appendChild()</code></td>
+<td>Adiciona ao final de um elemento pai</td>
+<td><code>pai.appendChild(div)</code></td>
+</tr>
+<tr>
+<td><code>remove()</code></td>
+<td>Remove um elemento</td>
+<td><code>elemento.remove()</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="exercicio-to-do-list"><strong>Exercício (To-Do List):</strong></h3>
+<ol>
+<li>Estrutura HTML:  </li>
+</ol>
+<pre><code class="language-html">   &lt;input type=&quot;text&quot; id=&quot;tarefa&quot;&gt;
+   &lt;button id=&quot;adicionar&quot;&gt;Adicionar&lt;/button&gt;
+   &lt;ul id=&quot;lista&quot;&gt;&lt;/ul&gt;
+</code></pre>
+<ol>
+<li>JavaScript:  </li>
+</ol>
+<pre><code class="language-javascript">   const botao = document.querySelector(&quot;#adicionar&quot;);
+   const lista = document.querySelector(&quot;#lista&quot;);
 
-// Criar um novo array com os quadrados dos números
-const quadrados = numeros.map(numero =&gt; numero * numero);
-</code></pre>
-<h2 id="exemplos-praticos-e-relevantes-para-o-metodo-map-em-javascript">Exemplos Práticos e Relevantes para o Método <code>map()</code> em JavaScript</h2>
-<h3 id="1-manipulacao-de-dados-de-usuarios">1. <strong>Manipulação de Dados de Usuários</strong></h3>
-<p><strong>Exemplo:</strong> Transformar um array de objetos representando usuários em um novo array contendo apenas os nomes.</p>
-<pre><code class="language-javascript">const usuarios = [
-    { nome: 'Ana', idade: 30 },
-    { nome: 'João', idade: 25 },
-    { nome: 'Maria', idade: 35 }
-];
+   botao.addEventListener(&quot;click&quot;, () =&gt; {
+     const input = document.querySelector(&quot;#tarefa&quot;);
+     if (input.value.trim() === &quot;&quot;) return; // Evita tarefa vazia
 
-const nomes = usuarios.map(usuario =&gt; usuario.nome);
-console.log(nomes); // Output: ['Ana', 'João', 'Maria']
+     const li = document.createElement(&quot;li&quot;);
+     li.textContent = input.value;
+     lista.appendChild(li);
+     input.value = &quot;&quot;; // Limpa o input
+   });
 </code></pre>
-<h4 id="2-formatacao-de-dados-para-exibicao">2. <strong>Formatação de Dados para Exibição</strong></h4>
-<ul>
-<li><strong>Exemplo:</strong> Formatar um array de preços para exibir com o símbolo de real e duas casas decimais.</li>
-</ul>
-<pre><code class="language-javascript">const precos = [10.99, 25.49, 15.99];
-const precosFormatados = precos.map(preco =&gt; `R$ ${preco.toFixed(2)}`);
-console.log(precosFormatados); // Output: ['R$ 10.99', 'R$ 25.49', 'R$ 15.99']
+<hr />
+<h2 id="5-projeto-final-da-aula"><strong>5. Projeto Final da Aula</strong></h2>
+<p><strong>Desafio:</strong> Criar um <strong>"Editor de Perfil"</strong> onde o usuário possa:  </p>
+<ol>
+<li>Digitar um nome e ver a atualização em tempo real (<code>keyup</code>).  </li>
+<li>Escolher uma cor para o fundo do perfil.  </li>
+<li>Adicionar uma descrição via <code>textarea</code> e exibi-la abaixo.  </li>
+</ol>
+<p><strong>Exemplo de Solução:</strong>  </p>
+<pre><code class="language-html">&lt;div id=&quot;perfil&quot; style=&quot;border: 1px solid #000; padding: 20px;&quot;&gt;
+  &lt;h2 id=&quot;nomePerfil&quot;&gt;Nome&lt;/h2&gt;
+  &lt;p id=&quot;descricao&quot;&gt;Descrição...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;input type=&quot;text&quot; id=&quot;inputNome&quot; placeholder=&quot;Seu nome&quot;&gt;
+&lt;textarea id=&quot;inputDescricao&quot; placeholder=&quot;Sua descrição&quot;&gt;&lt;/textarea&gt;
+&lt;input type=&quot;color&quot; id=&quot;corFundo&quot;&gt;
 </code></pre>
-<h4 id="3-criacao-de-elementos-html">3. <strong>Criação de Elementos HTML</strong></h4>
-<ul>
-<li><strong>Exemplo:</strong> Criar uma lista não ordenada (ul) com os itens de um array.</li>
-</ul>
-<pre><code class="language-javascript">const itens = ['maçã', 'banana', 'laranja'];
-const listaHtml = itens.map(item =&gt; `&lt;li&gt;${item}&lt;/li&gt;`).join('');
-console.log(listaHtml);
+<pre><code class="language-javascript">const inputNome = document.querySelector(&quot;#inputNome&quot;);
+const inputDescricao = document.querySelector(&quot;#inputDescricao&quot;);
+const corFundo = document.querySelector(&quot;#corFundo&quot;);
+const perfil = document.querySelector(&quot;#perfil&quot;);
+
+inputNome.addEventListener(&quot;keyup&quot;, () =&gt; {
+  document.querySelector(&quot;#nomePerfil&quot;).textContent = inputNome.value;
+});
+
+inputDescricao.addEventListener(&quot;keyup&quot;, () =&gt; {
+  document.querySelector(&quot;#descricao&quot;).textContent = inputDescricao.value;
+});
+
+corFundo.addEventListener(&quot;input&quot;, () =&gt; {
+  perfil.style.backgroundColor = corFundo.value;
+});
 </code></pre>
-<h3 id="4-processamento-de-dados-de-formularios">4. <strong>Processamento de Dados de Formulários</strong></h3>
+<hr />
+<h2 id="recursos-complementares"><strong>Recursos Complementares:</strong></h2>
 <ul>
-<li><strong>Exemplo:</strong> Extrair os valores de um formulário e criar um objeto com os dados.</li>
-</ul>
-<pre><code class="language-javascript">const formulario = document.querySelector('form');
-const dadosFormulario = new FormData(formulario);
-const dadosObjeto = [...dadosFormulario.entries()].map(([chave, valor]) =&gt; ({ [chave]: valor }));
-console.log(dadosObjeto);
-</code></pre>
-<h3 id="5-transformacao-de-unidades-de-medida">5. <strong>Transformação de Unidades de Medida</strong></h3>
-<ul>
-<li><strong>Exemplo:</strong> Converter uma lista de temperaturas em Celsius para Fahrenheit.</li>
-</ul>
-<pre><code class="language-javascript">const temperaturasCelsius = [0, 10, 20, 30];
-const temperaturasFahrenheit = temperaturasCelsius.map(celsius =&gt; (celsius * 9/5) + 32);
-</code></pre>
-<h3 id="6-criacao-de-novos-objetos-a-partir-de-arrays">6. <strong>Criação de Novos Objetos a Partir de Arrays</strong></h3>
-<ul>
-<li><strong>Exemplo:</strong> Criar um array de objetos com propriedades chave-valor a partir de dois arrays.</li>
-</ul>
-<pre><code class="language-javascript">const nomes = ['Ana', 'João', 'Maria'];
-const idades = [30, 25, 35];
-const pessoas = nomes.map((nome, index) =&gt; ({ nome, idade: idades[index] }));
-</code></pre>
-<h2 id="atividades-praticas_1">Atividades Práticas</h2>
-<ul>
-<li><strong>Criar um catálogo de produtos:</strong> Dado um array de objetos representando produtos (nome, preço, categoria), criar um novo array com os produtos de uma categoria específica.</li>
-<li><strong>Transformar uma lista de datas em um novo formato:</strong> Converter um array de strings representando datas no formato "YYYY-MM-DD" para o formato "DD/MM/YYYY".</li>
-<li><strong>Validar um formulário:</strong> Utilizar <code>map()</code> para verificar se todos os campos obrigatórios de um formulário foram preenchidos.</li>
-<li><strong>Criar um gráfico simples:</strong> Gerar um array de coordenadas a partir de um conjunto de dados e utilizá-lo para criar um gráfico de linhas básico.</li>
-</ul>
-<p><strong>Dicas Adicionais:</strong></p>
-<ul>
-<li><strong>Enfatize a imutabilidade:</strong> O <code>map()</code> cria um novo array, não modificando o original.</li>
-<li><strong>Explore diferentes cenários:</strong> Apresente exemplos que envolvam diferentes tipos de dados e estruturas.</li>
-<li><strong>Incentive a experimentação:</strong> Deixe os alunos explorarem diferentes formas de utilizar o <code>map()</code>.</li>
-<li><strong>Relacione com outros métodos:</strong> Mostre como o <code>map()</code> pode ser combinado com outros métodos como <code>filter</code> e <code>reduce</code> para realizar operações mais complexas.</li>
-</ul>
-<p>Com esses exemplos e atividades, seus alunos terão uma base sólida para utilizar o <code>map()</code> em seus projetos JavaScript.</p></div>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model">MDN - DOM</a>  </li>
+<li><a href="https://javascript.info/events">JavaScript.info - Eventos</a>  </li>
+</ul></div>
         
         
     </div>

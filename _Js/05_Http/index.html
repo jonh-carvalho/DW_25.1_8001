@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>03 - DOM e Manipulação de HTML com JavaScript - DW</title>
+    <title>05 - Http - DW</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -309,37 +309,31 @@
                         
                             
 <li >
-    <a href="../00_Intro/">01 - Introdução ao JavaScript</a>
+    <a href="../01_Intro/">01 - Introdução ao JavaScript</a>
 </li>
 
                         
                             
 <li >
-    <a href="../01_Arrays/">02 - Arrays, Objetos e Métodos Avançados</a>
+    <a href="../02_Arrays/">02 - Arrays, Objetos e Métodos Avançados</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../03_Dom/">03 - DOM e Manipulação de HTML com JavaScript</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../04_Forms/">04 - Validação de Formulários</a>
 </li>
 
                         
                             
 <li class="active">
-    <a href="./">03 - DOM e Manipulação de HTML com JavaScript</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../03_Forms/">04 - Validação de Formulários</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../04_Http/">05 - Http</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../05_Lendo%20Json/">05 Lendo Json</a>
+    <a href="./">05 - Http</a>
 </li>
 
                         
@@ -351,37 +345,43 @@
                         
                             
 <li >
-    <a href="../07_Fetch/">07 - Fetch API</a>
+    <a href="../07_Lendo%20Json/">07 - Lendo Json</a>
 </li>
 
                         
                             
 <li >
-    <a href="../08_FetchApi/">08 - Consumindo com Fetch API -</a>
+    <a href="../08_Fetch/">08 - Fetch API</a>
 </li>
 
                         
                             
 <li >
-    <a href="../09_JsonServer/">09 - JsonServer</a>
+    <a href="../09_FetchApi/">09 - Consumindo com Fetch API -</a>
 </li>
 
                         
                             
 <li >
-    <a href="../10_FormsJS/">11 Manipulando html com js</a>
+    <a href="../10_JsonServer/">10 - JsonServer</a>
 </li>
 
                         
                             
 <li >
-    <a href="../11_ChartMap/">05 - Chart Map</a>
+    <a href="../11_FormsJS/">11 Manipulando html com js</a>
 </li>
 
                         
                             
 <li >
-    <a href="../11_Maps_Sets/">04 - O Comando Map em JavaScript</a>
+    <a href="../12_ChartMap/">12 - Chart Map</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../13_Maps_Sets/">13 - O Comando Map em JavaScript</a>
 </li>
 
                         
@@ -431,17 +431,17 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../01_Arrays/">
+                        <a rel="prev" href="../04_Forms/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../03_Forms/">
+                        <a rel="next" href="../06_Json/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/_Js/02_Dom.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/DW_25.1_8001/edit/master/docs/_Js/05_Http.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -453,276 +453,210 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#03-dom-e-manipulacao-de-html-com-javascript">03 - DOM e Manipulação de HTML com JavaScript</a></li>
-            <li class="second-level"><a href="#1-introducao-ao-dom">1. Introdução ao DOM</a></li>
+        <li class="first-level active"><a href="#05-http">05 - Http</a></li>
+            <li class="second-level"><a href="#1-introducao-ao-protocolo-http">1. Introdução ao Protocolo HTTP</a></li>
                 
-                <li class="third-level"><a href="#o-que-e-o-dom">O que é o DOM?</a></li>
-                <li class="third-level"><a href="#selecionando-elementos">Selecionando Elementos</a></li>
-                <li class="third-level"><a href="#pratica-guiada">Prática Guiada:</a></li>
-            <li class="second-level"><a href="#2-modificando-elementos">2. Modificando Elementos</a></li>
+                <li class="third-level"><a href="#http-a-base-da-comunicacao-na-web">HTTP: A Base da Comunicação na Web</a></li>
+            <li class="second-level"><a href="#como-funciona">Como funciona?</a></li>
                 
-                <li class="third-level"><a href="#propriedades-e-metodos-uteis">Propriedades e Métodos Úteis:</a></li>
-                <li class="third-level"><a href="#exercicio">Exercício:</a></li>
-            <li class="second-level"><a href="#3-eventos">3. Eventos</a></li>
+            <li class="second-level"><a href="#por-que-o-http-e-importante">Por que o HTTP é importante?</a></li>
                 
-                <li class="third-level"><a href="#principais-eventos">Principais Eventos:</a></li>
-                <li class="third-level"><a href="#pratica">Prática:</a></li>
-            <li class="second-level"><a href="#4-criando-e-removendo-elementos">4. Criando e Removendo Elementos</a></li>
+            <li class="second-level"><a href="#http-vs-https">HTTP vs. HTTPS</a></li>
                 
-                <li class="third-level"><a href="#metodos-do-dom">Métodos do DOM:</a></li>
-                <li class="third-level"><a href="#exercicio-to-do-list">Exercício (To-Do List):</a></li>
-            <li class="second-level"><a href="#5-projeto-final-da-aula">5. Projeto Final da Aula</a></li>
+            <li class="second-level"><a href="#2-metodos-http">2. Métodos HTTP</a></li>
                 
-            <li class="second-level"><a href="#recursos-complementares">Recursos Complementares:</a></li>
+            <li class="second-level"><a href="#3-status-http">3. Status HTTP</a></li>
+                
+                <li class="third-level"><a href="#1xx-informacional">1xx – Informacional</a></li>
+                <li class="third-level"><a href="#2xx-sucesso">2xx – Sucesso</a></li>
+                <li class="third-level"><a href="#3xx-redirecionamento">3xx – Redirecionamento</a></li>
+                <li class="third-level"><a href="#4xx-erro-do-cliente">4xx – Erro do Cliente</a></li>
+                <li class="third-level"><a href="#5xx-erro-do-servidor">5xx – Erro do Servidor</a></li>
+            <li class="second-level"><a href="#4-exemplo-pratico-de-requisicao-http">4. Exemplo Prático de Requisição HTTP</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="03-dom-e-manipulacao-de-html-com-javascript">03 - <strong>DOM e Manipulação de HTML com JavaScript</strong></h1>
-<p><strong>Objetivo:</strong> Aprender a interagir com elementos HTML usando JavaScript, manipular eventos e criar dinamicamente conteúdo na página.  </p>
-<hr />
-<h2 id="1-introducao-ao-dom"><strong>1. Introdução ao DOM</strong></h2>
-<h3 id="o-que-e-o-dom"><strong>O que é o DOM?</strong></h3>
+<h1 id="05-http">05 - Http</h1>
+<h3 id="1-introducao-ao-protocolo-http">1. Introdução ao Protocolo HTTP</h3>
+<h4 id="http-a-base-da-comunicacao-na-web">HTTP: A Base da Comunicação na Web</h4>
+<p><strong>HTTP</strong> é a sigla para <strong>Hypertext Transfer Protocol</strong> ou, em português, <strong>Protocolo de Transferência de Hipertexto</strong>. É o protocolo fundamental que permite a comunicação entre navegadores web (como o Chrome, Firefox, Safari) e servidores web (onde estão hospedados os sites).</p>
+<p><strong>Em resumo, o HTTP é como a linguagem que seu navegador e os servidores da internet usam para "conversar" e mostrar as páginas que você visita.</strong></p>
+<h3 id="como-funciona">Como funciona?</h3>
+<ol>
+<li>
+<p><strong>Você digita um endereço (URL) na barra de endereços do seu navegador.</strong></p>
+</li>
+<li>
+<p><strong>Seu navegador envia uma solicitação HTTP para o servidor onde está hospedado o site.</strong></p>
+</li>
+<li>
+<p><strong>O servidor processa a solicitação e envia uma resposta HTTP com o conteúdo da página.</strong></p>
+</li>
+<li>
+<p><strong>Seu navegador recebe a resposta e exibe a página na sua tela.</strong></p>
+</li>
+</ol>
+<p><strong>Imagine o HTTP como um garçom em um restaurante:</strong> você faz um pedido (a solicitação HTTP), o garçom leva o pedido para a cozinha (o servidor), a cozinha prepara o prato (processa a solicitação) e o garçom traz o prato para você (a resposta HTTP).</p>
+<h3 id="por-que-o-http-e-importante">Por que o HTTP é importante?</h3>
+<p><strong>*Base da World Wide Web (WWW):</strong> É o protocolo que permite a existência da internet como a conhecemos, com páginas interligadas por links.</p>
+<p><strong>*Facilita a navegação:</strong> Permite que você navegue entre diferentes páginas de um site e de diferentes sites com facilidade.</p>
+<p><strong>*Transfere diversos tipos de dados:</strong> Não se limita a texto, mas também permite a transferência de imagens, vídeos, arquivos e outros tipos de dados.</p>
+<h3 id="http-vs-https">HTTP vs. HTTPS</h3>
+<p>É comum confundir HTTP com HTTPS. A principal diferença é que o <strong>HTTPS</strong> é uma versão segura do HTTP. Ele utiliza criptografia para proteger a comunicação entre o seu navegador e o servidor, garantindo a privacidade e a integridade dos dados transmitidos. Por isso, é altamente recomendado acessar sites que utilizam HTTPS, especialmente aqueles que envolvem transações financeiras ou informações pessoais.</p>
+<p><strong>Em resumo, o HTTP é o protocolo que torna a internet possível, permitindo que você acesse e interaja com milhões de sites ao redor do mundo.</strong></p>
+<p><strong>Gostaria de saber mais sobre algum aspecto específico do HTTP?</strong> Por exemplo, você pode me perguntar sobre:</p>
+<p><strong>*Métodos HTTP:</strong> GET, POST, PUT, DELETE e outros.</p>
+<p><strong>*Cabeçalhos HTTP:</strong> informações adicionais que acompanham as solicitações e respostas.</p>
+<p><strong>*Códigos de status HTTP:</strong> como 200 (OK), 404 (Não encontrado) e 500 (Erro interno do servidor).</p>
+<p><strong>*Diferenças entre HTTP e HTTPS.</strong></p>
+<p><strong>Se tiver alguma outra dúvida, fique à vontade para perguntar!</strong></p>
+<h3 id="2-metodos-http">2. Métodos HTTP</h3>
+<p>-<strong>GET</strong>: Usado para solicitar dados de um servidor. Não altera o estado do servidor (idempotente).</p>
+<pre><code>- Exemplo: acessar uma página da web ou recuperar uma lista de produtos.
+
+```http
+
+GET /produtos HTTP/1.1
+
+Host: www.exemplo.com
+
+```
+</code></pre>
+<p>-<strong>POST</strong>: Envia dados ao servidor para criar ou modificar um recurso.</p>
+<pre><code>- Exemplo: enviar um formulário de cadastro.
+
+```http
+
+POST /cadastro HTTP/1.1
+
+Host: www.exemplo.com
+
+Content-Type: application/json
+
+{
+
+"nome": "João",
+
+"email": "joao@example.com"
+
+}
+
+```
+</code></pre>
 <ul>
-<li><strong>DOM (Document Object Model):</strong> Representação estruturada do HTML como uma árvore de objetos.  </li>
-<li><strong>Como o JavaScript interage com o DOM?</strong>  </li>
-<li>Acessa, modifica e remove elementos.  </li>
-<li>Reage a eventos (cliques, teclas, formulários).  </li>
+<li>
+<p><strong>PUT</strong>: Envia dados para substituir um recurso existente no servidor.</p>
+<ul>
+<li>Exemplo: atualizar o perfil de um usuário.</li>
 </ul>
-<h3 id="selecionando-elementos"><strong>Selecionando Elementos</strong></h3>
-<ul>
-<li><strong>Métodos clássicos:</strong>  </li>
+</li>
 </ul>
-<pre><code class="language-javascript">  document.getElementById(&quot;meuId&quot;);          // Retorna um único elemento
-  document.getElementsByClassName(&quot;classe&quot;); // Retorna uma HTMLCollection
-  document.getElementsByTagName(&quot;div&quot;);     // Retorna uma HTMLCollection
-</code></pre>
+<p>-<strong>PATCH</strong>: Semelhante ao <code>PUT</code>, mas usado para modificações parciais de um recurso.</p>
 <ul>
-<li><strong>Métodos modernos (querySelector):</strong>  </li>
+<li>
+<p><strong>DELETE</strong>: Remove um recurso do servidor.</p>
+<ul>
+<li>Exemplo: excluir uma conta de usuário.</li>
 </ul>
-<pre><code class="language-javascript">  document.querySelector(&quot;#meuId&quot;);         // Retorna o PRIMEIRO elemento que corresponde
-  document.querySelectorAll(&quot;.classe&quot;);      // Retorna uma NodeList (todos os elementos)
-</code></pre>
-<h3 id="pratica-guiada"><strong>Prática Guiada:</strong></h3>
-<ul>
-<li>Criar uma página HTML com:  </li>
+</li>
+<li>
+<p><strong>HEAD</strong>: Igual ao <code>GET</code>, mas sem o corpo da resposta. Usado para verificar se o recurso existe ou para recuperar metadados.</p>
+</li>
+<li>
+<p><strong>OPTIONS</strong>: Pergunta ao servidor quais métodos e opções são suportados para um determinado recurso.</p>
+</li>
+<li>
+<p><strong>TRACE</strong>: Usado para diagnóstico, retorna o conteúdo exato da requisição recebida pelo servidor.</p>
+</li>
 </ul>
-<pre><code class="language-html">  &lt;h1 id=&quot;titulo&quot;&gt;Olá, DOM!&lt;/h1&gt;
-  &lt;p class=&quot;texto&quot;&gt;Texto 1&lt;/p&gt;
-  &lt;p class=&quot;texto&quot;&gt;Texto 2&lt;/p&gt;
-</code></pre>
+<blockquote>
+<p><strong>Atividade prática</strong>: Utilize uma ferramenta como o Postman ou <code>curl</code> para testar os métodos HTTP.</p>
+</blockquote>
+<h3 id="3-status-http">3. Status HTTP</h3>
+<p>Os códigos de status HTTP indicam o resultado de uma requisição. Eles são divididos em cinco categorias:</p>
+<h4 id="1xx-informacional">1xx – Informacional</h4>
+<p>Indicam que a requisição foi recebida e está sendo processada.</p>
 <ul>
-<li>No console:  </li>
+<li><strong>100 Continue</strong>: O servidor está pronto para receber o corpo da requisição.</li>
 </ul>
-<pre><code class="language-javascript">  const titulo = document.querySelector(&quot;#titulo&quot;);
-  titulo.textContent = &quot;Novo Título!&quot;;
-  const textos = document.querySelectorAll(&quot;.texto&quot;);
-  textos.forEach(texto =&gt; texto.style.color = &quot;blue&quot;);
-</code></pre>
-<hr />
-<h2 id="2-modificando-elementos"><strong>2. Modificando Elementos</strong></h2>
-<h3 id="propriedades-e-metodos-uteis"><strong>Propriedades e Métodos Úteis:</strong></h3>
-<table>
-<thead>
-<tr>
-<th>Propriedade/Método</th>
-<th>Descrição</th>
-<th>Exemplo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>textContent</code></td>
-<td>Altera o texto interno</td>
-<td><code>elemento.textContent = "Novo texto"</code></td>
-</tr>
-<tr>
-<td><code>innerHTML</code></td>
-<td>Permite inserir HTML</td>
-<td><code>elemento.innerHTML = "&lt;strong&gt;Negrito&lt;/strong&gt;"</code></td>
-</tr>
-<tr>
-<td><code>setAttribute()</code></td>
-<td>Altera atributos</td>
-<td><code>img.setAttribute("src", "foto.jpg")</code></td>
-</tr>
-<tr>
-<td><code>style</code></td>
-<td>Modifica CSS inline</td>
-<td><code>elemento.style.backgroundColor = "red"</code></td>
-</tr>
-<tr>
-<td><code>classList</code></td>
-<td>Manipula classes CSS</td>
-<td><code>elemento.classList.add("destaque")</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="exercicio"><strong>Exercício:</strong></h3>
-<ol>
-<li>Criar um botão em HTML:  </li>
-</ol>
-<pre><code class="language-html">   &lt;button id=&quot;mudarCor&quot;&gt;Mudar Cor&lt;/button&gt;
-   &lt;div id=&quot;caixa&quot; style=&quot;width: 100px; height: 100px; background: yellow;&quot;&gt;&lt;/div&gt;
-</code></pre>
-<ol>
-<li>No JavaScript:  </li>
-</ol>
-<pre><code class="language-javascript">   const botao = document.querySelector(&quot;#mudarCor&quot;);
-   const caixa = document.querySelector(&quot;#caixa&quot;);
-
-   botao.addEventListener(&quot;click&quot;, () =&gt; {
-     caixa.style.backgroundColor = &quot;purple&quot;;
-   });
-</code></pre>
-<hr />
-<h2 id="3-eventos"><strong>3. Eventos</strong></h2>
-<h3 id="principais-eventos"><strong>Principais Eventos:</strong></h3>
-<table>
-<thead>
-<tr>
-<th>Evento</th>
-<th>Descrição</th>
-<th>Exemplo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>click</code></td>
-<td>Clique do mouse</td>
-<td><code>botao.addEventListener("click", função)</code></td>
-</tr>
-<tr>
-<td><code>submit</code></td>
-<td>Envio de formulário</td>
-<td><code>form.addEventListener("submit", função)</code></td>
-</tr>
-<tr>
-<td><code>keypress</code></td>
-<td>Tecla pressionada</td>
-<td><code>input.addEventListener("keypress", função)</code></td>
-</tr>
-<tr>
-<td><code>mouseover</code></td>
-<td>Mouse sobre o elemento</td>
-<td><code>div.addEventListener("mouseover", função)</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="pratica"><strong>Prática:</strong></h3>
-<ol>
-<li>Criar um formulário:  </li>
-</ol>
-<pre><code class="language-html">   &lt;form id=&quot;meuForm&quot;&gt;
-     &lt;input type=&quot;text&quot; id=&quot;nome&quot; placeholder=&quot;Seu nome&quot;&gt;
-     &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
-   &lt;/form&gt;
-</code></pre>
-<ol>
-<li>Validar o formulário:  </li>
-</ol>
-<pre><code class="language-javascript">   const form = document.querySelector(&quot;#meuForm&quot;);
-   form.addEventListener(&quot;submit&quot;, (event) =&gt; {
-     event.preventDefault(); // Evita o recarregamento
-     const nome = document.querySelector(&quot;#nome&quot;).value;
-     alert(`Nome digitado: ${nome}`);
-   });
-</code></pre>
-<hr />
-<h2 id="4-criando-e-removendo-elementos"><strong>4. Criando e Removendo Elementos</strong></h2>
-<h3 id="metodos-do-dom"><strong>Métodos do DOM:</strong></h3>
-<table>
-<thead>
-<tr>
-<th>Método</th>
-<th>Descrição</th>
-<th>Exemplo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>createElement()</code></td>
-<td>Cria um novo elemento</td>
-<td><code>const div = document.createElement("div")</code></td>
-</tr>
-<tr>
-<td><code>appendChild()</code></td>
-<td>Adiciona ao final de um elemento pai</td>
-<td><code>pai.appendChild(div)</code></td>
-</tr>
-<tr>
-<td><code>remove()</code></td>
-<td>Remove um elemento</td>
-<td><code>elemento.remove()</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="exercicio-to-do-list"><strong>Exercício (To-Do List):</strong></h3>
-<ol>
-<li>Estrutura HTML:  </li>
-</ol>
-<pre><code class="language-html">   &lt;input type=&quot;text&quot; id=&quot;tarefa&quot;&gt;
-   &lt;button id=&quot;adicionar&quot;&gt;Adicionar&lt;/button&gt;
-   &lt;ul id=&quot;lista&quot;&gt;&lt;/ul&gt;
-</code></pre>
-<ol>
-<li>JavaScript:  </li>
-</ol>
-<pre><code class="language-javascript">   const botao = document.querySelector(&quot;#adicionar&quot;);
-   const lista = document.querySelector(&quot;#lista&quot;);
-
-   botao.addEventListener(&quot;click&quot;, () =&gt; {
-     const input = document.querySelector(&quot;#tarefa&quot;);
-     if (input.value.trim() === &quot;&quot;) return; // Evita tarefa vazia
-
-     const li = document.createElement(&quot;li&quot;);
-     li.textContent = input.value;
-     lista.appendChild(li);
-     input.value = &quot;&quot;; // Limpa o input
-   });
-</code></pre>
-<hr />
-<h2 id="5-projeto-final-da-aula"><strong>5. Projeto Final da Aula</strong></h2>
-<p><strong>Desafio:</strong> Criar um <strong>"Editor de Perfil"</strong> onde o usuário possa:  </p>
-<ol>
-<li>Digitar um nome e ver a atualização em tempo real (<code>keyup</code>).  </li>
-<li>Escolher uma cor para o fundo do perfil.  </li>
-<li>Adicionar uma descrição via <code>textarea</code> e exibi-la abaixo.  </li>
-</ol>
-<p><strong>Exemplo de Solução:</strong>  </p>
-<pre><code class="language-html">&lt;div id=&quot;perfil&quot; style=&quot;border: 1px solid #000; padding: 20px;&quot;&gt;
-  &lt;h2 id=&quot;nomePerfil&quot;&gt;Nome&lt;/h2&gt;
-  &lt;p id=&quot;descricao&quot;&gt;Descrição...&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;input type=&quot;text&quot; id=&quot;inputNome&quot; placeholder=&quot;Seu nome&quot;&gt;
-&lt;textarea id=&quot;inputDescricao&quot; placeholder=&quot;Sua descrição&quot;&gt;&lt;/textarea&gt;
-&lt;input type=&quot;color&quot; id=&quot;corFundo&quot;&gt;
-</code></pre>
-<pre><code class="language-javascript">const inputNome = document.querySelector(&quot;#inputNome&quot;);
-const inputDescricao = document.querySelector(&quot;#inputDescricao&quot;);
-const corFundo = document.querySelector(&quot;#corFundo&quot;);
-const perfil = document.querySelector(&quot;#perfil&quot;);
-
-inputNome.addEventListener(&quot;keyup&quot;, () =&gt; {
-  document.querySelector(&quot;#nomePerfil&quot;).textContent = inputNome.value;
-});
-
-inputDescricao.addEventListener(&quot;keyup&quot;, () =&gt; {
-  document.querySelector(&quot;#descricao&quot;).textContent = inputDescricao.value;
-});
-
-corFundo.addEventListener(&quot;input&quot;, () =&gt; {
-  perfil.style.backgroundColor = corFundo.value;
-});
-</code></pre>
-<hr />
-<h2 id="recursos-complementares"><strong>Recursos Complementares:</strong></h2>
+<h4 id="2xx-sucesso">2xx – Sucesso</h4>
+<p>Indicam que a requisição foi bem-sucedida.</p>
 <ul>
-<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model">MDN - DOM</a>  </li>
-<li><a href="https://javascript.info/events">JavaScript.info - Eventos</a>  </li>
-</ul></div>
+<li>
+<p><strong>200 OK</strong>: A requisição foi bem-sucedida.</p>
+</li>
+<li>
+<p><strong>201 Created</strong>: Um novo recurso foi criado (geralmente após um <code>POST</code>).</p>
+</li>
+<li>
+<p><strong>204 No Content</strong>: A requisição foi bem-sucedida, mas não há conteúdo para retornar.</p>
+</li>
+</ul>
+<h4 id="3xx-redirecionamento">3xx – Redirecionamento</h4>
+<p>Indicam que o cliente precisa realizar uma ação adicional para completar a requisição.</p>
+<ul>
+<li>
+<p><strong>301 Moved Permanently</strong>: O recurso foi movido permanentemente para uma nova URL.</p>
+</li>
+<li>
+<p><strong>302 Found</strong>: O recurso foi temporariamente movido para outra URL.</p>
+</li>
+</ul>
+<h4 id="4xx-erro-do-cliente">4xx – Erro do Cliente</h4>
+<p>Indicam que houve um erro por parte do cliente.</p>
+<ul>
+<li>
+<p><strong>400 Bad Request</strong>: A requisição está malformada ou inválida.</p>
+</li>
+<li>
+<p><strong>401 Unauthorized</strong>: Acesso negado, geralmente por falta de autenticação.</p>
+</li>
+<li>
+<p><strong>403 Forbidden</strong>: Acesso negado, mesmo com autenticação.</p>
+</li>
+<li>
+<p><strong>404 Not Found</strong>: O recurso solicitado não foi encontrado no servidor.</p>
+</li>
+</ul>
+<h4 id="5xx-erro-do-servidor">5xx – Erro do Servidor</h4>
+<p>Indicam que o servidor encontrou um erro ao tentar processar a requisição.</p>
+<ul>
+<li>
+<p><strong>500 Internal Server Error</strong>: Um erro genérico no servidor.</p>
+</li>
+<li>
+<p><strong>502 Bad Gateway</strong>: O servidor recebeu uma resposta inválida de outro servidor.</p>
+</li>
+<li>
+<p><strong>503 Service Unavailable</strong>: O servidor está temporariamente indisponível (sobrecarga ou manutenção).</p>
+</li>
+</ul>
+<h3 id="4-exemplo-pratico-de-requisicao-http">4. Exemplo Prático de Requisição HTTP</h3>
+<ul>
+<li>Montar uma requisição <code>GET</code> e uma <code>POST</code> usando JavaScript com o <code>fetch</code>.</li>
+<li>Mostrar a diferença entre os métodos e como lidar com os diferentes status HTTP retornados.</li>
+</ul>
+<p>```javascript</p>
+<p>fetch('https://api.exemplo.com/recurso')</p>
+<pre><code>.then(response=&gt;{
+
+  if (!response.ok) {
+
+    thrownewError(`Erro: ${response.status}`);
+
+  }
+
+  return response.json();
+
+})
+
+.then(data=&gt; console.log(data))
+
+.catch(error=&gt; console.error(error));
+</code></pre>
+<p>```</p></div>
         
         
     </div>
