@@ -121,7 +121,7 @@ fetch("https://dummyjson.com/posts")
 
   .catch((error) => console.error("Erro:", error));
 
-// Lida com erros
+/* Lida com erros
 // Imprimindo os posts no HTML
     const postsContainer = document.getElementById('jsonplaceholder');
     
@@ -133,4 +133,4 @@ fetch("https://dummyjson.com/posts")
         <p>${post.body}</p>
     `;
     postsContainer.appendChild(postElement);
-})
+})*/
