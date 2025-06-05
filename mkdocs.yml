@@ -1,5 +1,6 @@
 site_name: DW
 theme:
+  disable_nav_previous_next: true
   name: null
   custom_dir: 'cinder'
   locale: pt_BR
@@ -16,4 +17,8 @@ theme:
 plugins:
    - search
 repo_url: "https://github.com/jonh-carvalho/DW_25.1_8001"
+extra:
+  collapse_toc: true
+  toc_depth: 0
+
 
