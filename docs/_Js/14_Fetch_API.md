@@ -1,4 +1,4 @@
-# **Roteiro Básico: Consumindo API com Fetch em JavaScript**
+# 14 - **Roteiro Básico: Consumindo API com Fetch em JavaScript**
 
 Uma página estática que busca e exibe imagens aleatórias de cachorros da **Dog CEO API**.
 
