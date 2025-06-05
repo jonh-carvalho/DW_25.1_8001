@@ -17,7 +17,7 @@
 | __13__ - 15/05/25     | Roteiros JS DOM, Forms |
 | __14__ - 22/05/25     | Roteiro Dados, Fetch, Api |
 | __15__ - 29/05/25     | Roteiro Site, Tabelas com JS |
-| __16__ - 05/06/25     | Revisão JS |
+| __16__ - 05/06/25     | :material-check: Revisão JS |
 | __17__ - 12/06/25     | AP2 |
 | __18__ - 19/06/25     | AS |
 <!--
@@ -46,3 +46,17 @@
 
 | __18__ - 04/12/24     | AS -  Toda matéria (objetivas, discursivas e desenvolvimento)   |
 -->
+
+> **Nota:**  
+> <span style="color: #d9534f;">Este é um parágrafo colorido usando HTML inline no Cinder/MkDocs. Ajuste a cor conforme necessário.</span>
+
+**Observação:** O tema Cinder do MkDocs já inclui o Bootstrap por padrão. Portanto, você pode usar classes e componentes do Bootstrap diretamente no seu Markdown utilizando HTML inline, como mostrado abaixo:
+
+```markdown
+<div class="alert alert-warning" role="alert">
+    Este é um alerta Bootstrap no Cinder/MkDocs!
+</div>
+```
+
+> **Nota:** Componentes que dependem de JavaScript (como modais ou dropdowns) podem não funcionar sem a inclusão dos scripts JS do Bootstrap. Para componentes apenas de estilo, o suporte já está disponível nativamente no tema.
+
