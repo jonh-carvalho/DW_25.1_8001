@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Índices Econômicos</title>
+  <link rel="stylesheet" href="pe.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Painel de Índices Econômicos</h1>
+    
+    <div class="controls">
+      <button id="refreshBtn">Atualizar Dados</button>
+      <small>Última atualização: <span id="lastUpdate">--/--/---- --:--:--</span></small>
+    </div>
+
+    <div class="grid">
+      <!-- Índices Brasileiros -->
+      <div class="card">
+        <h2>🇧🇷 Brasil</h2>
+        <div class="indicator">
+          <span class="label">SELIC</span>
+          <span class="value" id="selic">--%</span>
+        </div>
+        <div class="indicator">
+          <span class="label">IPCA (Últ. 12 meses)</span>
+          <span class="value" id="ipca">--%</span>
+        </div>
+        <div class="indicator">
+          <span class="label">Dólar Comercial</span>
+          <span class="value" id="usd-brl">R$ --</span>
+        </div>
+      </div>
+
+      <!-- Índices Internacionais -->
+      <div class="card">
+        <h2>🌎 Mundo</h2>
+        <div class="indicator">
+          <span class="label">Fed Funds Rate (EUA)</span>
+          <span class="value" id="fed-rate">--%</span>
+        </div>
+        <div class="indicator">
+          <span class="label">OURO (USD/oz)</span>
+          <span class="value" id="gold-price">$ --</span>
+        </div>
+        <div class="indicator">
+          <span class="label">Bitcoin (USD)</span>
+          <span class="value" id="btc-price">$ --</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card full-width">
+      <h2>📈 Histórico do Dólar (Últimos 30 dias)</h2>
+      <div id="usdChart"></div>
+    </div>
+  </div>
+
+  <script src="pe.js"></script>
+</body>
+</html>
