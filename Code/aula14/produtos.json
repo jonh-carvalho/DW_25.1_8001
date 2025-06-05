@@ -1,0 +1,15 @@
+
+[
+    {
+        "nome": "Notebook",
+        "preco": 2500
+    },
+    {
+        "nome": "Celular",
+        "preco": 800
+    },
+    {
+        "nome": "Tablet",
+        "preco": 1200
+    }
+]
