@@ -1,0 +1,19 @@
+ {
+  "cotacoes": [
+    {
+      "moeda": "Dólar",
+      "valor": 5.25,
+      "data": "2023-10-01"
+    },
+    {
+      "moeda": "Euro",
+      "valor": 5.75,
+      "data": "2023-10-01"
+    },
+    {
+      "moeda": "Bitcoin",
+      "valor": 200000.00,
+      "data": "2023-10-01"
+    }
+  ]
+}
