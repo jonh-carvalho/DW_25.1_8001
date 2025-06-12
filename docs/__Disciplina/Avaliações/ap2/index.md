@@ -1,7 +1,8 @@
 # AP2
 
-## Objetivo
+# Atividade Teórica 2 
 
+## Atividade Prática 2
 
 Desenvolver um site responsivo utilizando **HTML**, **CSS, JS** e técnicas de layout como **Flexbox** e **CSS Grid**, seguindo boas práticas de design web e Mobile First. Crie uma aplicação web interativa que utilize uma API  para exibir informações.
 
