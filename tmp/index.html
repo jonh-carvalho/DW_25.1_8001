@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Investimentos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #1a5235; /* Verde escuro (tom de verde da Brasil Bolsa Balcão - B3) */
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        main.slider-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            width: 95%;
+            max-width: 800px;
+            transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+            position: absolute;
+            opacity: 0;
+            transform: translateX(100%);
+            visibility: hidden;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0);
+            visibility: visible;
+            position: relative;
+        }
+
+        .slide h2 {
+            color: #1a5235; /* Verde escuro */
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 600;
+        }
+
+        .slide p {
+            font-size: 1.15em;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #4a4a4a;
+        }
+
+        .slide input[type="number"] {
+            margin: 15px 0;
+            padding: 15px;
+            border: 1px solid #d1d1d1;
+            border-radius: 6px;
+            width: calc(100% - 30px);
+            max-width: 400px;
+            font-size: 1.1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .slide input[type="number"]:focus {
+            outline: none;
+            border-color: #388e3c; /* Verde mais claro */
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide label {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .slide input[type="checkbox"] {
+            margin-right: 10px;
+            vertical-align: middle;
+            width: 18px;
+            height: 18px;
+        }
+
+        .navigation-buttons {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            background-color: #388e3c; /* Verde mais claro */
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin: 0 15px;
+            font-weight: 500;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        button:hover {
+            background-color: #1a5235; /* Verde escuro */
+            transform: translateY(-2px);
+        }
+
+        button:disabled {
+            background-color: #b8b8b8;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        #investment-analysis, #final-report {
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #investment-analysis h3, #final-report h3 {
+            color: #1a5235;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+
+        #investment-analysis p, #final-report p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        table thead th {
+            background-color: #f0f0f0;
+            color: #1a5235;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.2em;
+            border-bottom: 2px solid #dcdcdc;
+        }
+
+        table tbody td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        table tbody tr:nth-child(odd) {
+            background-color: #f8f8f8;
+        }
+
+        table tbody tr:hover {
+            background-color: #f0f0f0;
+        }
+
+        #final-report h4 {
+            color: #1a5235;
+            margin: 30px 0 15px 0;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        #final-report h5 {
+            color: #388e3c;
+            margin: 20px 0 10px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        #final-report ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        #final-report ul li::before {
+            content: '•';
+            color: #388e3c;
+            margin-right: 10px;
+        }
+
+        #disclaimer {
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* Estilos para dispositivos móveis */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 20px;
+                width: 98%;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .slide h2 {
+                font-size: 1.6em;
+            }
+
+            .slide p {
+                font-size: 1.1em;
+            }
+
+            button {
+                padding: 12px 25px;
+                font-size: 1em;
+                margin: 10px;
+            }
+
+            .navigation-buttons {
+                flex-direction: column;
+            }
+
+            .navigation-buttons button {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            table thead th, table tbody td {
+                padding: 12px;
+                font-size: 0.9em;
+            }
+
+            #investment-analysis h3, #final-report h3 {
+                font-size: 1.5em;
+            }
+
+            #investment-analysis p, #final-report p {
+                font-size: 1em;
+            }
+        }
+
+        /* Estilos para telas menores que 480px */
+        @media (max-width: 480px) {
+            .slide {
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            header p {
+                font-size: 0.9em;
+            }
+
+            .slide h2 {
+                font-size: 1.4em;
+            }
+
+            .slide p {
+                font-size: 1em;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            table thead th, table tbody td {
+                padding: 10px;
+                font-size: 0.8em;
+            }
+
+            #investment-analysis h3, #final-report h3 {
+                font-size: 1.3em;
+            }
+
+            #investment-analysis p, #final-report p {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simulador de Investimentos</h1>
+        <p>Compare e invista com inteligência</p>
+    </header>
+
+    <main class="slider-container">
+        <div class="slide active" id="slide1">
+            <h2>Bem-vindo!</h2>
+            <p>Descubra as melhores opções de investimento para o seu perfil e objetivos financeiros.</p>
+            <button class="next-slide-btn">Começar</button>
+        </div>
+
+        <div class="slide" id="slide2">
+            <h2>Seu Valor Inicial</h2>
+            <p>Qual o valor que você deseja investir inicialmente?</p>
+            <input type="number" id="initial-amount" placeholder="Ex: 10000">
+            <div class="navigation-buttons">
+                <button class="prev-slide-btn">Anterior</button>
+                <button class="next-slide-btn" disabled>Próximo</button>
+            </div>
+        </div>
+
+        <div class="slide" id="slide3">
+            <h2>Selecione os Investimentos</h2>
+            <p>Quais tipos de investimento você gostaria de comparar?</p>
+            <label><input type="checkbox" name="investment-type" value="rendaFixa"> Renda Fixa</label><br>
+            <label><input type="checkbox" name="investment-type" value="rendaVariavel"> Renda Variável</label><br>
+            <label><input type="checkbox" name="investment-type" value="criptomoedas"> Criptomoedas</label><br>
+             <label><input type="checkbox" name="investment-type" value="fundosImobiliarios"> Fundos Imobiliários</label><br>
+            <div class="navigation-buttons">
+                <button class="prev-slide-btn">Anterior</button>
+                <button class="next-slide-btn" disabled>Analisar</button>
+            </div>
+        </div>
+
+        <div class="slide" id="slide4">
+            <h2>Análise dos Investimentos</h2>
+            <div id="investment-analysis">
+                <p>Aguarde enquanto comparamos os investimentos selecionados...</p>
+            </div>
+            <div class="navigation-buttons">
+                <button class="prev-slide-btn">Anterior</button>
+                <button class="next-slide-btn">Ver Relatório</button>
+            </div>
+        </div>
+
+        <div class="slide" id="slide5">
+            <h2>Seu Relatório Personalizado</h2>
+            <div id="final-report">
+                <p>Gerando seu relatório detalhado...</p>
+            </div>
+            <div class="navigation-buttons">
+                <button class="prev-slide-btn">Anterior</button>
+                <button onclick="location.reload()">Recomeçar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; font-size: 0.9em; color: #888;">
+        <p>© 2024 Simulador de Investimentos. Todos os direitos reservados.</p>
+        <p>Este simulador é apenas para fins informativos. Consulte um especialista financeiro antes de tomar decisões de investimento.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const nextButtons = document.querySelectorAll('.next-slide-btn');
+            const prevButtons = document.querySelectorAll('.prev-slide-btn');
+            const initialAmountInput = document.getElementById('initial-amount');
+            const investmentCheckboxes = document.querySelectorAll('input[name="investment-type"]');
+            const analyzeButton = document.querySelector('#slide3 .next-slide-btn');
+            const showReportButton = document.querySelector('#slide4 .next-slide-btn');
+
+
+            let currentSlideIndex = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.add('active');
+                        slide.style.zIndex = 1;
+                    } else {
+                        slide.classList.remove('active');
+                        slide.style.zIndex = 0;
+                    }
+                });
+            }
+
+            function goToNextSlide() {
+                if (currentSlideIndex < slides.length - 1) {
+                    currentSlideIndex++;
+                    showSlide(currentSlideIndex);
+                    handleSlideSpecificActions(currentSlideIndex);
+                }
+            }
+
+            function goToPrevSlide() {
+                if (currentSlideIndex > 0) {
+                    currentSlideIndex--;
+                    showSlide(currentSlideIndex);
+                    handleSlideSpecificActions(currentSlideIndex);
+                }
+            }
+
+
+            function handleSlideSpecificActions(index) {
+                if (index === 2) {
+                    validateInitialAmount();
+                    validateInvestmentSelection();
+                }
+                if (index === 3) {
+                    validateInvestmentSelection();
+                }
+                if (index === 4) {
+                    displayInvestmentAnalysis();
+                } else if (index === 5) {
+                    generateFinalReport();
+                }
+            }
+
+            initialAmountInput.addEventListener('input', validateInitialAmount);
+
+            investmentCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', validateInvestmentSelection);
+            });
+
+            function validateInitialAmount() {
+                const initialAmount = parseFloat(initialAmountInput.value);
+                nextButtons[1].disabled = isNaN(initialAmount) || initialAmount <= 0;
+                nextButtons[1].style.opacity = nextButtons[1].disabled ? 0.5 : 1;
+            }
+
+            function validateInvestmentSelection() {
+                let isAnyInvestmentSelected = Array.from(investmentCheckboxes).some(checkbox => checkbox.checked);
+                analyzeButton.disabled = !isAnyInvestmentSelected;
+                analyzeButton.style.opacity = analyzeButton.disabled ? 0.5 : 1;
+                showReportButton.disabled = !isAnyInvestmentSelected;
+                showReportButton.style.opacity = showReportButton.disabled ? 0.5:1;
+            }
+
+
+            nextButtons.forEach(button => {
+                button.addEventListener('click', goToNextSlide);
+            });
+
+            prevButtons.forEach(button => {
+                button.addEventListener('click', goToPrevSlide);
+            });
+
+
+            async function getInvestmentData(investmentType) {
+                const mockData = {
+                    rendaFixa: {
+                        expectedReturn: 0.10,
+                        risk: 'Baixo',
+                        description: 'Investimentos de renda fixa são conhecidos pela sua segurança e previsibilidade de retorno, como CDBs, Tesouro Direto e LCIs/LCAs.',
+                        historicalReturns: [0.08, 0.09, 0.10, 0.11, 0.12]
+                    },
+                    rendaVariavel: {
+                        expectedReturn: 0.18,
+                        risk: 'Alto',
+                        description: 'Investimentos de renda variável possuem maior potencial de retorno, mas também maior risco. Incluem ações, fundos de ações e ETFs.',
+                        historicalReturns: [0.15, 0.20, -0.05, 0.25, 0.18]
+                    },
+                    criptomoedas: {
+                        expectedReturn: 0.25,
+                        risk: 'Muito Alto',
+                        description: 'Criptomoedas são ativos digitais com alta volatilidade e potencial de retornos elevados, mas com riscos significativos.',
+                        historicalReturns: [0.30, 0.50, -0.40, 0.60, 0.45]
+                    },
+                    fundosImobiliarios: {
+                        expectedReturn: 0.12,
+                        risk: 'Médio',
+                        description: 'Fundos imobiliários investem em empreendimentos imobiliários e distribuem rendimentos periódicos, como aluguéis.',
+                        historicalReturns: [0.10, 0.13, 0.11, 0.14, 0.12]
+                    }
+                };
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                        resolve(mockData[investmentType]);
+                    }, 500);
+                });
+            }
+
+            async function displayInvestmentAnalysis() {
+                const initialAmount = parseFloat(document.getElementById('initial-amount').value);
+                const selectedInvestments = Array.from(document.querySelectorAll('input[name="investment-type"]:checked')).map(cb => cb.value);
+                const analysisDiv = document.getElementById('investment-analysis');
+                analysisDiv.innerHTML = '<p>Aguarde enquanto comparamos os investimentos selecionados...</p>';
+
+                if (!initialAmount || selectedInvestments.length === 0) {
+                    analysisDiv.innerHTML = '<p style="color: red;">Por favor, insira um valor inicial e selecione pelo menos um tipo de investimento.</p>';
+                    return;
+                }
+
+                let analysisContent = `
+                    <h3>Análise dos Investimentos</h3>
+                    <p>Com um investimento inicial de <strong>R$ ${initialAmount.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>, você pode considerar as seguintes opções:</p>
+                    <table class="table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Investimento</th>
+                                <th>Retorno Esperado (Anual)</th>
+                                <th>Risco</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+
+                let chartLabels = [];
+                let chartData = [];
+                let hasData = false;
+
+                for (const type of selectedInvestments) {
+                    const data = await getInvestmentData(type);
+                    if (data) {
+                        hasData = true;
+                        const estimatedReturn = initialAmount * data.expectedReturn;
+                        analysisContent += `
+                            <tr>
+                                <td>${type.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</td>
+                                <td>${(data.expectedReturn * 100).toFixed(2)}% (R$ ${estimatedReturn.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })})</td>
+                                <td>${data.risk}</td>
+                                <td>${data.description}</td>
+                            </tr>
+                        `;
+                        chartLabels.push(type.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()));
+                        chartData.push(estimatedReturn);
+                    }
+                }
+
+                analysisContent += `
+                        </tbody>
+                    </table>
+                    ${hasData ? `<div class="chart-container mt-4"><canvas id="investmentReturnChart"></canvas></div>` : '<p>Nenhum dado de investimento encontrado.</p>'}
+                `;
+                analysisDiv.innerHTML = analysisContent;
+
+                if (hasData) {
+                    renderInvestmentReturnChart(chartLabels, chartData);
+                }
+            }
+
+            function renderInvestmentReturnChart(labels, data) {
+                const ctx = document.getElementById('investmentReturnChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Retorno Anual Esperado',
+                            data: data,
+                            backgroundColor: [
+                                '#26ae60', '#f1c40f', '#e74c3c', '#3498db'
+                            ],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    font: {
+                                        size: 12
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                titleFont: {
+                                    size: 14
+                                },
+                                bodyFont: {
+                                    size: 12
+                                },
+                                footerFont: {
+                                    size: 10
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function (value) {
+                                        return 'R$ ' + value.toLocaleString('pt-BR');
+                                    },
+                                    font: {
+                                        size: 12
+                                    }
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Retorno Anual Esperado (R$)',
+                                    font: {
+                                        size: 14,
+                                        style: 'bold'
+                                    }
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    font: {
+                                        size: 12
+                                    }
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Tipo de Investimento',
+                                    font: {
+                                        size: 14,
+                                        style: 'bold'
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+
+            async function generateFinalReport() {
+                const initialAmount = parseFloat(document.getElementById('initial-amount').value);
+                const selectedInvestments = Array.from(document.querySelectorAll('input[name="investment-type"]:checked')).map(cb => cb.value);
+                const reportDiv = document.getElementById('final-report');
+                reportDiv.innerHTML = '<p>Aguarde enquanto geramos seu relatório personalizado...</p>';
+
+                if (!initialAmount || selectedInvestments.length === 0) {
+                    reportDiv.innerHTML = '<p style="color: red;">Não foi possível gerar o relatório. Por favor, revise suas escolhas.</p>';
+                    return;
+                }
+
+                let reportContent = `
+                    <h3>Seu Relatório de Investimentos</h3>
+                    <p>Com base nas suas seleções, apresentamos um resumo detalhado para auxiliar na sua decisão:</p>
+                    <div class="summary-box">
+                        <p><strong>Valor Inicial:</strong> R$ ${initialAmount.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+                        <p><strong>Investimentos Selecionados:</strong> ${selectedInvestments.map(type => type.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())).join(', ')}</p>
+                    </div>
+                `;
+
+                let totalExpectedReturn = 0;
+                let highestReturn = 0;
+                let highestReturnInvestment = '';
+                let lowestReturn = Infinity;
+                let lowestReturnInvestment = '';
+
+                for (const type of selectedInvestments) {
+                    const data = await getInvestmentData(type);
+                    if (data) {
+                        const estimatedReturn = initialAmount * data.expectedReturn;
+                        totalExpectedReturn += estimatedReturn;
+
+                        if (data.expectedReturn > highestReturn) {
+                            highestReturn = data.expectedReturn;
+                            highestReturnInvestment = type;
+                        }
+                        if (data.expectedReturn < lowestReturn) {
+                            lowestReturn = data.expectedReturn;
+                            lowestReturnInvestment = type;
+                        }
+
+                        reportContent += `
+                            <h4>${type.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</h4>
+                            <p><strong>Retorno Esperado:</strong> ${(data.expectedReturn * 100).toFixed(2)}% (R$ ${estimatedReturn.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} Anual)</p>
+                            <p><strong>Risco:</strong> ${data.risk}</p>
+                            <p><strong>Descrição:</strong> ${data.description}</p>
+                        `;
+                    }
+                }
+
+                const averageReturn = totalExpectedReturn / selectedInvestments.length;
+
+                reportContent += `
+                    <h4>Análise Geral da Carteira</h4>
+                    <p>O retorno anual médio esperado da sua seleção de investimentos é de <strong>R$ ${averageReturn.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>.</p>
+                    <p>O investimento com maior retorno esperado é <strong>${highestReturnInvestment.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</strong> (R$ ${(initialAmount * highestReturn).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}), enquanto o menor é <strong>${lowestReturnInvestment.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</strong> (R$ ${(initialAmount * lowestReturn).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}).</p>
+
+                    <p><strong>Recomendação:</strong> É importante diversificar seus investimentos para equilibrar risco e retorno. Considere consultar um especialista financeiro para alinhar suas escolhas com seus objetivos e perfil de risco.</p>
+
+                    <div class="disclaimer">
+                        <p><strong>Aviso Legal:</strong> Este relatório é gerado automaticamente com base nos dados fornecidos e tem finalidade informativa. Não constitui recomendação de investimento. Os resultados apresentados são simulações e não garantem retornos futuros. Rentabilidade passada não é garantia de rentabilidade futura. Invista com responsabilidade e esteja ciente dos riscos envolvidos.</p>
+                    </div>
+                `;
+                reportDiv.innerHTML = reportContent;
+            }
+
+            showSlide(currentSlideIndex);
+            validateInitialAmount();
+            validateInvestmentSelection();
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
